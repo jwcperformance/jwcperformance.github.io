@@ -1,0 +1,1218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>JWC Performance | B2B &amp; B2C Lead Generation Specialist — Fixed Fee, 15+ Years' Experience</title>
+<meta name="description" content="Fixed-fee lead generation through paid search and paid social for UK B2B and B2C businesses. Over 15 years' experience working with everyone from large corporations to SMBs, across Google, Meta and LinkedIn. No retainers, no jargon.">
+
+<!-- Open Graph -->
+<meta property="og:title" content="JWC Performance | B2B & B2C Lead Generation Specialist">
+<meta property="og:description" content="Fixed-fee lead generation through Google, Meta and LinkedIn. Over 15 years' experience, from large corporations to SMBs.">
+<meta property="og:type" content="website">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+  :root{
+    --ink:#13130D;
+    --khaki-deep:#33331F;
+    --khaki:#4A4A30;
+    --khaki-mid:#6B6B45;
+    --khaki-line: #7d7d54;
+    --gold:#C9A227;
+    --gold-bright:#E0B82E;
+    --bone:#EFEAD9;
+    --bone-dim:#DCD5BC;
+    --paper:#F7F4EA;
+    --display: 'Playfair Display', serif;
+    --body: 'Inter', sans-serif;
+    --mono: 'JetBrains Mono', monospace;
+  }
+
+  *{ margin:0; padding:0; box-sizing:border-box; }
+  html{ scroll-behavior:smooth; }
+  body{
+    background:var(--paper);
+    color:var(--ink);
+    font-family:var(--body);
+    line-height:1.5;
+    -webkit-font-smoothing:antialiased;
+  }
+
+  @media (prefers-reduced-motion: reduce){
+    *{ animation-duration:0.01ms !important; animation-iteration-count:1 !important; transition-duration:0.01ms !important; scroll-behavior:auto !important; }
+  }
+
+  a{ color:inherit; }
+  img{ max-width:100%; display:block; }
+  .wrap{ max-width:1180px; margin:0 auto; padding:0 32px; }
+  @media (max-width:640px){ .wrap{ padding:0 20px; } }
+
+  /* ---------- Focus visibility ---------- */
+  a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible, select:focus-visible{
+    outline:3px solid var(--gold-bright);
+    outline-offset:2px;
+  }
+
+  /* ---------- Top ledger strip ---------- */
+  .ledger-strip{
+    background:var(--khaki-deep);
+    color:var(--bone-dim);
+    font-family:var(--mono);
+    font-size:12px;
+    letter-spacing:0.04em;
+    padding:8px 0;
+    overflow:hidden;
+    border-bottom:1px solid var(--khaki-line);
+  }
+  .ledger-strip .wrap{
+    display:flex;
+    justify-content:space-between;
+    flex-wrap:wrap;
+    gap:8px;
+  }
+  .ledger-strip span{ opacity:0.85; }
+  .ledger-strip .gold-dot{ color:var(--gold); }
+
+  /* ---------- Header ---------- */
+  header{
+    background:var(--paper);
+    border-bottom:1px solid #00000014;
+    position:sticky;
+    top:0;
+    z-index:50;
+  }
+  nav.wrap{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding-top:18px;
+    padding-bottom:18px;
+  }
+  .logo{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    font-family:var(--display);
+    font-weight:700;
+    font-size:20px;
+    letter-spacing:0;
+    text-decoration:none;
+    color:var(--ink);
+  }
+  .logo-mark{
+    width:34px; height:34px;
+    flex-shrink:0;
+  }
+  .logo small{
+    display:block;
+    font-family:var(--mono);
+    font-weight:400;
+    font-size:10px;
+    letter-spacing:0.12em;
+    color:var(--khaki-mid);
+    text-transform:uppercase;
+    margin-top:2px;
+  }
+  .nav-links{
+    display:flex;
+    gap:32px;
+    list-style:none;
+    font-size:14px;
+    font-weight:500;
+  }
+  .nav-links a{
+    text-decoration:none;
+    position:relative;
+    padding:4px 0;
+  }
+  .nav-links a::after{
+    content:'';
+    position:absolute;
+    left:0; bottom:0;
+    width:0; height:2px;
+    background:var(--gold);
+    transition:width 0.2s ease;
+  }
+  .nav-links a:hover::after{ width:100%; }
+  .nav-cta{
+    background:var(--khaki-deep);
+    color:var(--bone);
+    padding:10px 20px;
+    border-radius:2px;
+    text-decoration:none;
+    font-size:14px;
+    font-weight:600;
+    border:1px solid var(--khaki-deep);
+    transition:background 0.2s ease, color 0.2s ease;
+  }
+  .nav-cta:hover{ background:var(--gold); border-color:var(--gold); color:var(--ink); }
+  .nav-toggle{ display:none; }
+
+  @media (max-width:860px){
+    .nav-links{ display:none; }
+    .nav-toggle{
+      display:block;
+      background:none; border:1px solid var(--khaki-mid);
+      border-radius:2px;
+      padding:8px 10px;
+      font-family:var(--mono);
+      font-size:12px;
+    }
+  }
+
+  /* ---------- Hero ---------- */
+  .hero{
+    background:var(--khaki-deep);
+    color:var(--bone);
+    position:relative;
+    overflow:hidden;
+    padding:88px 0 96px;
+  }
+  .hero::before{
+    content:'';
+    position:absolute;
+    inset:0;
+    background-image:
+      linear-gradient(var(--khaki-line) 1px, transparent 1px);
+    background-size: 100% 48px;
+    opacity:0.08;
+    pointer-events:none;
+  }
+  .hero-grid{
+    position:relative;
+    display:grid;
+    grid-template-columns:1.15fr 0.85fr;
+    gap:56px;
+    align-items:center;
+  }
+  @media (max-width:980px){
+    .hero-grid{ grid-template-columns:1fr; }
+  }
+  .eyebrow{
+    font-family:var(--mono);
+    font-size:13px;
+    letter-spacing:0.1em;
+    text-transform:uppercase;
+    color:var(--gold);
+    display:flex;
+    align-items:center;
+    gap:10px;
+    margin-bottom:22px;
+  }
+  .eyebrow::before{
+    content:'';
+    width:24px; height:1px;
+    background:var(--gold);
+  }
+  .hero h1{
+    font-family:var(--display);
+    font-weight:700;
+    font-size:clamp(36px, 5vw, 54px);
+    line-height:1.1;
+    letter-spacing:-0.01em;
+    margin-bottom:22px;
+  }
+  .hero h1 em{
+    font-style:normal;
+    color:var(--gold-bright);
+  }
+  .hero p.lede{
+    font-size:18px;
+    color:var(--bone-dim);
+    max-width:46ch;
+    margin-bottom:34px;
+    line-height:1.6;
+  }
+  .hero-actions{
+    display:flex;
+    gap:14px;
+    flex-wrap:wrap;
+    margin-bottom:40px;
+  }
+  .btn{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    font-family:var(--body);
+    font-weight:600;
+    font-size:15px;
+    padding:14px 26px;
+    border-radius:2px;
+    text-decoration:none;
+    cursor:pointer;
+    border:1px solid transparent;
+    transition:transform 0.15s ease, background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+  }
+  .btn:hover{ transform:translateY(-1px); }
+  .btn-primary{
+    background:var(--gold);
+    color:var(--ink);
+  }
+  .btn-primary:hover{ background:var(--gold-bright); }
+  .btn-ghost{
+    border-color:var(--khaki-line);
+    color:var(--bone);
+  }
+  .btn-ghost:hover{ border-color:var(--gold); color:var(--gold-bright); }
+
+  .hero-trust{
+    display:flex;
+    gap:28px;
+    flex-wrap:wrap;
+    font-family:var(--mono);
+    font-size:12px;
+    color:var(--khaki-line);
+    text-transform:uppercase;
+    letter-spacing:0.06em;
+  }
+  .hero-trust strong{ color:var(--bone-dim); font-weight:600; }
+
+  /* ---------- Hero ledger card (signature element) ---------- */
+  .ledger-card{
+    background:var(--paper);
+    color:var(--ink);
+    border-radius:3px;
+    box-shadow:0 30px 60px -20px rgba(0,0,0,0.5);
+    overflow:hidden;
+    transform:rotate(1.2deg);
+    border:1px solid #00000010;
+  }
+  .ledger-card-head{
+    background:var(--ink);
+    color:var(--bone-dim);
+    font-family:var(--mono);
+    font-size:11px;
+    letter-spacing:0.08em;
+    text-transform:uppercase;
+    padding:12px 18px;
+    display:flex;
+    justify-content:space-between;
+  }
+  .ledger-card-body{ padding:22px 22px 18px; }
+  .ledger-row{
+    display:flex;
+    justify-content:space-between;
+    align-items:baseline;
+    padding:10px 0;
+    border-bottom:1px dashed #00000018;
+    font-family:var(--mono);
+    font-size:13px;
+  }
+  .ledger-row:last-of-type{ border-bottom:none; }
+  .ledger-row .label{ color:var(--khaki); }
+  .ledger-row .value{ font-weight:600; }
+  .ledger-row.waste .value{
+    color:#A33B2C;
+    text-decoration:line-through;
+    text-decoration-color:#A33B2C88;
+  }
+  .ledger-row.fix .value{ color:#3E6B3E; }
+  .ledger-total{
+    margin-top:14px;
+    padding-top:14px;
+    border-top:2px solid var(--ink);
+    display:flex;
+    justify-content:space-between;
+    font-family:var(--mono);
+    font-weight:700;
+    font-size:15px;
+  }
+  .ledger-total .value{ color:var(--gold); }
+  .ledger-card-foot{
+    background:var(--bone-dim);
+    font-family:var(--mono);
+    font-size:11px;
+    padding:10px 18px;
+    color:var(--khaki);
+    letter-spacing:0.04em;
+  }
+  @media (max-width:980px){ .ledger-card{ transform:none; max-width:420px; } }
+
+  /* ---------- Section scaffolding ---------- */
+  section{ padding:96px 0; }
+  .section-head{
+    max-width:640px;
+    margin-bottom:56px;
+  }
+  .section-num{
+    font-family:var(--mono);
+    font-size:12px;
+    color:var(--khaki-mid);
+    letter-spacing:0.1em;
+    text-transform:uppercase;
+    margin-bottom:14px;
+    display:block;
+  }
+  .section-head h2{
+    font-family:var(--display);
+    font-size:clamp(28px, 3.4vw, 38px);
+    font-weight:700;
+    letter-spacing:0;
+    line-height:1.2;
+    margin-bottom:14px;
+    color:var(--ink);
+  }
+  .section-head p{
+    color:var(--khaki);
+    font-size:16px;
+    line-height:1.6;
+  }
+  .alt{ background:var(--bone); }
+
+  /* ---------- Services (ledger line items) ---------- */
+  .service-line{
+    border-top:1px solid #00000018;
+    padding:36px 0;
+    display:grid;
+    grid-template-columns:80px 1fr 240px;
+    gap:28px;
+    align-items:start;
+  }
+  .service-line:last-child{ border-bottom:1px solid #00000018; }
+  @media (max-width:820px){
+    .service-line{ grid-template-columns:48px 1fr; }
+    .service-fee{ grid-column:1 / -1; margin-top:8px; }
+  }
+  .service-code{
+    font-family:var(--mono);
+    font-size:13px;
+    color:var(--gold);
+    font-weight:600;
+    padding-top:4px;
+  }
+  .service-main h3{
+    font-family:var(--display);
+    font-size:22px;
+    font-weight:700;
+    margin-bottom:10px;
+  }
+  .service-main p{
+    color:var(--khaki);
+    font-size:15px;
+    line-height:1.65;
+    max-width:56ch;
+    margin-bottom:14px;
+  }
+  .service-tags{
+    display:flex;
+    flex-wrap:wrap;
+    gap:8px;
+  }
+  .service-tags span{
+    font-family:var(--mono);
+    font-size:11px;
+    text-transform:uppercase;
+    letter-spacing:0.04em;
+    background:var(--bone-dim);
+    color:var(--khaki-deep);
+    padding:5px 10px;
+    border-radius:2px;
+  }
+  .service-fee{
+    text-align:right;
+    font-family:var(--mono);
+  }
+  .service-fee .price{
+    font-size:24px;
+    font-weight:700;
+    color:var(--ink);
+    display:block;
+  }
+  .service-fee .period{
+    font-size:11px;
+    color:var(--khaki-mid);
+    text-transform:uppercase;
+    letter-spacing:0.04em;
+    display:block;
+    margin-bottom:14px;
+  }
+  @media (max-width:820px){
+    .service-fee{ text-align:left; }
+  }
+  .service-fee a{
+    font-size:13px;
+    font-weight:600;
+    color:var(--gold);
+    text-decoration:none;
+    border-bottom:1px solid var(--gold);
+    padding-bottom:2px;
+  }
+  .service-fee a:hover{ color:var(--khaki-deep); border-color:var(--khaki-deep); }
+
+  /* ---------- Process ---------- */
+  .process-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:1px;
+    background:#00000018;
+    border:1px solid #00000018;
+  }
+  @media (max-width:820px){ .process-grid{ grid-template-columns:1fr 1fr; } }
+  @media (max-width:520px){ .process-grid{ grid-template-columns:1fr; } }
+  .process-step{
+    background:var(--paper);
+    padding:32px 26px;
+  }
+  .process-step .step-num{
+    font-family:var(--mono);
+    color:var(--gold);
+    font-weight:700;
+    font-size:13px;
+    margin-bottom:18px;
+    display:block;
+  }
+  .process-step h4{
+    font-family:var(--display);
+    font-size:17px;
+    font-weight:700;
+    margin-bottom:10px;
+  }
+  .process-step p{
+    font-size:14px;
+    color:var(--khaki);
+    line-height:1.6;
+  }
+
+  /* ---------- Why / stats ---------- */
+  .why-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:48px;
+    align-items:start;
+  }
+  @media (max-width:860px){ .why-grid{ grid-template-columns:1fr; } }
+  .why-list{ list-style:none; }
+  .why-list li{
+    display:flex;
+    gap:16px;
+    padding:18px 0;
+    border-top:1px solid #00000014;
+  }
+  .why-list li:last-child{ border-bottom:1px solid #00000014; }
+  .why-list .mark{
+    font-family:var(--mono);
+    color:var(--gold);
+    font-weight:700;
+    flex-shrink:0;
+  }
+  .why-list h4{
+    font-family:var(--display);
+    font-size:16px;
+    margin-bottom:4px;
+  }
+  .why-list p{ font-size:14px; color:var(--khaki); line-height:1.6; }
+
+  .stat-card{
+    background:var(--khaki-deep);
+    color:var(--bone);
+    padding:36px;
+    border-radius:3px;
+  }
+  .stat-card .stat{
+    font-family:var(--mono);
+    font-size:42px;
+    font-weight:700;
+    color:var(--gold-bright);
+    line-height:1;
+    margin-bottom:8px;
+  }
+  .stat-card .stat-label{
+    font-size:13px;
+    color:var(--bone-dim);
+    text-transform:uppercase;
+    letter-spacing:0.06em;
+    margin-bottom:28px;
+  }
+  .stat-card .quote{
+    font-size:15px;
+    line-height:1.7;
+    color:var(--bone-dim);
+    border-left:2px solid var(--gold);
+    padding-left:16px;
+  }
+
+  /* ---------- Web design strip ---------- */
+  .web-strip{
+    background:var(--ink);
+    color:var(--bone);
+  }
+  .web-strip .wrap{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:48px;
+    align-items:center;
+  }
+  @media (max-width:860px){ .web-strip .wrap{ grid-template-columns:1fr; } }
+  .web-strip h2{
+    font-family:var(--display);
+    font-size:clamp(26px,3vw,34px);
+    margin-bottom:16px;
+  }
+  .web-strip p{ color:var(--khaki-line); font-size:16px; line-height:1.7; margin-bottom:24px; }
+  .web-feature-list{ list-style:none; }
+  .web-feature-list li{
+    font-family:var(--mono);
+    font-size:13px;
+    padding:8px 0;
+    color:var(--bone-dim);
+    display:flex;
+    gap:10px;
+  }
+  .web-feature-list li::before{ content:'—'; color:var(--gold); }
+  .web-mock{
+    background:var(--khaki-deep);
+    border-radius:4px;
+    padding:18px;
+    border:1px solid var(--khaki-line);
+  }
+  .web-mock-bar{ display:flex; gap:6px; margin-bottom:14px; }
+  .web-mock-bar span{ width:9px; height:9px; border-radius:50%; background:var(--khaki-line); }
+  .web-mock-bar span:nth-child(1){ background:#A33B2C; }
+  .web-mock-bar span:nth-child(2){ background:var(--gold); }
+  .web-mock-bar span:nth-child(3){ background:#3E6B3E; }
+  .web-mock-block{ background:var(--bone); border-radius:2px; height:14px; margin-bottom:10px; }
+  .web-mock-block.w60{ width:60%; }
+  .web-mock-block.w40{ width:40%; }
+  .web-mock-block.w90{ width:90%; }
+  .web-mock-cta{
+    margin-top:18px;
+    background:var(--gold);
+    color:var(--ink);
+    font-family:var(--mono);
+    font-size:11px;
+    font-weight:700;
+    text-align:center;
+    padding:10px;
+    border-radius:2px;
+    width:140px;
+  }
+
+  /* ---------- FAQ ---------- */
+  .faq-item{
+    border-top:1px solid #00000018;
+    padding:22px 0;
+  }
+  .faq-item:last-child{ border-bottom:1px solid #00000018; }
+  .faq-item summary{
+    cursor:pointer;
+    font-family:var(--display);
+    font-weight:700;
+    font-size:17px;
+    list-style:none;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:16px;
+  }
+  .faq-item summary::-webkit-details-marker{ display:none; }
+  .faq-item summary::after{
+    content:'+';
+    font-family:var(--mono);
+    color:var(--gold);
+    font-size:22px;
+    flex-shrink:0;
+    transition:transform 0.2s ease;
+  }
+  .faq-item[open] summary::after{ transform:rotate(45deg); }
+  .faq-item p{
+    margin-top:14px;
+    color:var(--khaki);
+    font-size:15px;
+    line-height:1.7;
+    max-width:70ch;
+  }
+
+  /* ---------- Contact ---------- */
+  .contact-grid{
+    display:grid;
+    grid-template-columns:1fr 1.2fr;
+    gap:56px;
+  }
+  @media (max-width:900px){ .contact-grid{ grid-template-columns:1fr; } }
+  .contact-info h2{
+    font-family:var(--display);
+    font-size:clamp(28px,3.4vw,36px);
+    margin-bottom:18px;
+  }
+  .contact-info p{ color:var(--khaki); font-size:16px; line-height:1.7; margin-bottom:28px; }
+  .contact-detail{
+    font-family:var(--mono);
+    font-size:14px;
+    padding:14px 0;
+    border-top:1px solid #00000018;
+    display:flex;
+    justify-content:space-between;
+  }
+  .contact-detail:last-child{ border-bottom:1px solid #00000018; }
+  .contact-detail .k{ color:var(--khaki-mid); text-transform:uppercase; letter-spacing:0.05em; font-size:11px; }
+
+  form{
+    background:var(--bone);
+    border:1px solid #00000018;
+    border-radius:3px;
+    padding:32px;
+  }
+  .form-row{ margin-bottom:20px; }
+  .form-row label{
+    display:block;
+    font-family:var(--mono);
+    font-size:11px;
+    text-transform:uppercase;
+    letter-spacing:0.06em;
+    color:var(--khaki-deep);
+    margin-bottom:8px;
+  }
+  .form-row input, .form-row select, .form-row textarea{
+    width:100%;
+    background:var(--paper);
+    border:1px solid var(--khaki-line);
+    border-radius:2px;
+    padding:12px 14px;
+    font-family:var(--body);
+    font-size:14px;
+    color:var(--ink);
+  }
+  .form-row textarea{ resize:vertical; min-height:110px; }
+  .form-row-split{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:16px;
+  }
+  @media (max-width:520px){ .form-row-split{ grid-template-columns:1fr; } }
+  .form-submit{
+    width:100%;
+    background:var(--khaki-deep);
+    color:var(--bone);
+    border:none;
+    padding:15px;
+    font-family:var(--body);
+    font-weight:600;
+    font-size:15px;
+    border-radius:2px;
+    cursor:pointer;
+    transition:background 0.2s ease;
+  }
+  .form-submit:hover{ background:var(--gold); color:var(--ink); }
+  .form-note{
+    font-size:12px;
+    color:var(--khaki-mid);
+    margin-top:14px;
+    text-align:center;
+  }
+  .form-status{
+    margin-top:14px;
+    font-family:var(--mono);
+    font-size:13px;
+    display:none;
+  }
+  .form-status.ok{ color:#3E6B3E; display:block; }
+  .form-status.err{ color:#A33B2C; display:block; }
+
+  /* ---------- Footer ---------- */
+  footer{
+    background:var(--khaki-deep);
+    color:var(--khaki-line);
+    padding:48px 0 28px;
+  }
+  .footer-top{
+    display:flex;
+    justify-content:space-between;
+    flex-wrap:wrap;
+    gap:24px;
+    padding-bottom:32px;
+    border-bottom:1px solid var(--khaki);
+    margin-bottom:24px;
+  }
+  .footer-logo{
+    font-family:var(--display);
+    font-weight:700;
+    font-size:18px;
+    color:var(--bone);
+  }
+  .footer-links{
+    display:flex;
+    gap:28px;
+    list-style:none;
+    font-size:13px;
+  }
+  .footer-links a{ text-decoration:none; color:var(--khaki-line); }
+  .footer-links a:hover{ color:var(--gold); }
+  .footer-bottom{
+    display:flex;
+    justify-content:space-between;
+    flex-wrap:wrap;
+    gap:10px;
+    font-family:var(--mono);
+    font-size:11px;
+    color:var(--khaki);
+  }
+
+  /* ---------- Reveal on scroll ---------- */
+  .reveal{
+    opacity:0;
+    transform:translateY(16px);
+    transition:opacity 0.6s ease, transform 0.6s ease;
+  }
+  .reveal.in{ opacity:1; transform:translateY(0); }
+</style>
+</head>
+<body>
+
+<div class="ledger-strip">
+  <div class="wrap">
+    <span><span class="gold-dot">●</span> B2B &amp; B2C lead generation — fixed fee, no retainers</span>
+    <span>Over 15 years' experience · Large corporations to SMBs</span>
+  </div>
+</div>
+
+<header>
+  <nav class="wrap">
+    <a href="#top" class="logo" aria-label="JWC Performance home">
+      <svg class="logo-mark" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true">
+        <rect x="1" y="1" width="38" height="38" rx="2" fill="#33331F" stroke="#C9A227" stroke-width="1.5"/>
+        <path d="M10 13 L19 13 L19 25 C19 28.3 16.8 30 13.5 30 C11.5 30 10 29 9 27.5" stroke="#EFEAD9" stroke-width="2.4" fill="none" stroke-linecap="round"/>
+        <path d="M22 13 L25.2 27 L28 17 L30.8 27 L34 13" stroke="#C9A227" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <span>JWC PERFORMANCE</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#services">Services</a></li>
+      <li><a href="#process">Process</a></li>
+      <li><a href="#approach">B2B/B2C</a></li>
+      <li><a href="#why">Why JWC</a></li>
+      <li><a href="#web-design">Web Design</a></li>
+      <li><a href="#faq">FAQ</a></li>
+    </ul>
+    <a href="#contact" class="nav-cta">Get an audit</a>
+  </nav>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero" style="padding-top:88px;">
+    <div class="wrap hero-grid">
+      <div>
+        <span class="eyebrow">Lead Generation Specialist · Over 15 Years' Experience</span>
+        <h1>More leads. Lower cost-per-lead. <em>Fixed fee, no contracts.</em></h1>
+        <p class="lede">I run paid search and paid social campaigns built to generate leads, not just clicks — for B2B and B2C businesses across the UK. Over 15 years' experience working with everyone from large corporations to SMBs, now working direct with businesses on fixed-fee terms.</p>
+        <div class="hero-actions">
+          <a href="#contact" class="btn btn-primary">Book a free discovery call</a>
+          <a href="#services" class="btn btn-ghost">See fixed prices</a>
+        </div>
+        <div class="hero-trust">
+          <span><strong>15+ years</strong> — large corporations to SMBs</span>
+          <span><strong>B2B &amp; B2C</strong> — Google, Meta &amp; LinkedIn</span>
+          <span><strong>Fixed fee</strong> — agreed before work starts</span>
+        </div>
+      </div>
+
+      <div class="ledger-card" role="img" aria-label="Sample lead generation results showing cost per lead reduced after account work">
+        <div class="ledger-card-head">
+          <span>Lead_Gen_Results.csv</span>
+          <span>Acct: ****4471</span>
+        </div>
+        <div class="ledger-card-body">
+          <div class="ledger-row waste">
+            <span class="label">Cost per lead — before</span>
+            <span class="value">£68.40</span>
+          </div>
+          <div class="ledger-row fix">
+            <span class="label">Cost per lead — after</span>
+            <span class="value">£31.90</span>
+          </div>
+          <div class="ledger-row">
+            <span class="label">Lead volume — before</span>
+            <span class="value">42/mo</span>
+          </div>
+          <div class="ledger-row fix">
+            <span class="label">Lead volume — after</span>
+            <span class="value">97/mo</span>
+          </div>
+          <div class="ledger-total">
+            <span>Reduction in cost-per-lead</span>
+            <span class="value">−53%</span>
+          </div>
+        </div>
+        <div class="ledger-card-foot">Illustrative example — your results are based on your actual account and market.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section id="services" class="wrap">
+    <div class="section-head reveal">
+      <span class="section-num">01 — Services</span>
+      <h2>Four ways to work together. One price for each.</h2>
+      <p>No bundled retainers, no "it depends" pricing. Pick what you need to generate more leads, at a lower cost — pay a fixed fee, agreed upfront, before any work begins.</p>
+    </div>
+
+    <div class="services-list">
+      <div class="service-line reveal">
+        <span class="service-code">01</span>
+        <div class="service-main">
+          <h3>Lead Gen Account Audit</h3>
+          <p>A line-by-line review of your Google Ads, Meta or LinkedIn account, focused on what actually matters for lead generation: cost-per-lead, lead quality, and where budget is being spent on clicks that were never going to convert. Written report, prioritised recommendations.</p>
+          <div class="service-tags">
+            <span>Google Ads</span>
+            <span>Meta Ads</span>
+            <span>LinkedIn Ads</span>
+            <span>5–7 day turnaround</span>
+          </div>
+        </div>
+        <div class="service-fee">
+          <span class="price">From £450</span>
+          <span class="period">One-off, fixed</span>
+          <a href="#contact">Enquire →</a>
+        </div>
+      </div>
+
+      <div class="service-line reveal">
+        <span class="service-code">02</span>
+        <div class="service-main">
+          <h3>Lead Gen Account Build</h3>
+          <p>Starting from scratch? I'll build a lead generation account from the ground up — campaign structure, audience and keyword targeting, ad copy, lead-tracking and CRM-ready conversion setup — across Google, Meta or LinkedIn, depending on where your buyers actually are.</p>
+          <div class="service-tags">
+            <span>New accounts</span>
+            <span>Lead tracking setup</span>
+            <span>B2B &amp; B2C</span>
+          </div>
+        </div>
+        <div class="service-fee">
+          <span class="price">From £750</span>
+          <span class="period">One-off, fixed</span>
+          <a href="#contact">Enquire →</a>
+        </div>
+      </div>
+
+      <div class="service-line reveal">
+        <span class="service-code">03</span>
+        <div class="service-main">
+          <h3>Account Restructure</h3>
+          <p>Your account rebuilt around generating leads, not just traffic — clean campaign structure, intent-matched targeting, proper negative keyword and audience exclusions, and lead tracking that's actually trustworthy enough to base decisions on.</p>
+          <div class="service-tags">
+            <span>Campaign rebuild</span>
+            <span>Lead tracking audit</span>
+            <span>Handover doc included</span>
+          </div>
+        </div>
+        <div class="service-fee">
+          <span class="price">From £999</span>
+          <span class="period">One-off, fixed</span>
+          <a href="#contact">Enquire →</a>
+        </div>
+      </div>
+
+      <div class="service-line reveal">
+        <span class="service-code">04</span>
+        <div class="service-main">
+          <h3>Freelance Lead Gen Management</h3>
+          <p>Ongoing, hands-on management for businesses who want a specialist running lead generation campaigns day-to-day without hiring in-house or signing an agency contract. Monthly reporting on leads and cost-per-lead, direct access to me.</p>
+          <div class="service-tags">
+            <span>Monthly retainer</span>
+            <span>Rolling, cancel anytime</span>
+            <span>Direct contact</span>
+          </div>
+        </div>
+        <div class="service-fee">
+          <span class="price">From £500/mo</span>
+          <span class="period">Ongoing, fixed</span>
+          <a href="#contact">Enquire →</a>
+        </div>
+      </div>
+
+      <div class="service-line reveal">
+        <span class="service-code">05</span>
+        <div class="service-main">
+          <h3>Flexible Support Hours</h3>
+          <p>For businesses with an in-house team or existing agency who just need extra hands or a second opinion — pre-paid blocks of hours for audits, campaign builds, troubleshooting or ad hoc strategy input.</p>
+          <div class="service-tags">
+            <span>Pre-paid blocks</span>
+            <span>No minimum term</span>
+            <span>Use as needed</span>
+          </div>
+        </div>
+        <div class="service-fee">
+          <span class="price">From £60/hr</span>
+          <span class="period">Pre-paid blocks of 5+</span>
+          <a href="#contact">Enquire →</a>
+        </div>
+      </div>
+
+      <div class="service-line reveal">
+        <span class="service-code">06</span>
+        <div class="service-main">
+          <h3>Website Design</h3>
+          <p>A fast, clean website built to convert the traffic your ads send it — not just look good. Particularly effective paired with an audit or restructure, so the whole funnel is working, not just the ad account.</p>
+          <div class="service-tags">
+            <span>Conversion-focused</span>
+            <span>Mobile-first</span>
+            <span>2–4 week build</span>
+          </div>
+        </div>
+        <div class="service-fee">
+          <span class="price">From £1,000</span>
+          <span class="period">One-off, fixed</span>
+          <a href="#contact">Enquire →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROCESS -->
+  <section id="process" class="alt">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <span class="section-num">02 — Process</span>
+        <h2>How a project actually runs.</h2>
+        <p>No discovery decks, no sales process designed to drag on. Most engagements go from first call to delivered findings within two weeks.</p>
+      </div>
+      <div class="process-grid reveal">
+        <div class="process-step">
+          <span class="step-num">01</span>
+          <h4>Discovery call</h4>
+          <p>15–20 minutes. You tell me what's going on, I tell you honestly whether I can help and roughly what it'll cost.</p>
+        </div>
+        <div class="process-step">
+          <span class="step-num">02</span>
+          <h4>Fixed quote</h4>
+          <p>A written quote, scoped to your account size and goals. Agreed in writing before anything starts — no surprises later.</p>
+        </div>
+        <div class="process-step">
+          <span class="step-num">03</span>
+          <h4>The work</h4>
+          <p>Audit, restructure, or build — done by me, not handed to a junior. Regular updates if the project runs more than a few days.</p>
+        </div>
+        <div class="process-step">
+          <span class="step-num">04</span>
+          <h4>Handover</h4>
+          <p>A clear report or finished build, plus a call to walk through it together. You keep full access and ownership — always.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- B2B & B2C APPROACH -->
+  <section id="approach" class="alt">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <span class="section-num">03 — Approach</span>
+        <h2>B2B and B2C need different playbooks. I run both.</h2>
+        <p>Most of my work is B2C — high-volume lead generation where speed, offer and targeting precision win. But the B2B playbook is just as familiar, built around longer consideration cycles and platforms like LinkedIn where the buyer actually is.</p>
+      </div>
+      <div class="why-grid">
+        <div class="stat-card reveal" style="background:var(--khaki-deep);">
+          <span class="eyebrow" style="margin-bottom:14px;">Primary focus</span>
+          <h4 style="font-family:var(--display); font-size:22px; color:var(--bone); margin-bottom:12px;">B2C Lead Generation</h4>
+          <p class="quote" style="border-left:2px solid var(--gold); padding-left:16px; margin-top:0;">High-intent, high-volume campaigns across Google and Meta — built to lower cost-per-lead while keeping lead quality high, not just chasing cheap clicks.</p>
+        </div>
+        <div class="stat-card reveal">
+          <span class="eyebrow" style="margin-bottom:14px;">Also offered</span>
+          <h4 style="font-family:var(--display); font-size:22px; color:var(--bone); margin-bottom:12px;">B2B Lead Generation</h4>
+          <p class="quote" style="border-left:2px solid var(--gold); padding-left:16px; margin-top:0;">Longer sales cycles, smaller audiences, higher-value leads. Campaigns built around LinkedIn and Google, with tracking set up to credit leads properly, not just last-click.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY -->
+  <section id="why" class="wrap">
+    <div class="section-head reveal">
+      <span class="section-num">04 — Why JWC</span>
+      <h2>Over 15 years generating leads, from corporations to SMBs.</h2>
+    </div>
+    <div class="why-grid">
+      <ul class="why-list reveal">
+        <li>
+          <span class="mark">→</span>
+          <div>
+            <h4>15+ years, large corporations to SMBs</h4>
+            <p>I've run lead generation for businesses of every size — from large corporations with complex stakeholder sign-off, to SMBs who need decisions made fast. I know what good looks like at both ends.</p>
+          </div>
+        </li>
+        <li>
+          <span class="mark">→</span>
+          <div>
+            <h4>Fixed fees, not vague retainers</h4>
+            <p>You know the exact cost before work starts. No "it depends on scope" creeping into the invoice later.</p>
+          </div>
+        </li>
+        <li>
+          <span class="mark">→</span>
+          <div>
+            <h4>No lock-in contracts</h4>
+            <p>One-off projects stay one-off. Ongoing support is cancel-anytime — you're not signing a 12-month agreement to find out if it works.</p>
+          </div>
+        </li>
+        <li>
+          <span class="mark">→</span>
+          <div>
+            <h4>You speak to the person doing the work</h4>
+            <p>No account managers relaying messages to an offshore team. Every audit, build and campaign is run by me, directly.</p>
+          </div>
+        </li>
+      </ul>
+      <div class="stat-card reveal">
+        <span class="stat">15+</span>
+        <span class="stat-label">Years in paid media — corporations to SMBs</span>
+        <p class="quote">"Most agencies are built to keep you paying monthly whether or not the work justifies it. JWC Performance is built the opposite way — fixed scope, fixed fee, clear end point."</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- WEB DESIGN STRIP -->
+  <section id="web-design" class="web-strip">
+    <div class="wrap">
+      <div>
+        <span class="eyebrow" style="color:var(--gold);">Also available</span>
+        <h2>A website built to convert the leads you're paying for.</h2>
+        <p>There's little point running a sharp lead generation campaign into a slow, confusing website. Web design is offered standalone or paired with an audit or campaign build — so the whole journey, from ad to enquiry, is working.</p>
+        <ul class="web-feature-list">
+          <li>Fast-loading, mobile-first build</li>
+          <li>Clear calls to action, not buried contact forms</li>
+          <li>Conversion tracking set up correctly from day one</li>
+          <li>Fixed price, agreed before the build starts</li>
+        </ul>
+      </div>
+      <div class="web-mock reveal" role="img" aria-label="Stylised preview of a clean website layout">
+        <div class="web-mock-bar"><span></span><span></span><span></span></div>
+        <div class="web-mock-block w60" style="height:22px; margin-bottom:18px;"></div>
+        <div class="web-mock-block w90"></div>
+        <div class="web-mock-block w90"></div>
+        <div class="web-mock-block w40"></div>
+        <div class="web-mock-cta">GET A QUOTE</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" class="wrap">
+    <div class="section-head reveal">
+      <span class="section-num">05 — FAQ</span>
+      <h2>Common questions.</h2>
+    </div>
+    <div>
+      <details class="faq-item reveal">
+        <summary>How is "fixed fee" actually fixed?</summary>
+        <p>You get a written quote after the discovery call, scoped to your account size and what you've asked for. That price doesn't change once work begins — if something changes scope significantly, I'll flag it and re-quote before doing any extra work, not after.</p>
+      </details>
+      <details class="faq-item reveal">
+        <summary>Do I need to give you account access?</summary>
+        <p>Yes, for audits, builds and restructures I'll need read or edit access to your Google Ads, Meta Ads or LinkedIn Ads account (granted through their standard user-permission systems — I never ask for your login details). Access can be revoked by you at any time.</p>
+      </details>
+      <details class="faq-item reveal">
+        <summary>What size accounts do you work with?</summary>
+        <p>Mostly small-to-medium UK businesses spending anywhere from a few hundred to tens of thousands of pounds a month on paid search. If your account is very large or very new, mention it on the discovery call and I'll be upfront about whether it's a good fit.</p>
+      </details>
+      <details class="faq-item reveal">
+        <summary>Can I just get an audit, with no obligation to do more?</summary>
+        <p>Yes — the audit is a standalone, one-off product. Plenty of clients take the findings and implement changes themselves, or pass them to their existing team. There's no pressure or expectation to book further work.</p>
+      </details>
+      <details class="faq-item reveal">
+        <summary>Do you work with businesses outside the UK?</summary>
+        <p>Right now I'm focused on UK businesses, mainly to keep account structures, currency and market context consistent. Get in touch anyway if you're not UK-based — happy to discuss whether it's a fit.</p>
+      </details>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="alt">
+    <div class="wrap contact-grid">
+      <div class="contact-info reveal">
+        <span class="section-num">06 — Get in touch</span>
+        <h2>Tell me what's going on with your account.</h2>
+        <p>Fill in the form and I'll come back to you within one working day, usually sooner. If it's urgent, or you'd rather just talk it through, book a call instead.</p>
+        <div class="contact-detail"><span class="k">Email</span><span>hello@jwcperformance.co.uk</span></div>
+        <div class="contact-detail"><span class="k">Response time</span><span>Within 1 working day</span></div>
+        <div class="contact-detail"><span class="k">Based in</span><span>United Kingdom</span></div>
+      </div>
+
+      <form id="contact-form" class="reveal" novalidate>
+        <div class="form-row">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" required autocomplete="name">
+        </div>
+        <div class="form-row-split">
+          <div class="form-row">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required autocomplete="email">
+          </div>
+          <div class="form-row">
+            <label for="company">Company</label>
+            <input type="text" id="company" name="company" autocomplete="organization">
+          </div>
+        </div>
+        <div class="form-row">
+          <label for="service">What do you need?</label>
+          <select id="service" name="service">
+            <option value="audit">Full Account Audit</option>
+            <option value="build">Ad Account Build</option>
+            <option value="restructure">Account Restructure</option>
+            <option value="freelance">Freelance PPC Management</option>
+            <option value="hours">Flexible Support Hours</option>
+            <option value="web">Website Design</option>
+            <option value="not-sure">Not sure yet</option>
+          </select>
+        </div>
+        <div class="form-row">
+          <label for="message">Tell me a bit about your account or project</label>
+          <textarea id="message" name="message" required></textarea>
+        </div>
+        <button type="submit" class="form-submit">Send enquiry</button>
+        <div class="form-note">No spam, no auto-enrolment to a mailing list. Just a direct reply.</div>
+        <div class="form-status" id="form-status" role="status" aria-live="polite"></div>
+      </form>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-top">
+      <span class="footer-logo">JWC PERFORMANCE</span>
+      <ul class="footer-links">
+        <li><a href="#services">Services</a></li>
+        <li><a href="#process">Process</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 JWC Performance. Fixed-fee paid search support for UK businesses.</span>
+      <span>hello@jwcperformance.co.uk</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Mobile nav: simple show/hide could go here if needed later
+
+  // Scroll reveal
+  const revealEls = document.querySelectorAll('.reveal');
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting){
+        entry.target.classList.add('in');
+        io.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12 });
+  revealEls.forEach(el => io.observe(el));
+
+  // Contact form — placeholder handling (no backend wired up yet)
+  const form = document.getElementById('contact-form');
+  const status = document.getElementById('form-status');
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    status.textContent = "This form isn't connected to an inbox yet — see the setup notes for how to connect it (e.g. via Formspree), or email hello@jwcperformance.co.uk directly for now.";
+    status.className = 'form-status err';
+  });
+</script>
+
+</body>
+</html>
