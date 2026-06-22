@@ -3,6 +3,30 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- Cookie consent: initialise dataLayer and default consent state BEFORE GTM -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+
+  // Set default consent — denied until user accepts
+  gtag('consent', 'default', {
+    'analytics_storage': 'denied',
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'wait_for_update': 500
+  });
+
+  // If user has already consented, update immediately
+  if(localStorage.getItem('jwc_cookie_consent') === 'accepted'){
+    gtag('consent', 'update', {
+      'analytics_storage': 'granted',
+      'ad_storage': 'granted',
+      'ad_user_data': 'granted',
+      'ad_personalization': 'granted'
+    });
+  }
+</script>
 <!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -71,23 +95,23 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     display:flex;align-items:center;gap:0;line-height:1;
   }
   .logo .bracket-open{
-    font-family:'Fraunces',serif;font-weight:700;font-size:26px;
-    color:var(--gold);line-height:1;margin-right:1px;
+    font-family:'Fraunces',serif;font-weight:700;font-size:34px;
+    color:var(--gold);line-height:1;margin-right:2px;
   }
   .logo .bracket-close{
-    font-family:'Fraunces',serif;font-weight:700;font-size:26px;
-    color:var(--khaki-deep);line-height:1;margin-left:1px;
+    font-family:'Fraunces',serif;font-weight:700;font-size:34px;
+    color:var(--khaki-deep);line-height:1;margin-left:2px;
   }
   .logo .logo-inner{
     display:flex;flex-direction:column;justify-content:center;gap:0;
     padding:0 2px;
   }
   .logo .logo-name{
-    font-family:'Fraunces',serif;font-weight:700;font-size:17px;
+    font-family:'Fraunces',serif;font-weight:700;font-size:22px;
     color:var(--ink);letter-spacing:-0.01em;line-height:1.15;
   }
   .logo .logo-sub{
-    font-family:'JetBrains Mono',monospace;font-weight:600;font-size:6.5px;
+    font-family:'JetBrains Mono',monospace;font-weight:600;font-size:8px;
     color:var(--gold-deep);letter-spacing:0.14em;text-transform:uppercase;line-height:1;
   }
   nav.desktop-nav{display:none;}
@@ -511,6 +535,43 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   @media (min-width:760px){
     .footer-cols{grid-template-columns:repeat(4,1fr);}
     .footer-bottom{flex-direction:row;justify-content:space-between;}
+  }
+  /* ---------- Cookie banner ---------- */
+  .cookie-banner{
+    position:fixed;bottom:0;left:0;right:0;z-index:999;
+    background:var(--khaki-deep);color:#EDE9D8;
+    padding:16px 20px;
+    display:flex;flex-direction:column;gap:12px;
+    border-top:2px solid var(--gold);
+    box-shadow:0 -4px 24px rgba(0,0,0,0.18);
+  }
+  .cookie-banner.hidden{display:none;}
+  .cookie-banner p{
+    font-size:13.5px;color:#C7C3AC;line-height:1.5;margin:0;
+  }
+  .cookie-banner a{color:var(--gold);text-decoration:underline;}
+  .cookie-banner-title{
+    font-family:'Fraunces',serif;font-size:16px;font-weight:700;
+    color:#F6F4ED;margin-bottom:2px;
+  }
+  .cookie-btns{
+    display:flex;gap:10px;flex-wrap:wrap;
+  }
+  .cookie-accept{
+    background:var(--gold);color:var(--khaki-deep);
+    border:none;padding:10px 20px;border-radius:4px;
+    font-weight:700;font-size:13.5px;cursor:pointer;font-family:inherit;
+  }
+  .cookie-reject{
+    background:transparent;color:#C7C3AC;
+    border:1px solid rgba(255,255,255,0.2);padding:10px 20px;border-radius:4px;
+    font-weight:600;font-size:13.5px;cursor:pointer;font-family:inherit;
+  }
+  .cookie-reject:hover{border-color:rgba(255,255,255,0.4);color:#EDE9D8;}
+  @media(min-width:760px){
+    .cookie-banner{flex-direction:row;align-items:center;justify-content:space-between;}
+    .cookie-banner-text{max-width:640px;}
+    .cookie-btns{flex-shrink:0;}
   }
 </style>
 </head>
@@ -1109,7 +1170,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
     <div class="footer-bottom">
       <span>© 2026 JWC Performance. Google Ads specialist for UK businesses.</span>
-      <span><a href="mailto:enquiries@jwcperformance.co.uk">enquiries@jwcperformance.co.uk</a></span>
+      <span><a href="mailto:enquiries@jwcperformance.co.uk">enquiries@jwcperformance.co.uk</a> · <a href="/cookie-policy.html" style="color:var(--muted);">Cookie policy</a></span>
     </div>
   </div>
 </footer>
@@ -1143,6 +1204,57 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     document.querySelectorAll('.cs-category').forEach(c => c.classList.remove('open'));
     if(!wasOpen) el.classList.add('open');
   }
+</script>
+
+<!-- Cookie banner -->
+<div class="cookie-banner" id="cookieBanner">
+  <div class="cookie-banner-text">
+    <div class="cookie-banner-title">This site uses cookies</div>
+    <p>We use cookies to analyse site traffic and improve your experience. By clicking "Accept", you consent to the use of analytics cookies. <a href="/cookie-policy.html">Cookie policy</a></p>
+  </div>
+  <div class="cookie-btns">
+    <button class="cookie-accept" id="cookieAccept">Accept</button>
+    <button class="cookie-reject" id="cookieReject">Reject</button>
+  </div>
+</div>
+
+<script>
+  (function(){
+    var banner = document.getElementById('cookieBanner');
+    var consent = localStorage.getItem('jwc_cookie_consent');
+
+    // Hide banner if already decided
+    if(consent === 'accepted' || consent === 'rejected'){
+      banner.classList.add('hidden');
+    }
+
+    document.getElementById('cookieAccept').addEventListener('click', function(){
+      localStorage.setItem('jwc_cookie_consent', 'accepted');
+      banner.classList.add('hidden');
+      // Update GTM consent
+      gtag('consent', 'update', {
+        'analytics_storage': 'granted',
+        'ad_storage': 'granted',
+        'ad_user_data': 'granted',
+        'ad_personalization': 'granted'
+      });
+      // Push event to dataLayer
+      window.dataLayer = window.dataLayer || [];
+      window.dataLayer.push({'event': 'cookie_consent_accepted'});
+    });
+
+    document.getElementById('cookieReject').addEventListener('click', function(){
+      localStorage.setItem('jwc_cookie_consent', 'rejected');
+      banner.classList.add('hidden');
+      // Ensure consent stays denied
+      gtag('consent', 'update', {
+        'analytics_storage': 'denied',
+        'ad_storage': 'denied',
+        'ad_user_data': 'denied',
+        'ad_personalization': 'denied'
+      });
+    });
+  })();
 </script>
 
 </body>
