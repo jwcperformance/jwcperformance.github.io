@@ -566,6 +566,23 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     .footer-cols{grid-template-columns:repeat(4,1fr);}
     .footer-bottom{flex-direction:row;justify-content:space-between;}
   }
+  /* ---------- Form success message ---------- */
+  .form-success{
+    display:none;
+    background:var(--paper);padding:32px;text-align:center;border-radius:4px;
+  }
+  .form-success.visible{display:block;}
+  .form-success .success-icon{
+    width:48px;height:48px;background:var(--gold);border-radius:50%;
+    display:flex;align-items:center;justify-content:center;
+    margin:0 auto 16px;font-size:22px;
+  }
+  .form-success h3{
+    font-family:'Fraunces',serif;font-size:22px;font-weight:700;
+    color:var(--ink);margin-bottom:8px;
+  }
+  .form-success p{font-size:14.5px;color:var(--muted);}
+
   /* ---------- Cookie banner ---------- */
   .cookie-banner{
     position:fixed;bottom:0;left:0;right:0;z-index:999;
@@ -1119,9 +1136,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           </div>
         </div>
 
-        <form class="form-card" method="POST" action="https://formspree.io/f/mnjknpkk">
+        <form class="form-card" id="enquiryForm" method="POST" action="https://formspree.io/f/mnjknpkk">
           <input type="hidden" name="_subject" value="New enquiry — JWC Performance">
-          <input type="hidden" name="_next" value="https://jwcperformance.co.uk/thank-you.html">
           <input type="text" name="_gotcha" style="display:none">
           <div class="form-row">
             <label for="name">Name</label>
@@ -1150,9 +1166,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <label for="msg">Tell me a bit about your account or project</label>
             <textarea id="msg" name="message"></textarea>
           </div>
-          <button type="submit" class="form-submit">Send enquiry</button>
+          <button type="submit" class="form-submit" id="enquirySubmit">Send enquiry</button>
           <p class="form-note">No spam, no auto-enrolment to a mailing list. Just a direct reply.</p>
         </form>
+        <div class="form-success" id="enquirySuccess">
+          <div class="success-icon">✓</div>
+          <h3>Thanks — got it.</h3>
+          <p>Your enquiry has been received. I'll come back to you within one working day, usually sooner.</p>
+        </div>
       </div>
     </div>
   </section>
@@ -1276,6 +1297,35 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       });
     });
   })();
+
+  // Enquiry form — AJAX submission
+  var enquiryForm = document.getElementById('enquiryForm');
+  if(enquiryForm){
+    enquiryForm.addEventListener('submit', function(e){
+      e.preventDefault();
+      var btn = document.getElementById('enquirySubmit');
+      btn.textContent = 'Sending...';
+      btn.disabled = true;
+      fetch(enquiryForm.action, {
+        method: 'POST',
+        body: new FormData(enquiryForm),
+        headers: { 'Accept': 'application/json' }
+      }).then(function(res){
+        if(res.ok){
+          enquiryForm.style.display = 'none';
+          document.getElementById('enquirySuccess').classList.add('visible');
+        } else {
+          btn.textContent = 'Send enquiry';
+          btn.disabled = false;
+          alert('Something went wrong — please try again or email enquiries@jwcperformance.co.uk');
+        }
+      }).catch(function(){
+        btn.textContent = 'Send enquiry';
+        btn.disabled = false;
+        alert('Something went wrong — please try again or email enquiries@jwcperformance.co.uk');
+      });
+    });
+  }
 </script>
 
 </body>
