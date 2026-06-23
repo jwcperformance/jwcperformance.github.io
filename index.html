@@ -143,32 +143,26 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     /* Services dropdown */
     .nav-dropdown{position:relative;}
     .nav-dropdown > a{display:flex;align-items:center;gap:5px;cursor:pointer;}
-    .nav-dropdown > a::after{
-      content:'▾';font-size:10px;color:var(--gold-deep);
-      transition:transform 0.2s ease;
-    }
-    .nav-dropdown:hover > a::after{transform:rotate(180deg);}
+    .nav-dropdown > a::after{content:'▾';font-size:10px;color:var(--gold-deep);transition:transform 0.2s ease;}
+    .nav-dropdown.open > a::after{transform:rotate(180deg);}
     .dropdown-menu{
       display:none;
-      position:absolute;top:calc(100% + 12px);left:0;
+      position:absolute;top:calc(100% + 8px);left:0;
+      min-width:220px;z-index:100;
       background:var(--paper);
       border:1px solid var(--line-strong);
       border-top:2px solid var(--gold);
-      min-width:220px;
-      z-index:100;
       box-shadow:0 8px 24px rgba(0,0,0,0.08);
     }
-    .nav-dropdown:hover .dropdown-menu{display:block;}
+    .nav-dropdown.open .dropdown-menu{display:block;}
     .dropdown-menu a{
       display:block;padding:12px 16px;
       font-size:13.5px;font-weight:500;color:var(--ink);
       border-bottom:1px solid var(--line);
-      border-bottom-width:1px;
     }
     .dropdown-menu a:last-child{border-bottom:none;}
-    .dropdown-menu a:hover{
-      background:var(--surface);color:var(--gold-deep);
-    }
+    .dropdown-menu a:hover{background:var(--surface);color:var(--gold-deep);}
+    .dropdown-menu-inner{}
   }
 
   /* ---------- Hero ---------- */
@@ -646,19 +640,23 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <div class="nav-dropdown">
         <a href="#services">Services</a>
         <div class="dropdown-menu">
-          <a href="/services/google-ads-audit.html">Google Ads Audit</a>
-          <a href="/services/account-management.html">Account Management</a>
-          <a href="/services/new-account-build.html">New Account Build</a>
-          <a href="/services/account-restructure.html">Account Restructure</a>
-          <a href="/services/website-design.html">Website Design & Build</a>
+          <div class="dropdown-menu-inner">
+            <a href="/services/google-ads-audit.html">Google Ads Audit</a>
+            <a href="/services/account-management.html">Account Management</a>
+            <a href="/services/new-account-build.html">New Account Build</a>
+            <a href="/services/account-restructure.html">Account Restructure</a>
+            <a href="/services/website-design.html">Website Design & Build</a>
+          </div>
         </div>
       </div>
       <a href="#why">Why JWC</a>
       <div class="nav-dropdown">
         <a href="#case-studies">Case studies</a>
         <div class="dropdown-menu">
-          <a href="/case-studies/google-ads.html">Google Ads</a>
-          <a href="/case-studies/website-design.html">Website Design & Build</a>
+          <div class="dropdown-menu-inner">
+            <a href="/case-studies/google-ads.html">Google Ads</a>
+            <a href="/case-studies/website-design.html">Website Design & Build</a>
+          </div>
         </div>
       </div>
       <a href="/blog/">Blog</a>
@@ -1226,6 +1224,22 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </footer>
 
 <script>
+  // Dropdown navigation — click based
+  document.querySelectorAll('.nav-dropdown > a').forEach(function(link){
+    link.addEventListener('click', function(e){
+      e.preventDefault();
+      var dropdown = link.closest('.nav-dropdown');
+      var isOpen = dropdown.classList.contains('open');
+      document.querySelectorAll('.nav-dropdown').forEach(function(d){ d.classList.remove('open'); });
+      if(!isOpen) dropdown.classList.add('open');
+    });
+  });
+  document.addEventListener('click', function(e){
+    if(!e.target.closest('.nav-dropdown')){
+      document.querySelectorAll('.nav-dropdown').forEach(function(d){ d.classList.remove('open'); });
+    }
+  });
+
   const menuBtn = document.getElementById('menuBtn');
   const mobileMenu = document.getElementById('mobileMenu');
   menuBtn.addEventListener('click', () => {
