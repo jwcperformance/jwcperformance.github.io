@@ -139,6 +139,36 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       display:inline-block;background:var(--gold);color:#ffffff;
       padding:14px 26px;border-radius:4px;font-weight:700;font-size:15px;
     }
+
+    /* Services dropdown */
+    .nav-dropdown{position:relative;}
+    .nav-dropdown > a{display:flex;align-items:center;gap:5px;cursor:pointer;}
+    .nav-dropdown > a::after{
+      content:'▾';font-size:10px;color:var(--gold-deep);
+      transition:transform 0.2s ease;
+    }
+    .nav-dropdown:hover > a::after{transform:rotate(180deg);}
+    .dropdown-menu{
+      display:none;
+      position:absolute;top:calc(100% + 12px);left:0;
+      background:var(--paper);
+      border:1px solid var(--line-strong);
+      border-top:2px solid var(--gold);
+      min-width:220px;
+      z-index:100;
+      box-shadow:0 8px 24px rgba(0,0,0,0.08);
+    }
+    .nav-dropdown:hover .dropdown-menu{display:block;}
+    .dropdown-menu a{
+      display:block;padding:12px 16px;
+      font-size:13.5px;font-weight:500;color:var(--ink);
+      border-bottom:1px solid var(--line);
+      border-bottom-width:1px;
+    }
+    .dropdown-menu a:last-child{border-bottom:none;}
+    .dropdown-menu a:hover{
+      background:var(--surface);color:var(--gold-deep);
+    }
   }
 
   /* ---------- Hero ---------- */
@@ -612,11 +642,25 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <span class="bracket-close">]</span>
     </a>
     <nav class="desktop-nav">
-      <a href="#services">Services</a>
-      <a href="#process">Process</a>
+      <div class="nav-dropdown">
+        <a href="#services">Services</a>
+        <div class="dropdown-menu">
+          <a href="/services/google-ads-audit.html">Google Ads Audit</a>
+          <a href="/services/account-management.html">Account Management</a>
+          <a href="/services/new-account-build.html">New Account Build</a>
+          <a href="/services/account-restructure.html">Account Restructure</a>
+          <a href="/services/website-design.html">Website Design & Build</a>
+        </div>
+      </div>
       <a href="#why">Why JWC</a>
-      <a href="#trust">Proof</a>
-      <a href="#case-studies">Case studies</a>
+      <div class="nav-dropdown">
+        <a href="#case-studies">Case studies</a>
+        <div class="dropdown-menu">
+          <a href="/case-studies/google-ads.html">Google Ads</a>
+          <a href="/case-studies/website-design.html">Website Design & Build</a>
+        </div>
+      </div>
+      <a href="/blog/">Blog</a>
       <a href="#faq">FAQ</a>
     </nav>
     <a href="#contact" class="nav-cta">Enquire today</a>
@@ -625,11 +669,17 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </button>
   </div>
   <div class="mobile-menu" id="mobileMenu">
-    <a href="#services">Services</a>
-    <a href="#process">Process</a>
+    <a href="#services" style="font-weight:700;color:var(--gold-deep);">Services</a>
+    <a href="/services/google-ads-audit.html" style="padding-left:36px;font-size:14px;">→ Google Ads Audit</a>
+    <a href="/services/account-management.html" style="padding-left:36px;font-size:14px;">→ Account Management</a>
+    <a href="/services/new-account-build.html" style="padding-left:36px;font-size:14px;">→ New Account Build</a>
+    <a href="/services/account-restructure.html" style="padding-left:36px;font-size:14px;">→ Account Restructure</a>
+    <a href="/services/website-design.html" style="padding-left:36px;font-size:14px;">→ Website Design & Build</a>
     <a href="#why">Why JWC</a>
-    <a href="#trust">Proof of work</a>
-    <a href="#case-studies">Case studies</a>
+    <a href="#case-studies" style="font-weight:700;color:var(--gold-deep);">Case studies</a>
+    <a href="/case-studies/google-ads.html" style="padding-left:36px;font-size:14px;">→ Google Ads</a>
+    <a href="/case-studies/website-design.html" style="padding-left:36px;font-size:14px;">→ Website Design & Build</a>
+    <a href="/blog/">Blog</a>
     <a href="#faq">FAQ</a>
     <a href="#contact"><button class="mm-cta">Enquire today</button></a>
   </div>
@@ -703,7 +753,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
               <span class="from">Completely free · no obligation</span>
               <span class="amount" style="color:var(--gold-deep);">Free</span>
             </span>
-            <a href="#contact" class="service-enquire">Get your free audit →</a>
+            <a href="/services/google-ads-audit.html" class="service-enquire">Find out more →</a>
           </div>
         </div>
       </div>
@@ -722,15 +772,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           </div>
           <div class="service-price-row">
             <span class="service-price"><span class="from">Hourly or day rate</span><span class="amount">£60/hr · £400/day</span></span>
-            <a href="#contact" class="service-enquire">Enquire →</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="service-file">
-        <div class="service-head">
-          <span class="service-index">03</span>
-          <span class="service-title">New Google Ads account build</span>
+            <a href="/services/account-management.html" class="service-enquire">Find out more →</a>
         </div>
         <div class="service-body">
           <p class="service-desc">Starting from scratch? I'll build a Google Ads account from the ground up — campaign structure, keyword identification, ad copy creation, tracking setup, plus a competitor and market review so your account launches in the right position, not just a live one.</p>
@@ -744,7 +786,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           </div>
           <div class="service-price-row">
             <span class="service-price"><span class="from">One-off, fixed fee</span><span class="amount">£1,000</span></span>
-            <a href="#contact" class="service-enquire">Enquire →</a>
+            <a href="/services/new-account-build.html" class="service-enquire">Find out more →</a>
           </div>
         </div>
       </div>
@@ -766,7 +808,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           </div>
           <div class="service-price-row">
             <span class="service-price"><span class="from">One-off, fixed fee</span><span class="amount">£1,500</span></span>
-            <a href="#contact" class="service-enquire">Enquire →</a>
+            <a href="/services/account-restructure.html" class="service-enquire">Find out more →</a>
           </div>
         </div>
       </div>
@@ -787,11 +829,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           </div>
           <div class="service-price-row">
             <span class="service-price"><span class="from">One-off, fixed fee</span><span class="amount">£1,000</span></span>
-            <a href="#contact" class="service-enquire">Enquire →</a>
-          </div>
-        </div>
-      </div>
-  <section id="process">
+            <a href="/services/website-design.html" class="service-enquire">Find out more →</a>
     <div class="wrap">
       <div class="section-head">
         <div class="section-label">02 — process</div>
