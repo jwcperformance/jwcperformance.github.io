@@ -611,37 +611,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
 
-<!-- Netlify form detection — hidden, do not remove -->
-<form name="enquiry" data-netlify="true" data-netlify-honeypot="bot-field" hidden>
-  <input type="hidden" name="form-name" value="enquiry">
-  <input type="text" name="name">
-  <input type="email" name="email">
-  <input type="text" name="company">
-  <select name="need">
-    <option>Free account audit</option>
-    <option>New account build (£1,000)</option>
-    <option>Account restructure (£1,500)</option>
-    <option>Account management (£60/hr · £400/day)</option>
-    <option>Website design &amp; build (£1,000)</option>
-    <option>Not sure yet</option>
-  </select>
-  <textarea name="message"></textarea>
-  <input type="text" name="bot-field">
-</form>
-
-<form name="audit-request" data-netlify="true" data-netlify-honeypot="bot-field" hidden>
-  <input type="hidden" name="form-name" value="audit-request">
-  <input type="text" name="name">
-  <input type="email" name="email">
-  <input type="text" name="company">
-  <input type="url" name="website">
-  <input type="text" name="google_ads_account_id">
-  <select name="monthly_budget"><option>Under £500/mo</option></select>
-  <select name="account_focus"><option>Lead generation</option></select>
-  <input type="text" name="ideal_cpa">
-  <textarea name="notes"></textarea>
-  <input type="text" name="bot-field">
-</form>
+<!-- Forms handled by Formspree -->
 
 <div class="top-strip">Google Ads specialist — <strong>free account audit, no obligation</strong> · 15+ years' experience · fixed fee</div>
 
@@ -1149,11 +1119,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           </div>
         </div>
 
-        <form class="form-card" name="enquiry" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" action="/thank-you.html">
-          <input type="hidden" name="form-name" value="enquiry">
-          <p style="position:absolute;left:-9999px;" aria-hidden="true">
-            <label>Don't fill this out if you're human: <input name="bot-field" tabindex="-1" autocomplete="off"></label>
-          </p>
+        <form class="form-card" method="POST" action="https://formspree.io/f/mnjknpkk">
+          <input type="hidden" name="_subject" value="New enquiry — JWC Performance">
+          <input type="hidden" name="_next" value="https://jwcperformance.co.uk/thank-you.html">
+          <input type="text" name="_gotcha" style="display:none">
           <div class="form-row">
             <label for="name">Name</label>
             <input type="text" id="name" name="name" required>
