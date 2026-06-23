@@ -266,6 +266,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   .form-submit{width:100%;background:var(--gold);color:#ffffff;border:none;padding:18px;font-weight:700;font-size:16px;border-radius:3px;cursor:pointer;margin-top:4px;}
   .form-note{font-size:12px;color:var(--muted);margin-top:10px;text-align:center;}
 
+  /* ---------- Form success message ---------- */
+  .form-success{display:none;background:var(--paper);padding:32px;text-align:center;border-radius:4px;}
+  .form-success.visible{display:block;}
+  .form-success .success-icon{width:48px;height:48px;background:var(--gold);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 16px;font-size:22px;}
+  .form-success h3{font-family:'Fraunces',serif;font-size:22px;font-weight:700;color:var(--ink);margin-bottom:8px;}
+  .form-success p{font-size:14.5px;color:var(--muted);}
+
   /* ---------- Cookie banner ---------- */
   .cookie-banner{
     position:fixed;bottom:0;left:0;right:0;z-index:999;
@@ -642,9 +649,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           </div>
         </div>
 
-        <form class="form-card" method="POST" action="https://formspree.io/f/xlgydjqg">
+        <form class="form-card" id="auditForm" method="POST" action="https://formspree.io/f/xlgydjqg">
           <input type="hidden" name="_subject" value="New audit request — JWC Performance">
-          <input type="hidden" name="_next" value="https://jwcperformance.co.uk/thank-you.html">
           <input type="text" name="_gotcha" style="display:none">
           <div class="form-row-2">
             <div class="form-row">
@@ -697,9 +703,14 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             <label for="audit-notes">Anything else I should know?</label>
             <textarea id="audit-notes" name="notes" placeholder="Current issues, previous agency work, specific concerns..."></textarea>
           </div>
-          <button type="submit" class="form-submit">Request my free audit</button>
+          <button type="submit" class="form-submit" id="auditSubmit">Request my free audit</button>
           <p class="form-note">No spam. No obligation. I'll confirm receipt within one working day.</p>
         </form>
+        <div class="form-success" id="auditSuccess">
+          <div class="success-icon">✓</div>
+          <h3>Audit request received.</h3>
+          <p>I'll be in touch within one working day to send the MCC access request and brief. Usually sooner.</p>
+        </div>
       </div>
     </div>
   </section>
@@ -796,6 +807,35 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       banner.classList.add('hidden');
     });
   })();
+
+  // Audit request form — AJAX submission
+  var auditForm = document.getElementById('auditForm');
+  if(auditForm){
+    auditForm.addEventListener('submit', function(e){
+      e.preventDefault();
+      var btn = document.getElementById('auditSubmit');
+      btn.textContent = 'Sending...';
+      btn.disabled = true;
+      fetch(auditForm.action, {
+        method: 'POST',
+        body: new FormData(auditForm),
+        headers: { 'Accept': 'application/json' }
+      }).then(function(res){
+        if(res.ok){
+          auditForm.style.display = 'none';
+          document.getElementById('auditSuccess').classList.add('visible');
+        } else {
+          btn.textContent = 'Request my free audit';
+          btn.disabled = false;
+          alert('Something went wrong — please try again or email enquiries@jwcperformance.co.uk');
+        }
+      }).catch(function(){
+        btn.textContent = 'Request my free audit';
+        btn.disabled = false;
+        alert('Something went wrong — please try again or email enquiries@jwcperformance.co.uk');
+      });
+    });
+  }
 </script>
 
 </body>
