@@ -577,6 +577,26 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   }
   .form-success p{font-size:14.5px;color:var(--muted);}
 
+  @media(min-width:760px){.cs-metrics-grid{grid-template-columns:repeat(4,1fr) !important;}}
+
+  /* ---------- Results strip ---------- */
+  .results-strip{background:var(--khaki-deep);padding:0;border-top:1px solid rgba(255,255,255,0.06);border-bottom:1px solid rgba(255,255,255,0.06);}
+  .results-strip-inner{display:grid;grid-template-columns:repeat(2,1fr);background:var(--khaki-deep);}
+  @media(min-width:760px){.results-strip-inner{grid-template-columns:repeat(4,1fr);}}
+  .results-metric{padding:28px 24px;border-right:1px solid rgba(255,255,255,0.08);border-bottom:1px solid rgba(255,255,255,0.08);}
+  .results-metric:nth-child(2n){border-right:none;}
+  @media(min-width:760px){
+    .results-metric{border-bottom:none;}
+    .results-metric:nth-child(2n){border-right:1px solid rgba(255,255,255,0.08);}
+    .results-metric:last-child{border-right:none;}
+  }
+  .results-metric-value{font-family:'Fraunces',serif;font-size:36px;font-weight:700;color:var(--gold);line-height:1;margin-bottom:6px;}
+  .results-metric-label{font-family:'JetBrains Mono',monospace;font-size:10.5px;text-transform:uppercase;letter-spacing:0.05em;color:#A8A48F;}
+  .results-metric-note{font-size:12px;color:#7A7660;margin-top:3px;}
+  .results-strip-footer{padding:16px 20px;display:flex;align-items:center;justify-content:space-between;gap:16px;border-top:1px solid rgba(255,255,255,0.06);flex-wrap:wrap;}
+  .results-strip-footer p{font-size:13px;color:#7A7660;font-family:'JetBrains Mono',monospace;}
+  .results-strip-footer a{font-family:'JetBrains Mono',monospace;font-size:12px;font-weight:700;color:var(--gold);text-transform:uppercase;letter-spacing:0.04em;}
+
   /* ---------- Cookie banner ---------- */
   .cookie-banner{
     position:fixed;bottom:0;left:0;right:0;z-index:999;
@@ -1030,49 +1050,44 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <p class="section-sub">A selection of projects across Google Ads and web design — showing what was done, why, and what changed as a result. More being added as clients approve them.</p>
       </div>
 
-      <div class="cs-coming-soon">
-        <div>
-          <div class="cs-label">Status</div>
-          <h3>Case studies coming soon</h3>
-          <p>Results are being documented and approved for publication. Check back shortly — or get in touch to discuss what's been achieved for clients in your sector.</p>
+      <!-- Higher education case study strip -->
+      <div style="margin-bottom:16px;">
+        <div style="background:var(--surface);padding:12px 20px;border-left:3px solid var(--gold);margin-bottom:1px;">
+          <span style="font-family:'JetBrains Mono',monospace;font-size:10.5px;text-transform:uppercase;letter-spacing:0.06em;color:var(--gold-deep);font-weight:600;">Higher Education · B2C · Lead Generation</span>
         </div>
-        <span class="cs-badge">Pending</span>
-      </div>
-
-      <div class="cs-category" id="cs-google">
-        <button class="cs-cat-btn" onclick="toggleCS('cs-google')">
-          <span>Google Ads<span class="cs-count">— coming soon</span></span>
-          <span class="plus mono">+</span>
-        </button>
-        <div class="cs-cat-body">
-          <div class="cs-empty">
-            <p>Google Ads case studies are being prepared — covering account restructures, new builds and ongoing management projects across B2B and B2C. Coming shortly.</p>
+        <div style="background:var(--khaki-deep);">
+          <div style="display:grid;grid-template-columns:repeat(2,1fr);" class="cs-metrics-grid">
+            <div class="results-metric">
+              <div class="results-metric-value">1,152%</div>
+              <div class="results-metric-label">Return on investment</div>
+              <div class="results-metric-note">Target was 684%</div>
+            </div>
+            <div class="results-metric">
+              <div class="results-metric-value">£3.5m</div>
+              <div class="results-metric-label">Course income generated</div>
+              <div class="results-metric-note">Target was £2.19m</div>
+            </div>
+            <div class="results-metric">
+              <div class="results-metric-value">71%</div>
+              <div class="results-metric-label">Above lead targets</div>
+              <div class="results-metric-note">Most successful campaign to date</div>
+            </div>
+            <div class="results-metric">
+              <div class="results-metric-value">£2.9m</div>
+              <div class="results-metric-label">Future pipeline value</div>
+              <div class="results-metric-note">Additional to direct income</div>
+            </div>
+          </div>
+          <div class="results-strip-footer">
+            <p>Performance Marketing Awards entry · Higher education lead generation</p>
+            <a href="/case-studies/higher-education-lead-gen.html">Read the case study →</a>
           </div>
         </div>
       </div>
 
-      <div class="cs-category" id="cs-web">
-        <button class="cs-cat-btn" onclick="toggleCS('cs-web')">
-          <span>Web design<span class="cs-count">— coming soon</span></span>
-          <span class="plus mono">+</span>
-        </button>
-        <div class="cs-cat-body">
-          <div class="cs-empty">
-            <p>Web design case studies are being prepared — including before/after conversions and how the sites were built to complement the Google Ads campaigns running alongside them.</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="cs-category" id="cs-social">
-        <button class="cs-cat-btn" onclick="toggleCS('cs-social')">
-          <span>Paid social<span class="cs-count">— coming soon</span></span>
-          <span class="plus mono">+</span>
-        </button>
-        <div class="cs-cat-body">
-          <div class="cs-empty">
-            <p>Paid social case studies — Meta and LinkedIn — will be added when that service is launched. Google Ads is the current focus.</p>
-          </div>
-        </div>
+      <div style="margin-top:28px;display:flex;gap:16px;flex-wrap:wrap;">
+        <a href="/case-studies/google-ads.html" style="font-family:'JetBrains Mono',monospace;font-size:12px;font-weight:700;color:var(--gold-deep);text-transform:uppercase;letter-spacing:0.04em;border-bottom:1px solid var(--gold);padding-bottom:2px;">All Google Ads case studies →</a>
+        <a href="/case-studies/website-design.html" style="font-family:'JetBrains Mono',monospace;font-size:12px;font-weight:700;color:var(--gold-deep);text-transform:uppercase;letter-spacing:0.04em;border-bottom:1px solid var(--gold);padding-bottom:2px;">Website Design case studies →</a>
       </div>
     </div>
   </section>
