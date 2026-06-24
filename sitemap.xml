@@ -7,6 +7,18 @@
     <priority>1.0</priority>
   </url>
   <url>
+    <loc>https://jwcperformance.co.uk/about</loc>
+    <lastmod>2026-06-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://jwcperformance.co.uk/faq</loc>
+    <lastmod>2026-06-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://jwcperformance.co.uk/services/google-ads-audit</loc>
     <lastmod>2026-06-24</lastmod>
     <changefreq>monthly</changefreq>
