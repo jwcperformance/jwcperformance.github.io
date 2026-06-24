@@ -149,7 +149,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           <a href="/services/website-design.html">Website Design & Build</a>
         </div>
       </div>
-      <a href="/#why">Why JWC</a>
+      <a href="/about.html">About</a>
       <div class="nav-dropdown">
         <a href="/case-studies/google-ads.html">Case studies</a>
         <div class="dropdown-menu">
@@ -172,7 +172,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <a href="/services/new-account-build.html" style="padding-left:36px;font-size:14px;">→ New Account Build</a>
     <a href="/services/account-restructure.html" style="padding-left:36px;font-size:14px;">→ Account Restructure</a>
     <a href="/services/website-design.html" style="padding-left:36px;font-size:14px;">→ Website Design & Build</a>
-    <a href="/#why">Why JWC</a>
+    <a href="/about.html">About</a>
     <a href="/case-studies/google-ads.html" style="font-weight:700;color:var(--gold-deep);">Case studies</a>
     <a href="/case-studies/google-ads.html" style="padding-left:36px;font-size:14px;">→ Google Ads</a>
     <a href="/case-studies/website-design.html" style="padding-left:36px;font-size:14px;">→ Website Design & Build</a>
@@ -376,7 +376,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       </div>
       <div class="footer-col">
         <h4>More</h4>
-        <a href="/#why">Why JWC</a>
+        <a href="/about.html">About</a>
         <a href="/blog/">Blog</a>
         <a href="/#faq">FAQ</a>
         <a href="/cookie-policy.html">Cookie policy</a>
