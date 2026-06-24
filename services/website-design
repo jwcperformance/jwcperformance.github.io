@@ -1,0 +1,760 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Website Design & Build | JWC Performance — Built to Convert</title>
+<meta name="description" content="Website design and build from a Google Ads specialist — built to convert the traffic you're paying for. GitHub hosted, Cloudflare served, Formspree forms. From £1,000.">
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-5HCM3QFH');</script>
+<!-- End Google Tag Manager -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#23241D;--paper:#F6F4ED;--surface:#ECE7D8;
+    --khaki:#6F6E55;--khaki-deep:#3D3E2F;
+    --gold:#B6862A;--gold-deep:#8A6418;--gold-pale:#EEE0BE;
+    --line:#DDD8C7;--line-strong:#C7C0A7;--muted:#6A6753;
+    --max:1140px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  html{scroll-behavior:smooth;}
+  body{font-family:'Inter',-apple-system,sans-serif;background:var(--paper);color:var(--ink);line-height:1.55;-webkit-font-smoothing:antialiased;overflow-x:hidden;}
+  a{color:inherit;text-decoration:none;}
+  .wrap{max-width:var(--max);margin:0 auto;padding:0 20px;}
+
+  .top-strip{background:var(--khaki-deep);color:#E6E2CF;font-family:'JetBrains Mono',monospace;font-size:11.5px;padding:8px 20px;text-align:center;letter-spacing:0.01em;}
+  .top-strip strong{color:var(--gold);}
+
+  header{position:sticky;top:0;z-index:50;background:rgba(246,244,237,0.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);}
+  .nav-row{display:flex;align-items:center;justify-content:space-between;padding:15px 20px;max-width:var(--max);margin:0 auto;}
+  .logo{font-family:'Fraunces',serif;font-weight:700;display:flex;align-items:center;gap:0;line-height:1;text-decoration:none;}
+  .logo .bracket-open{font-size:68px;color:var(--gold);line-height:1;margin-right:3px;font-family:'Fraunces',serif;font-weight:700;}
+  .logo .bracket-close{font-size:68px;color:var(--khaki-deep);line-height:1;margin-left:3px;font-family:'Fraunces',serif;font-weight:700;}
+  .logo .logo-inner{display:flex;flex-direction:column;justify-content:center;padding:0 2px;}
+  .logo .logo-name{font-family:'Fraunces',serif;font-weight:700;font-size:44px;color:var(--ink);letter-spacing:-0.01em;line-height:1.15;}
+  .logo .logo-sub{font-family:'JetBrains Mono',monospace;font-weight:600;font-size:16px;color:var(--gold-deep);letter-spacing:0.14em;text-transform:uppercase;line-height:1;}
+  nav.desktop-nav{display:none;}
+  .nav-cta{display:none;}
+  .menu-btn{width:40px;height:40px;border:1px solid var(--line-strong);border-radius:4px;background:transparent;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:4px;cursor:pointer;}
+  .menu-btn span{width:18px;height:1.5px;background:var(--ink);display:block;}
+  .mobile-menu{display:none;flex-direction:column;border-top:1px solid var(--line);background:var(--paper);}
+  .mobile-menu.open{display:flex;}
+  .mobile-menu a{padding:16px 20px;border-bottom:1px solid var(--line);font-size:15px;font-weight:500;}
+  .mobile-menu .mm-cta{margin:16px 20px 20px;padding:18px;background:var(--gold);color:#ffffff;text-align:center;border-radius:4px;font-weight:700;border:none;font-size:16px;}
+
+  @media (min-width:920px){
+    nav.desktop-nav{display:flex;align-items:center;gap:30px;font-size:14px;font-weight:500;}
+    nav.desktop-nav a{padding:8px 0;border-bottom:1px solid transparent;}
+    nav.desktop-nav a:hover{border-bottom:1px solid var(--gold-deep);}
+    .menu-btn{display:none;}
+    .nav-cta{display:inline-block;background:var(--gold);color:#ffffff;padding:14px 26px;border-radius:4px;font-weight:700;font-size:15px;}
+    .nav-dropdown{position:relative;}
+    .nav-dropdown > a{display:flex;align-items:center;gap:5px;cursor:pointer;}
+    .nav-dropdown > a::after{content:'▾';font-size:10px;color:var(--gold-deep);transition:transform 0.2s ease;}
+    .nav-dropdown.open > a::after{transform:rotate(180deg);}
+    .dropdown-menu{display:none;position:absolute;top:calc(100% + 8px);left:0;min-width:220px;z-index:100;background:var(--paper);border:1px solid var(--line-strong);border-top:2px solid var(--gold);box-shadow:0 8px 24px rgba(0,0,0,0.08);}
+    .nav-dropdown.open .dropdown-menu{display:block;}
+    .dropdown-menu a{display:block;padding:12px 16px;font-size:13.5px;font-weight:500;color:var(--ink);border-bottom:1px solid var(--line);}
+    .dropdown-menu a:last-child{border-bottom:none;}
+    .dropdown-menu a:hover{background:var(--surface);color:var(--gold-deep);}
+  }
+
+  /* Hero */
+  .page-hero{padding:52px 0 48px;}
+  .breadcrumb{font-family:'JetBrains Mono',monospace;font-size:11.5px;color:var(--muted);margin-bottom:16px;display:flex;align-items:center;gap:8px;}
+  .breadcrumb a{color:var(--muted);}
+  .breadcrumb a:hover{color:var(--gold-deep);}
+  .eyebrow{font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:0.05em;color:var(--gold-deep);font-weight:600;text-transform:uppercase;display:flex;align-items:center;gap:8px;margin-bottom:16px;}
+  .eyebrow::before{content:'';width:14px;height:1px;background:var(--gold-deep);display:inline-block;}
+  h1{font-family:'Fraunces',serif;font-size:32px;font-weight:700;letter-spacing:-0.01em;margin-bottom:16px;line-height:1.1;}
+  h1 em{font-style:italic;color:var(--gold-deep);}
+  .hero-sub{font-size:16.5px;color:var(--muted);max-width:560px;margin-bottom:24px;}
+  .hero-ctas{display:flex;flex-direction:column;gap:10px;}
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:18px 30px;border-radius:4px;font-weight:700;font-size:16px;text-align:center;border:1px solid transparent;}
+  .btn-primary{background:var(--gold);color:#ffffff;}
+  .btn-secondary{background:transparent;border:2px solid var(--line-strong);color:var(--ink);font-weight:700;}
+  @media (min-width:900px){
+    .page-hero-inner{display:grid;grid-template-columns:1.1fr 0.9fr;gap:56px;align-items:start;}
+    h1{font-size:44px;}
+    .hero-ctas{flex-direction:row;}
+  }
+
+  /* Glance panel */
+  .glance-panel{border:1px solid var(--line-strong);background:var(--paper);}
+  .glance-head{background:var(--khaki-deep);padding:14px 20px;}
+  .glance-head span{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--gold);text-transform:uppercase;letter-spacing:0.06em;font-weight:600;}
+  .glance-row{display:flex;justify-content:space-between;align-items:baseline;padding:14px 20px;border-bottom:1px solid var(--line);font-size:13.5px;}
+  .glance-row:last-child{border-bottom:none;}
+  .glance-row .k{color:var(--muted);}
+  .glance-row .v{font-weight:700;}
+  .glance-row .v.gold{color:var(--gold-deep);font-family:'JetBrains Mono',monospace;}
+
+  /* Sections */
+  section{padding:56px 0;border-bottom:1px solid var(--line);}
+  .section-label{font-family:'JetBrains Mono',monospace;font-size:11.5px;color:var(--gold-deep);text-transform:uppercase;letter-spacing:0.06em;font-weight:600;margin-bottom:12px;display:flex;align-items:center;gap:8px;}
+  .section-label::before{content:'';width:14px;height:1px;background:var(--gold-deep);display:inline-block;}
+  h2{font-family:'Fraunces',serif;font-size:26px;font-weight:700;letter-spacing:-0.01em;margin-bottom:10px;}
+  .section-sub{color:var(--muted);font-size:15px;max-width:600px;margin-bottom:28px;}
+
+  /* What's included grid */
+  .included-grid{display:grid;grid-template-columns:1fr;gap:1px;background:var(--line-strong);border:1px solid var(--line-strong);}
+  @media (min-width:680px){.included-grid{grid-template-columns:repeat(2,1fr);}}
+  @media (min-width:1000px){.included-grid{grid-template-columns:repeat(3,1fr);}}
+  .included-item{background:var(--paper);padding:22px;}
+  .included-num{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--gold-deep);font-weight:600;margin-bottom:8px;}
+  .included-title{font-size:15.5px;font-weight:700;margin-bottom:6px;}
+  .included-desc{font-size:13.5px;color:var(--muted);}
+
+  /* Tech stack callout */
+  .tech-callout{background:var(--khaki-deep);padding:28px;margin-top:28px;display:flex;flex-direction:column;gap:16px;}
+  @media (min-width:760px){.tech-callout{flex-direction:row;align-items:center;justify-content:space-between;gap:24px;}}
+  .tech-callout h3{font-family:'Fraunces',serif;font-size:19px;font-weight:700;color:#F6F4ED;margin-bottom:6px;}
+  .tech-callout p{font-size:14px;color:#C7C3AC;max-width:560px;}
+  .tech-tags{display:flex;flex-wrap:wrap;gap:8px;flex-shrink:0;}
+  .tech-tag{font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:700;color:var(--gold-deep);background:var(--gold-pale);padding:6px 12px;text-transform:uppercase;letter-spacing:0.05em;white-space:nowrap;}
+
+  /* Two col split */
+  .split{display:grid;grid-template-columns:1fr;gap:16px;}
+  @media (min-width:760px){.split{grid-template-columns:1fr 1fr;}}
+  .panel{border:1px solid var(--line-strong);padding:24px;background:var(--paper);}
+  .panel h3{font-family:'JetBrains Mono',monospace;font-size:11px;text-transform:uppercase;letter-spacing:0.05em;color:var(--gold-deep);font-weight:600;margin-bottom:14px;}
+  .panel ul{list-style:none;}
+  .panel li{font-size:14px;padding:9px 0;border-top:1px solid var(--line);display:flex;gap:10px;align-items:flex-start;}
+  .panel li:first-child{border-top:none;}
+  .panel li::before{content:'—';color:var(--gold-deep);flex-shrink:0;}
+
+  /* Process */
+  .process-timeline{display:flex;flex-direction:column;}
+  .process-step{display:grid;grid-template-columns:56px 1fr;gap:20px;padding:28px 0;border-top:1px solid var(--line);}
+  .process-step:first-child{border-top:none;}
+  .step-left{display:flex;flex-direction:column;align-items:center;gap:6px;}
+  .step-num{width:36px;height:36px;border-radius:50%;background:var(--khaki-deep);color:var(--gold);font-family:'JetBrains Mono',monospace;font-size:13px;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+  .step-time{font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--muted);text-align:center;line-height:1.3;}
+  .step-title{font-size:17px;font-weight:700;margin-bottom:6px;}
+  .step-desc{color:var(--muted);font-size:14.5px;margin-bottom:10px;}
+  .step-detail{background:var(--surface);padding:14px 16px;border-left:3px solid var(--gold);font-size:13.5px;color:var(--muted);}
+
+  /* FAQ */
+  .faq-item{border-top:1px solid var(--line);}
+  .faq-item:last-child{border-bottom:1px solid var(--line);}
+  .faq-q{width:100%;text-align:left;background:none;border:none;cursor:pointer;padding:18px 0;display:flex;justify-content:space-between;align-items:center;gap:16px;font-size:15.5px;font-weight:600;color:var(--ink);font-family:inherit;}
+  .faq-q .plus{font-family:'JetBrains Mono',monospace;color:var(--gold-deep);font-size:18px;flex-shrink:0;transition:transform 0.2s ease;}
+  .faq-item.open .faq-q .plus{transform:rotate(45deg);}
+  .faq-a{max-height:0;overflow:hidden;transition:max-height 0.25s ease;}
+  .faq-item.open .faq-a{max-height:300px;}
+  .faq-a p{padding:0 0 20px;color:var(--muted);font-size:14.5px;max-width:640px;}
+
+  /* Form */
+  .form-section{background:var(--khaki-deep);color:var(--paper);padding:56px 0;border-bottom:none;}
+  .form-section .section-label{color:var(--gold);}
+  .form-section .section-label::before{background:var(--gold);}
+  .form-section h2{color:#F6F4ED;}
+  .form-section .section-sub{color:#C7C3AC;}
+  .form-grid{display:grid;grid-template-columns:1fr;gap:24px;margin-top:28px;}
+  @media (min-width:820px){.form-grid{grid-template-columns:1fr 1.4fr;}}
+  .form-meta{display:flex;flex-direction:column;}
+  .form-meta-item{padding:14px 0;border-top:1px solid rgba(237,233,216,0.18);font-size:13.5px;}
+  .form-meta-item:first-child{border-top:none;}
+  .form-meta-item .k{font-family:'JetBrains Mono',monospace;font-size:10.5px;text-transform:uppercase;letter-spacing:0.05em;color:#A8A48F;display:block;margin-bottom:4px;}
+  .form-meta-item .v{font-weight:600;}
+  .form-card{background:var(--paper);color:var(--ink);padding:24px;border-radius:4px;}
+  .form-row{margin-bottom:14px;}
+  .form-row label{display:block;font-size:12px;font-weight:600;color:var(--muted);margin-bottom:6px;text-transform:uppercase;letter-spacing:0.03em;}
+  .form-row input,.form-row select,.form-row textarea{width:100%;border:1px solid var(--line-strong);background:var(--paper);padding:11px 12px;font-size:14.5px;font-family:inherit;color:var(--ink);border-radius:3px;}
+  .form-row textarea{min-height:80px;resize:vertical;}
+  .form-row input:focus,.form-row select:focus,.form-row textarea:focus{outline:2px solid var(--gold-deep);outline-offset:1px;border-color:var(--gold-deep);}
+  .form-row-2{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
+  .form-submit{width:100%;background:var(--gold);color:#ffffff;border:none;padding:18px;font-weight:700;font-size:16px;border-radius:3px;cursor:pointer;margin-top:4px;}
+  .form-note{font-size:12px;color:var(--muted);margin-top:10px;text-align:center;}
+  .form-success{display:none;background:var(--paper);padding:32px;text-align:center;border-radius:4px;}
+  .form-success.visible{display:block;}
+  .form-success .success-icon{width:48px;height:48px;background:var(--gold);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 16px;font-size:22px;}
+  .form-success h3{font-family:'Fraunces',serif;font-size:22px;font-weight:700;color:var(--ink);margin-bottom:8px;}
+  .form-success p{font-size:14.5px;color:var(--muted);}
+
+  /* Cookie */
+  .cookie-banner{position:fixed;bottom:0;left:0;right:0;z-index:999;background:var(--khaki-deep);color:#EDE9D8;padding:16px 20px;display:flex;flex-direction:column;gap:12px;border-top:2px solid var(--gold);box-shadow:0 -4px 24px rgba(0,0,0,0.18);}
+  .cookie-banner.hidden{display:none;}
+  .cookie-banner p{font-size:13.5px;color:#C7C3AC;line-height:1.5;margin:0;}
+  .cookie-banner a{color:var(--gold);text-decoration:underline;}
+  .cookie-banner-title{font-family:'Fraunces',serif;font-size:16px;font-weight:700;color:#F6F4ED;margin-bottom:2px;}
+  .cookie-btns{display:flex;gap:10px;}
+  .cookie-accept{background:var(--gold);color:#ffffff;border:none;padding:10px 20px;border-radius:4px;font-weight:700;font-size:13.5px;cursor:pointer;font-family:inherit;}
+  .cookie-reject{background:transparent;color:#C7C3AC;border:1px solid rgba(255,255,255,0.2);padding:10px 20px;border-radius:4px;font-weight:600;font-size:13.5px;cursor:pointer;font-family:inherit;}
+  @media(min-width:760px){.cookie-banner{flex-direction:row;align-items:center;justify-content:space-between;}.cookie-banner-text{max-width:640px;}.cookie-btns{flex-shrink:0;}}
+
+  /* Footer */
+  footer{padding:40px 0 28px;}
+  .footer-cols{display:grid;grid-template-columns:repeat(2,1fr);gap:24px;margin-bottom:24px;}
+  .footer-col h4{font-family:'JetBrains Mono',monospace;font-size:10.5px;text-transform:uppercase;letter-spacing:0.05em;color:var(--muted);margin-bottom:12px;}
+  .footer-col a{display:block;font-size:14px;padding:6px 0;color:var(--ink);}
+  .footer-bottom{border-top:1px solid var(--line);padding-top:20px;font-size:12px;color:var(--muted);display:flex;flex-direction:column;gap:8px;}
+  @media (min-width:760px){.footer-cols{grid-template-columns:repeat(4,1fr);}.footer-bottom{flex-direction:row;justify-content:space-between;}}
+</style>
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5HCM3QFH" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<div class="top-strip">Google Ads specialist — <strong>free account audit, no obligation</strong> · 15+ years' experience · fixed fee</div>
+
+<header>
+  <div class="nav-row">
+    <a href="/" class="logo">
+      <span class="bracket-open">[</span>
+      <span class="logo-inner"><span class="logo-name">JWC</span><span class="logo-sub">Performance</span></span>
+      <span class="bracket-close">]</span>
+    </a>
+    <nav class="desktop-nav">
+      <div class="nav-dropdown">
+        <a href="/#services">Services</a>
+        <div class="dropdown-menu">
+          <a href="/services/google-ads-audit.html">Google Ads Audit</a>
+          <a href="/services/account-management.html">Account Management</a>
+          <a href="/services/new-account-build.html">New Account Build</a>
+          <a href="/services/account-restructure.html">Account Restructure</a>
+          <a href="/services/website-design.html">Website Design & Build</a>
+        </div>
+      </div>
+      <a href="/#why">Why JWC</a>
+      <div class="nav-dropdown">
+        <a href="/#case-studies">Case studies</a>
+        <div class="dropdown-menu">
+          <a href="/case-studies/google-ads.html">Google Ads</a>
+          <a href="/case-studies/website-design.html">Website Design & Build</a>
+        </div>
+      </div>
+      <a href="/blog/">Blog</a>
+      <a href="/#faq">FAQ</a>
+    </nav>
+    <a href="#enquire" class="nav-cta">Enquire today</a>
+    <button class="menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="/#services" style="font-weight:700;color:var(--gold-deep);">Services</a>
+    <a href="/services/google-ads-audit.html" style="padding-left:36px;font-size:14px;">→ Google Ads Audit</a>
+    <a href="/services/account-management.html" style="padding-left:36px;font-size:14px;">→ Account Management</a>
+    <a href="/services/new-account-build.html" style="padding-left:36px;font-size:14px;">→ New Account Build</a>
+    <a href="/services/account-restructure.html" style="padding-left:36px;font-size:14px;">→ Account Restructure</a>
+    <a href="/services/website-design.html" style="padding-left:36px;font-size:14px;">→ Website Design & Build</a>
+    <a href="/#why">Why JWC</a>
+    <a href="/#case-studies" style="font-weight:700;color:var(--gold-deep);">Case studies</a>
+    <a href="/case-studies/google-ads.html" style="padding-left:36px;font-size:14px;">→ Google Ads</a>
+    <a href="/case-studies/website-design.html" style="padding-left:36px;font-size:14px;">→ Website Design & Build</a>
+    <a href="/blog/">Blog</a>
+    <a href="/#faq">FAQ</a>
+    <a href="#enquire"><button class="mm-cta">Enquire today</button></a>
+  </div>
+</header>
+
+<main>
+
+  <!-- HERO -->
+  <section class="page-hero" style="border-bottom:none;">
+    <div class="wrap page-hero-inner">
+      <div>
+        <div class="breadcrumb">
+          <a href="/">Home</a> / <a href="/#services">Services</a> / Website Design & Build
+        </div>
+        <div class="eyebrow">Website design & build · from £1,000</div>
+        <h1>A website built to <em>capture leads and grow your business online.</em></h1>
+        <p class="hero-sub">A fast, professional website designed to make a strong first impression and turn visitors into enquiries. Mobile-first, clearly structured, with lead forms and conversion tracking set up correctly from day one — so you know exactly what your site is delivering.</p>
+        <div class="hero-ctas">
+          <a href="#enquire" class="btn btn-primary">Get a quote</a>
+          <a href="#whats-included" class="btn btn-secondary">See what's included</a>
+        </div>
+      </div>
+
+      <div class="glance-panel" style="margin-top:32px;">
+        <div class="glance-head"><span>At a glance</span></div>
+        <div class="glance-row"><span class="k">Starting from</span><span class="v gold">£1,000</span></div>
+        <div class="glance-row"><span class="k">Exact price</span><span class="v">Agreed at scoping call</span></div>
+        <div class="glance-row"><span class="k">Turnaround</span><span class="v">Agreed at scoping call</span></div>
+        <div class="glance-row"><span class="k">Hosting</span><span class="v">Cloudflare Pages — free</span></div>
+        <div class="glance-row"><span class="k">Forms</span><span class="v">Formspree</span></div>
+        <div class="glance-row"><span class="k">Maintenance</span><span class="v">Available on request</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHAT'S INCLUDED -->
+  <section id="whats-included">
+    <div class="wrap">
+      <div class="section-label">What's included</div>
+      <h2>Everything needed for a site that works.</h2>
+      <p class="section-sub">Every build includes the same core elements — the scope and complexity determine the price, not what corners get cut.</p>
+
+      <div class="included-grid">
+        <div class="included-item">
+          <div class="included-num mono">01</div>
+          <div class="included-title">Discovery call</div>
+          <div class="included-desc">A 30-minute call to understand your business, core message, target audience and what success looks like — enquiries, calls, sales or something else. This drives every design decision.</div>
+        </div>
+        <div class="included-item">
+          <div class="included-num mono">02</div>
+          <div class="included-title">Mobile-first design</div>
+          <div class="included-desc">Built mobile-first as standard — because most of your paid traffic lands on a phone, not a desktop. Every page is tested across screen sizes before delivery.</div>
+        </div>
+        <div class="included-item">
+          <div class="included-num mono">03</div>
+          <div class="included-title">Conversion-led structure</div>
+          <div class="included-desc">Clear calls to action, logical page flow and form placement designed to convert visitors — not just inform them. Built by someone who tracks what happens after the click.</div>
+        </div>
+        <div class="included-item">
+          <div class="included-num mono">04</div>
+          <div class="included-title">Lead forms via Formspree</div>
+          <div class="included-desc">Contact and enquiry forms set up through Formspree — submissions go straight to your inbox. No WordPress plugins, no monthly form fees, no technical maintenance required.</div>
+        </div>
+        <div class="included-item">
+          <div class="included-num mono">05</div>
+          <div class="included-title">Analytics & conversion tracking</div>
+          <div class="included-desc">Google Tag Manager and GA4 installed and configured — so form submissions, calls and key actions are tracked from day one. You'll know exactly how many leads your site is generating and where they're coming from.</div>
+        </div>
+        <div class="included-item">
+          <div class="included-num mono">06</div>
+          <div class="included-title">Fast, free hosting</div>
+          <div class="included-desc">Hosted on Cloudflare Pages — one of the fastest CDNs in the world, completely free, with automatic HTTPS and deploys directly from GitHub. No monthly hosting fees.</div>
+        </div>
+        <div class="included-item">
+          <div class="included-num mono">07</div>
+          <div class="included-title">SEO basics built in</div>
+          <div class="included-desc">Page titles, meta descriptions, clean URL structure, sitemap and robots.txt all set up correctly — so the site is ready for organic search from launch, not retrofitted later.</div>
+        </div>
+        <div class="included-item">
+          <div class="included-num mono">08</div>
+          <div class="included-title">Cookie consent</div>
+          <div class="included-desc">A PECR-compliant cookie banner and cookie policy — built in, not bolted on. Consent is respected before any analytics fires.</div>
+        </div>
+        <div class="included-item">
+          <div class="included-num mono">09</div>
+          <div class="included-title">Handover & documentation</div>
+          <div class="included-desc">Full access to the GitHub repo, Cloudflare account and Formspree forms. A clear handover document so you — or anyone else — can update the site going forward.</div>
+        </div>
+        <div class="included-item">
+          <div class="included-num mono">10</div>
+          <div class="included-title">Post-launch support</div>
+          <div class="included-desc">Available after launch for questions, minor fixes and small updates. You won't be left on your own the moment the site goes live — if something needs tweaking or you're not sure how something works, just get in touch.</div>
+        </div>
+      </div>
+
+      <!-- Tech stack -->
+      <div class="tech-callout">
+        <div>
+          <h3>Built on a proven tech stack</h3>
+          <p>The same stack this site is built on — GitHub for version control, Cloudflare Pages for hosting, Formspree for forms. Fast, free to run, and maintainable by anyone with basic HTML knowledge or a developer.</p>
+        </div>
+        <div class="tech-tags">
+          <span class="tech-tag">GitHub</span>
+          <span class="tech-tag">Cloudflare</span>
+          <span class="tech-tag">Formspree</span>
+          <span class="tech-tag">GTM + GA4</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY NOT WORDPRESS / IDEAL FOR / NOT INCLUDED -->
+  <section id="more">
+    <div class="wrap">
+      <div class="section-label">Good to know</div>
+      <h2>A few things worth reading before enquiring.</h2>
+      <p class="section-sub">Who this is right for, what's not included, and why the tech stack is different from what most designers use.</p>
+
+      <div class="split" style="margin-bottom:24px;">
+        <div class="panel">
+          <h3>Ideal for</h3>
+          <ul>
+            <li>Service businesses that need a clean, professional online presence</li>
+            <li>Freelancers and sole traders wanting a site that looks credible and converts</li>
+            <li>B2B businesses needing a lead generation site</li>
+            <li>Anyone running Google Ads who needs a better landing page</li>
+            <li>Businesses that want full ownership of their site with no platform lock-in</li>
+          </ul>
+        </div>
+        <div class="panel">
+          <h3>What's not included</h3>
+          <ul>
+            <li>Copywriting — you provide the text, or we discuss it at the scoping call</li>
+            <li>Photography or imagery — you supply assets, or stock images are sourced</li>
+            <li>Domain registration — typically under £15/year, handled separately</li>
+            <li>Ecommerce / payment processing — not offered at this stage</li>
+            <li>Ongoing monthly maintenance — available on request, priced separately</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="panel" style="border:1px solid var(--line-strong);padding:24px;background:var(--surface);">
+        <h3 style="font-family:'Fraunces',serif;font-size:18px;font-weight:700;color:var(--ink);margin-bottom:12px;">Why not WordPress?</h3>
+        <p style="font-size:14.5px;color:var(--muted);margin-bottom:12px;">Most freelance web designers build on WordPress. There's nothing wrong with that — but it comes with ongoing costs and maintenance that most small business owners don't fully anticipate. Plugin updates, security patches, hosting fees and the occasional site break when something conflicts.</p>
+        <p style="font-size:14.5px;color:var(--muted);margin-bottom:12px;">The sites I build are hand-coded in HTML and CSS, hosted free on Cloudflare Pages with deploys straight from GitHub. There are no monthly platform fees, no plugin vulnerabilities, no database to maintain, and no hosting bill. The site loads faster, costs less to run, and is genuinely easier to hand over to another developer if you ever need one.</p>
+        <p style="font-size:14.5px;color:var(--muted);">The trade-off is that it's not a drag-and-drop CMS — editing content means editing HTML, which is straightforward for a developer but less so if you want to update things yourself regularly. If self-editing is a priority, we can discuss options at the scoping call.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHAT I NEED FROM YOU -->
+  <section id="brief">
+    <div class="wrap">
+      <div class="section-label">What I need from you</div>
+      <h2>The brief — what to expect after enquiring.</h2>
+      <p class="section-sub">After the initial enquiry, a 30-minute scoping call is booked. Here's what we'll cover — and what you'll need to have ready or be ready to discuss.</p>
+
+      <div class="split">
+        <div class="panel">
+          <h3>Business & goals</h3>
+          <ul>
+            <li>What your business does and who it serves</li>
+            <li>Your core message — what you want visitors to understand immediately</li>
+            <li>What success looks like — enquiries, calls, sales, sign-ups</li>
+            <li>Your target audience and what matters to them</li>
+            <li>Any competitors or reference sites you like</li>
+          </ul>
+        </div>
+        <div class="panel">
+          <h3>Design & content</h3>
+          <ul>
+            <li>Logo file (ideally SVG or high-res PNG)</li>
+            <li>Brand colours and fonts (if established)</li>
+            <li>Any imagery you have or want sourced</li>
+            <li>Whether you have copy written or need guidance</li>
+            <li>Standalone landing page or full multi-page site</li>
+          </ul>
+        </div>
+        <div class="panel">
+          <h3>Technical</h3>
+          <ul>
+            <li>Do you have a domain already registered?</li>
+            <li>Any existing pages or content to reference or migrate</li>
+            <li>Third-party integrations needed (booking, CRM, live chat)</li>
+            <li>Primary CTA — form, phone number, email or booking link</li>
+          </ul>
+        </div>
+        <div class="panel">
+          <h3>Sign-off & timeline</h3>
+          <ul>
+            <li>Who is the decision maker — does anyone else need to approve?</li>
+            <li>How many rounds of revisions are you expecting?</li>
+            <li>Any hard deadline (launch date, campaign start etc.)</li>
+            <li>Are you also running or planning Google Ads alongside this?</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROCESS -->
+  <section id="process">
+    <div class="wrap">
+      <div class="section-label">The process</div>
+      <h2>From call to live site.</h2>
+      <p class="section-sub">Timelines are agreed at the scoping call based on complexity — a single landing page moves much faster than a full multi-page site.</p>
+
+      <div class="process-timeline">
+        <div class="process-step">
+          <div class="step-left"><div class="step-num">01</div><div class="step-time">Day 0</div></div>
+          <div class="step-content">
+            <div class="step-title">Enquire</div>
+            <div class="step-desc">Fill in the form below with a brief overview of what you need. I'll come back within one working day to book a 30-minute scoping call.</div>
+            <div class="step-detail">💬 Back to you within one working day</div>
+          </div>
+        </div>
+        <div class="process-step">
+          <div class="step-left"><div class="step-num">02</div><div class="step-time">Day 1–2</div></div>
+          <div class="step-content">
+            <div class="step-title">Scoping call</div>
+            <div class="step-desc">A 30-minute call covering your business, goals, audience, design preferences and technical requirements. Pricing and timeline confirmed on this call — no surprises after.</div>
+            <div class="step-detail">📞 30 minutes · pricing & timeline confirmed · no obligation to proceed</div>
+          </div>
+        </div>
+        <div class="process-step">
+          <div class="step-left"><div class="step-num">03</div><div class="step-time">Day 2–3</div></div>
+          <div class="step-content">
+            <div class="step-title">Brief & assets gathered</div>
+            <div class="step-desc">Logo, brand assets, copy, imagery and any reference sites collected. Any gaps in copy or imagery flagged and resolved before the build starts — not halfway through.</div>
+            <div class="step-detail">📋 Logo · colours · fonts · copy · imagery · reference sites</div>
+          </div>
+        </div>
+        <div class="process-step">
+          <div class="step-left"><div class="step-num">04</div><div class="step-time">Build phase</div></div>
+          <div class="step-content">
+            <div class="step-title">Design & build</div>
+            <div class="step-desc">The site is designed and built in HTML/CSS — mobile-first, with conversion tracking, forms and SEO basics all set up as part of the build, not added at the end.</div>
+            <div class="step-detail">🖥️ Mobile-first · conversion tracking · forms · SEO · cookie consent</div>
+          </div>
+        </div>
+        <div class="process-step">
+          <div class="step-left"><div class="step-num">05</div><div class="step-time">Review</div></div>
+          <div class="step-content">
+            <div class="step-title">Review & revisions</div>
+            <div class="step-desc">A preview link is shared for your review. Feedback is gathered, revisions made and the site signed off before going live.</div>
+            <div class="step-detail">✅ Preview before launch · revisions included · sign-off required</div>
+          </div>
+        </div>
+        <div class="process-step">
+          <div class="step-left"><div class="step-num">06</div><div class="step-time">Launch</div></div>
+          <div class="step-content">
+            <div class="step-title">Launch & handover</div>
+            <div class="step-desc">The site goes live on Cloudflare Pages with your domain connected. Full handover of the GitHub repo, Cloudflare and Formspree access, plus a handover document covering how everything works.</div>
+            <div class="step-detail">🚀 Live on Cloudflare · full access handed over · ongoing maintenance available</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq">
+    <div class="wrap">
+      <div class="section-label">FAQ</div>
+      <h2>Common questions.</h2>
+      <div class="faq-list">
+        <div class="faq-item open">
+          <button class="faq-q"><span>Why does pricing start from £1,000?</span><span class="plus mono">+</span></button>
+          <div class="faq-a"><p>A single landing page with a form, tracking and hosting set up properly takes a meaningful amount of work — design, build, GTM setup, form integration, Cloudflare deployment and handover documentation. More pages, custom design requirements or third-party integrations add to that. The scoping call is where we agree the exact price for your specific project.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q"><span>Do I need to provide copy and images?</span><span class="plus mono">+</span></button>
+          <div class="faq-a"><p>Ideally yes — you know your business better than anyone. But if you need help with copy structure or sourcing imagery, that can be discussed at the scoping call. Copy that needs to be written from scratch will affect the timeline and may affect the price.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q"><span>Can I update the site myself after handover?</span><span class="plus mono">+</span></button>
+          <div class="faq-a"><p>Yes — you get full access to the GitHub repo. Anyone with basic HTML knowledge can make text and content changes directly. For larger changes, ongoing maintenance support is available — get in touch to discuss.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q"><span>Do I need a domain already?</span><span class="plus mono">+</span></button>
+          <div class="faq-a"><p>Not necessarily — we can set one up as part of the project if needed. If you already have one, we'll connect it to Cloudflare Pages during the launch phase. Domain registration costs are separate and typically under £15/year.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q"><span>Can this be combined with Google Ads management?</span><span class="plus mono">+</span></button>
+          <div class="faq-a"><p>Yes — a site built alongside a Google Ads account build or restructure means the entire journey from ad to enquiry is designed to work together. But the website stands completely on its own too — plenty of clients use it purely for organic search, social media or direct traffic without running paid campaigns.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FORM -->
+  <section class="form-section" id="enquire">
+    <div class="wrap">
+      <div class="section-label">Get a quote</div>
+      <h2>Tell me about your project.</h2>
+      <p class="section-sub">Fill in the form and I'll come back within one working day to book a 30-minute scoping call — where pricing and timeline are confirmed.</p>
+
+      <div class="form-grid">
+        <div class="form-meta">
+          <div class="form-meta-item"><span class="k">Starting from</span><span class="v">£1,000</span></div>
+          <div class="form-meta-item"><span class="k">First step</span><span class="v">30-minute scoping call</span></div>
+          <div class="form-meta-item"><span class="k">Pricing confirmed</span><span class="v">On the scoping call — no surprises</span></div>
+          <div class="form-meta-item"><span class="k">Response time</span><span class="v">Within 1 working day</span></div>
+          <div class="form-meta-item">
+            <span class="k">Email</span>
+            <a class="v" href="mailto:enquiries@jwcperformance.co.uk" style="border-bottom:1px solid var(--gold);padding-bottom:1px;">enquiries@jwcperformance.co.uk</a>
+          </div>
+        </div>
+
+        <form class="form-card" id="webForm" method="POST" action="https://formspree.io/f/mnjknpkk">
+          <input type="hidden" name="_subject" value="Website design enquiry — JWC Performance">
+          <input type="text" name="_gotcha" style="display:none">
+          <div class="form-row-2">
+            <div class="form-row">
+              <label for="web-name">Your name</label>
+              <input type="text" id="web-name" name="name" required>
+            </div>
+            <div class="form-row">
+              <label for="web-company">Company</label>
+              <input type="text" id="web-company" name="company">
+            </div>
+          </div>
+          <div class="form-row">
+            <label for="web-email">Email address</label>
+            <input type="email" id="web-email" name="email" required>
+          </div>
+          <div class="form-row-2">
+            <div class="form-row">
+              <label for="web-type">Type of site</label>
+              <select id="web-type" name="site_type">
+                <option>Single landing page</option>
+                <option>Small site (2–5 pages)</option>
+                <option>Full site (6–10 pages)</option>
+                <option>Not sure yet</option>
+              </select>
+            </div>
+            <div class="form-row">
+              <label for="web-domain">Do you have a domain?</label>
+              <select id="web-domain" name="has_domain">
+                <option>Yes, I have one</option>
+                <option>No, need one</option>
+                <option>Not sure</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-row">
+            <label for="web-goal">Primary goal of the site</label>
+            <select id="web-goal" name="primary_goal">
+              <option>Generate enquiries / leads</option>
+              <option>Drive phone calls</option>
+              <option>Ecommerce / sales</option>
+              <option>Support Google Ads campaigns</option>
+              <option>Mixed / not sure</option>
+            </select>
+          </div>
+          <div class="form-row">
+            <label for="web-notes">Tell me about your business and what you need</label>
+            <textarea id="web-notes" name="notes" placeholder="What you do, who your customers are, any reference sites, any deadline..."></textarea>
+          </div>
+          <button type="submit" class="form-submit" id="webSubmit">Send enquiry</button>
+          <p class="form-note">No obligation. I'll come back within one working day to book the scoping call.</p>
+        </form>
+        <div class="form-success" id="webSuccess">
+          <div class="success-icon">✓</div>
+          <h3>Enquiry received.</h3>
+          <p>I'll be in touch within one working day to book a 30-minute scoping call and discuss your project.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-cols">
+      <div class="footer-col">
+        <h4>Services</h4>
+        <a href="/services/google-ads-audit.html">Free account audit</a>
+        <a href="/services/account-management.html">Account management</a>
+        <a href="/services/new-account-build.html">New account build</a>
+        <a href="/services/account-restructure.html">Account restructure</a>
+      </div>
+      <div class="footer-col">
+        <h4>Google Ads</h4>
+        <a href="/#approach">B2B campaigns</a>
+        <a href="/#approach">B2C campaigns</a>
+        <a href="/case-studies/google-ads.html">Case studies</a>
+      </div>
+      <div class="footer-col">
+        <h4>More</h4>
+        <a href="/#why">Why JWC</a>
+        <a href="/blog/">Blog</a>
+        <a href="/#faq">FAQ</a>
+        <a href="/cookie-policy.html">Cookie policy</a>
+      </div>
+      <div class="footer-col">
+        <h4>Get in touch</h4>
+        <a href="mailto:enquiries@jwcperformance.co.uk">Email</a>
+        <a href="#enquire">Get a quote</a>
+        <a href="/#contact">Contact form</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 JWC Performance. Google Ads specialist for UK businesses.</span>
+      <span><a href="mailto:enquiries@jwcperformance.co.uk">enquiries@jwcperformance.co.uk</a> · <a href="/cookie-policy.html" style="color:var(--muted);">Cookie policy</a></span>
+    </div>
+  </div>
+</footer>
+
+<div class="cookie-banner" id="cookieBanner">
+  <div class="cookie-banner-text">
+    <div class="cookie-banner-title">This site uses cookies</div>
+    <p>We use cookies to analyse site traffic and improve your experience. <a href="/cookie-policy.html">Cookie policy</a></p>
+  </div>
+  <div class="cookie-btns">
+    <button class="cookie-accept" id="cookieAccept">Accept</button>
+    <button class="cookie-reject" id="cookieReject">Reject</button>
+  </div>
+</div>
+
+<script>
+  document.querySelectorAll('.nav-dropdown > a').forEach(function(link){
+    link.addEventListener('click', function(e){
+      e.preventDefault();
+      var dropdown = link.closest('.nav-dropdown');
+      var isOpen = dropdown.classList.contains('open');
+      document.querySelectorAll('.nav-dropdown').forEach(function(d){ d.classList.remove('open'); });
+      if(!isOpen) dropdown.classList.add('open');
+    });
+  });
+  document.addEventListener('click', function(e){
+    if(!e.target.closest('.nav-dropdown')){
+      document.querySelectorAll('.nav-dropdown').forEach(function(d){ d.classList.remove('open'); });
+    }
+  });
+
+  const menuBtn = document.getElementById('menuBtn');
+  const mobileMenu = document.getElementById('mobileMenu');
+  menuBtn.addEventListener('click', () => {
+    const isOpen = mobileMenu.classList.toggle('open');
+    menuBtn.setAttribute('aria-expanded', isOpen);
+  });
+  document.querySelectorAll('.mobile-menu a').forEach(a => {
+    a.addEventListener('click', () => {
+      mobileMenu.classList.remove('open');
+      menuBtn.setAttribute('aria-expanded', 'false');
+    });
+  });
+
+  document.querySelectorAll('.faq-q').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const item = btn.closest('.faq-item');
+      const wasOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+      if(!wasOpen) item.classList.add('open');
+    });
+  });
+
+  var webForm = document.getElementById('webForm');
+  if(webForm){
+    webForm.addEventListener('submit', function(e){
+      e.preventDefault();
+      var btn = document.getElementById('webSubmit');
+      btn.textContent = 'Sending...';
+      btn.disabled = true;
+      fetch(webForm.action, {
+        method: 'POST',
+        body: new FormData(webForm),
+        headers: { 'Accept': 'application/json' }
+      }).then(function(res){
+        if(res.ok){
+          webForm.style.display = 'none';
+          document.getElementById('webSuccess').classList.add('visible');
+        } else {
+          btn.textContent = 'Send enquiry';
+          btn.disabled = false;
+          alert('Something went wrong — please try again or email enquiries@jwcperformance.co.uk');
+        }
+      }).catch(function(){
+        btn.textContent = 'Send enquiry';
+        btn.disabled = false;
+        alert('Something went wrong — please try again or email enquiries@jwcperformance.co.uk');
+      });
+    });
+  }
+
+  (function(){
+    var banner = document.getElementById('cookieBanner');
+    var consent = localStorage.getItem('jwc_cookie_consent');
+    if(consent === 'accepted' || consent === 'rejected') banner.classList.add('hidden');
+    function gtag(){window.dataLayer = window.dataLayer || []; window.dataLayer.push(arguments);}
+    document.getElementById('cookieAccept').addEventListener('click', function(){
+      localStorage.setItem('jwc_cookie_consent', 'accepted');
+      banner.classList.add('hidden');
+      gtag('consent', 'update', {'analytics_storage':'granted','ad_storage':'granted','ad_user_data':'granted','ad_personalization':'granted'});
+    });
+    document.getElementById('cookieReject').addEventListener('click', function(){
+      localStorage.setItem('jwc_cookie_consent', 'rejected');
+      banner.classList.add('hidden');
+    });
+  })();
+</script>
+
+</body>
+</html>
