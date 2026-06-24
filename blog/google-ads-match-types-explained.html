@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Google Ads Match Types Explained: Broad, Phrase and Exact in 2026 | JWC Performance</title>
+<meta name="description" content="Google Ads match types explained in plain English. What broad, phrase and exact match actually do in 2026, how they've changed, and which to use for your account.">
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-5HCM3QFH');</script>
+<!-- End Google Tag Manager -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#23241D;--paper:#F6F4ED;--surface:#ECE7D8;
+    --khaki-deep:#3D3E2F;--gold:#B6862A;--gold-deep:#8A6418;--gold-pale:#EEE0BE;
+    --line:#DDD8C7;--line-strong:#C7C0A7;--muted:#6A6753;--max:1140px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  html{scroll-behavior:smooth;}
+  body{font-family:'Inter',-apple-system,sans-serif;background:var(--paper);color:var(--ink);line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden;}
+  a{color:inherit;text-decoration:none;}
+  .wrap{max-width:var(--max);margin:0 auto;padding:0 20px;}
+  .top-strip{background:var(--khaki-deep);color:#E6E2CF;font-family:'JetBrains Mono',monospace;font-size:11.5px;padding:8px 20px;text-align:center;}
+  .top-strip strong{color:var(--gold);}
+  header{position:sticky;top:0;z-index:50;background:rgba(246,244,237,0.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);}
+  .nav-row{display:flex;align-items:center;justify-content:space-between;padding:15px 20px;max-width:var(--max);margin:0 auto;}
+  .logo{font-family:'Fraunces',serif;font-weight:700;display:flex;align-items:center;gap:0;line-height:1;text-decoration:none;}
+  .logo .bracket-open{font-size:68px;color:var(--gold);line-height:1;margin-right:3px;font-family:'Fraunces',serif;font-weight:700;}
+  .logo .bracket-close{font-size:68px;color:var(--khaki-deep);line-height:1;margin-left:3px;font-family:'Fraunces',serif;font-weight:700;}
+  .logo .logo-inner{display:flex;flex-direction:column;justify-content:center;padding:0 2px;}
+  .logo .logo-name{font-family:'Fraunces',serif;font-weight:700;font-size:44px;color:var(--ink);letter-spacing:-0.01em;line-height:1.15;}
+  .logo .logo-sub{font-family:'JetBrains Mono',monospace;font-weight:600;font-size:16px;color:var(--gold-deep);letter-spacing:0.14em;text-transform:uppercase;line-height:1;}
+  nav.desktop-nav{display:none;}
+  .nav-cta{display:none;}
+  .menu-btn{width:40px;height:40px;border:1px solid var(--line-strong);border-radius:4px;background:transparent;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:4px;cursor:pointer;}
+  .menu-btn span{width:18px;height:1.5px;background:var(--ink);display:block;}
+  .mobile-menu{display:none;flex-direction:column;border-top:1px solid var(--line);background:var(--paper);}
+  .mobile-menu.open{display:flex;}
+  .mobile-menu a{padding:16px 20px;border-bottom:1px solid var(--line);font-size:15px;font-weight:500;}
+  .mobile-menu .mm-cta{margin:16px 20px 20px;padding:18px;background:var(--gold);color:#ffffff;text-align:center;border-radius:4px;font-weight:700;border:none;font-size:16px;}
+  @media(min-width:920px){
+    nav.desktop-nav{display:flex;align-items:center;gap:30px;font-size:14px;font-weight:500;}
+    nav.desktop-nav a{padding:8px 0;border-bottom:1px solid transparent;}
+    nav.desktop-nav a:hover{border-bottom:1px solid var(--gold-deep);}
+    .menu-btn{display:none;}
+    .nav-cta{display:inline-block;background:var(--gold);color:#ffffff;padding:14px 26px;border-radius:4px;font-weight:700;font-size:15px;}
+    .nav-dropdown{position:relative;}
+    .nav-dropdown>a{display:flex;align-items:center;gap:5px;cursor:pointer;}
+    .nav-dropdown>a::after{content:'▾';font-size:10px;color:var(--gold-deep);transition:transform 0.2s ease;}
+    .nav-dropdown.open>a::after{transform:rotate(180deg);}
+    .dropdown-menu{display:none;position:absolute;top:calc(100% + 8px);left:0;min-width:220px;z-index:100;background:var(--paper);border:1px solid var(--line-strong);border-top:2px solid var(--gold);box-shadow:0 8px 24px rgba(0,0,0,0.08);}
+    .nav-dropdown.open .dropdown-menu{display:block;}
+    .dropdown-menu a{display:block;padding:12px 16px;font-size:13.5px;font-weight:500;color:var(--ink);border-bottom:1px solid var(--line);}
+    .dropdown-menu a:last-child{border-bottom:none;}
+    .dropdown-menu a:hover{background:var(--surface);color:var(--gold-deep);}
+  }
+  .article-hero{padding:52px 0 40px;border-bottom:1px solid var(--line);}
+  .breadcrumb{font-family:'JetBrains Mono',monospace;font-size:11.5px;color:var(--muted);margin-bottom:16px;display:flex;align-items:center;gap:8px;}
+  .breadcrumb a{color:var(--muted);}
+  .breadcrumb a:hover{color:var(--gold-deep);}
+  .article-meta{font-family:'JetBrains Mono',monospace;font-size:11.5px;color:var(--muted);margin-bottom:16px;display:flex;align-items:center;gap:16px;}
+  .article-meta .tag{background:var(--gold-pale);color:var(--gold-deep);padding:3px 10px;font-weight:600;}
+  h1.article-title{font-family:'Fraunces',serif;font-size:28px;font-weight:700;letter-spacing:-0.01em;line-height:1.1;margin-bottom:16px;max-width:820px;}
+  @media(min-width:900px){h1.article-title{font-size:40px;}}
+  .article-intro{font-size:17px;color:var(--muted);max-width:680px;line-height:1.6;}
+  .article-wrap{display:grid;grid-template-columns:1fr;gap:40px;padding:52px 0;}
+  @media(min-width:960px){.article-wrap{grid-template-columns:1fr 300px;gap:60px;}}
+  .article-body h2{font-family:'Fraunces',serif;font-size:24px;font-weight:700;letter-spacing:-0.01em;margin:40px 0 14px;color:var(--ink);}
+  .article-body h2:first-child{margin-top:0;}
+  .article-body h3{font-family:'Fraunces',serif;font-size:19px;font-weight:700;margin:28px 0 10px;color:var(--ink);}
+  .article-body p{font-size:16px;color:var(--muted);margin-bottom:18px;max-width:680px;}
+  .article-body ul,.article-body ol{margin:0 0 18px 20px;}
+  .article-body li{font-size:16px;color:var(--muted);margin-bottom:8px;}
+  .article-body strong{color:var(--ink);font-weight:600;}
+  .article-body a{color:var(--gold-deep);border-bottom:1px solid var(--gold);padding-bottom:1px;}
+  .callout{background:var(--surface);border-left:4px solid var(--gold);padding:20px 24px;margin:28px 0;}
+  .callout p{margin-bottom:8px;font-size:15px;}
+  .callout p:last-child{margin-bottom:0;}
+  .callout strong{color:var(--gold-deep);}
+  .match-card{border:1px solid var(--line-strong);margin-bottom:20px;}
+  .match-card-head{padding:16px 20px;display:flex;align-items:center;justify-content:space-between;gap:16px;}
+  .match-card-head.broad{background:#3D3E2F;}
+  .match-card-head.phrase{background:#4A4530;}
+  .match-card-head.exact{background:#8A6418;}
+  .match-card-title{font-family:'Fraunces',serif;font-size:19px;font-weight:700;color:#F6F4ED;}
+  .match-card-syntax{font-family:'JetBrains Mono',monospace;font-size:13px;color:var(--gold-pale);background:rgba(0,0,0,0.2);padding:4px 10px;}
+  .match-card-body{padding:20px;}
+  .match-card-body p{font-size:14.5px;color:var(--muted);margin-bottom:12px;}
+  .match-card-body p:last-child{margin-bottom:0;}
+  .match-card-body strong{color:var(--ink);}
+  .match-example{background:var(--surface);padding:12px 16px;margin:12px 0;font-size:13.5px;}
+  .match-example .label{font-family:'JetBrains Mono',monospace;font-size:10px;text-transform:uppercase;letter-spacing:0.05em;color:var(--gold-deep);font-weight:600;margin-bottom:6px;}
+  .match-example .kw{font-family:'JetBrains Mono',monospace;font-weight:700;color:var(--ink);}
+  .match-example .searches{color:var(--muted);}
+  .comparison-table{width:100%;border-collapse:collapse;margin:24px 0;font-size:14px;}
+  .comparison-table th{background:var(--khaki-deep);color:var(--gold);font-family:'JetBrains Mono',monospace;font-size:10.5px;text-transform:uppercase;letter-spacing:0.05em;padding:12px 16px;text-align:left;font-weight:600;}
+  .comparison-table td{padding:12px 16px;border-bottom:1px solid var(--line);color:var(--muted);vertical-align:top;}
+  .comparison-table tr:last-child td{border-bottom:none;}
+  .comparison-table tr:nth-child(even) td{background:var(--surface);}
+  .comparison-table td strong{color:var(--ink);}
+  .article-sidebar{display:flex;flex-direction:column;gap:20px;}
+  .sidebar-card{border:1px solid var(--line-strong);padding:20px;background:var(--paper);}
+  .sidebar-card h4{font-family:'JetBrains Mono',monospace;font-size:10.5px;text-transform:uppercase;letter-spacing:0.05em;color:var(--gold-deep);font-weight:600;margin-bottom:12px;}
+  .sidebar-card p{font-size:13.5px;color:var(--muted);margin-bottom:14px;}
+  .sidebar-card .btn{display:block;text-align:center;background:var(--gold);color:#ffffff;padding:12px 16px;border-radius:4px;font-weight:700;font-size:14px;}
+  .sidebar-card ul{list-style:none;}
+  .sidebar-card li{font-size:13.5px;padding:7px 0;border-bottom:1px solid var(--line);display:flex;gap:8px;}
+  .sidebar-card li:last-child{border-bottom:none;}
+  .sidebar-card li::before{content:'→';color:var(--gold-deep);flex-shrink:0;}
+  .author-card{background:var(--khaki-deep);padding:20px;}
+  .author-card h4{font-family:'JetBrains Mono',monospace;font-size:10.5px;text-transform:uppercase;letter-spacing:0.05em;color:var(--gold);font-weight:600;margin-bottom:10px;}
+  .author-card p{font-size:13px;color:#C7C3AC;margin-bottom:0;}
+  .cta-band{background:var(--khaki-deep);padding:56px 0;border-top:1px solid var(--line);}
+  .cta-band .eyebrow{font-family:'JetBrains Mono',monospace;font-size:11.5px;color:var(--gold);text-transform:uppercase;letter-spacing:0.06em;font-weight:600;margin-bottom:12px;display:flex;align-items:center;gap:8px;}
+  .cta-band .eyebrow::before{content:'';width:14px;height:1px;background:var(--gold);display:inline-block;}
+  .cta-band h2{font-family:'Fraunces',serif;font-size:28px;font-weight:700;color:#F6F4ED;margin-bottom:10px;}
+  .cta-band p{color:#C7C3AC;font-size:15px;max-width:540px;margin-bottom:28px;}
+  .btn-primary{display:inline-flex;align-items:center;justify-content:center;padding:18px 30px;border-radius:4px;font-weight:700;font-size:16px;background:var(--gold);color:#ffffff;border:none;}
+  .cookie-banner{position:fixed;bottom:0;left:0;right:0;z-index:999;background:var(--khaki-deep);color:#EDE9D8;padding:16px 20px;display:flex;flex-direction:column;gap:12px;border-top:2px solid var(--gold);box-shadow:0 -4px 24px rgba(0,0,0,0.18);}
+  .cookie-banner.hidden{display:none;}
+  .cookie-banner p{font-size:13.5px;color:#C7C3AC;line-height:1.5;margin:0;}
+  .cookie-banner a{color:var(--gold);text-decoration:underline;}
+  .cookie-banner-title{font-family:'Fraunces',serif;font-size:16px;font-weight:700;color:#F6F4ED;margin-bottom:2px;}
+  .cookie-btns{display:flex;gap:10px;}
+  .cookie-accept{background:var(--gold);color:#ffffff;border:none;padding:10px 20px;border-radius:4px;font-weight:700;font-size:13.5px;cursor:pointer;font-family:inherit;}
+  .cookie-reject{background:transparent;color:#C7C3AC;border:1px solid rgba(255,255,255,0.2);padding:10px 20px;border-radius:4px;font-weight:600;font-size:13.5px;cursor:pointer;font-family:inherit;}
+  @media(min-width:760px){.cookie-banner{flex-direction:row;align-items:center;justify-content:space-between;}.cookie-banner-text{max-width:640px;}.cookie-btns{flex-shrink:0;}}
+  footer{padding:40px 0 28px;}
+  .footer-cols{display:grid;grid-template-columns:repeat(2,1fr);gap:24px;margin-bottom:24px;}
+  .footer-col h4{font-family:'JetBrains Mono',monospace;font-size:10.5px;text-transform:uppercase;letter-spacing:0.05em;color:var(--muted);margin-bottom:12px;}
+  .footer-col a{display:block;font-size:14px;padding:6px 0;color:var(--ink);}
+  .footer-bottom{border-top:1px solid var(--line);padding-top:20px;font-size:12px;color:var(--muted);display:flex;flex-direction:column;gap:8px;}
+  @media(min-width:760px){.footer-cols{grid-template-columns:repeat(4,1fr);}.footer-bottom{flex-direction:row;justify-content:space-between;}}
+</style>
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5HCM3QFH" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+<div class="top-strip">Google Ads specialist — <strong>free account audit, no obligation</strong> · 15+ years' experience · fixed fee</div>
+
+<header>
+  <div class="nav-row">
+    <a href="/" class="logo">
+      <span class="bracket-open">[</span>
+      <span class="logo-inner"><span class="logo-name">JWC</span><span class="logo-sub">Performance</span></span>
+      <span class="bracket-close">]</span>
+    </a>
+    <nav class="desktop-nav">
+      <div class="nav-dropdown">
+        <a href="/#services">Services</a>
+        <div class="dropdown-menu">
+          <a href="/services/google-ads-audit.html">Google Ads Audit</a>
+          <a href="/services/account-management.html">Account Management</a>
+          <a href="/services/new-account-build.html">New Account Build</a>
+          <a href="/services/account-restructure.html">Account Restructure</a>
+          <a href="/services/website-design.html">Website Design & Build</a>
+        </div>
+      </div>
+      <a href="/#why">Why JWC</a>
+      <div class="nav-dropdown">
+        <a href="/case-studies/google-ads.html">Case studies</a>
+        <div class="dropdown-menu">
+          <a href="/case-studies/google-ads.html">Google Ads</a>
+          <a href="/case-studies/website-design.html">Website Design & Build</a>
+        </div>
+      </div>
+      <a href="/blog/">Blog</a>
+      <a href="/#faq">FAQ</a>
+    </nav>
+    <a href="/services/google-ads-audit.html" class="nav-cta">Free audit</a>
+    <button class="menu-btn" id="menuBtn" aria-label="Open menu"><span></span><span></span><span></span></button>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="/#services" style="font-weight:700;color:var(--gold-deep);">Services</a>
+    <a href="/services/google-ads-audit.html" style="padding-left:36px;font-size:14px;">→ Google Ads Audit</a>
+    <a href="/services/account-management.html" style="padding-left:36px;font-size:14px;">→ Account Management</a>
+    <a href="/services/new-account-build.html" style="padding-left:36px;font-size:14px;">→ New Account Build</a>
+    <a href="/services/account-restructure.html" style="padding-left:36px;font-size:14px;">→ Account Restructure</a>
+    <a href="/services/website-design.html" style="padding-left:36px;font-size:14px;">→ Website Design & Build</a>
+    <a href="/#why">Why JWC</a>
+    <a href="/case-studies/google-ads.html" style="font-weight:700;color:var(--gold-deep);">Case studies</a>
+    <a href="/case-studies/google-ads.html" style="padding-left:36px;font-size:14px;">→ Google Ads</a>
+    <a href="/case-studies/website-design.html" style="padding-left:36px;font-size:14px;">→ Website Design & Build</a>
+    <a href="/blog/">Blog</a>
+    <a href="/#faq">FAQ</a>
+    <a href="/services/google-ads-audit.html"><button class="mm-cta">Get a free audit</button></a>
+  </div>
+</header>
+
+<main>
+  <section class="article-hero">
+    <div class="wrap">
+      <div class="breadcrumb"><a href="/">Home</a> / <a href="/blog/">Blog</a> / Google Ads Fundamentals</div>
+      <div class="article-meta">
+        <span class="tag">Google Ads</span>
+        <span>June 2026</span>
+        <span>9 min read</span>
+      </div>
+      <h1 class="article-title">Google Ads Match Types Explained: Broad, Phrase and Exact in 2026</h1>
+      <p class="article-intro">Match types control which searches trigger your ads. Get them wrong and you burn budget on irrelevant clicks. Get them right and you reach exactly the people you want. Here is how each one works in 2026 and how to use them properly.</p>
+    </div>
+  </section>
+
+  <div class="wrap">
+    <div class="article-wrap">
+      <article class="article-body">
+
+        <h2>What are match types and why do they matter?</h2>
+        <p>When you add a keyword to your Google Ads campaign, the match type tells Google how closely a person's search needs to match that keyword before your ad is eligible to show. A loose match type means your ad can show for a wide range of searches. A tight match type means it only shows for very specific ones.</p>
+        <p>This matters enormously for budget efficiency. If you are running a tight budget and your match types are too loose, you will spend money on searches that have nothing to do with what you sell. If your match types are too tight, you might miss relevant searches and not spend your full budget.</p>
+        <p>There used to be four match types in Google Ads. Broad match, broad match modifier, phrase match and exact match. Broad match modifier was removed in 2021 and its behaviour was rolled into phrase match. So in 2026 there are three match types to understand.</p>
+
+        <h2>The three match types</h2>
+
+        <div class="match-card">
+          <div class="match-card-head broad">
+            <span class="match-card-title">Broad match</span>
+            <span class="match-card-syntax">keyword</span>
+          </div>
+          <div class="match-card-body">
+            <p><strong>What it does:</strong> Shows your ad for searches that Google considers related to your keyword. This includes synonyms, related topics, misspellings and searches that don't contain any of your keyword's words at all.</p>
+            <p><strong>How it works in 2026:</strong> Broad match is significantly more powerful than it used to be because it now uses signals from the rest of your campaign to decide when to show. Your landing page, ad copy and other keywords in the ad group all influence what searches trigger your broad match keywords.</p>
+            <div class="match-example">
+              <div class="label">Example</div>
+              <div class="kw">Keyword: running shoes</div>
+              <div class="searches">Could show for: trainers, jogging footwear, best shoes for marathon training, Nike sport shoes, comfortable shoes for exercise</div>
+            </div>
+            <p><strong>When to use it:</strong> Broad match works well in accounts with good conversion data and smart bidding active. The algorithm can use conversion signals to figure out which of the wide range of searches are actually worth showing for. In accounts without much data, or using manual bidding, broad match tends to waste budget fast.</p>
+            <p><strong>The risk:</strong> Without a solid negative keyword list, broad match will inevitably show your ads for irrelevant searches. This requires more active management than the other match types.</p>
+          </div>
+        </div>
+
+        <div class="match-card">
+          <div class="match-card-head phrase">
+            <span class="match-card-title">Phrase match</span>
+            <span class="match-card-syntax">"keyword"</span>
+          </div>
+          <div class="match-card-body">
+            <p><strong>What it does:</strong> Shows your ad for searches that include the meaning of your keyword. Words can appear before or after your keyword phrase, and close variants including misspellings and singular or plural versions are included.</p>
+            <p><strong>How it works in 2026:</strong> Since the removal of broad match modifier, phrase match absorbed some of BMM's tighter behaviour. It is more restrictive than broad match but more flexible than exact. The order of words in the keyword doesn't need to be preserved, but the core meaning does.</p>
+            <div class="match-example">
+              <div class="label">Example</div>
+              <div class="kw">Keyword: "running shoes"</div>
+              <div class="searches">Could show for: best running shoes, running shoes for women, buy running shoes online, trail running shoes UK<br>Would NOT show for: jogging trainers, sport footwear</div>
+            </div>
+            <p><strong>When to use it:</strong> Phrase match is the most versatile match type for most accounts. It gives you reasonable control over what your ads show for while still capturing variations and word order differences that exact match would miss. It is a good default for accounts that want control without being overly restrictive.</p>
+            <p><strong>The risk:</strong> It is still broader than exact match, so regular search term reviews are important to catch anything irrelevant slipping through.</p>
+          </div>
+        </div>
+
+        <div class="match-card">
+          <div class="match-card-head exact">
+            <span class="match-card-title">Exact match</span>
+            <span class="match-card-syntax">[keyword]</span>
+          </div>
+          <div class="match-card-body">
+            <p><strong>What it does:</strong> Shows your ad only when someone searches for your exact keyword or a very close variant of it. Close variants include misspellings, singular and plural forms, abbreviations and reorderings of words with the same meaning.</p>
+            <p><strong>How it works in 2026:</strong> Exact match is no longer truly exact in the way it used to be. Google's close variants mean a search for "shoes for running" could trigger an exact match keyword of [running shoes] because Google determines the meaning is the same. This is more permissive than the old exact match behaviour, which many advertisers didn't welcome.</p>
+            <div class="match-example">
+              <div class="label">Example</div>
+              <div class="kw">Keyword: [running shoes]</div>
+              <div class="searches">Could show for: running shoes, running shoe, shoes for running, running shoes UK<br>Would NOT show for: best running shoes, cheap running shoes, trail running shoes</div>
+            </div>
+            <p><strong>When to use it:</strong> Exact match is best for your highest-value keywords where you know precisely what someone needs to search to be a good prospect. It gives you the most control over spend and makes it easier to see exactly which searches are driving results.</p>
+            <p><strong>The risk:</strong> You can miss relevant searches by being too restrictive, particularly longer tail variations that convert well but wouldn't trigger exact match keywords.</p>
+          </div>
+        </div>
+
+        <h2>How the match types compare</h2>
+
+        <table class="comparison-table">
+          <thead>
+            <tr><th>Match type</th><th>Reach</th><th>Control</th><th>Best for</th></tr>
+          </thead>
+          <tbody>
+            <tr><td><strong>Broad match</strong></td><td>Widest</td><td>Lowest</td><td>Large budgets, strong conversion data, smart bidding</td></tr>
+            <tr><td><strong>Phrase match</strong></td><td>Medium</td><td>Medium</td><td>Most accounts as the primary match type</td></tr>
+            <tr><td><strong>Exact match</strong></td><td>Narrowest</td><td>Highest</td><td>High-value specific keywords, tight budgets</td></tr>
+          </tbody>
+        </table>
+
+        <h2>What has changed in recent years</h2>
+        <p>Match types have loosened considerably over the past few years and it is worth knowing about if your understanding of them is based on how they worked before 2020.</p>
+        <p>Broad match modifier was removed in 2021. The plus sign syntax that used to lock individual words into a match is no longer supported. Phrase match absorbed much of what BMM did, though it is still broader than the old BMM behaviour in some cases.</p>
+        <p>Close variants have expanded significantly for both phrase and exact match. Google now considers searches with the same meaning as close variants, not just obvious misspellings and plurals. This means exact match in particular is less restrictive than it used to be.</p>
+        <p>Broad match has become more intelligent. It now uses signals from across your campaign to determine relevance, rather than just looking at the keyword in isolation. This makes it more viable than it was a few years ago, particularly in accounts with smart bidding active.</p>
+
+        <div class="callout">
+          <p><strong>The general direction of travel:</strong> Google has been consistently moving towards broader match types and more algorithmic control over when ads show. Negative keywords have become more important as a result, because they are now one of the primary tools for excluding irrelevant traffic that looser match types might otherwise capture.</p>
+        </div>
+
+        <h2>How to use match types in practice</h2>
+
+        <h3>For most small to medium accounts</h3>
+        <p>Start with phrase match as your primary match type. It gives you a reasonable balance of reach and control. Use exact match for your most important keywords where you know exactly what search terms you want to capture. Build a negative keyword list from day one and add to it weekly based on your search terms report.</p>
+        <p>Hold off on broad match until you have solid conversion data and are running smart bidding strategies. Then test it carefully, ideally in a separate campaign so you can compare performance.</p>
+
+        <h3>For larger accounts with conversion data</h3>
+        <p>Broad match with Target CPA or Target ROAS bidding can work very effectively once the account has enough conversion data for the algorithm to optimise against. The combination of broad match reach and smart bidding efficiency can open up search volume that phrase and exact match campaigns miss.</p>
+        <p>Even in this setup, a comprehensive negative keyword list at account level is essential to prevent the most obviously irrelevant searches from getting through.</p>
+
+        <h3>Negative keywords matter more than ever</h3>
+        <p>As match types have loosened, the importance of negative keywords has increased in proportion. A well-maintained negative keyword list is one of the most effective tools for controlling what your ads show for across all match types. Without one, even phrase and exact match can produce surprising search term results.</p>
+        <p>Review your search terms report at least weekly, particularly for phrase and broad match keywords. Add anything irrelevant as a negative at the appropriate level. Over time this builds into a valuable exclusion list that improves the efficiency of the whole account.</p>
+
+        <h2>Common mistakes with match types</h2>
+        <ul>
+          <li><strong>Using only broad match on a small budget.</strong> Without enough data for smart bidding to work well, broad match burns through limited budgets quickly on irrelevant searches.</li>
+          <li><strong>Using only exact match everywhere.</strong> You will miss relevant searches and often struggle to spend your full budget, particularly for lower-volume keywords.</li>
+          <li><strong>Not reviewing search terms regularly.</strong> Match types are not a set-and-forget decision. What triggers your ads changes over time as Google updates its algorithms and as search behaviour shifts.</li>
+          <li><strong>No negative keywords.</strong> Running any match type without a negative keyword strategy is like having a broad match account with no guardrails.</li>
+          <li><strong>Mixing match types for the same keyword in the same ad group.</strong> Having running shoes, "running shoes" and [running shoes] all in the same ad group creates internal competition and muddies your performance data.</li>
+        </ul>
+
+        <h2>The bottom line</h2>
+        <p>Match types are one of the most fundamental decisions in any Google Ads account and they have a direct impact on how efficiently your budget is spent. Phrase match is the most practical starting point for most accounts. Exact match gives you the most control for your most important keywords. Broad match can be powerful but needs the right conditions to work well.</p>
+        <p>Whatever match types you use, a regular search terms review and an active negative keyword list are non-negotiable. They are what keeps your account efficient as match types continue to evolve.</p>
+        <p>If you are unsure how your current match type setup is affecting performance, a proper account audit will show you exactly where your budget is going and whether the right people are seeing your ads.</p>
+
+      </article>
+
+      <aside class="article-sidebar">
+        <div class="sidebar-card" style="background:var(--khaki-deep);">
+          <h4 style="color:var(--gold);">Free Google Ads audit</h4>
+          <p style="color:#C7C3AC;">Find out whether your match types are costing you money. Free 12-point audit, delivered within 5 working days.</p>
+          <a href="/services/google-ads-audit.html" class="btn">Request free audit</a>
+        </div>
+        <div class="sidebar-card">
+          <h4>Related posts</h4>
+          <ul>
+            <li><a href="/blog/how-to-audit-your-google-ads-account.html">How to audit your own account</a></li>
+            <li><a href="/blog/why-your-google-ads-arent-converting.html">Why your Google Ads aren't converting</a></li>
+            <li><a href="/blog/what-is-a-good-cost-per-lead-google-ads.html">What is a good cost per lead?</a></li>
+            <li><a href="/blog/">All posts</a></li>
+          </ul>
+        </div>
+        <div class="sidebar-card">
+          <h4>Related services</h4>
+          <ul>
+            <li><a href="/services/google-ads-audit.html">Free account audit</a></li>
+            <li><a href="/services/account-restructure.html">Account restructure</a></li>
+            <li><a href="/services/new-account-build.html">New account build</a></li>
+          </ul>
+        </div>
+        <div class="author-card">
+          <h4>Written by</h4>
+          <p>Joe Coombs. Google Ads specialist with 15+ years of experience across B2B and B2C campaigns, from large corporations to growing SMBs.</p>
+        </div>
+      </aside>
+    </div>
+  </div>
+
+  <section class="cta-band">
+    <div class="wrap">
+      <div class="eyebrow">Get started</div>
+      <h2>Not sure if your match types are set up correctly?</h2>
+      <p>The free audit covers keyword strategy and match type setup as part of a full 12-point review. Delivered within 5 working days with no obligation.</p>
+      <a href="/services/google-ads-audit.html" class="btn-primary">Request your free audit</a>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-cols">
+      <div class="footer-col">
+        <h4>Services</h4>
+        <a href="/services/google-ads-audit.html">Free account audit</a>
+        <a href="/services/account-management.html">Account management</a>
+        <a href="/services/new-account-build.html">New account build</a>
+        <a href="/services/account-restructure.html">Account restructure</a>
+      </div>
+      <div class="footer-col">
+        <h4>Case studies</h4>
+        <a href="/case-studies/google-ads.html">Google Ads</a>
+        <a href="/case-studies/website-design.html">Website Design & Build</a>
+      </div>
+      <div class="footer-col">
+        <h4>More</h4>
+        <a href="/#why">Why JWC</a>
+        <a href="/blog/">Blog</a>
+        <a href="/#faq">FAQ</a>
+        <a href="/cookie-policy.html">Cookie policy</a>
+      </div>
+      <div class="footer-col">
+        <h4>Get in touch</h4>
+        <a href="mailto:enquiries@jwcperformance.co.uk">Email</a>
+        <a href="/services/google-ads-audit.html">Free audit</a>
+        <a href="/#contact">Contact form</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 JWC Performance. Google Ads specialist for UK businesses.</span>
+      <span><a href="mailto:enquiries@jwcperformance.co.uk">enquiries@jwcperformance.co.uk</a> · <a href="/cookie-policy.html" style="color:var(--muted);">Cookie policy</a></span>
+    </div>
+  </div>
+</footer>
+
+<div class="cookie-banner" id="cookieBanner">
+  <div class="cookie-banner-text">
+    <div class="cookie-banner-title">This site uses cookies</div>
+    <p>We use cookies to analyse site traffic and improve your experience. <a href="/cookie-policy.html">Cookie policy</a></p>
+  </div>
+  <div class="cookie-btns">
+    <button class="cookie-accept" id="cookieAccept">Accept</button>
+    <button class="cookie-reject" id="cookieReject">Reject</button>
+  </div>
+</div>
+
+<script>
+  document.querySelectorAll('.nav-dropdown > a').forEach(function(link){
+    link.addEventListener('click', function(e){
+      e.preventDefault();
+      var dropdown = link.closest('.nav-dropdown');
+      var isOpen = dropdown.classList.contains('open');
+      document.querySelectorAll('.nav-dropdown').forEach(function(d){ d.classList.remove('open'); });
+      if(!isOpen) dropdown.classList.add('open');
+    });
+  });
+  document.addEventListener('click', function(e){
+    if(!e.target.closest('.nav-dropdown')){
+      document.querySelectorAll('.nav-dropdown').forEach(function(d){ d.classList.remove('open'); });
+    }
+  });
+  const menuBtn = document.getElementById('menuBtn');
+  const mobileMenu = document.getElementById('mobileMenu');
+  menuBtn.addEventListener('click', () => { mobileMenu.classList.toggle('open'); });
+  document.querySelectorAll('.mobile-menu a').forEach(a => { a.addEventListener('click', () => { mobileMenu.classList.remove('open'); }); });
+  (function(){
+    var banner = document.getElementById('cookieBanner');
+    if(localStorage.getItem('jwc_cookie_consent')) banner.classList.add('hidden');
+    function gtag(){window.dataLayer=window.dataLayer||[];window.dataLayer.push(arguments);}
+    document.getElementById('cookieAccept').addEventListener('click', function(){
+      localStorage.setItem('jwc_cookie_consent','accepted');
+      banner.classList.add('hidden');
+      gtag('consent','update',{'analytics_storage':'granted','ad_storage':'granted','ad_user_data':'granted','ad_personalization':'granted'});
+    });
+    document.getElementById('cookieReject').addEventListener('click', function(){
+      localStorage.setItem('jwc_cookie_consent','rejected');
+      banner.classList.add('hidden');
+    });
+  })();
+</script>
+</body>
+</html>
