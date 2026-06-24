@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>How to Audit Your Own Google Ads Account: 12 Things to Check | JWC Performance</title>
+<meta name="description" content="A practical 12-point checklist for reviewing your Google Ads account yourself. The same areas covered in a professional audit, explained in plain English.">
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-5HCM3QFH');</script>
+<!-- End Google Tag Manager -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#23241D;--paper:#F6F4ED;--surface:#ECE7D8;
+    --khaki-deep:#3D3E2F;--gold:#B6862A;--gold-deep:#8A6418;--gold-pale:#EEE0BE;
+    --line:#DDD8C7;--line-strong:#C7C0A7;--muted:#6A6753;--max:1140px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  html{scroll-behavior:smooth;}
+  body{font-family:'Inter',-apple-system,sans-serif;background:var(--paper);color:var(--ink);line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden;}
+  a{color:inherit;text-decoration:none;}
+  .wrap{max-width:var(--max);margin:0 auto;padding:0 20px;}
+  .top-strip{background:var(--khaki-deep);color:#E6E2CF;font-family:'JetBrains Mono',monospace;font-size:11.5px;padding:8px 20px;text-align:center;}
+  .top-strip strong{color:var(--gold);}
+  header{position:sticky;top:0;z-index:50;background:rgba(246,244,237,0.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);}
+  .nav-row{display:flex;align-items:center;justify-content:space-between;padding:15px 20px;max-width:var(--max);margin:0 auto;}
+  .logo{font-family:'Fraunces',serif;font-weight:700;display:flex;align-items:center;gap:0;line-height:1;text-decoration:none;}
+  .logo .bracket-open{font-size:68px;color:var(--gold);line-height:1;margin-right:3px;font-family:'Fraunces',serif;font-weight:700;}
+  .logo .bracket-close{font-size:68px;color:var(--khaki-deep);line-height:1;margin-left:3px;font-family:'Fraunces',serif;font-weight:700;}
+  .logo .logo-inner{display:flex;flex-direction:column;justify-content:center;padding:0 2px;}
+  .logo .logo-name{font-family:'Fraunces',serif;font-weight:700;font-size:44px;color:var(--ink);letter-spacing:-0.01em;line-height:1.15;}
+  .logo .logo-sub{font-family:'JetBrains Mono',monospace;font-weight:600;font-size:16px;color:var(--gold-deep);letter-spacing:0.14em;text-transform:uppercase;line-height:1;}
+  nav.desktop-nav{display:none;}
+  .nav-cta{display:none;}
+  .menu-btn{width:40px;height:40px;border:1px solid var(--line-strong);border-radius:4px;background:transparent;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:4px;cursor:pointer;}
+  .menu-btn span{width:18px;height:1.5px;background:var(--ink);display:block;}
+  .mobile-menu{display:none;flex-direction:column;border-top:1px solid var(--line);background:var(--paper);}
+  .mobile-menu.open{display:flex;}
+  .mobile-menu a{padding:16px 20px;border-bottom:1px solid var(--line);font-size:15px;font-weight:500;}
+  .mobile-menu .mm-cta{margin:16px 20px 20px;padding:18px;background:var(--gold);color:#ffffff;text-align:center;border-radius:4px;font-weight:700;border:none;font-size:16px;}
+  @media(min-width:920px){
+    nav.desktop-nav{display:flex;align-items:center;gap:30px;font-size:14px;font-weight:500;}
+    nav.desktop-nav a{padding:8px 0;border-bottom:1px solid transparent;}
+    nav.desktop-nav a:hover{border-bottom:1px solid var(--gold-deep);}
+    .menu-btn{display:none;}
+    .nav-cta{display:inline-block;background:var(--gold);color:#ffffff;padding:14px 26px;border-radius:4px;font-weight:700;font-size:15px;}
+    .nav-dropdown{position:relative;}
+    .nav-dropdown>a{display:flex;align-items:center;gap:5px;cursor:pointer;}
+    .nav-dropdown>a::after{content:'▾';font-size:10px;color:var(--gold-deep);transition:transform 0.2s ease;}
+    .nav-dropdown.open>a::after{transform:rotate(180deg);}
+    .dropdown-menu{display:none;position:absolute;top:calc(100% + 8px);left:0;min-width:220px;z-index:100;background:var(--paper);border:1px solid var(--line-strong);border-top:2px solid var(--gold);box-shadow:0 8px 24px rgba(0,0,0,0.08);}
+    .nav-dropdown.open .dropdown-menu{display:block;}
+    .dropdown-menu a{display:block;padding:12px 16px;font-size:13.5px;font-weight:500;color:var(--ink);border-bottom:1px solid var(--line);}
+    .dropdown-menu a:last-child{border-bottom:none;}
+    .dropdown-menu a:hover{background:var(--surface);color:var(--gold-deep);}
+  }
+  .article-hero{padding:52px 0 40px;border-bottom:1px solid var(--line);}
+  .breadcrumb{font-family:'JetBrains Mono',monospace;font-size:11.5px;color:var(--muted);margin-bottom:16px;display:flex;align-items:center;gap:8px;}
+  .breadcrumb a{color:var(--muted);}
+  .breadcrumb a:hover{color:var(--gold-deep);}
+  .article-meta{font-family:'JetBrains Mono',monospace;font-size:11.5px;color:var(--muted);margin-bottom:16px;display:flex;align-items:center;gap:16px;}
+  .article-meta .tag{background:var(--gold-pale);color:var(--gold-deep);padding:3px 10px;font-weight:600;}
+  h1.article-title{font-family:'Fraunces',serif;font-size:28px;font-weight:700;letter-spacing:-0.01em;line-height:1.1;margin-bottom:16px;max-width:820px;}
+  @media(min-width:900px){h1.article-title{font-size:40px;}}
+  .article-intro{font-size:17px;color:var(--muted);max-width:680px;line-height:1.6;}
+  .article-wrap{display:grid;grid-template-columns:1fr;gap:40px;padding:52px 0;}
+  @media(min-width:960px){.article-wrap{grid-template-columns:1fr 300px;gap:60px;}}
+  .article-body h2{font-family:'Fraunces',serif;font-size:24px;font-weight:700;letter-spacing:-0.01em;margin:40px 0 14px;color:var(--ink);}
+  .article-body h2:first-child{margin-top:0;}
+  .article-body h3{font-family:'Fraunces',serif;font-size:19px;font-weight:700;margin:28px 0 10px;color:var(--ink);}
+  .article-body p{font-size:16px;color:var(--muted);margin-bottom:18px;max-width:680px;}
+  .article-body ul,.article-body ol{margin:0 0 18px 20px;}
+  .article-body li{font-size:16px;color:var(--muted);margin-bottom:8px;}
+  .article-body strong{color:var(--ink);font-weight:600;}
+  .article-body a{color:var(--gold-deep);border-bottom:1px solid var(--gold);padding-bottom:1px;}
+  .callout{background:var(--surface);border-left:4px solid var(--gold);padding:20px 24px;margin:28px 0;}
+  .callout p{margin-bottom:0;font-size:15px;}
+  .callout strong{color:var(--gold-deep);}
+  .checklist-item{border:1px solid var(--line-strong);margin-bottom:16px;background:var(--paper);}
+  .checklist-head{background:var(--khaki-deep);padding:14px 20px;display:flex;align-items:center;gap:12px;}
+  .checklist-num{font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--gold);font-weight:700;background:rgba(255,255,255,0.1);padding:3px 10px;}
+  .checklist-head h3{font-family:'Fraunces',serif;font-size:17px;font-weight:700;color:#F6F4ED;margin:0;}
+  .checklist-body{padding:18px 20px;}
+  .checklist-body p{font-size:14.5px;color:var(--muted);margin-bottom:10px;}
+  .checklist-body p:last-child{margin-bottom:0;}
+  .checklist-body strong{color:var(--ink);}
+  .article-sidebar{display:flex;flex-direction:column;gap:20px;}
+  .sidebar-card{border:1px solid var(--line-strong);padding:20px;background:var(--paper);}
+  .sidebar-card h4{font-family:'JetBrains Mono',monospace;font-size:10.5px;text-transform:uppercase;letter-spacing:0.05em;color:var(--gold-deep);font-weight:600;margin-bottom:12px;}
+  .sidebar-card p{font-size:13.5px;color:var(--muted);margin-bottom:14px;}
+  .sidebar-card .btn{display:block;text-align:center;background:var(--gold);color:#ffffff;padding:12px 16px;border-radius:4px;font-weight:700;font-size:14px;}
+  .sidebar-card ul{list-style:none;}
+  .sidebar-card li{font-size:13.5px;padding:7px 0;border-bottom:1px solid var(--line);display:flex;gap:8px;}
+  .sidebar-card li:last-child{border-bottom:none;}
+  .sidebar-card li::before{content:'→';color:var(--gold-deep);flex-shrink:0;}
+  .author-card{background:var(--khaki-deep);padding:20px;}
+  .author-card h4{font-family:'JetBrains Mono',monospace;font-size:10.5px;text-transform:uppercase;letter-spacing:0.05em;color:var(--gold);font-weight:600;margin-bottom:10px;}
+  .author-card p{font-size:13px;color:#C7C3AC;margin-bottom:0;}
+  .cta-band{background:var(--khaki-deep);padding:56px 0;border-top:1px solid var(--line);}
+  .cta-band .eyebrow{font-family:'JetBrains Mono',monospace;font-size:11.5px;color:var(--gold);text-transform:uppercase;letter-spacing:0.06em;font-weight:600;margin-bottom:12px;display:flex;align-items:center;gap:8px;}
+  .cta-band .eyebrow::before{content:'';width:14px;height:1px;background:var(--gold);display:inline-block;}
+  .cta-band h2{font-family:'Fraunces',serif;font-size:28px;font-weight:700;color:#F6F4ED;margin-bottom:10px;}
+  .cta-band p{color:#C7C3AC;font-size:15px;max-width:540px;margin-bottom:28px;}
+  .btn-primary{display:inline-flex;align-items:center;justify-content:center;padding:18px 30px;border-radius:4px;font-weight:700;font-size:16px;background:var(--gold);color:#ffffff;border:none;}
+  .cookie-banner{position:fixed;bottom:0;left:0;right:0;z-index:999;background:var(--khaki-deep);color:#EDE9D8;padding:16px 20px;display:flex;flex-direction:column;gap:12px;border-top:2px solid var(--gold);box-shadow:0 -4px 24px rgba(0,0,0,0.18);}
+  .cookie-banner.hidden{display:none;}
+  .cookie-banner p{font-size:13.5px;color:#C7C3AC;line-height:1.5;margin:0;}
+  .cookie-banner a{color:var(--gold);text-decoration:underline;}
+  .cookie-banner-title{font-family:'Fraunces',serif;font-size:16px;font-weight:700;color:#F6F4ED;margin-bottom:2px;}
+  .cookie-btns{display:flex;gap:10px;}
+  .cookie-accept{background:var(--gold);color:#ffffff;border:none;padding:10px 20px;border-radius:4px;font-weight:700;font-size:13.5px;cursor:pointer;font-family:inherit;}
+  .cookie-reject{background:transparent;color:#C7C3AC;border:1px solid rgba(255,255,255,0.2);padding:10px 20px;border-radius:4px;font-weight:600;font-size:13.5px;cursor:pointer;font-family:inherit;}
+  @media(min-width:760px){.cookie-banner{flex-direction:row;align-items:center;justify-content:space-between;}.cookie-banner-text{max-width:640px;}.cookie-btns{flex-shrink:0;}}
+  footer{padding:40px 0 28px;}
+  .footer-cols{display:grid;grid-template-columns:repeat(2,1fr);gap:24px;margin-bottom:24px;}
+  .footer-col h4{font-family:'JetBrains Mono',monospace;font-size:10.5px;text-transform:uppercase;letter-spacing:0.05em;color:var(--muted);margin-bottom:12px;}
+  .footer-col a{display:block;font-size:14px;padding:6px 0;color:var(--ink);}
+  .footer-bottom{border-top:1px solid var(--line);padding-top:20px;font-size:12px;color:var(--muted);display:flex;flex-direction:column;gap:8px;}
+  @media(min-width:760px){.footer-cols{grid-template-columns:repeat(4,1fr);}.footer-bottom{flex-direction:row;justify-content:space-between;}}
+</style>
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5HCM3QFH" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+<div class="top-strip">Google Ads specialist — <strong>free account audit, no obligation</strong> · 15+ years' experience · fixed fee</div>
+
+<header>
+  <div class="nav-row">
+    <a href="/" class="logo">
+      <span class="bracket-open">[</span>
+      <span class="logo-inner"><span class="logo-name">JWC</span><span class="logo-sub">Performance</span></span>
+      <span class="bracket-close">]</span>
+    </a>
+    <nav class="desktop-nav">
+      <div class="nav-dropdown">
+        <a href="/#services">Services</a>
+        <div class="dropdown-menu">
+          <a href="/services/google-ads-audit.html">Google Ads Audit</a>
+          <a href="/services/account-management.html">Account Management</a>
+          <a href="/services/new-account-build.html">New Account Build</a>
+          <a href="/services/account-restructure.html">Account Restructure</a>
+          <a href="/services/website-design.html">Website Design & Build</a>
+        </div>
+      </div>
+      <a href="/about.html">About</a>
+      <div class="nav-dropdown">
+        <a href="/case-studies/google-ads.html">Case studies</a>
+        <div class="dropdown-menu">
+          <a href="/case-studies/google-ads.html">Google Ads</a>
+          <a href="/case-studies/website-design.html">Website Design & Build</a>
+        </div>
+      </div>
+      <a href="/blog/">Blog</a>
+      <a href="/#faq">FAQ</a>
+    </nav>
+    <a href="/services/google-ads-audit.html" class="nav-cta">Free audit</a>
+    <button class="menu-btn" id="menuBtn" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="/#services" style="font-weight:700;color:var(--gold-deep);">Services</a>
+    <a href="/services/google-ads-audit.html" style="padding-left:36px;font-size:14px;">→ Google Ads Audit</a>
+    <a href="/services/account-management.html" style="padding-left:36px;font-size:14px;">→ Account Management</a>
+    <a href="/services/new-account-build.html" style="padding-left:36px;font-size:14px;">→ New Account Build</a>
+    <a href="/services/account-restructure.html" style="padding-left:36px;font-size:14px;">→ Account Restructure</a>
+    <a href="/services/website-design.html" style="padding-left:36px;font-size:14px;">→ Website Design & Build</a>
+    <a href="/about.html">About</a>
+    <a href="/case-studies/google-ads.html" style="font-weight:700;color:var(--gold-deep);">Case studies</a>
+    <a href="/case-studies/google-ads.html" style="padding-left:36px;font-size:14px;">→ Google Ads</a>
+    <a href="/case-studies/website-design.html" style="padding-left:36px;font-size:14px;">→ Website Design & Build</a>
+    <a href="/blog/">Blog</a>
+    <a href="/#faq">FAQ</a>
+    <a href="/services/google-ads-audit.html"><button class="mm-cta">Get a free audit</button></a>
+  </div>
+</header>
+
+<main>
+  <section class="article-hero">
+    <div class="wrap">
+      <div class="breadcrumb"><a href="/">Home</a> / <a href="/blog/">Blog</a> / Google Ads Auditing</div>
+      <div class="article-meta">
+        <span class="tag">Google Ads</span>
+        <span>June 2026</span>
+        <span>10 min read</span>
+      </div>
+      <h1 class="article-title">How to Audit Your Own Google Ads Account: 12 Things to Check</h1>
+      <p class="article-intro">You don't need a specialist to do an initial review of your Google Ads account. This checklist covers the same 12 areas I look at in a professional audit. Work through it and you'll have a clear picture of where your account is strong and where it's leaking budget.</p>
+    </div>
+  </section>
+
+  <div class="wrap">
+    <div class="article-wrap">
+      <article class="article-body">
+
+        <h2>Before you start</h2>
+        <p>Set your date range to the last 90 days before looking at anything. Shorter periods give you too little data to draw meaningful conclusions. Longer periods can include historical performance that no longer reflects how the account is set up today.</p>
+        <p>Work through each area in order. Some issues will point you towards others, so it helps to build up the full picture rather than jumping around.</p>
+
+        <div class="checklist-item">
+          <div class="checklist-head"><span class="checklist-num">01</span><h3>Account structure</h3></div>
+          <div class="checklist-body">
+            <p>Look at how your campaigns and ad groups are organised. Each campaign should have a clear purpose and each ad group should be tightly themed around a specific set of closely related keywords.</p>
+            <p><strong>What to look for:</strong> Ad groups with more than 20 keywords are usually too broad. If an ad group contains keywords that span very different topics, the ads inside it can't be relevant to all of them. That hurts quality scores and click-through rates.</p>
+            <p>Ask yourself whether the structure reflects how your customers think about your products or services, or whether it reflects how someone set up the account quickly without thinking it through.</p>
+          </div>
+        </div>
+
+        <div class="checklist-item">
+          <div class="checklist-head"><span class="checklist-num">02</span><h3>Keyword approach</h3></div>
+          <div class="checklist-body">
+            <p>Look at the keywords you are bidding on. Are they relevant to what you actually sell? Are the match types appropriate for your goals and budget?</p>
+            <p><strong>What to look for:</strong> Too many broad match keywords on a limited budget is a common problem. Broad match gives Google a lot of latitude to show your ads for searches you didn't intend to target. That can be powerful in large accounts with lots of data, but in smaller accounts it usually burns through budget fast.</p>
+            <p>Check which keywords are spending the most and whether they are generating conversions or just clicks.</p>
+          </div>
+        </div>
+
+        <div class="checklist-item">
+          <div class="checklist-head"><span class="checklist-num">03</span><h3>Search term analysis</h3></div>
+          <div class="checklist-body">
+            <p>This is one of the most important things to check. Go to Keywords and then Search Terms. This shows you the actual searches that triggered your ads and resulted in clicks.</p>
+            <p><strong>What to look for:</strong> Look for search terms that are irrelevant to your business. If you are a B2B software company and your ads are showing for "free software download" or "student discount," that is wasted budget. Make a note of anything irrelevant as these need to become negative keywords.</p>
+            <p>Also look for high-performing search terms that you are not directly targeting as keywords. These are opportunities to be more specific and improve relevance.</p>
+          </div>
+        </div>
+
+        <div class="checklist-item">
+          <div class="checklist-head"><span class="checklist-num">04</span><h3>Negative keywords</h3></div>
+          <div class="checklist-body">
+            <p>Check what negative keywords are already in place at both campaign and ad group level. A new account often has very few negatives, which means budget is being spent on irrelevant searches from day one.</p>
+            <p><strong>What to look for:</strong> The absence of negative keywords is itself the finding. Most accounts should have a substantial negative keyword list built from regular search term reviews. If yours doesn't, start one based on your search terms report findings from step three.</p>
+            <p>Common negatives for B2B accounts include "free," "jobs," "courses," "how to" and "DIY." For local service businesses, searches from outside your service area should be excluded.</p>
+          </div>
+        </div>
+
+        <div class="checklist-item">
+          <div class="checklist-head"><span class="checklist-num">05</span><h3>Ad copy and assets</h3></div>
+          <div class="checklist-body">
+            <p>Look at your responsive search ads. Are the headlines and descriptions relevant to the keywords in each ad group? Do they give a clear reason to click and a clear call to action?</p>
+            <p><strong>What to look for:</strong> Check your ad strength rating in Google Ads. Poor or average ratings suggest headlines and descriptions are too similar to each other or aren't using enough unique content. Also check whether you have enabled all available asset types including sitelinks, callouts, structured snippets and call extensions if phone calls matter to your business.</p>
+            <p>Look at the performance labels on individual headlines and descriptions. "Low" performing assets should be replaced with something different.</p>
+          </div>
+        </div>
+
+        <div class="checklist-item">
+          <div class="checklist-head"><span class="checklist-num">06</span><h3>Landing page review</h3></div>
+          <div class="checklist-body">
+            <p>Click through your ads and look at the pages people are landing on. Does the landing page deliver what the ad promised? Is the call to action obvious? Does it load quickly on mobile?</p>
+            <p><strong>What to look for:</strong> A mismatch between the ad and the landing page is a major conversion killer. If your ad says "get a free quote" and the landing page talks about your company history with no obvious quote form, people will leave.</p>
+            <p>Check Google's landing page experience rating in the Keywords section. Below average ratings indicate that Google considers your landing page a poor match for the keywords being targeted.</p>
+          </div>
+        </div>
+
+        <div class="checklist-item">
+          <div class="checklist-head"><span class="checklist-num">07</span><h3>Quality score analysis</h3></div>
+          <div class="checklist-body">
+            <p>Add the Quality Score column to your keywords view. This shows Google's rating of how relevant your keywords, ads and landing pages are to each other, scored from 1 to 10.</p>
+            <p><strong>What to look for:</strong> Keywords with quality scores of 1 to 4 are costing you significantly more per click than they need to. A quality score of 7 or above is a reasonable target. Scores below 5 indicate a meaningful disconnect somewhere between the keyword, the ad or the landing page.</p>
+            <p>Also look at the three component scores: expected CTR, ad relevance and landing page experience. These tell you exactly where the problem is.</p>
+          </div>
+        </div>
+
+        <div class="checklist-item">
+          <div class="checklist-head"><span class="checklist-num">08</span><h3>Bidding strategy</h3></div>
+          <div class="checklist-body">
+            <p>Check what bidding strategy each campaign is using and whether it is appropriate for where the account is in its lifecycle.</p>
+            <p><strong>What to look for:</strong> Smart bidding strategies like Target CPA and Maximise Conversions need conversion data to work well. If a campaign has fewer than 30 conversions in the last 30 days, automated bidding is likely to underperform. Manual CPC or Maximise Clicks with a bid cap is often more appropriate until enough data has been collected.</p>
+            <p>Also check whether any campaigns have Target CPA targets set that are unrealistically low. If the target is £20 but the average order value is £50 and competitors are paying £30, the campaign will struggle to spend budget and win auctions.</p>
+          </div>
+        </div>
+
+        <div class="checklist-item">
+          <div class="checklist-head"><span class="checklist-num">09</span><h3>Conversion tracking</h3></div>
+          <div class="checklist-body">
+            <p>Go to Tools and then Conversions. Check what conversion actions are being tracked and whether they are actually meaningful to your business.</p>
+            <p><strong>What to look for:</strong> Tracking page views or session starts as conversions is a common mistake that makes the account look like it is performing better than it is. Only track things that represent genuine business outcomes: form submissions, phone calls, purchases, bookings.</p>
+            <p>Check that the conversion status shows "Recording" rather than "No recent conversions." If you haven't recorded a conversion in weeks on an active campaign, either the tracking is broken or the campaign genuinely isn't converting.</p>
+          </div>
+        </div>
+
+        <div class="checklist-item">
+          <div class="checklist-head"><span class="checklist-num">10</span><h3>Demographic review</h3></div>
+          <div class="checklist-body">
+            <p>Go to Audiences and then Demographics. Look at performance broken down by age, gender and household income if available.</p>
+            <p><strong>What to look for:</strong> You may find that one age group converts at twice the rate of another. Or that mobile users have a conversion rate of 0.5% while desktop users convert at 4%. These are not things to ignore. Applying bid adjustments to amplify what is working and reduce spend on what isn't is one of the clearest efficiency gains available in most accounts.</p>
+          </div>
+        </div>
+
+        <div class="checklist-item">
+          <div class="checklist-head"><span class="checklist-num">11</span><h3>Budget efficiency and impression share</h3></div>
+          <div class="checklist-body">
+            <p>Add the Impression Share and Impression Share Lost to Budget columns to your campaign view.</p>
+            <p><strong>What to look for:</strong> If your impression share lost to budget is high, it means your ads are not showing for every eligible search because you are running out of budget. That might mean the budget needs increasing, or it might mean you are targeting too broadly and wasting budget on irrelevant searches that could be cut to make the most of what you have.</p>
+            <p>Also look at when in the day your budget runs out. If campaigns are depleted by 2pm, you are missing the afternoon and evening traffic entirely.</p>
+          </div>
+        </div>
+
+        <div class="checklist-item">
+          <div class="checklist-head"><span class="checklist-num">12</span><h3>Competitor analysis</h3></div>
+          <div class="checklist-body">
+            <p>Go to Auction Insights in your campaign view. This shows you which competitors are appearing in the same auctions as you and how your impression share compares to theirs.</p>
+            <p><strong>What to look for:</strong> Competitors with significantly higher impression share are likely winning more of the available traffic. That could be because of higher bids, better quality scores, broader targeting or simply larger budgets. Understanding who you are competing against and where you are losing out is an important part of knowing where to focus improvement efforts.</p>
+          </div>
+        </div>
+
+        <h2>What to do with what you find</h2>
+        <p>Work through the checklist and make a note of every issue you identify. Then prioritise them by likely impact. Broken conversion tracking and irrelevant search terms usually sit at the top because they affect everything else in the account.</p>
+        <p>Some things you will be able to fix yourself. Others, particularly structural issues and bidding strategy changes, carry more risk if done incorrectly. If you find a lot of issues or you are not confident in making the changes, a professional audit will give you a more complete picture and a prioritised action plan.</p>
+
+        <div class="callout">
+          <p><strong>Want a professional audit done for you?</strong> The <a href="/services/google-ads-audit.html">free Google Ads audit</a> covers all 12 of these areas in detail and is delivered as a PDF report within 5 working days. There is no obligation to do anything further with the findings.</p>
+        </div>
+
+      </article>
+
+      <aside class="article-sidebar">
+        <div class="sidebar-card" style="background:var(--khaki-deep);">
+          <h4 style="color:var(--gold);">Rather have it done for you?</h4>
+          <p style="color:#C7C3AC;">The free audit covers all 12 areas and is delivered within 5 working days. No obligation.</p>
+          <a href="/services/google-ads-audit.html" class="btn">Request free audit</a>
+        </div>
+        <div class="sidebar-card">
+          <h4>Related posts</h4>
+          <ul>
+            <li><a href="/blog/why-your-google-ads-arent-converting.html">Why your Google Ads aren't converting</a></li>
+            <li><a href="/blog/how-much-does-a-google-ads-specialist-cost-uk.html">How much does a specialist cost?</a></li>
+            <li><a href="/blog/">All posts</a></li>
+          </ul>
+        </div>
+        <div class="sidebar-card">
+          <h4>Related services</h4>
+          <ul>
+            <li><a href="/services/google-ads-audit.html">Free account audit</a></li>
+            <li><a href="/services/account-restructure.html">Account restructure</a></li>
+          </ul>
+        </div>
+        <div class="author-card">
+          <h4>Written by</h4>
+          <p>Joe Coombs. Google Ads specialist with 15+ years of experience across B2B and B2C campaigns, from large corporations to growing SMBs.</p>
+        </div>
+      </aside>
+    </div>
+  </div>
+
+  <section class="cta-band">
+    <div class="wrap">
+      <div class="eyebrow">Get started</div>
+      <h2>Want it done properly?</h2>
+      <p>The free audit covers all 12 of these areas in detail and delivers findings as a PDF within 5 working days, along with a walkthrough call to go through everything together.</p>
+      <a href="/services/google-ads-audit.html" class="btn-primary">Request your free audit</a>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-cols">
+      <div class="footer-col">
+        <h4>Services</h4>
+        <a href="/services/google-ads-audit.html">Free account audit</a>
+        <a href="/services/account-management.html">Account management</a>
+        <a href="/services/new-account-build.html">New account build</a>
+        <a href="/services/account-restructure.html">Account restructure</a>
+      </div>
+      <div class="footer-col">
+        <h4>Case studies</h4>
+        <a href="/case-studies/google-ads.html">Google Ads</a>
+        <a href="/case-studies/website-design.html">Website Design & Build</a>
+      </div>
+      <div class="footer-col">
+        <h4>More</h4>
+        <a href="/about.html">About</a>
+        <a href="/blog/">Blog</a>
+        <a href="/#faq">FAQ</a>
+        <a href="/cookie-policy.html">Cookie policy</a>
+      </div>
+      <div class="footer-col">
+        <h4>Get in touch</h4>
+        <a href="mailto:enquiries@jwcperformance.co.uk">Email</a>
+        <a href="/services/google-ads-audit.html">Free audit</a>
+        <a href="/#contact">Contact form</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 JWC Performance. Google Ads specialist for UK businesses.</span>
+      <span><a href="mailto:enquiries@jwcperformance.co.uk">enquiries@jwcperformance.co.uk</a> · <a href="/cookie-policy.html" style="color:var(--muted);">Cookie policy</a></span>
+    </div>
+  </div>
+</footer>
+
+<div class="cookie-banner" id="cookieBanner">
+  <div class="cookie-banner-text">
+    <div class="cookie-banner-title">This site uses cookies</div>
+    <p>We use cookies to analyse site traffic and improve your experience. <a href="/cookie-policy.html">Cookie policy</a></p>
+  </div>
+  <div class="cookie-btns">
+    <button class="cookie-accept" id="cookieAccept">Accept</button>
+    <button class="cookie-reject" id="cookieReject">Reject</button>
+  </div>
+</div>
+
+<script>
+  document.querySelectorAll('.nav-dropdown > a').forEach(function(link){
+    link.addEventListener('click', function(e){
+      e.preventDefault();
+      var dropdown = link.closest('.nav-dropdown');
+      var isOpen = dropdown.classList.contains('open');
+      document.querySelectorAll('.nav-dropdown').forEach(function(d){ d.classList.remove('open'); });
+      if(!isOpen) dropdown.classList.add('open');
+    });
+  });
+  document.addEventListener('click', function(e){
+    if(!e.target.closest('.nav-dropdown')){
+      document.querySelectorAll('.nav-dropdown').forEach(function(d){ d.classList.remove('open'); });
+    }
+  });
+  const menuBtn = document.getElementById('menuBtn');
+  const mobileMenu = document.getElementById('mobileMenu');
+  menuBtn.addEventListener('click', () => { mobileMenu.classList.toggle('open'); });
+  document.querySelectorAll('.mobile-menu a').forEach(a => { a.addEventListener('click', () => { mobileMenu.classList.remove('open'); }); });
+  (function(){
+    var banner = document.getElementById('cookieBanner');
+    if(localStorage.getItem('jwc_cookie_consent')) banner.classList.add('hidden');
+    function gtag(){window.dataLayer=window.dataLayer||[];window.dataLayer.push(arguments);}
+    document.getElementById('cookieAccept').addEventListener('click', function(){
+      localStorage.setItem('jwc_cookie_consent','accepted');
+      banner.classList.add('hidden');
+      gtag('consent','update',{'analytics_storage':'granted','ad_storage':'granted','ad_user_data':'granted','ad_personalization':'granted'});
+    });
+    document.getElementById('cookieReject').addEventListener('click', function(){
+      localStorage.setItem('jwc_cookie_consent','rejected');
+      banner.classList.add('hidden');
+    });
+  })();
+</script>
+</body>
+</html>
