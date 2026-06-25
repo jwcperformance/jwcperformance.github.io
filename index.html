@@ -73,18 +73,18 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
   /* ---------- Top strip ---------- */
   .top-strip{
-    background:var(--khaki-deep);color:#E6E2CF;
+    background:var(--gold);color:var(--khaki-deep);
     font-family:'JetBrains Mono',monospace;font-size:11.5px;
     padding:8px 20px;text-align:center;letter-spacing:0.01em;
+    font-weight:700;
   }
-  .top-strip strong{color:var(--gold);font-weight:600;}
+  .top-strip strong{color:var(--khaki-deep);font-weight:700;}
 
   /* ---------- Header ---------- */
   header{
     position:sticky;top:0;z-index:50;
-    background:rgba(246,244,237,0.94);
-    backdrop-filter:blur(8px);
-    border-bottom:1px solid var(--line);
+    background:#3D3E2F;
+    border-bottom:1px solid rgba(255,255,255,0.08);
   }
   .nav-row{
     display:flex;align-items:center;justify-content:space-between;
@@ -117,11 +117,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   nav.desktop-nav{display:none;}
   .nav-cta{display:none;}
   .menu-btn{
-    width:40px;height:40px;border:1px solid var(--line-strong);border-radius:4px;
+    width:40px;height:40px;border:1px solid rgba(255,255,255,0.3);border-radius:4px;
     background:transparent;display:flex;align-items:center;justify-content:center;
     flex-direction:column;gap:4px;cursor:pointer;
   }
-  .menu-btn span{width:18px;height:1.5px;background:var(--ink);display:block;}
+  .menu-btn span{width:18px;height:1.5px;background:#ffffff;display:block;}
   .mobile-menu{display:none;flex-direction:column;border-top:1px solid var(--line);background:var(--paper);}
   .mobile-menu.open{display:flex;}
   .mobile-menu a{padding:16px 20px;border-bottom:1px solid var(--line);font-size:15px;font-weight:500;}
@@ -132,8 +132,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
   @media (min-width:920px){
     nav.desktop-nav{display:flex;align-items:center;gap:30px;font-size:14px;font-weight:500;}
-    nav.desktop-nav a{padding:8px 0;border-bottom:1px solid transparent;}
-    nav.desktop-nav a:hover{border-bottom:1px solid var(--gold-deep);}
+    nav.desktop-nav a{padding:8px 0;border-bottom:1px solid transparent;color:#ffffff;}
+    nav.desktop-nav a:hover{border-bottom:1px solid rgba(255,255,255,0.5);color:#ffffff;}
     .menu-btn{display:none;}
     .nav-cta{
       display:inline-block;background:var(--gold);color:#ffffff;
@@ -167,6 +167,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
   /* ---------- Hero ---------- */
   .hero{padding:52px 0 0;}
+  .hero-image-wrap{
+    width:100%;aspect-ratio:4/3;overflow:hidden;border-radius:4px;
+    background:var(--surface);
+  }
+  @media(min-width:900px){.hero-image-wrap{aspect-ratio:auto;min-height:420px;}}
   .eyebrow{
     font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:0.05em;
     color:var(--gold-deep);font-weight:600;
@@ -658,13 +663,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <header>
   <div class="nav-row">
-    <a href="#top" class="logo">
-      <span class="bracket-open">[</span>
-      <span class="logo-inner">
-        <span class="logo-name">JWC</span>
-        <span class="logo-sub">Performance</span>
-      </span>
-      <span class="bracket-close">]</span>
+    <a href="/" class="logo">
+      <img src="/assets/logo.png" alt="JWC Performance" style="height:60px;width:auto;display:block;">
     </a>
     <nav class="desktop-nav">
       <div class="nav-dropdown">
@@ -746,22 +746,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </div>
       </div>
 
-      <!-- LEDGER signature element -->
-      <div class="ledger">
-        <div class="ledger-tab">Lead_Gen_Results.csv</div>
-        <div class="ledger-inner">
-          <div class="ledger-row"><span class="label">Cost per lead — before</span><span class="value">£68.40</span></div>
-          <div class="ledger-row"><span class="label">Cost per lead — after</span><span class="value gold">£31.90</span></div>
-          <div class="ledger-row"><span class="label">Lead volume — before</span><span class="value">42 / mo</span></div>
-          <div class="ledger-row"><span class="label">Lead volume — after</span><span class="value gold">97 / mo</span></div>
-          <div class="ledger-foot">
-            <span class="total-label">Reduction in cost-per-lead</span>
-            <span class="total-value">−53%</span>
-          </div>
-        </div>
+      <!-- Hero image -->
+      <div class="hero-image-wrap">
+        <img src="/assets/hero.jpg" alt="Google Ads and website performance" style="width:100%;height:100%;object-fit:cover;display:block;border-radius:4px;">
       </div>
     </div>
-    <p class="wrap" style="font-size:12px;color:var(--muted);margin-top:10px;">Illustrative example. Your results depend on your actual account, market and starting position.</p>
+    <p class="wrap" style="font-size:12px;color:var(--muted);margin-top:10px;display:none;"></p>
   </section>
 
   <!-- SERVICES -->
@@ -1222,8 +1212,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <div class="footer-col">
         <h4>More</h4>
         <a href="/about.html">About</a>
-        <a href="#process">Process</a>
-        <a href="#faq">FAQ</a>
+        <a href="/blog/">Blog</a>
+        <a href="/faq.html">FAQ</a>
+        <a href="/cookie-policy.html">Cookie policy</a>
+        <a href="/privacy-policy.html">Privacy policy</a>
       </div>
       <div class="footer-col">
         <h4>Get in touch</h4>
