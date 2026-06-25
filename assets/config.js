@@ -2,11 +2,39 @@
 // Update these values when ready. Changes here update every page automatically.
 
 var JWC = {
-  whatsapp: '447399600473',  // Update when you get a dedicated number
-  linkedin: '',              // e.g. 'https://linkedin.com/in/joe-coombs'
-  facebook: '',              // e.g. 'https://facebook.com/jwcperformance'
-  phone: ''                  // e.g. '07399 600473' — for display purposes
+  whatsapp: '447399600473',
+  linkedin: 'https://www.linkedin.com/company/jwc-performance/',
+  facebook: 'https://www.facebook.com/profile.php?id=61591596471748',
+  phone: ''
 };
+
+(function() {
+  if (JWC.whatsapp) {
+    document.querySelectorAll('.jwc-whatsapp').forEach(function(el) {
+      el.href = 'https://wa.me/' + JWC.whatsapp;
+      el.style.display = '';
+    });
+  }
+  if (JWC.linkedin) {
+    document.querySelectorAll('.jwc-linkedin').forEach(function(el) {
+      el.href = JWC.linkedin;
+      el.style.display = '';
+    });
+  }
+  if (JWC.facebook) {
+    document.querySelectorAll('.jwc-facebook').forEach(function(el) {
+      el.href = JWC.facebook;
+      el.style.display = '';
+    });
+  }
+  if (JWC.phone) {
+    document.querySelectorAll('.jwc-phone').forEach(function(el) {
+      el.textContent = JWC.phone;
+      el.href = 'tel:' + JWC.phone.replace(/\s/g, '');
+      el.style.display = '';
+    });
+  }
+})();
 
 // Builds WhatsApp link if number is set
 (function() {
