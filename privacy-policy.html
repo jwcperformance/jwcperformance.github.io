@@ -27,22 +27,34 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   body{font-family:'Inter',-apple-system,sans-serif;background:var(--paper);color:var(--ink);line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden;}
   a{color:inherit;text-decoration:none;}
   .wrap{max-width:var(--max);margin:0 auto;padding:0 20px;}
-  .top-strip{background:var(--khaki-deep);color:#E6E2CF;font-family:'JetBrains Mono',monospace;font-size:11.5px;padding:8px 20px;text-align:center;}
-  .top-strip strong{color:var(--gold);}
-  header{position:sticky;top:0;z-index:50;background:rgba(246,244,237,0.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);}
-  .nav-row{display:flex;align-items:center;justify-content:space-between;padding:15px 20px;max-width:var(--max);margin:0 auto;}
-  .logo{font-family:'Fraunces',serif;font-weight:700;display:flex;align-items:center;gap:0;line-height:1;text-decoration:none;}
-  .logo .bracket-open{font-size:68px;color:var(--gold);line-height:1;margin-right:3px;font-family:'Fraunces',serif;font-weight:700;}
-  .logo .bracket-close{font-size:68px;color:var(--khaki-deep);line-height:1;margin-left:3px;font-family:'Fraunces',serif;font-weight:700;}
-  .logo .logo-inner{display:flex;flex-direction:column;justify-content:center;padding:0 2px;}
-  .logo .logo-name{font-family:'Fraunces',serif;font-weight:700;font-size:44px;color:var(--ink);letter-spacing:-0.01em;line-height:1.15;}
-  .logo .logo-sub{font-family:'JetBrains Mono',monospace;font-weight:600;font-size:16px;color:var(--gold-deep);letter-spacing:0.14em;text-transform:uppercase;line-height:1;}
-  .menu-btn{width:40px;height:40px;border:1px solid var(--line-strong);border-radius:4px;background:transparent;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:4px;cursor:pointer;}
-  .menu-btn span{width:18px;height:1.5px;background:var(--ink);display:block;}
+  .top-strip{background:var(--gold);color:var(--khaki-deep);font-family:'JetBrains Mono',monospace;font-size:11.5px;padding:8px 20px;text-align:center;letter-spacing:0.01em;font-weight:700;}
+  .top-strip strong{color:var(--khaki-deep);font-weight:700;}
+  header{position:sticky;top:0;z-index:50;background:#3D3E2F;border-bottom:1px solid rgba(255,255,255,0.08);}
+  .nav-row{display:flex;align-items:center;justify-content:space-between;padding:10px 20px;max-width:var(--max);margin:0 auto;}
+  .logo{display:flex;align-items:center;line-height:1;}
+  .menu-btn{width:40px;height:40px;border:1px solid rgba(255,255,255,0.3);border-radius:4px;background:transparent;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:4px;cursor:pointer;}
+  .menu-btn span{width:18px;height:1.5px;background:#ffffff;display:block;}
+  .mobile-menu{display:none;flex-direction:column;border-top:1px solid var(--line);background:var(--paper);}
+  .mobile-menu.open{display:flex;max-height:100vh;overflow-y:auto;}
+  .mobile-menu a{padding:16px 20px;border-bottom:1px solid var(--line);font-size:15px;font-weight:500;}
+  .mobile-menu .mm-cta{margin:16px 20px 20px;padding:18px;background:var(--gold);color:#ffffff;text-align:center;border-radius:4px;font-weight:700;border:none;font-size:16px;}
+  nav.desktop-nav{display:none;}
   .nav-cta{display:none;}
   @media(min-width:920px){
+    nav.desktop-nav{display:flex;align-items:center;gap:30px;font-size:17px;font-weight:500;}
+    nav.desktop-nav a{padding:8px 0;border-bottom:1px solid transparent;color:#ffffff;}
+    nav.desktop-nav a:hover{border-bottom:1px solid rgba(255,255,255,0.5);color:#ffffff;}
     .menu-btn{display:none;}
-    .nav-cta{display:inline-block;background:var(--gold);color:#ffffff;padding:14px 26px;border-radius:4px;font-weight:700;font-size:15px;}
+    .nav-cta{display:inline-block;background:var(--gold);color:#ffffff;padding:16px 32px;border-radius:4px;font-weight:700;font-size:18px;}
+    .nav-dropdown{position:relative;}
+    .nav-dropdown > a{display:flex;align-items:center;gap:5px;cursor:pointer;}
+    .nav-dropdown > a::after{content:'▾';font-size:10px;color:var(--gold);transition:transform 0.2s ease;}
+    .nav-dropdown.open > a::after{transform:rotate(180deg);}
+    .dropdown-menu{display:none;position:absolute;top:calc(100% + 8px);left:0;min-width:220px;z-index:100;background:var(--khaki-deep);border:1px solid rgba(255,255,255,0.1);border-top:2px solid var(--gold);box-shadow:0 8px 24px rgba(0,0,0,0.2);}
+    .nav-dropdown.open .dropdown-menu{display:block;}
+    .dropdown-menu a{display:block;padding:12px 16px;font-size:13.5px;font-weight:500;color:#ffffff;border-bottom:1px solid rgba(255,255,255,0.08);}
+    .dropdown-menu a:last-child{border-bottom:none;}
+    .dropdown-menu a:hover{background:rgba(255,255,255,0.08);color:var(--gold);}
   }
 
   /* Page */
@@ -102,8 +114,65 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <a href="/" class="logo">
       <img src="/assets/logo.png" alt="JWC Performance" style="height:180px;width:auto;display:block;">
     </a>
-    <a href="/services/google-ads-audit.html" class="nav-cta">Free audit</a>
-    <button class="menu-btn" id="menuBtn" aria-label="Open menu"><span></span><span></span><span></span></button>
+    <nav class="desktop-nav">
+      <div class="nav-dropdown">
+        <a href="/#services">Services</a>
+        <div class="dropdown-menu">
+          <a href="/services/google-ads-audit.html">Google Ads Audit</a>
+          <a href="/services/account-management.html">Account Management</a>
+          <a href="/services/new-account-build.html">New Account Build</a>
+          <a href="/services/account-restructure.html">Account Restructure</a>
+          <a href="/services/website-design.html">Website Design &amp; Build</a>
+        </div>
+      </div>
+      <div class="nav-dropdown">
+        <a href="/google-ads-b2b.html">Sectors</a>
+        <div class="dropdown-menu">
+          <a href="/google-ads-b2b.html">Google Ads for B2B</a>
+          <a href="/google-ads-b2c.html">Google Ads for B2C</a>
+        </div>
+      </div>
+      <div class="nav-dropdown">
+        <a href="/about.html">About</a>
+        <div class="dropdown-menu">
+          <a href="/about.html">About Joe</a>
+          <a href="/process.html">How Joe works</a>
+        </div>
+      </div>
+      <div class="nav-dropdown">
+        <a href="/case-studies/google-ads.html">Case studies</a>
+        <div class="dropdown-menu">
+          <a href="/case-studies/google-ads.html">Google Ads</a>
+          <a href="/case-studies/website-design.html">Website Design &amp; Build</a>
+        </div>
+      </div>
+      <a href="/blog/">Blog</a>
+      <a href="/faq.html">FAQ</a>
+    </nav>
+    <a href="/#contact" class="nav-cta">Enquire today</a>
+    <button class="menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="/#services" style="font-weight:700;color:var(--gold-deep);">Services</a>
+    <a href="/services/google-ads-audit.html" style="padding-left:36px;font-size:14px;">→ Google Ads Audit</a>
+    <a href="/services/account-management.html" style="padding-left:36px;font-size:14px;">→ Account Management</a>
+    <a href="/services/new-account-build.html" style="padding-left:36px;font-size:14px;">→ New Account Build</a>
+    <a href="/services/account-restructure.html" style="padding-left:36px;font-size:14px;">→ Account Restructure</a>
+    <a href="/services/website-design.html" style="padding-left:36px;font-size:14px;">→ Website Design &amp; Build</a>
+    <a href="/google-ads-b2b.html" style="font-weight:700;color:var(--gold-deep);">Sectors</a>
+    <a href="/google-ads-b2b.html" style="padding-left:36px;font-size:14px;">→ Google Ads for B2B</a>
+    <a href="/google-ads-b2c.html" style="padding-left:36px;font-size:14px;">→ Google Ads for B2C</a>
+    <a href="/about.html" style="font-weight:700;color:var(--gold-deep);">About</a>
+    <a href="/about.html" style="padding-left:36px;font-size:14px;">→ About Joe</a>
+    <a href="/process.html" style="padding-left:36px;font-size:14px;">→ How Joe works</a>
+    <a href="/case-studies/google-ads.html" style="font-weight:700;color:var(--gold-deep);">Case studies</a>
+    <a href="/case-studies/google-ads.html" style="padding-left:36px;font-size:14px;">→ Google Ads</a>
+    <a href="/case-studies/website-design.html" style="padding-left:36px;font-size:14px;">→ Website Design &amp; Build</a>
+    <a href="/blog/">Blog</a>
+    <a href="/faq.html">FAQ</a>
+    <a href="#contact"><button class="mm-cta">Enquire today</button></a>
   </div>
 </header>
 
@@ -230,6 +299,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       <div class="footer-col">
         <h4>More</h4>
         <a href="/about.html">About</a>
+        <a href="/process.html">How Joe works</a>
         <a href="/blog/">Blog</a>
         <a href="/faq.html">FAQ</a>
         <a href="/cookie-policy.html">Cookie policy</a>
@@ -274,8 +344,32 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </div>
 
 <script>
+  document.querySelectorAll('.nav-dropdown > a').forEach(function(link){
+    link.addEventListener('click', function(e){
+      e.preventDefault();
+      var dropdown = link.closest('.nav-dropdown');
+      var isOpen = dropdown.classList.contains('open');
+      document.querySelectorAll('.nav-dropdown').forEach(function(d){ d.classList.remove('open'); });
+      if(!isOpen) dropdown.classList.add('open');
+    });
+  });
+  document.addEventListener('click', function(e){
+    if(!e.target.closest('.nav-dropdown')){
+      document.querySelectorAll('.nav-dropdown').forEach(function(d){ d.classList.remove('open'); });
+    }
+  });
   const menuBtn = document.getElementById('menuBtn');
-  if(menuBtn) menuBtn.addEventListener('click', () => { document.querySelector('.mobile-menu') && document.querySelector('.mobile-menu').classList.toggle('open'); });
+  const mobileMenu = document.getElementById('mobileMenu');
+  menuBtn.addEventListener('click', () => {
+    const isOpen = mobileMenu.classList.toggle('open');
+    menuBtn.setAttribute('aria-expanded', isOpen);
+  });
+  document.querySelectorAll('.mobile-menu a').forEach(a => {
+    a.addEventListener('click', () => {
+      mobileMenu.classList.remove('open');
+      menuBtn.setAttribute('aria-expanded', 'false');
+    });
+  });
   (function(){
     var banner = document.getElementById('cookieBanner');
     if(localStorage.getItem('jwc_cookie_consent')) banner.classList.add('hidden');
