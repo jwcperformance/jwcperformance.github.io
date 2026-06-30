@@ -5,7 +5,7 @@ var JWC = {
   whatsapp: '447848522456',
   linkedin: 'https://www.linkedin.com/company/jwc-performance/',
   facebook: 'https://www.facebook.com/profile.php?id=61591596471748',
-  phone: ''
+  phone: '07848 522456'
 };
 
 (function() {
