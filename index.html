@@ -3,30 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<!-- Cookie consent: initialise dataLayer and default consent state BEFORE GTM -->
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-
-  // Set default consent — denied until user accepts
-  gtag('consent', 'default', {
-    'analytics_storage': 'denied',
-    'ad_storage': 'denied',
-    'ad_user_data': 'denied',
-    'ad_personalization': 'denied',
-    'wait_for_update': 500
-  });
-
-  // If user has already consented, update immediately
-  if(localStorage.getItem('jwc_cookie_consent') === 'accepted'){
-    gtag('consent', 'update', {
-      'analytics_storage': 'granted',
-      'ad_storage': 'granted',
-      'ad_user_data': 'granted',
-      'ad_personalization': 'granted'
-    });
-  }
-</script>
+<title>How It Works | JWC Performance — Google Ads Specialist</title>
+<meta name="description" content="From first contact to ongoing performance — here is exactly how Joe works with clients. Fixed fees, no lock-in, and direct access at every step.">
 <!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -34,576 +12,112 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
 })(window,document,'script','dataLayer','GTM-5HCM3QFH');</script>
 <!-- End Google Tag Manager -->
-<title>JWC Performance | Google Ads Specialist — Fixed Fee, No Contracts</title>
-<meta name="description" content="Google Ads specialist with 15+ years' experience. Free account audits, new builds, restructures and ongoing management — all fixed fee, agreed upfront.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
   :root{
-    --ink:#23241D;
-    --paper:#F6F4ED;
-    --surface:#ECE7D8;
-    --khaki:#6F6E55;
-    --khaki-deep:#3D3E2F;
-    --gold:#B6862A;
-    --gold-deep:#8A6418;
-    --gold-pale:#EEE0BE;
-    --line:#DDD8C7;
-    --line-strong:#C7C0A7;
-    --muted:#6A6753;
-    --max:1140px;
+    --ink:#23241D;--paper:#F6F4ED;--surface:#ECE7D8;
+    --khaki-deep:#3D3E2F;--gold:#B6862A;--gold-deep:#8A6418;--gold-pale:#EEE0BE;
+    --line:#DDD8C7;--line-strong:#C7C0A7;--muted:#6A6753;--max:1140px;
   }
   *{box-sizing:border-box;margin:0;padding:0;}
   html{scroll-behavior:smooth;}
-  body{
-    font-family:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;
-    background:var(--paper);
-    color:var(--ink);
-    line-height:1.55;
-    -webkit-font-smoothing:antialiased;
-    overflow-x:hidden;
-  }
-  .mono{font-family:'JetBrains Mono',ui-monospace,monospace;}
-  .display{font-family:'Fraunces',Georgia,serif;}
+  body{font-family:'Inter',-apple-system,sans-serif;background:var(--paper);color:var(--ink);line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden;}
   a{color:inherit;text-decoration:none;}
-  img,svg{display:block;max-width:100%;}
   .wrap{max-width:var(--max);margin:0 auto;padding:0 20px;}
-  :focus-visible{outline:2px solid var(--gold-deep);outline-offset:2px;}
 
-  /* ---------- Top strip ---------- */
-  .top-strip{
-    background:var(--gold);color:var(--khaki-deep);
-    font-family:'JetBrains Mono',monospace;font-size:11.5px;
-    padding:8px 20px;text-align:center;letter-spacing:0.01em;
-    font-weight:700;
-  }
+  /* Top strip */
+  .top-strip{background:var(--gold);color:var(--khaki-deep);font-family:'JetBrains Mono',monospace;font-size:11.5px;padding:8px 20px;text-align:center;letter-spacing:0.01em;font-weight:700;}
   .top-strip strong{color:var(--khaki-deep);font-weight:700;}
 
-  /* ---------- Header ---------- */
-  header{
-    position:sticky;top:0;z-index:50;
-    background:#3D3E2F;
-    border-bottom:1px solid rgba(255,255,255,0.08);
-  }
-  .nav-row{
-    display:flex;align-items:center;justify-content:space-between;
-    padding:10px 20px;max-width:var(--max);margin:0 auto;
-  }
-  .logo{
-    font-family:'Fraunces',serif;font-weight:700;font-size:18px;letter-spacing:-0.01em;
-    display:flex;align-items:center;gap:0;line-height:1;
-  }
-  .logo .bracket-open{
-    font-family:'Fraunces',serif;font-weight:700;font-size:68px;
-    color:var(--gold);line-height:1;margin-right:3px;
-  }
-  .logo .bracket-close{
-    font-family:'Fraunces',serif;font-weight:700;font-size:68px;
-    color:var(--khaki-deep);line-height:1;margin-left:3px;
-  }
-  .logo .logo-inner{
-    display:flex;flex-direction:column;justify-content:center;gap:0;
-    padding:0 2px;
-  }
-  .logo .logo-name{
-    font-family:'Fraunces',serif;font-weight:700;font-size:44px;
-    color:var(--ink);letter-spacing:-0.01em;line-height:1.15;
-  }
-  .logo .logo-sub{
-    font-family:'JetBrains Mono',monospace;font-weight:600;font-size:16px;
-    color:var(--gold-deep);letter-spacing:0.14em;text-transform:uppercase;line-height:1;
-  }
-  nav.desktop-nav{display:none;}
-  .nav-cta{display:none;}
-  .menu-btn{
-    width:40px;height:40px;border:1px solid rgba(255,255,255,0.3);border-radius:4px;
-    background:transparent;display:flex;align-items:center;justify-content:center;
-    flex-direction:column;gap:4px;cursor:pointer;
-  }
+  /* Header */
+  header{position:sticky;top:0;z-index:50;background:#3D3E2F;border-bottom:1px solid rgba(255,255,255,0.08);}
+  .nav-row{display:flex;align-items:center;justify-content:space-between;padding:10px 20px;max-width:var(--max);margin:0 auto;}
+  .logo{display:flex;align-items:center;line-height:1;}
+  .menu-btn{width:40px;height:40px;border:1px solid rgba(255,255,255,0.3);border-radius:4px;background:transparent;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:4px;cursor:pointer;}
   .menu-btn span{width:18px;height:1.5px;background:#ffffff;display:block;}
   .mobile-menu{display:none;flex-direction:column;border-top:1px solid var(--line);background:var(--paper);}
   .mobile-menu.open{display:flex;max-height:100vh;overflow-y:auto;}
   .mobile-menu a{padding:16px 20px;border-bottom:1px solid var(--line);font-size:15px;font-weight:500;}
-  .mobile-menu .mm-cta{
-    margin:16px 20px 20px;padding:18px;background:var(--gold);color:#ffffff;
-    text-align:center;border-radius:4px;font-weight:700;border:none;font-size:16px;
-  }
-
-  @media (min-width:920px){
+  .mobile-menu .mm-cta{margin:16px 20px 20px;padding:18px;background:var(--gold);color:#ffffff;text-align:center;border-radius:4px;font-weight:700;border:none;font-size:16px;}
+  nav.desktop-nav{display:none;}
+  .nav-cta{display:none;}
+  @media(min-width:920px){
     nav.desktop-nav{display:flex;align-items:center;gap:30px;font-size:17px;font-weight:500;}
     nav.desktop-nav a{padding:8px 0;border-bottom:1px solid transparent;color:#ffffff;}
     nav.desktop-nav a:hover{border-bottom:1px solid rgba(255,255,255,0.5);color:#ffffff;}
     .menu-btn{display:none;}
-    .nav-cta{
-      display:inline-block;background:var(--gold);color:#ffffff;
-      padding:16px 32px;border-radius:4px;font-weight:700;font-size:18px;
-    }
+    .nav-cta{display:inline-block;background:var(--gold);color:#ffffff;padding:16px 32px;border-radius:4px;font-weight:700;font-size:18px;}
     .nav-phone{display:inline-block !important;}
-
-    /* Services dropdown */
     .nav-dropdown{position:relative;}
     .nav-dropdown > a{display:flex;align-items:center;gap:5px;cursor:pointer;}
-    .nav-dropdown > a::after{content:'▾';font-size:10px;color:var(--gold-deep);transition:transform 0.2s ease;}
+    .nav-dropdown > a::after{content:'▾';font-size:10px;color:var(--gold);transition:transform 0.2s ease;}
     .nav-dropdown.open > a::after{transform:rotate(180deg);}
-    .dropdown-menu{
-      display:none;
-      position:absolute;top:calc(100% + 8px);left:0;
-      min-width:220px;z-index:100;
-      background:var(--khaki-deep);
-      border:1px solid rgba(255,255,255,0.1);
-      border-top:2px solid var(--gold);
-      box-shadow:0 8px 24px rgba(0,0,0,0.2);
-    }
+    .dropdown-menu{display:none;position:absolute;top:calc(100% + 8px);left:0;min-width:220px;z-index:100;background:var(--khaki-deep);border:1px solid rgba(255,255,255,0.1);border-top:2px solid var(--gold);box-shadow:0 8px 24px rgba(0,0,0,0.2);}
     .nav-dropdown.open .dropdown-menu{display:block;}
-    .dropdown-menu a{
-      display:block;padding:12px 16px;
-      font-size:13.5px;font-weight:500;color:#ffffff;
-      border-bottom:1px solid rgba(255,255,255,0.08);
-    }
+    .dropdown-menu a{display:block;padding:12px 16px;font-size:13.5px;font-weight:500;color:#ffffff;border-bottom:1px solid rgba(255,255,255,0.08);}
     .dropdown-menu a:last-child{border-bottom:none;}
     .dropdown-menu a:hover{background:rgba(255,255,255,0.08);color:var(--gold);}
-    .dropdown-menu-inner{}
   }
 
-  /* ---------- Hero ---------- */
-  .hero{padding:52px 0 0;}
-  .hero-image-wrap{
-    width:100%;aspect-ratio:4/3;overflow:hidden;border-radius:4px;
-    background:var(--surface);
-  }
-  @media(min-width:900px){.hero-image-wrap{aspect-ratio:auto;min-height:420px;}}
-  .eyebrow{
-    font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:0.05em;
-    color:var(--gold-deep);font-weight:600;
-    display:flex;align-items:center;gap:8px;margin-bottom:18px;
-  }
-  h1{
-    font-family:'Fraunces',serif;font-size:32px;line-height:1.12;font-weight:700;
-    letter-spacing:-0.01em;margin-bottom:18px;
-  }
-  h1 em{font-style:italic;color:var(--gold-deep);}
-  .hero-sub{font-size:16.5px;color:var(--muted);max-width:540px;margin-bottom:26px;}
-  .hero-ctas{display:flex;flex-direction:column;gap:10px;margin-bottom:8px;}
-  .btn{
-    display:inline-flex;align-items:center;justify-content:center;gap:8px;
-    padding:18px 30px;border-radius:4px;font-weight:700;font-size:17px;
-    text-align:center;border:1px solid transparent;
-  }
-  .btn-primary{background:var(--gold);color:#ffffff;}
-  .btn-secondary{background:transparent;border:2px solid var(--line-strong);color:var(--ink);font-weight:700;}
+  /* Hero */
+  .page-hero{padding:56px 0;border-bottom:1px solid var(--line);}
+  .breadcrumb{font-family:'JetBrains Mono',monospace;font-size:11.5px;color:var(--muted);margin-bottom:16px;display:flex;align-items:center;gap:8px;}
+  .breadcrumb a{color:var(--muted);}
+  .eyebrow{font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:0.05em;color:var(--gold-deep);font-weight:600;text-transform:uppercase;display:flex;align-items:center;gap:8px;margin-bottom:16px;}
+  .eyebrow::before{content:'';width:14px;height:1px;background:var(--gold-deep);display:inline-block;}
+  h1{font-family:'Fraunces',serif;font-size:32px;font-weight:700;letter-spacing:-0.01em;margin-bottom:16px;line-height:1.1;}
+  @media(min-width:900px){h1{font-size:44px;}}
+  .hero-sub{font-size:17px;color:var(--muted);max-width:620px;line-height:1.65;}
 
-  .hero-meta{
-    display:flex;flex-direction:column;gap:0;
-    margin-top:36px;
-    border-top:1px solid var(--line);
-  }
-  .hero-meta-item{
-    display:flex;justify-content:space-between;align-items:baseline;
-    padding:13px 0;border-bottom:1px solid var(--line);
-    font-size:13.5px;
-  }
-  .hero-meta-item .k{color:var(--muted);}
-  .hero-meta-item .v{font-weight:600;}
-
-  @media (min-width:920px){
-    .hero-inner{display:grid;grid-template-columns:1.05fr 0.85fr;gap:56px;align-items:start;}
-    h1{font-size:46px;}
-    .hero-ctas{flex-direction:row;}
-    .btn{width:auto;}
-  }
-
-  /* ---------- Case file ledger (signature element 1) ---------- */
-  .ledger{
-    margin-top:48px;
-    border:1px solid var(--line-strong);
-    background:var(--paper);
-    position:relative;
-  }
-  .ledger-tab{
-    position:absolute;top:-1px;left:24px;
-    background:var(--gold);color:#ffffff;
-    font-family:'JetBrains Mono',monospace;font-size:10.5px;font-weight:600;
-    letter-spacing:0.05em;text-transform:uppercase;
-    padding:6px 12px;
-    clip-path:polygon(0 0,100% 0,100% 100%,8px 100%,0 70%);
-  }
-  .ledger-inner{padding:30px 20px 20px;}
-  .ledger-row{
-    display:flex;justify-content:space-between;align-items:baseline;
-    padding:12px 0;border-top:1px dashed var(--line-strong);
-    font-size:14px;gap:12px;
-  }
-  .ledger-row:first-child{border-top:none;}
-  .ledger-row .label{color:var(--muted);}
-  .ledger-row .value{font-family:'JetBrains Mono',monospace;font-weight:600;white-space:nowrap;}
-  .ledger-row .value.gold{color:var(--gold-deep);}
-  .ledger-foot{
-    border-top:1px solid var(--ink);
-    margin-top:6px;padding-top:14px;
-    display:flex;justify-content:space-between;align-items:baseline;
-    font-family:'JetBrains Mono',monospace;font-size:13px;
-  }
-  .ledger-foot .total-label{color:var(--muted);}
-  .ledger-foot .total-value{font-size:17px;font-weight:700;color:var(--gold-deep);}
-
-  /* ---------- Section scaffolding ---------- */
-  section{padding:58px 0;border-bottom:1px solid var(--line);}
-  .section-head{margin-bottom:34px;max-width:620px;}
-  .section-label{
-    font-family:'JetBrains Mono',monospace;font-size:11.5px;color:var(--gold-deep);
-    text-transform:uppercase;letter-spacing:0.06em;font-weight:600;margin-bottom:12px;
-    display:flex;align-items:center;gap:8px;
-  }
+  /* Process steps */
+  .process-section{padding:64px 0;border-bottom:1px solid var(--line);}
+  .process-section:last-of-type{border-bottom:none;}
+  .section-label{font-family:'JetBrains Mono',monospace;font-size:11.5px;color:var(--gold-deep);text-transform:uppercase;letter-spacing:0.06em;font-weight:600;margin-bottom:12px;display:flex;align-items:center;gap:8px;}
   .section-label::before{content:'';width:14px;height:1px;background:var(--gold-deep);display:inline-block;}
-  h2{
-    font-family:'Fraunces',serif;font-size:25px;font-weight:700;
-    letter-spacing:-0.01em;margin-bottom:10px;
-  }
-  .section-sub{color:var(--muted);font-size:15px;}
+  h2{font-family:'Fraunces',serif;font-size:26px;font-weight:700;letter-spacing:-0.01em;margin-bottom:12px;}
+  .step-grid{display:flex;flex-direction:column;gap:0;margin-top:40px;}
+  .step{display:grid;grid-template-columns:56px 1fr;gap:24px;padding:32px 0;border-top:1px solid var(--line);}
+  .step:first-child{border-top:none;padding-top:0;}
+  .step-number{font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:600;color:var(--gold-deep);background:var(--surface);border:1px solid var(--line-strong);width:40px;height:40px;display:flex;align-items:center;justify-content:center;flex-shrink:0;letter-spacing:0.05em;}
+  .step-content h3{font-family:'Fraunces',serif;font-size:20px;font-weight:700;color:var(--ink);margin-bottom:8px;}
+  .step-content p{font-size:15px;color:var(--muted);max-width:640px;line-height:1.7;margin-bottom:10px;}
+  .step-content p:last-child{margin-bottom:0;}
+  .step-tag{display:inline-flex;font-family:'JetBrains Mono',monospace;font-size:10.5px;font-weight:600;color:var(--gold-deep);background:var(--gold-pale);padding:4px 10px;margin-bottom:12px;}
 
-  /* ---------- Services / case-file tabs (signature element 2) ---------- */
-  .service-file{
-    border:1px solid var(--line-strong);
-    margin-bottom:14px;
-    background:var(--paper);
-  }
-  .service-head{
-    display:flex;align-items:center;gap:14px;
-    padding:18px 18px;
-    border-bottom:1px solid var(--line);
-  }
-  .service-index{
-    font-family:'JetBrains Mono',monospace;font-size:12px;font-weight:600;
-    color:var(--gold-deep);
-    border:1px solid var(--gold-deep);
-    width:30px;height:30px;flex-shrink:0;
-    display:flex;align-items:center;justify-content:center;
-    border-radius:50%;
-  }
-  .service-title{font-size:17.5px;font-weight:700;letter-spacing:-0.005em;}
-  .service-body{padding:18px;}
-  .service-desc{color:var(--muted);font-size:14.5px;margin-bottom:14px;}
-  .service-tags{display:flex;flex-wrap:wrap;gap:7px;margin-bottom:16px;}
-  .tag{
-    font-family:'JetBrains Mono',monospace;font-size:10.5px;padding:4px 9px;
-    background:var(--surface);border-radius:3px;color:var(--khaki-deep);
-  }
-  .service-price-row{
-    display:flex;justify-content:space-between;align-items:center;
-    border-top:1px dashed var(--line-strong);padding-top:14px;
-    flex-wrap:wrap;gap:10px;
-  }
-  .service-price{
-    font-family:'JetBrains Mono',monospace;
-  }
-  .service-price .from{font-size:11px;color:var(--muted);display:block;text-transform:uppercase;letter-spacing:0.04em;}
-  .service-price .amount{font-size:19px;font-weight:700;color:var(--gold-deep);}
-  .service-enquire{
-    font-size:13px;font-weight:700;color:var(--khaki-deep);
-    border-bottom:1px solid var(--gold);padding-bottom:1px;
-  }
+  /* What you can expect panel */
+  .expect-panel{background:var(--khaki-deep);padding:32px;margin-top:40px;}
+  .expect-panel h3{font-family:'Fraunces',serif;font-size:18px;font-weight:700;color:#F6F4ED;margin-bottom:16px;}
+  .expect-list{display:flex;flex-direction:column;gap:10px;}
+  .expect-item{display:flex;gap:12px;align-items:flex-start;font-size:14.5px;color:#C7C3AC;line-height:1.5;}
+  .expect-item::before{content:'→';color:var(--gold);flex-shrink:0;margin-top:1px;}
 
-  /* ---------- Approach (B2B/B2C) ---------- */
-  .split{display:grid;grid-template-columns:1fr;gap:16px;}
-  @media (min-width:760px){.split{grid-template-columns:1fr 1fr;}}
-  .panel{border:1px solid var(--line-strong);padding:24px;background:var(--paper);}
-  .panel.featured{background:var(--khaki-deep);color:#EDE9D8;border-color:var(--khaki-deep);}
-  .panel-eyebrow{
-    font-family:'JetBrains Mono',monospace;font-size:10.5px;text-transform:uppercase;
-    letter-spacing:0.05em;color:var(--gold-deep);margin-bottom:10px;font-weight:600;
-  }
-  .panel.featured .panel-eyebrow{color:var(--gold);}
-  .panel h3{font-family:'Fraunces',serif;font-size:19px;font-weight:700;margin-bottom:10px;}
-  .panel p{font-size:14.5px;color:var(--muted);}
-  .panel.featured p{color:#C7C3AC;}
+  /* Principles bar */
+  .principles{display:grid;grid-template-columns:1fr;gap:1px;background:var(--line-strong);border:1px solid var(--line-strong);margin-top:40px;}
+  @media(min-width:680px){.principles{grid-template-columns:repeat(3,1fr);}}
+  .principle{background:var(--paper);padding:24px;}
+  .principle-label{font-family:'JetBrains Mono',monospace;font-size:10.5px;text-transform:uppercase;letter-spacing:0.06em;color:var(--gold-deep);font-weight:600;margin-bottom:8px;}
+  .principle-text{font-size:14.5px;color:var(--muted);line-height:1.6;}
 
-  /* ---------- Process ---------- */
-  .process{display:grid;grid-template-columns:1fr;gap:0;}
-  @media (min-width:760px){.process{grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line-strong);border:1px solid var(--line-strong);}}
-  .process-step{
-    padding:22px 0;border-top:1px solid var(--line);
-    background:var(--surface);
-  }
-  .process-step:first-child{border-top:none;}
-  @media (min-width:760px){
-    .process-step{border-top:none;padding:22px 18px;}
-  }
-  .step-mark{
-    font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--gold-deep);font-weight:600;
-    margin-bottom:8px;display:block;
-  }
-  .step-title{font-size:15.5px;font-weight:700;margin-bottom:6px;}
-  .step-desc{color:var(--muted);font-size:13.5px;}
+  /* CTA band */
+  .cta-band{background:var(--khaki-deep);padding:56px 0;}
+  .cta-band .eyebrow{color:var(--gold);}
+  .cta-band .eyebrow::before{background:var(--gold);}
+  .cta-band h2{font-family:'Fraunces',serif;font-size:26px;font-weight:700;color:#F6F4ED;margin-bottom:10px;}
+  .cta-band p{color:#C7C3AC;font-size:15px;max-width:540px;margin-bottom:28px;}
+  .cta-btns{display:flex;flex-direction:column;gap:10px;}
+  @media(min-width:600px){.cta-btns{flex-direction:row;}}
+  .btn-primary{display:inline-flex;align-items:center;justify-content:center;padding:18px 30px;border-radius:4px;font-weight:700;font-size:16px;background:var(--gold);color:#ffffff;border:none;}
+  .btn-secondary{display:inline-flex;align-items:center;justify-content:center;padding:18px 30px;border-radius:4px;font-weight:700;font-size:16px;background:transparent;color:#ffffff;border:2px solid rgba(255,255,255,0.3);}
 
-  /* ---------- Why JWC ---------- */
-  .why-list{display:flex;flex-direction:column;}
-  .why-row{
-    display:grid;grid-template-columns:auto 1fr;gap:16px;
-    padding:20px 0;border-top:1px solid var(--line);
-  }
-  .why-row:first-child{border-top:none;}
-  .why-mark{color:var(--gold-deep);font-size:18px;line-height:1;padding-top:3px;}
-  .why-title{font-size:16px;font-weight:700;margin-bottom:4px;}
-  .why-desc{color:var(--muted);font-size:14.5px;}
-  .quote-block{
-    margin-top:32px;padding:26px 22px;
-    background:var(--khaki-deep);color:#EDE9D8;
-    border-left:3px solid var(--gold);
-  }
-  .quote-block p{
-    font-family:'Fraunces',serif;font-style:italic;font-size:17px;line-height:1.5;
-  }
-  .quote-cite{
-    margin-top:14px;font-family:'JetBrains Mono',monospace;font-size:11.5px;
-    color:#B9B5A0;text-transform:uppercase;letter-spacing:0.04em;
-  }
-
-  /* ---------- Trust: credentials + testimonials ---------- */
-  .cred-strip{
-    display:flex;flex-wrap:wrap;gap:10px;
-    margin-top:28px;
-  }
-  .cred-badge{
-    display:flex;align-items:center;gap:10px;
-    border:1px solid var(--line-strong);
-    padding:10px 14px;
-    background:var(--paper);
-  }
-  .cred-badge .g-mark{
-    width:22px;height:22px;border-radius:50%;
-    background:#ffffff;border:1px solid var(--line);
-    display:flex;align-items:center;justify-content:center;
-    flex-shrink:0;padding:4px;
-  }
-  .cred-badge .g-mark svg{width:100%;height:100%;display:block;}
-  .cred-badge .cred-text{display:flex;flex-direction:column;line-height:1.3;}
-  .cred-badge .cred-name{font-size:12.5px;font-weight:700;}
-  .cred-badge .cred-issuer{font-size:11px;color:var(--muted);font-family:'JetBrains Mono',monospace;}
-
-  .sector-proof{
-    margin-top:16px;
-    border-top:1px solid var(--line);
-  }
-  .sector-row{
-    display:flex;justify-content:space-between;align-items:baseline;
-    padding:13px 0;border-bottom:1px solid var(--line);
-    font-size:13.5px;gap:12px;
-    flex-wrap:wrap;
-  }
-  .sector-row .v{font-family:'JetBrains Mono',monospace;font-weight:600;color:var(--gold-deep);text-align:right;}
-  @media (min-width:600px){
-    .sector-row .v{white-space:nowrap;}
-  }
-
-  .testimonial-grid{display:grid;grid-template-columns:1fr;gap:14px;margin-top:8px;}
-  @media (min-width:760px){.testimonial-grid{grid-template-columns:repeat(2,1fr);}}
-  .testimonial-card{
-    border:1px solid var(--line-strong);
-    padding:22px;background:var(--paper);
-    display:flex;flex-direction:column;gap:16px;
-  }
-  .placeholder-flag{
-    display:inline-flex;align-self:flex-start;
-    font-family:'JetBrains Mono',monospace;font-size:9.5px;font-weight:600;
-    text-transform:uppercase;letter-spacing:0.04em;
-    color:var(--gold-deep);background:var(--gold-pale);
-    padding:3px 8px;border-radius:3px;
-  }
-  .testimonial-card blockquote{
-    font-family:'Fraunces',serif;font-style:italic;font-size:15.5px;line-height:1.5;
-    color:var(--ink);
-  }
-  .testimonial-attr{
-    display:flex;align-items:center;gap:10px;
-    border-top:1px solid var(--line);padding-top:14px;
-  }
-  .testimonial-avatar{
-    width:34px;height:34px;border-radius:50%;
-    background:var(--surface);border:1px solid var(--line-strong);
-    display:flex;align-items:center;justify-content:center;
-    font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--muted);
-  }
-  .testimonial-meta{display:flex;flex-direction:column;line-height:1.3;}
-  .testimonial-meta .name{font-size:13px;font-weight:700;}
-  .testimonial-meta .role{font-size:12px;color:var(--muted);}
-  .trust-note{
-    font-size:12.5px;color:var(--muted);margin-top:18px;
-    border-left:2px solid var(--gold);padding-left:12px;
-  }
-
-  /* ---------- Case studies ---------- */
-  .cs-coming-soon{
-    border:1px solid var(--line-strong);
-    background:var(--surface);
-    padding:28px 22px;
-    margin-bottom:24px;
-    display:flex;flex-direction:column;gap:10px;
-  }
-  @media (min-width:760px){
-    .cs-coming-soon{flex-direction:row;align-items:center;justify-content:space-between;gap:24px;}
-  }
-  .cs-coming-soon .cs-label{
-    font-family:'JetBrains Mono',monospace;font-size:11px;text-transform:uppercase;
-    letter-spacing:0.05em;color:var(--gold-deep);font-weight:600;margin-bottom:6px;
-  }
-  .cs-coming-soon h3{font-family:'Fraunces',serif;font-size:18px;font-weight:700;}
-  .cs-coming-soon p{font-size:14px;color:var(--muted);max-width:480px;}
-  .cs-badge{
-    font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:600;
-    text-transform:uppercase;letter-spacing:0.04em;
-    border:1px solid var(--line-strong);padding:6px 12px;
-    color:var(--muted);white-space:nowrap;flex-shrink:0;
-  }
-  .cs-category{border-top:1px solid var(--line);margin-bottom:0;}
-  .cs-cat-btn{
-    width:100%;text-align:left;background:none;border:none;cursor:pointer;
-    padding:18px 0;display:flex;justify-content:space-between;align-items:center;gap:16px;
-    font-size:15.5px;font-weight:700;color:var(--ink);font-family:'Fraunces',serif;
-  }
-  .cs-cat-btn .cs-count{
-    font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--muted);
-    font-weight:400;margin-left:10px;
-  }
-  .cs-cat-btn .plus{
-    font-family:'JetBrains Mono',monospace;color:var(--gold-deep);font-size:18px;
-    flex-shrink:0;transition:transform 0.2s ease;
-  }
-  .cs-category.open .cs-cat-btn .plus{transform:rotate(45deg);}
-  .cs-cat-body{
-    max-height:0;overflow:hidden;transition:max-height 0.25s ease;
-  }
-  .cs-category.open .cs-cat-body{max-height:400px;}
-  .cs-empty{
-    padding:18px 0 22px;
-    border-top:1px dashed var(--line-strong);
-  }
-  .cs-empty p{font-size:14px;color:var(--muted);}
-
-  /* ---------- Web design callout ---------- */
-  .web-checklist{list-style:none;display:flex;flex-direction:column;}
-  .web-checklist li{
-    padding:11px 0;border-top:1px solid var(--line);
-    font-size:14.5px;display:flex;align-items:baseline;gap:10px;
-  }
-  .web-checklist li:first-child{border-top:none;}
-  .web-checklist li::before{content:'—';color:var(--gold-deep);font-weight:700;}
-
-  /* ---------- FAQ ---------- */
-  .faq-item{border-top:1px solid var(--line);}
-  .faq-item:last-child{border-bottom:1px solid var(--line);}
-  .faq-q{
-    width:100%;text-align:left;background:none;border:none;cursor:pointer;
-    padding:18px 0;display:flex;justify-content:space-between;align-items:center;gap:16px;
-    font-size:15.5px;font-weight:600;color:var(--ink);font-family:inherit;
-  }
-  .faq-q .plus{
-    font-family:'JetBrains Mono',monospace;color:var(--gold-deep);font-size:18px;
-    flex-shrink:0;transition:transform 0.2s ease;
-  }
-  .faq-item.open .faq-q .plus{transform:rotate(45deg);}
-  .faq-a{
-    max-height:0;overflow:hidden;transition:max-height 0.25s ease;
-  }
-  .faq-item.open .faq-a{max-height:240px;}
-  .faq-a p{padding:0 0 20px;color:var(--muted);font-size:14.5px;max-width:640px;}
-
-  /* ---------- CTA / contact band ---------- */
-  .cta-band{background:var(--khaki-deep);color:var(--paper);padding:54px 0;border-bottom:none;}
-  .cta-band .section-label{color:var(--gold);}
-  .cta-band .section-label::before{background:var(--gold);}
-  .cta-band h2{color:#F6F4ED;}
-  .cta-band .section-sub{color:#C7C3AC;}
-  .contact-grid{display:grid;grid-template-columns:1fr;gap:24px;margin-top:28px;}
-  @media (min-width:820px){.contact-grid{grid-template-columns:1fr 1.2fr;}}
-  .contact-meta{display:flex;flex-direction:column;gap:0;}
-  .contact-meta-item{
-    padding:14px 0;border-top:1px solid rgba(237,233,216,0.18);
-    font-size:13.5px;
-  }
-  .contact-meta-item:first-child{border-top:none;}
-  .contact-meta-item .k{
-    font-family:'JetBrains Mono',monospace;font-size:10.5px;text-transform:uppercase;
-    letter-spacing:0.05em;color:#A8A48F;display:block;margin-bottom:4px;
-  }
-  .contact-meta-item .v{font-weight:600;}
-  .contact-meta-item a.v{border-bottom:1px solid var(--gold);padding-bottom:1px;}
-
-  .form-card{background:var(--paper);color:var(--ink);padding:22px;border-radius:4px;}
-  .form-row{margin-bottom:14px;}
-  .form-row label{
-    display:block;font-size:12px;font-weight:600;color:var(--muted);margin-bottom:6px;
-    text-transform:uppercase;letter-spacing:0.03em;
-  }
-  .form-row input,.form-row select,.form-row textarea{
-    width:100%;border:1px solid var(--line-strong);background:var(--paper);
-    padding:11px 12px;font-size:14.5px;font-family:inherit;color:var(--ink);border-radius:3px;
-  }
-  .form-row textarea{min-height:90px;resize:vertical;}
-  .form-row input:focus,.form-row select:focus,.form-row textarea:focus{
-    outline:2px solid var(--gold-deep);outline-offset:1px;border-color:var(--gold-deep);
-  }
-  .form-submit{
-    width:100%;background:var(--gold);color:#ffffff;border:none;
-    padding:18px;font-weight:700;font-size:17px;border-radius:4px;cursor:pointer;margin-top:4px;
-  }
-  .form-note{font-size:12px;color:var(--muted);margin-top:10px;text-align:center;}
-
-  /* ---------- Footer ---------- */
+  /* Footer */
   footer{padding:40px 0 28px;}
-  .footer-grid{display:flex;flex-direction:column;gap:24px;}
-  .footer-cols{display:grid;grid-template-columns:repeat(2,1fr);gap:24px;}
-  .footer-col h4{
-    font-family:'JetBrains Mono',monospace;font-size:10.5px;text-transform:uppercase;
-    letter-spacing:0.05em;color:var(--muted);margin-bottom:12px;
-  }
+  .footer-cols{display:grid;grid-template-columns:repeat(2,1fr);gap:24px;margin-bottom:24px;}
+  .footer-col h4{font-family:'JetBrains Mono',monospace;font-size:10.5px;text-transform:uppercase;letter-spacing:0.05em;color:var(--muted);margin-bottom:12px;}
   .footer-col a{display:block;font-size:14px;padding:6px 0;color:var(--ink);}
-  .footer-bottom{
-    border-top:1px solid var(--line);padding-top:20px;font-size:12px;color:var(--muted);
-    display:flex;flex-direction:column;gap:12px;align-items:flex-start;
-  }
-  @media (min-width:760px){
-    .footer-cols{grid-template-columns:repeat(4,1fr);}
-    .footer-bottom{flex-direction:row;justify-content:space-between;align-items:center;}
-  }
-  /* ---------- Form success message ---------- */
-  .form-success{
-    display:none;
-    background:var(--paper);padding:32px;text-align:center;border-radius:4px;
-  }
-  .form-success.visible{display:block;}
-  .form-success .success-icon{
-    width:48px;height:48px;background:var(--gold);border-radius:50%;
-    display:flex;align-items:center;justify-content:center;
-    margin:0 auto 16px;font-size:22px;
-  }
-  .form-success h3{
-    font-family:'Fraunces',serif;font-size:22px;font-weight:700;
-    color:var(--ink);margin-bottom:8px;
-  }
-  .form-success p{font-size:14.5px;color:var(--muted);}
-
-  @media(min-width:760px){.cs-metrics-grid{grid-template-columns:repeat(4,1fr) !important;}}
-
-  /* ---------- Results strip ---------- */
-  .results-strip{background:var(--khaki-deep);padding:0;border-top:1px solid rgba(255,255,255,0.06);border-bottom:1px solid rgba(255,255,255,0.06);}
-  .results-strip-inner{display:grid;grid-template-columns:repeat(2,1fr);background:var(--khaki-deep);}
-  @media(min-width:760px){.results-strip-inner{grid-template-columns:repeat(4,1fr);}}
-  .results-metric{padding:28px 24px;border-right:1px solid rgba(255,255,255,0.08);border-bottom:1px solid rgba(255,255,255,0.08);}
-  .results-metric:nth-child(2n){border-right:none;}
-  @media(min-width:760px){
-    .results-metric{border-bottom:none;}
-    .results-metric:nth-child(2n){border-right:1px solid rgba(255,255,255,0.08);}
-    .results-metric:last-child{border-right:none;}
-  }
-  .results-metric-value{font-family:'Fraunces',serif;font-size:36px;font-weight:700;color:var(--gold);line-height:1;margin-bottom:6px;}
-  .results-metric-label{font-family:'JetBrains Mono',monospace;font-size:10.5px;text-transform:uppercase;letter-spacing:0.05em;color:#A8A48F;}
-  .results-metric-note{font-size:12px;color:#7A7660;margin-top:3px;}
-  .results-strip-footer{padding:16px 20px;display:flex;align-items:center;justify-content:space-between;gap:16px;border-top:1px solid rgba(255,255,255,0.06);flex-wrap:wrap;}
-  .results-strip-footer p{font-size:13px;color:#7A7660;font-family:'JetBrains Mono',monospace;}
-  .results-strip-footer a{font-family:'JetBrains Mono',monospace;font-size:12px;font-weight:700;color:var(--gold);text-transform:uppercase;letter-spacing:0.04em;}
-
-  /* ---------- Social icons ---------- */
+  .footer-bottom{border-top:1px solid var(--line);padding-top:20px;font-size:12px;color:var(--muted);display:flex;flex-direction:row;justify-content:space-between;align-items:center;}
+  @media(min-width:760px){.footer-cols{grid-template-columns:repeat(4,1fr);}}
   .social-icons{display:flex;gap:10px;margin-top:4px;}
   .social-icon{width:32px;height:32px;display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:opacity 0.15s ease;line-height:0;background:none;}
   .social-icon:hover{opacity:0.7;}
@@ -613,90 +127,52 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   .social-icon.email svg{fill:var(--muted);}
   .social-icon svg{width:28px;height:28px;display:block;}
 
-  /* ---------- Cookie banner ---------- */
-  .cookie-banner{
-    position:fixed;bottom:0;left:0;right:0;z-index:999;
-    background:var(--khaki-deep);color:#EDE9D8;
-    padding:16px 20px;
-    display:flex;flex-direction:column;gap:12px;
-    border-top:2px solid var(--gold);
-    box-shadow:0 -4px 24px rgba(0,0,0,0.18);
-  }
+  /* Cookie */
+  .cookie-banner{position:fixed;bottom:0;left:0;right:0;z-index:999;background:var(--khaki-deep);color:#EDE9D8;padding:16px 20px;display:flex;flex-direction:column;gap:12px;border-top:2px solid var(--gold);box-shadow:0 -4px 24px rgba(0,0,0,0.18);}
   .cookie-banner.hidden{display:none;}
-  .cookie-banner p{
-    font-size:13.5px;color:#C7C3AC;line-height:1.5;margin:0;
-  }
+  .cookie-banner p{font-size:13.5px;color:#C7C3AC;line-height:1.5;margin:0;}
   .cookie-banner a{color:var(--gold);text-decoration:underline;}
-  .cookie-banner-title{
-    font-family:'Fraunces',serif;font-size:16px;font-weight:700;
-    color:#F6F4ED;margin-bottom:2px;
-  }
-  .cookie-btns{
-    display:flex;gap:10px;flex-wrap:wrap;
-  }
-  .cookie-accept{
-    background:var(--gold);color:#ffffff;
-    border:none;padding:12px 24px;border-radius:4px;
-    font-weight:700;font-size:14.5px;cursor:pointer;font-family:inherit;
-  }
-  .cookie-reject{
-    background:transparent;color:#C7C3AC;
-    border:1px solid rgba(255,255,255,0.2);padding:10px 20px;border-radius:4px;
-    font-weight:600;font-size:13.5px;cursor:pointer;font-family:inherit;
-  }
-  .cookie-reject:hover{border-color:rgba(255,255,255,0.4);color:#EDE9D8;}
-  @media(min-width:760px){
-    .cookie-banner{flex-direction:row;align-items:center;justify-content:space-between;}
-    .cookie-banner-text{max-width:640px;}
-    .cookie-btns{flex-shrink:0;}
-  }
+  .cookie-banner-title{font-family:'Fraunces',serif;font-size:16px;font-weight:700;color:#F6F4ED;margin-bottom:2px;}
+  .cookie-btns{display:flex;gap:10px;}
+  .cookie-accept{background:var(--gold);color:#ffffff;border:none;padding:10px 20px;border-radius:4px;font-weight:700;font-size:13.5px;cursor:pointer;font-family:inherit;}
+  .cookie-reject{background:transparent;color:#C7C3AC;border:1px solid rgba(255,255,255,0.2);padding:10px 20px;border-radius:4px;font-weight:600;font-size:13.5px;cursor:pointer;font-family:inherit;}
+  @media(min-width:760px){.cookie-banner{flex-direction:row;align-items:center;justify-content:space-between;}.cookie-banner-text{max-width:640px;}.cookie-btns{flex-shrink:0;}}
 </style>
 </head>
 <body>
-<!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5HCM3QFH"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5HCM3QFH" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
-<!-- Forms handled by Formspree -->
-
-<div class="top-strip"><a href="tel:07848522456" style="color:inherit;font-weight:700;">07848 522456</a> · Currently accepting new clients · <strong>free account audit, no obligation</strong> · fixed fee · 15+ years' experience</div>
+<div class="top-strip"><a href="tel:07848522456" style="color:inherit;font-weight:700;">07848 522456</a> · Google Ads specialist — <strong>free account audit, no obligation</strong> · 15+ years' experience · fixed fee</div>
 
 <header>
   <div class="nav-row">
     <a href="/" class="logo">
-      <img src="/assets/logo.webp" alt="JWC Performance" style="height:180px;width:auto;display:block;" width="322" height="180" onerror="this.src='/assets/logo.png'">
+      <img src="/assets/logo.png" alt="JWC Performance" style="height:180px;width:auto;display:block;">
     </a>
     <nav class="desktop-nav">
       <div class="nav-dropdown">
-        <a href="#services">Services</a>
+        <a href="/#services">Services</a>
         <div class="dropdown-menu">
-          <div class="dropdown-menu-inner">
-            <a href="/services/google-ads-audit.html">Google Ads Audit</a>
-            <a href="/services/account-management.html">Account Management</a>
-            <a href="/services/new-account-build.html">New Account Build</a>
-            <a href="/services/account-restructure.html">Account Restructure</a>
-            <a href="/services/website-design.html">Website Design & Build</a>
-          </div>
+          <a href="/services/google-ads-audit.html">Google Ads Audit</a>
+          <a href="/services/account-management.html">Account Management</a>
+          <a href="/services/new-account-build.html">New Account Build</a>
+          <a href="/services/account-restructure.html">Account Restructure</a>
+          <a href="/services/website-design.html">Website Design &amp; Build</a>
         </div>
       </div>
       <div class="nav-dropdown">
         <a href="/google-ads-b2b.html">Sectors</a>
         <div class="dropdown-menu">
-          <div class="dropdown-menu-inner">
-            <a href="/google-ads-b2b.html">Google Ads for B2B</a>
-            <a href="/google-ads-b2c.html">Google Ads for B2C</a>
-          </div>
+          <a href="/google-ads-b2b.html">Google Ads for B2B</a>
+          <a href="/google-ads-b2c.html">Google Ads for B2C</a>
         </div>
       </div>
       <div class="nav-dropdown"><a href="/about.html">About</a><div class="dropdown-menu"><a href="/about.html">About Joe</a><a href="/process.html">How Joe works</a></div></div>
       <div class="nav-dropdown">
-        <a href="#case-studies">Case studies</a>
+        <a href="/case-studies/google-ads.html">Case studies</a>
         <div class="dropdown-menu">
-          <div class="dropdown-menu-inner">
-            <a href="/case-studies/google-ads.html">Google Ads</a>
-            <a href="/case-studies/website-design.html">Website Design & Build</a>
-          </div>
+          <a href="/case-studies/google-ads.html">Google Ads</a>
+          <a href="/case-studies/website-design.html">Website Design &amp; Build</a>
         </div>
       </div>
       <a href="/ppc-consultant-london.html">London PPC</a>
@@ -710,21 +186,21 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </button>
   </div>
   <div class="mobile-menu" id="mobileMenu">
-    <a href="#services" style="font-weight:700;color:var(--gold-deep);">Services</a>
+    <a href="/#services" style="font-weight:700;color:var(--gold-deep);">Services</a>
     <a href="/services/google-ads-audit.html" style="padding-left:36px;font-size:14px;">→ Google Ads Audit</a>
     <a href="/services/account-management.html" style="padding-left:36px;font-size:14px;">→ Account Management</a>
     <a href="/services/new-account-build.html" style="padding-left:36px;font-size:14px;">→ New Account Build</a>
     <a href="/services/account-restructure.html" style="padding-left:36px;font-size:14px;">→ Account Restructure</a>
-    <a href="/services/website-design.html" style="padding-left:36px;font-size:14px;">→ Website Design & Build</a>
+    <a href="/services/website-design.html" style="padding-left:36px;font-size:14px;">→ Website Design &amp; Build</a>
     <a href="/google-ads-b2b.html" style="font-weight:700;color:var(--gold-deep);">Sectors</a>
     <a href="/google-ads-b2b.html" style="padding-left:36px;font-size:14px;">→ Google Ads for B2B</a>
     <a href="/google-ads-b2c.html" style="padding-left:36px;font-size:14px;">→ Google Ads for B2C</a>
     <a href="/about.html" style="font-weight:700;color:var(--gold-deep);">About</a>
     <a href="/about.html" style="padding-left:36px;font-size:14px;">→ About Joe</a>
     <a href="/process.html" style="padding-left:36px;font-size:14px;">→ How Joe works</a>
-    <a href="#case-studies" style="font-weight:700;color:var(--gold-deep);">Case studies</a>
+    <a href="/case-studies/google-ads.html" style="font-weight:700;color:var(--gold-deep);">Case studies</a>
     <a href="/case-studies/google-ads.html" style="padding-left:36px;font-size:14px;">→ Google Ads</a>
-    <a href="/case-studies/website-design.html" style="padding-left:36px;font-size:14px;">→ Website Design & Build</a>
+    <a href="/case-studies/website-design.html" style="padding-left:36px;font-size:14px;">→ Website Design &amp; Build</a>
     <a href="/ppc-consultant-london.html">London PPC</a>
     <a href="/blog/">Blog</a>
     <a href="/faq.html">FAQ</a>
@@ -732,529 +208,185 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
 </header>
 
-<main id="top">
+<main>
 
   <!-- HERO -->
-  <section class="hero" style="border-bottom:none;">
-    <div class="wrap hero-inner">
-      <div>
-        <div class="eyebrow">Google Ads specialist · over 15 years' experience</div>
-        <h1>Better Google Ads results. <em>Starting with a free audit.</em></h1>
-        <p class="hero-sub">I specialise in Google Ads and PPC — building, restructuring and managing campaigns for B2B and B2C businesses across the UK. 15+ years’ experience as a freelance PPC consultant, fixed-fee pricing, and a free no-obligation audit to start. No retainers, no account managers, no surprises.</p>
-        <div class="hero-ctas">
-          <a href="#contact" class="btn btn-primary">Get your free audit</a>
-          <a href="#services" class="btn btn-secondary">See fixed prices</a>
-        </div>
-        <p style="margin-top:12px;font-size:14px;color:var(--muted);">Or call: <a href="tel:07848522456" style="color:var(--gold-deep);font-weight:600;font-family:'JetBrains Mono',monospace;">07848 522456</a></p>
-        <div class="hero-meta">
-          <div class="hero-meta-item"><span class="k">Specialism</span><span class="v">Google Ads — Search, Display &amp; more</span></div>
-          <div class="hero-meta-item"><span class="k">Experience</span><span class="v">15+ years — corporations to SMBs</span></div>
-          <div class="hero-meta-item"><span class="k">Terms</span><span class="v">Fixed fee, agreed before work starts</span></div>
-        </div>
-      </div>
-
-      <!-- LEDGER signature element -->
-      <div class="ledger">
-        <div class="ledger-tab">Lead_Gen_Results.csv</div>
-        <div class="ledger-inner">
-          <div class="ledger-row"><span class="label">Cost per lead — before</span><span class="value">£68.40</span></div>
-          <div class="ledger-row"><span class="label">Cost per lead — after</span><span class="value gold">£31.90</span></div>
-          <div class="ledger-row"><span class="label">Lead volume — before</span><span class="value">42 / mo</span></div>
-          <div class="ledger-row"><span class="label">Lead volume — after</span><span class="value gold">97 / mo</span></div>
-          <div class="ledger-foot">
-            <span class="total-label">Reduction in cost-per-lead</span>
-            <span class="total-value">−53%</span>
-          </div>
-        </div>
-      </div>
-    </div>
-    <p class="wrap" style="font-size:12px;color:var(--muted);margin-top:10px;">Illustrative example. Your results depend on your actual account, market and starting position.</p>
-  </section>
-
-  <!-- SERVICES -->
-  <section id="services">
+  <section class="page-hero">
     <div class="wrap">
-      <div class="section-head">
-        <div class="section-label">01 — services</div>
-        <h2>Five Google Ads services. One fixed price for each.</h2>
-        <p class="section-sub">No bundled retainers, no "it depends" pricing. Every service has a fixed fee agreed in writing before any work begins — and a free no-obligation audit to start.</p>
-      </div>
-
-      <div class="service-file">
-        <div class="service-head">
-          <span class="service-index">01</span>
-          <span class="service-title">Google Ads account audit</span>
-        </div>
-        <div class="service-body">
-          <p class="service-desc">A thorough, no-obligation review of your Google Ads account covering account structure, search relevance, location performance, demographic performance, tracking, ads &amp; content and landing page quality. Delivered as a PowerPoint presentation with quick wins, a long-term strategy and predicted improvements.</p>
-          <div class="service-tags">
-            <span class="tag">Account structure</span>
-            <span class="tag">Search relevance</span>
-            <span class="tag">Location &amp; demographic</span>
-            <span class="tag">Tracking review</span>
-            <span class="tag">Ads &amp; content</span>
-            <span class="tag">Landing page</span>
-            <span class="tag">5 working days</span>
-          </div>
-          <div class="service-price-row">
-            <span class="service-price">
-              <span class="from">Completely free · no obligation</span>
-              <span class="amount" style="color:var(--gold-deep);">Free</span>
-            </span>
-            <a href="/services/google-ads-audit.html" class="service-enquire">Find out more →</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="service-file">
-        <div class="service-head">
-          <span class="service-index">02</span>
-          <span class="service-title">Account management</span>
-        </div>
-        <div class="service-body">
-          <p class="service-desc">Hands-on day-to-day management of your Google Ads account — optimising bids, refining targeting, testing ad copy and keeping performance moving in the right direction. Available on an hourly or day-rate basis, no long-term contract required.</p>
-          <div class="service-tags">
-            <span class="tag">Flexible</span>
-            <span class="tag">No lock-in</span>
-            <span class="tag">Direct access</span>
-          </div>
-          <div class="service-price-row">
-            <span class="service-price"><span class="from">Hourly or day rate</span><span class="amount">£60/hr · £400/day</span></span>
-            <a href="/services/account-management.html" class="service-enquire">Find out more →</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="service-file">
-        <div class="service-head">
-          <span class="service-index">03</span>
-          <span class="service-title">New Google Ads account build</span>
-        </div>
-        <div class="service-body">
-          <p class="service-desc">Starting from scratch? I'll build a Google Ads account from the ground up — campaign structure, keyword identification, ad copy creation, tracking setup, plus a competitor and market review so your account launches in the right position, not just a live one.</p>
-          <div class="service-tags">
-            <span class="tag">Campaign structure</span>
-            <span class="tag">Keyword research</span>
-            <span class="tag">Ad copy</span>
-            <span class="tag">Tracking setup</span>
-            <span class="tag">Competitor review</span>
-            <span class="tag">Up to 5 working days</span>
-          </div>
-          <div class="service-price-row">
-            <span class="service-price"><span class="from">One-off, fixed fee</span><span class="amount">£1,000</span></span>
-            <a href="/services/new-account-build.html" class="service-enquire">Find out more →</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="service-file">
-        <div class="service-head">
-          <span class="service-index">04</span>
-          <span class="service-title">Account restructure</span>
-        </div>
-        <div class="service-body">
-          <p class="service-desc">Everything in a new account build, plus a full analysis of your existing account — what's been working, what hasn't, and why. Your account rebuilt on solid foundations with the context of its history, not starting blind.</p>
-          <div class="service-tags">
-            <span class="tag">Full account analysis</span>
-            <span class="tag">Campaign rebuild</span>
-            <span class="tag">Keyword research</span>
-            <span class="tag">Ad copy</span>
-            <span class="tag">Tracking review</span>
-            <span class="tag">Up to 5 working days</span>
-          </div>
-          <div class="service-price-row">
-            <span class="service-price"><span class="from">One-off, fixed fee</span><span class="amount">£1,500</span></span>
-            <a href="/services/account-restructure.html" class="service-enquire">Find out more →</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="service-file">
-        <div class="service-head">
-          <span class="service-index">05</span>
-          <span class="service-title">Website design &amp; build</span>
-        </div>
-        <div class="service-body">
-          <p class="service-desc">A fast, professional website designed to capture leads and grow your business online. Mobile-first, clearly structured, with lead forms, analytics and conversion tracking set up correctly from day one. Hosted free on Cloudflare — no monthly platform fees.</p>
-          <div class="service-tags">
-            <span class="tag">Mobile-first</span>
-            <span class="tag">Lead forms included</span>
-            <span class="tag">GTM + GA4</span>
-            <span class="tag">Free hosting</span>
-            <span class="tag">Full handover</span>
-          </div>
-          <div class="service-price-row">
-            <span class="service-price"><span class="from">From · price agreed at scoping call</span><span class="amount">£1,000+</span></span>
-            <a href="/services/website-design.html" class="service-enquire">Find out more →</a>
-          </div>
-        </div>
-      </div>
+      <div class="breadcrumb"><a href="/">Home</a> / How it works</div>
+      <div class="eyebrow">The process</div>
+      <h1>How Joe works — a fixed-fee Google Ads process with no surprises.</h1>
+      <p class="hero-sub">Fill in the form and you will hear back within one working day. Here is exactly what the fixed-fee Google Ads management process looks like from that point — what Joe needs from you, how long things take, and what to expect at every stage.</p>
     </div>
   </section>
 
-  <!-- APPROACH B2B/B2C -->
-  <section id="approach">
+  <!-- WHAT HAPPENS NEXT -->
+  <section class="process-section">
     <div class="wrap">
-      <div class="section-head">
-        <div class="section-label">03 — approach</div>
-        <h2>Google Ads for B2B and B2C — both need a different approach.</h2>
-        <p class="section-sub">Google Ads works differently depending on whether you're selling to businesses or consumers. The intent signals, bidding strategy, keyword structure and conversion tracking that works for B2C lead generation won't work as-is for a B2B sales cycle — and vice versa.</p>
-      </div>
-      <div class="split">
-        <div class="panel featured">
-          <div class="panel-eyebrow">B2C Google Ads</div>
-          <h3>High-volume, lower cost-per-lead</h3>
-          <p>Fast buying cycles, higher search volumes, competitive keywords. Built around getting the right intent signals and keeping CPL down without sacrificing lead quality.</p>
-        </div>
-        <div class="panel">
-          <div class="panel-eyebrow">B2B Google Ads</div>
-          <h3>Longer cycles, higher-value leads</h3>
-          <p>Smaller search volumes, longer decision cycles, multiple stakeholders. Built around the right match types, negative lists and tracking that credits leads properly — not just the last click.</p>
-        </div>
+      <div class="section-label">After you get in touch</div>
+      <h2>What happens after you fill in the form.</h2>
+      <div style="background:var(--surface);border-left:4px solid var(--gold);padding:24px 28px;margin-top:28px;max-width:640px;">
+        <p style="font-family:'Fraunces',serif;font-size:18px;font-weight:700;color:var(--ink);margin-bottom:8px;">You will hear back within one working day.</p>
+        <p style="font-size:15px;color:var(--muted);line-height:1.7;margin-bottom:0;">Joe responds to all enquiries directly — no automated replies, no account managers. Working hours are flexible so you may hear back in the evening. From there, the process below is exactly what follows.</p>
       </div>
     </div>
   </section>
 
-  <!-- ABOUT -->
-  <section id="why">
+  <!-- STEPS -->
+  <section class="process-section">
     <div class="wrap">
-      <div class="section-head">
-        <div class="section-label">04 — about</div>
-        <h2>15 years in paid media. Working directly with you.</h2>
+      <div class="section-label">End to end</div>
+      <h2>Nine steps. Every time.</h2>
+
+      <div class="step-grid">
+
+        <!-- Step 1 -->
+        <div class="step">
+          <div class="step-number">01</div>
+          <div class="step-content">
+            <div class="step-tag">First contact</div>
+            <h3>Initial call — understand your situation</h3>
+            <p>The first conversation is about understanding your business, your goals and what is happening with your Google Ads right now. There is no sales script and no pressure. The goal is to find out whether working together makes sense, and if so, what that looks like.</p>
+            <p>This call usually takes 20 to 30 minutes. You speak directly with Joe — not a business development executive.</p>
+          </div>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="step">
+          <div class="step-number">02</div>
+          <div class="step-content">
+            <div class="step-tag">Free, no obligation</div>
+            <h3>Free audit — a full review of your account</h3>
+            <p>For most clients, the next step is a free 12-point audit of your existing Google Ads account. This covers campaign structure, keyword relevance, search term data, tracking, ad copy, landing pages and more — delivered as a presentation with clear findings, quick wins and a long-term strategy.</p>
+            <p>The audit is free and carries no obligation. Many clients take the findings and act on them independently. If you want Joe to do the work, that is when a quote comes in.</p>
+          </div>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="step">
+          <div class="step-number">03</div>
+          <div class="step-content">
+            <div class="step-tag">Before any work starts</div>
+            <h3>Written quote — fixed fee, agreed upfront</h3>
+            <p>If you decide to proceed, you receive a written quote scoped to your account and goals. The price is fixed. It does not change once work begins. If the scope changes significantly, a new quote is issued before any additional work takes place — not after.</p>
+            <p>No retainers. No "it depends". A number, in writing, before anything starts.</p>
+          </div>
+        </div>
+
+        <!-- Step 4 -->
+        <div class="step">
+          <div class="step-number">04</div>
+          <div class="step-content">
+            <div class="step-tag">Build phase</div>
+            <h3>Build — campaigns, tracking and everything in between</h3>
+            <p>Depending on the service, this stage covers building a new account from scratch, restructuring an existing one, or getting a new website live. Every build includes proper tracking and analytics setup — conversion tracking, GA4, GTM — so performance can be measured correctly from day one.</p>
+            <p>Throughout the build, communication is direct. You are kept in the loop on progress without needing to chase for updates.</p>
+          </div>
+        </div>
+
+        <!-- Step 5 -->
+        <div class="step">
+          <div class="step-number">05</div>
+          <div class="step-content">
+            <div class="step-tag">Before go-live</div>
+            <h3>Review and sign-off — nothing launches without your approval</h3>
+            <p>Before anything goes live, you see exactly what has been built. Campaign structure, ad copy, targeting settings, tracking setup — all reviewed together. Any changes are made before launch, not after.</p>
+            <p>This step exists because surprises after launch cost money. A thorough review beforehand prevents that.</p>
+          </div>
+        </div>
+
+        <!-- Step 6 -->
+        <div class="step">
+          <div class="step-number">06</div>
+          <div class="step-content">
+            <div class="step-tag">Go-live</div>
+            <h3>Launch — campaigns live, performance tracking begins</h3>
+            <p>Campaigns go live and data collection begins immediately. The first few weeks are a learning phase — the account gathers signal, spend patterns establish themselves and early optimisation opportunities start to appear.</p>
+            <p>Expectations are managed clearly from the start. If you are expecting leads in week one, that conversation happens before launch — not after.</p>
+          </div>
+        </div>
+
+        <!-- Step 7 -->
+        <div class="step">
+          <div class="step-number">07</div>
+          <div class="step-content">
+            <div class="step-tag">Ongoing</div>
+            <h3>Optimisation — continuous improvement, not set and forget</h3>
+            <p>Active account management means regular review of search terms, bid adjustments, ad copy testing, negative keyword expansion and audience refinement. Performance does not plateau — there is always something to improve, and the account is treated as a live, evolving asset.</p>
+            <p>The cadence of work is agreed upfront. You know what is being done and when.</p>
+          </div>
+        </div>
+
+        <!-- Step 8 -->
+        <div class="step">
+          <div class="step-number">08</div>
+          <div class="step-content">
+            <div class="step-tag">Ongoing</div>
+            <h3>Reporting — clear numbers tied to business outcomes</h3>
+            <p>Monthly reporting covers what matters: cost per lead, conversion volume, spend efficiency and how performance is trending over time. Reports are written in plain language — no vanity metrics, no impression share graphs masquerading as results.</p>
+            <p>If the numbers are not where they need to be, that is addressed directly — with context and a plan, not excuses.</p>
+          </div>
+        </div>
+
+        <!-- Step 9 -->
+        <div class="step">
+          <div class="step-number">09</div>
+          <div class="step-content">
+            <div class="step-tag">No lock-in</div>
+            <h3>Transparent exit — cancel anytime, no penalties</h3>
+            <p>There are no minimum contract terms and no penalties for leaving. One-off projects end when the work is done. Ongoing management is cancel-anytime — you are not locked into a 12-month agreement to find out if the work is delivering.</p>
+            <p>If it is not working, you should be free to say so. That is how it should be.</p>
+          </div>
+        </div>
+
       </div>
-      <div style="display:grid;grid-template-columns:1fr;gap:40px;margin-bottom:32px;">
-        <div style="display:flex;align-items:flex-start;gap:24px;flex-wrap:wrap;">
-          <img src="/assets/joe-coombs.webp" alt="Joe Coombs, Google Ads Specialist" style="width:120px;height:120px;object-fit:cover;object-position:top;border-radius:4px;flex-shrink:0;" width="240" height="240" loading="lazy" onerror="this.src='/assets/joe-coombs.jpg'">
-          <div>
-            <div style="font-family:'Fraunces',serif;font-size:18px;font-weight:700;color:var(--ink);margin-bottom:4px;">Joe Coombs</div>
-            <div style="font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--gold-deep);text-transform:uppercase;letter-spacing:0.05em;">Google Ads Specialist · JWC Performance</div>
-          </div>
+
+      <!-- What you can expect panel -->
+      <div class="expect-panel">
+        <h3>What you can expect throughout</h3>
+        <div class="expect-list">
+          <div class="expect-item">Direct access to Joe at every stage — no account managers relaying messages</div>
+          <div class="expect-item">Fixed fees agreed in writing before any work begins</div>
+          <div class="expect-item">Clear communication without needing to chase for updates</div>
+          <div class="expect-item">Reporting tied to business outcomes, not vanity metrics</div>
+          <div class="expect-item">No lock-in contracts and no penalties for leaving</div>
         </div>
       </div>
-      <div class="why-list">
-        <div class="why-row">
-          <span class="why-mark">—</span>
-          <div>
-            <div class="why-title">15+ years, large corporations to SMBs</div>
-            <div class="why-desc">I've run lead generation for businesses of every size — from large corporations with complex stakeholder sign-off, to SMBs who need decisions made fast. I know what good looks like at both ends.</div>
-          </div>
-        </div>
-        <div class="why-row">
-          <span class="why-mark">—</span>
-          <div>
-            <div class="why-title">Fixed fees, not vague retainers</div>
-            <div class="why-desc">You know the exact cost before work starts. No "it depends on scope" creeping into the invoice later.</div>
-          </div>
-        </div>
-        <div class="why-row">
-          <span class="why-mark">—</span>
-          <div>
-            <div class="why-title">No lock-in contracts</div>
-            <div class="why-desc">One-off projects stay one-off. Ongoing support is cancel-anytime — you're not signing a 12-month agreement to find out if it works.</div>
-          </div>
-        </div>
-        <div class="why-row">
-          <span class="why-mark">—</span>
-          <div>
-            <div class="why-title">You speak to the person doing the work</div>
-            <div class="why-desc">No account managers relaying messages to an offshore team. Every audit, build and campaign is run by me, directly.</div>
-          </div>
-        </div>
-      </div>
-      <div class="quote-block">
-        <p>"Most agencies are built to keep you paying monthly whether or not the work justifies it. JWC Performance is built the opposite way — fixed scope, fixed fee, clear end point. If you’re looking for a freelance PPC consultant who works to your goals, not a monthly retainer, this is how I work."</p>
-        <div class="quote-cite">15+ years in paid media — corporations to SMBs</div>
-      </div>
+
     </div>
   </section>
 
-  <!-- HOW IT WORKS -->
-  <section id="how-it-works">
+  <!-- PRINCIPLES -->
+  <section class="process-section">
     <div class="wrap">
-      <div class="section-head">
-        <div class="section-label">05 — how it works</div>
-        <h2>What happens after you get in touch.</h2>
-        <p class="section-sub">No drawn-out onboarding. No waiting weeks to get started. Here is what the process looks like from first contact to work underway.</p>
-      </div>
-      <div class="process">
-        <div class="process-step">
-          <span class="step-mark">01</span>
-          <div class="step-title">Free audit or discovery call</div>
-          <div class="step-desc">Fill in the form and Joe will respond within one working day. Most engagements start with a free 12-point account audit — no obligation, delivered within 5 working days.</div>
+      <div class="section-label">How Joe works</div>
+      <h2>Three things that do not change.</h2>
+      <div class="principles">
+        <div class="principle">
+          <div class="principle-label">Fixed fees</div>
+          <div class="principle-text">Every piece of work has a price agreed in writing before it starts. The invoice matches the quote — always.</div>
         </div>
-        <div class="process-step">
-          <span class="step-mark">02</span>
-          <div class="step-title">Written quote, agreed upfront</div>
-          <div class="step-desc">If you want to proceed, you receive a fixed-fee quote scoped to your account and goals — in writing, before any work begins. The invoice matches the quote. Always.</div>
+        <div class="principle">
+          <div class="principle-label">Direct access</div>
+          <div class="principle-text">You speak with the person doing the work. There is no layer of account management between you and the decisions being made on your account.</div>
         </div>
-        <div class="process-step">
-          <span class="step-mark">03</span>
-          <div class="step-title">Build, restructure or management</div>
-          <div class="step-desc">Work gets underway. You're kept in the loop throughout — direct communication, no account managers in the middle. Nothing launches without your sign-off.</div>
+        <div class="principle">
+          <div class="principle-label">No lock-in</div>
+          <div class="principle-text">One-off projects stay one-off. Ongoing support is cancel-anytime. You should stay because the work is good, not because you are contractually obligated to.</div>
         </div>
-        <div class="process-step">
-          <span class="step-mark">04</span>
-          <div class="step-title">Live and improving</div>
-          <div class="step-desc">Campaigns go live and optimisation begins. Monthly reporting covers cost per lead, conversion volume and what's happening next — in plain language, not vanity metrics.</div>
-        </div>
-      </div>
-      <div style="margin-top:24px;">
-        <a href="/process.html" style="font-family:'JetBrains Mono',monospace;font-size:12px;font-weight:700;color:var(--gold-deep);text-transform:uppercase;letter-spacing:0.04em;border-bottom:1px solid var(--gold);padding-bottom:2px;">See the full process →</a>
       </div>
     </div>
   </section>
 
-  <!-- TRUST: CREDENTIALS, SECTORS, TESTIMONIALS -->
-  <section id="trust">
+  <!-- CTA -->
+  <section class="cta-band">
     <div class="wrap">
-      <div class="section-head">
-        <div class="section-label">Proof of work</div>
-        <h2>Certified, experienced, and willing to show it.</h2>
-        <p class="section-sub">Client names stay confidential by default — most agreements include that as standard — but the certifications, sector experience and feedback below are real.</p>
-      </div>
-
-      <div class="cred-strip">
-        <div class="cred-badge">
-          <span class="g-mark"><svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><path fill="#4285F4" d="M45.12 24.5c0-1.56-.14-3.06-.4-4.5H24v8.51h11.84c-.51 2.75-2.06 5.08-4.39 6.64v5.52h7.11c4.16-3.83 6.56-9.47 6.56-16.17z"/><path fill="#34A853" d="M24 46c5.94 0 10.92-1.97 14.56-5.33l-7.11-5.52c-1.97 1.32-4.49 2.1-7.45 2.1-5.73 0-10.58-3.87-12.31-9.07H4.34v5.7C7.96 41.07 15.4 46 24 46z"/><path fill="#FBBC05" d="M11.69 28.18C11.25 26.86 11 25.45 11 24s.25-2.86.69-4.18v-5.7H4.34C2.85 17.09 2 20.45 2 24s.85 6.91 2.34 9.88l7.35-5.7z"/><path fill="#EA4335" d="M24 10.75c3.23 0 6.13 1.11 8.41 3.29l6.31-6.31C34.91 4.18 29.93 2 24 2 15.4 2 7.96 6.93 4.34 14.12l7.35 5.7c1.73-5.2 6.58-9.07 12.31-9.07z"/></svg></span>
-          <span class="cred-text"><span class="cred-name">Google Ads Search</span><span class="cred-issuer">Google Skillshop</span></span>
-        </div>
-        <div class="cred-badge">
-          <span class="g-mark"><svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><path fill="#4285F4" d="M45.12 24.5c0-1.56-.14-3.06-.4-4.5H24v8.51h11.84c-.51 2.75-2.06 5.08-4.39 6.64v5.52h7.11c4.16-3.83 6.56-9.47 6.56-16.17z"/><path fill="#34A853" d="M24 46c5.94 0 10.92-1.97 14.56-5.33l-7.11-5.52c-1.97 1.32-4.49 2.1-7.45 2.1-5.73 0-10.58-3.87-12.31-9.07H4.34v5.7C7.96 41.07 15.4 46 24 46z"/><path fill="#FBBC05" d="M11.69 28.18C11.25 26.86 11 25.45 11 24s.25-2.86.69-4.18v-5.7H4.34C2.85 17.09 2 20.45 2 24s.85 6.91 2.34 9.88l7.35-5.7z"/><path fill="#EA4335" d="M24 10.75c3.23 0 6.13 1.11 8.41 3.29l6.31-6.31C34.91 4.18 29.93 2 24 2 15.4 2 7.96 6.93 4.34 14.12l7.35 5.7c1.73-5.2 6.58-9.07 12.31-9.07z"/></svg></span>
-          <span class="cred-text"><span class="cred-name">Google Ads Display</span><span class="cred-issuer">Google Skillshop</span></span>
-        </div>
-        <div class="cred-badge">
-          <span class="g-mark"><svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><path fill="#4285F4" d="M45.12 24.5c0-1.56-.14-3.06-.4-4.5H24v8.51h11.84c-.51 2.75-2.06 5.08-4.39 6.64v5.52h7.11c4.16-3.83 6.56-9.47 6.56-16.17z"/><path fill="#34A853" d="M24 46c5.94 0 10.92-1.97 14.56-5.33l-7.11-5.52c-1.97 1.32-4.49 2.1-7.45 2.1-5.73 0-10.58-3.87-12.31-9.07H4.34v5.7C7.96 41.07 15.4 46 24 46z"/><path fill="#FBBC05" d="M11.69 28.18C11.25 26.86 11 25.45 11 24s.25-2.86.69-4.18v-5.7H4.34C2.85 17.09 2 20.45 2 24s.85 6.91 2.34 9.88l7.35-5.7z"/><path fill="#EA4335" d="M24 10.75c3.23 0 6.13 1.11 8.41 3.29l6.31-6.31C34.91 4.18 29.93 2 24 2 15.4 2 7.96 6.93 4.34 14.12l7.35 5.7c1.73-5.2 6.58-9.07 12.31-9.07z"/></svg></span>
-          <span class="cred-text"><span class="cred-name">Google Ads Video</span><span class="cred-issuer">Google Skillshop</span></span>
-        </div>
-        <div class="cred-badge">
-          <span class="g-mark"><svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><path fill="#4285F4" d="M45.12 24.5c0-1.56-.14-3.06-.4-4.5H24v8.51h11.84c-.51 2.75-2.06 5.08-4.39 6.64v5.52h7.11c4.16-3.83 6.56-9.47 6.56-16.17z"/><path fill="#34A853" d="M24 46c5.94 0 10.92-1.97 14.56-5.33l-7.11-5.52c-1.97 1.32-4.49 2.1-7.45 2.1-5.73 0-10.58-3.87-12.31-9.07H4.34v5.7C7.96 41.07 15.4 46 24 46z"/><path fill="#FBBC05" d="M11.69 28.18C11.25 26.86 11 25.45 11 24s.25-2.86.69-4.18v-5.7H4.34C2.85 17.09 2 20.45 2 24s.85 6.91 2.34 9.88l7.35-5.7z"/><path fill="#EA4335" d="M24 10.75c3.23 0 6.13 1.11 8.41 3.29l6.31-6.31C34.91 4.18 29.93 2 24 2 15.4 2 7.96 6.93 4.34 14.12l7.35 5.7c1.73-5.2 6.58-9.07 12.31-9.07z"/></svg></span>
-          <span class="cred-text"><span class="cred-name">AI-Powered Performance Ads</span><span class="cred-issuer">Google Skillshop</span></span>
-        </div>
-      </div>
-      <p class="trust-note">Current Google Ads Skillshop certifications — verified via Google Skillshop.</p>
-
-      <div class="sector-proof">
-        <div class="sector-row"><span>Years managing live ad spend</span><span class="v">15+</span></div>
-        <div class="sector-row"><span>Largest single account managed</span><span class="v">Enterprise / corporate</span></div>
-        <div class="sector-row"><span>Smallest single account managed</span><span class="v">Local SMB</span></div>
-        <div class="sector-row" style="flex-direction:column;align-items:flex-start;gap:4px;">
-          <span>Sectors worked across</span>
-          <span class="v" style="text-align:left;">B2B SaaS, finance, home services, ecommerce, recruitment</span>
-        </div>
-      </div>
-
-      <div class="section-head" style="margin-top:48px;">
-        <div class="section-label">What clients say</div>
-        <h2 style="font-size:21px;">In their words.</h2>
-      </div>
-      <div class="testimonial-grid">
-        <div class="testimonial-card">
-          <blockquote>"We came to Joseph with a real challenge. Our campaigns were too broad and simply weren't reflecting the commercial reality of our individual locations. He completely changed how we thought about targeting, moving us away from a blanket national approach and focusing instead on local visibility where it actually mattered. The results spoke for themselves. Engagement improved, and for the first time we had a genuine picture of cost per acquisition tied directly to revenue at a site level. It was a real step change for us."</blockquote>
-          <div class="testimonial-attr">
-            <span class="testimonial-avatar mono">★</span>
-            <span class="testimonial-meta"><span class="name">Stephen, Head of Digital Marketing</span><span class="role">B2C Healthcare Organisation · 2022</span></span>
-          </div>
-        </div>
-        <div class="testimonial-card">
-          <blockquote>"Joseph came in and very quickly identified that our account structure wasn't aligned to what we actually cared about, which was revenue, not just conversions. He rebuilt everything around high intent audiences and the improvement in both conversion rate and ROAS was almost immediate. He brought a level of commercial focus to our paid media that we simply hadn't had before. Exactly what we needed at exactly the right time."</blockquote>
-          <div class="testimonial-attr">
-            <span class="testimonial-avatar mono">★</span>
-            <span class="testimonial-meta"><span class="name">Alex, Performance Marketing Manager</span><span class="role">B2B Financial Services Firm · 2025</span></span>
-          </div>
-        </div>
-        <div class="testimonial-card">
-          <blockquote>"The transformation Joseph delivered was honestly remarkable. He didn't just cut wastage, he completely reframed how we measured success, helping us understand where genuine registrations were actually coming from rather than just looking at applications. The ROI we achieved was over 1,100% and that work went on to win recognition at both the Digital Impact Awards and the Performance Marketing Awards. We couldn't be happier with what he achieved."</blockquote>
-          <div class="testimonial-attr">
-            <span class="testimonial-avatar mono">★</span>
-            <span class="testimonial-meta"><span class="name">Alison, Head of Marketing</span><span class="role">B2C Higher Education Institution · 2025</span></span>
-          </div>
-        </div>
-        <div class="testimonial-card">
-          <blockquote>"Years of accumulated spend had left our account in a real state and Joseph wasn't afraid to take a completely fresh approach. He rebuilt everything from scratch, improving relevance and engagement rates and giving us solid performance indicators tied to revenue for the first time. We finally feel like our paid media is actually working as hard as it should be. We only wish we'd brought him in sooner."</blockquote>
-          <div class="testimonial-attr">
-            <span class="testimonial-avatar mono">★</span>
-            <span class="testimonial-meta"><span class="name">Jessica, Head of Marketing</span><span class="role">B2C Music Education Provider · 2026</span></span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- WEB DESIGN -->
-  <section id="web-design">
-    <div class="wrap split">
-      <div>
-        <div class="section-label">Also available</div>
-        <h2 style="margin-bottom:14px;">A website built to convert the traffic you're paying for.</h2>
-        <p class="section-sub" style="margin-bottom:10px;">There's little point running a sharp Google Ads campaign into a slow, confusing website. Web design is offered standalone or alongside an account build or restructure — fixed fee, you host the domain, I design and build the site.</p>
-        <p class="section-sub" style="margin-bottom:18px;font-family:'JetBrains Mono',monospace;font-size:13px;color:var(--gold-deep);font-weight:600;">£1,000 · up to 10 pages · 10 working days</p>
-        <a href="#contact" class="btn btn-primary">Get a quote</a>
-      </div>
-      <div class="panel">
-        <div class="panel-eyebrow">What's included</div>
-        <ul class="web-checklist">
-          <li>Up to 10 pages, mobile-first design</li>
-          <li>Clear calls to action, not buried contact forms</li>
-          <li>Conversion tracking set up correctly from day one</li>
-          <li>You host the domain — I build and hand over the site</li>
-          <li>Fixed price, agreed before the build starts</li>
-        </ul>
-      </div>
-    </div>
-  </section>
-
-  <!-- CASE STUDIES -->
-  <section id="case-studies">
-    <div class="wrap">
-      <div class="section-head">
-        <div class="section-label">Real work, real results</div>
-        <h2>Case studies.</h2>
-        <p class="section-sub">A selection of projects across Google Ads and web design — showing what was done, why, and what changed as a result. More being added as clients approve them.</p>
-      </div>
-
-      <!-- Higher education case study strip -->
-      <div style="margin-bottom:16px;">
-        <div style="background:var(--surface);padding:12px 20px;border-left:3px solid var(--gold);margin-bottom:1px;">
-          <span style="font-family:'JetBrains Mono',monospace;font-size:10.5px;text-transform:uppercase;letter-spacing:0.06em;color:var(--gold-deep);font-weight:600;">Higher Education · B2C · Lead Generation</span>
-        </div>
-        <div style="background:var(--khaki-deep);">
-          <div style="display:grid;grid-template-columns:repeat(2,1fr);" class="cs-metrics-grid">
-            <div class="results-metric">
-              <div class="results-metric-value">1,152%</div>
-              <div class="results-metric-label">Return on investment</div>
-              <div class="results-metric-note">Target was 684%</div>
-            </div>
-            <div class="results-metric">
-              <div class="results-metric-value">£3.5m</div>
-              <div class="results-metric-label">Course income generated</div>
-              <div class="results-metric-note">Target was £2.19m</div>
-            </div>
-            <div class="results-metric">
-              <div class="results-metric-value">71%</div>
-              <div class="results-metric-label">Above lead targets</div>
-              <div class="results-metric-note">Most successful campaign to date</div>
-            </div>
-            <div class="results-metric">
-              <div class="results-metric-value">£2.9m</div>
-              <div class="results-metric-label">Future pipeline value</div>
-              <div class="results-metric-note">Additional to direct income</div>
-            </div>
-          </div>
-          <div class="results-strip-footer">
-            <p>Performance Marketing Awards entry · Higher education lead generation</p>
-            <a href="/case-studies/higher-education-lead-gen.html">Read the case study →</a>
-          </div>
-        </div>
-      </div>
-
-      <div style="margin-top:28px;display:flex;gap:16px;flex-wrap:wrap;">
-        <a href="/case-studies/google-ads.html" style="font-family:'JetBrains Mono',monospace;font-size:12px;font-weight:700;color:var(--gold-deep);text-transform:uppercase;letter-spacing:0.04em;border-bottom:1px solid var(--gold);padding-bottom:2px;">All Google Ads case studies →</a>
-        <a href="/case-studies/website-design.html" style="font-family:'JetBrains Mono',monospace;font-size:12px;font-weight:700;color:var(--gold-deep);text-transform:uppercase;letter-spacing:0.04em;border-bottom:1px solid var(--gold);padding-bottom:2px;">Website Design case studies →</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- FAQ -->
-  <section id="faq">
-    <div class="wrap">
-      <div class="section-head">
-        <div class="section-label">06 — faq</div>
-        <h2>Common questions.</h2>
-      </div>
-      <div class="faq-list">
-        <div class="faq-item open">
-          <button class="faq-q"><span>Is the audit really free with no obligation?</span><span class="plus mono">+</span></button>
-          <div class="faq-a"><p>Yes — completely. The audit is a standalone piece of work: a full review of your Google Ads account delivered as a PowerPoint presentation with quick wins, a long-term strategy and predicted improvements. There is no obligation to book any further work, and no follow-up sales pressure.</p></div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-q"><span>How is "fixed fee" actually fixed?</span><span class="plus mono">+</span></button>
-          <div class="faq-a"><p>You get a written quote after the discovery call, scoped to your account and goals. That price doesn't change once work begins — if something changes scope significantly, I'll flag it and re-quote before doing any extra work, not after.</p></div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-q"><span>Do I need to give you account access?</span><span class="plus mono">+</span></button>
-          <div class="faq-a"><p>Yes — for audits, builds and restructures I'll need read or edit access to your Google Ads account, granted through Google's standard user-permission system. I never ask for your login details, and access can be revoked by you at any time.</p></div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-q"><span>What size accounts do you work with?</span><span class="plus mono">+</span></button>
-          <div class="faq-a"><p>Mostly small-to-medium UK businesses spending anywhere from a few hundred to tens of thousands of pounds a month on Google Ads. If your account is very large or very new, mention it on the discovery call and I'll be upfront about whether it's a good fit.</p></div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-q"><span>Can I just get the free audit with no obligation to do more?</span><span class="plus mono">+</span></button>
-          <div class="faq-a"><p>Absolutely. Plenty of clients take the findings and implement the recommendations themselves, or pass them to their existing team. There's no pressure or expectation to book further work — the audit stands on its own.</p></div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-q"><span>Do you work with businesses outside the UK?</span><span class="plus mono">+</span></button>
-          <div class="faq-a"><p>The current focus is UK businesses, mainly to keep market context, currency and account structures consistent. Get in touch anyway — happy to discuss whether it's a fit.</p></div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- CONTACT -->
-  <section class="cta-band" id="contact">
-    <div class="wrap">
-      <div class="section-label">07 — get in touch</div>
-      <h2>Tell me what's going on with your account.</h2>
-      <p class="section-sub">Fill in the form and I'll come back to you within one working day, usually sooner. Not sure what you need? Request the free audit — it's a good place to start regardless.</p>
-
-      <div class="contact-grid">
-        <div class="contact-meta">
-          <div class="contact-meta-item">
-            <span class="k">Email</span>
-            <a class="v" href="mailto:enquiries@jwcperformance.co.uk">enquiries@jwcperformance.co.uk</a>
-          </div>
-          <div class="contact-meta-item">
-            <span class="k">WhatsApp</span>
-            <a class="v jwc-whatsapp" href="https://wa.me/447399600473">Message me on WhatsApp</a>
-          </div>
-          <div class="contact-meta-item">
-            <span class="k">Response time</span>
-            <span class="v">Within 1 working day</span>
-          </div>
-          <div class="contact-meta-item">
-            <span class="k">Based in</span>
-            <span class="v">United Kingdom</span>
-          </div>
-        </div>
-
-        <form class="form-card" id="enquiryForm" method="POST" action="https://formspree.io/f/mnjknpkk">
-          <input type="hidden" name="_subject" value="New enquiry — JWC Performance">
-          <input type="text" name="_gotcha" style="display:none">
-          <div class="form-row">
-            <label for="name">Name</label>
-            <input type="text" id="name" name="name" required>
-          </div>
-          <div class="form-row">
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email" required>
-          </div>
-          <div class="form-row">
-            <label for="company">Company</label>
-            <input type="text" id="company" name="company">
-          </div>
-          <div class="form-row">
-            <label for="need">What do you need?</label>
-            <select id="need" name="need">
-              <option>Free account audit</option>
-              <option>New account build (£1,000)</option>
-              <option>Account restructure (£1,500)</option>
-              <option>Account management (£60/hr · £400/day)</option>
-              <option>Website design &amp; build (£1,000)</option>
-              <option>Not sure yet</option>
-            </select>
-          </div>
-          <div class="form-row">
-            <label for="msg">Tell me a bit about your account or project</label>
-            <textarea id="msg" name="message"></textarea>
-          </div>
-          <button type="submit" class="form-submit" id="enquirySubmit">Send enquiry</button>
-          <p class="form-note">No spam, no auto-enrolment to a mailing list. Just a direct reply.</p>
-        </form>
-        <div class="form-success" id="enquirySuccess">
-          <div class="success-icon">✓</div>
-          <h3>Thanks — got it.</h3>
-          <p>Your enquiry has been received. I'll come back to you within one working day, usually sooner.</p>
-        </div>
+      <div class="eyebrow">Get started</div>
+      <h2>The free audit is the best place to start.</h2>
+      <p>A full review of your account — structure, targeting, tracking, ad copy and landing pages — delivered as a presentation with clear findings and a long-term strategy. Free, no obligation.</p>
+      <div class="cta-btns">
+        <a href="/services/google-ads-audit.html" class="btn-primary">Get a free audit</a>
+        <a href="/#contact" class="btn-secondary">Send an enquiry</a>
       </div>
     </div>
   </section>
@@ -1262,28 +394,25 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </main>
 
 <footer>
-  <div class="wrap footer-grid">
+  <div class="wrap">
     <div class="footer-cols">
       <div class="footer-col">
         <h4>Services</h4>
-        <a href="#services">Free account audit</a>
-        <a href="#services">New account build</a>
-        <a href="#services">Account restructure</a>
-        <a href="#web-design">Website design</a>
+        <a href="/services/google-ads-audit.html">Free account audit</a>
+        <a href="/services/account-management.html">Account management</a>
+        <a href="/services/new-account-build.html">New account build</a>
+        <a href="/services/account-restructure.html">Account restructure</a>
       </div>
       <div class="footer-col">
-        <h4>Google Ads</h4>
-        <a href="#approach">B2B campaigns</a>
-        <a href="#approach">B2C campaigns</a>
-        <a href="#trust">Certifications</a>
-        <a href="#case-studies">Case studies</a>
+        <h4>Case studies</h4>
+        <a href="/case-studies/google-ads.html">Google Ads</a>
+        <a href="/case-studies/website-design.html">Website Design &amp; Build</a>
       </div>
       <div class="footer-col">
         <h4>More</h4>
         <a href="/about.html" style="font-weight:700;color:var(--gold-deep);">About</a>
-    <a href="/about.html" style="padding-left:36px;font-size:14px;">→ About Joe</a>
-    <a href="/process.html" style="padding-left:36px;font-size:14px;">→ How Joe works</a>
-        <a href="/blog/">Blog</a>
+        <a href="/about.html" style="padding-left:36px;font-size:14px;">→ About Joe</a>
+        <a href="/process.html" style="padding-left:36px;font-size:14px;">→ How Joe works</a>        <a href="/blog/">Blog</a>
         <a href="/faq.html">FAQ</a>
         <a href="/ppc-consultant-london.html">London PPC</a>
         <a href="/cookie-policy.html">Cookie policy</a>
@@ -1294,7 +423,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <a href="tel:07848522456" style="font-weight:600;color:var(--gold-deep);">07848 522456</a>
         <a href="mailto:enquiries@jwcperformance.co.uk">Email</a>
         <a href="/services/google-ads-audit.html">Free audit</a>
-        <a href="#contact">Contact form</a>
+        <a href="/#contact">Contact form</a>
       </div>
     </div>
     <div class="footer-bottom">
@@ -1317,8 +446,18 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
 </footer>
 
+<div class="cookie-banner" id="cookieBanner">
+  <div class="cookie-banner-text">
+    <div class="cookie-banner-title">This site uses cookies</div>
+    <p>We use cookies to analyse site traffic and improve your experience. <a href="/cookie-policy.html">Cookie policy</a></p>
+  </div>
+  <div class="cookie-btns">
+    <button class="cookie-accept" id="cookieAccept">Accept</button>
+    <button class="cookie-reject" id="cookieReject">Reject</button>
+  </div>
+</div>
+
 <script>
-  // Dropdown navigation — click based
   document.querySelectorAll('.nav-dropdown > a').forEach(function(link){
     link.addEventListener('click', function(e){
       e.preventDefault();
@@ -1333,7 +472,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       document.querySelectorAll('.nav-dropdown').forEach(function(d){ d.classList.remove('open'); });
     }
   });
-
   const menuBtn = document.getElementById('menuBtn');
   const mobileMenu = document.getElementById('mobileMenu');
   menuBtn.addEventListener('click', () => {
@@ -1346,104 +484,21 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       menuBtn.setAttribute('aria-expanded', 'false');
     });
   });
-
-  document.querySelectorAll('.faq-q').forEach(btn => {
-    btn.addEventListener('click', () => {
-      const item = btn.closest('.faq-item');
-      const wasOpen = item.classList.contains('open');
-      document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
-      if(!wasOpen) item.classList.add('open');
-    });
-  });
-
-  function toggleCS(id) {
-    const el = document.getElementById(id);
-    const wasOpen = el.classList.contains('open');
-    document.querySelectorAll('.cs-category').forEach(c => c.classList.remove('open'));
-    if(!wasOpen) el.classList.add('open');
-  }
-</script>
-
-<!-- Cookie banner -->
-<div class="cookie-banner" id="cookieBanner">
-  <div class="cookie-banner-text">
-    <div class="cookie-banner-title">This site uses cookies</div>
-    <p>We use cookies to analyse site traffic and improve your experience. By clicking "Accept", you consent to the use of analytics cookies. <a href="/cookie-policy.html">Cookie policy</a></p>
-  </div>
-  <div class="cookie-btns">
-    <button class="cookie-accept" id="cookieAccept">Accept</button>
-    <button class="cookie-reject" id="cookieReject">Reject</button>
-  </div>
-</div>
-
-<script>
   (function(){
     var banner = document.getElementById('cookieBanner');
-    var consent = localStorage.getItem('jwc_cookie_consent');
-
-    // Hide banner if already decided
-    if(consent === 'accepted' || consent === 'rejected'){
-      banner.classList.add('hidden');
-    }
-
+    if(localStorage.getItem('jwc_cookie_consent')) banner.classList.add('hidden');
+    function gtag(){window.dataLayer=window.dataLayer||[];window.dataLayer.push(arguments);}
     document.getElementById('cookieAccept').addEventListener('click', function(){
-      localStorage.setItem('jwc_cookie_consent', 'accepted');
+      localStorage.setItem('jwc_cookie_consent','accepted');
       banner.classList.add('hidden');
-      // Update GTM consent
-      gtag('consent', 'update', {
-        'analytics_storage': 'granted',
-        'ad_storage': 'granted',
-        'ad_user_data': 'granted',
-        'ad_personalization': 'granted'
-      });
-      // Push event to dataLayer
-      window.dataLayer = window.dataLayer || [];
-      window.dataLayer.push({'event': 'cookie_consent_accepted'});
+      gtag('consent','update',{'analytics_storage':'granted','ad_storage':'granted','ad_user_data':'granted','ad_personalization':'granted'});
     });
-
     document.getElementById('cookieReject').addEventListener('click', function(){
-      localStorage.setItem('jwc_cookie_consent', 'rejected');
+      localStorage.setItem('jwc_cookie_consent','rejected');
       banner.classList.add('hidden');
-      // Ensure consent stays denied
-      gtag('consent', 'update', {
-        'analytics_storage': 'denied',
-        'ad_storage': 'denied',
-        'ad_user_data': 'denied',
-        'ad_personalization': 'denied'
-      });
     });
   })();
-
-  // Enquiry form — AJAX submission
-  var enquiryForm = document.getElementById('enquiryForm');
-  if(enquiryForm){
-    enquiryForm.addEventListener('submit', function(e){
-      e.preventDefault();
-      var btn = document.getElementById('enquirySubmit');
-      btn.textContent = 'Sending...';
-      btn.disabled = true;
-      fetch(enquiryForm.action, {
-        method: 'POST',
-        body: new FormData(enquiryForm),
-        headers: { 'Accept': 'application/json' }
-      }).then(function(res){
-        if(res.ok){
-          enquiryForm.style.display = 'none';
-          document.getElementById('enquirySuccess').classList.add('visible');
-        } else {
-          btn.textContent = 'Send enquiry';
-          btn.disabled = false;
-          alert('Something went wrong — please try again or email enquiries@jwcperformance.co.uk');
-        }
-      }).catch(function(){
-        btn.textContent = 'Send enquiry';
-        btn.disabled = false;
-        alert('Something went wrong — please try again or email enquiries@jwcperformance.co.uk');
-      });
-    });
-  }
 </script>
-
-<script src="/assets/config.js" defer></script>
+<script src="/assets/config.js"></script>
 </body>
 </html>
