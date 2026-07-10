@@ -194,6 +194,17 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     .dropdown-menu a:last-child{border-bottom:none;}
     .dropdown-menu a:hover{background:rgba(255,255,255,0.08);color:var(--gold);}
   }
+
+  /* --- Header/footer standardisation pass --- */
+  .nav-row{gap:16px;}
+  @media(min-width:760px){
+    .footer-cols{grid-template-columns:repeat(5,1fr);}
+  }
+  @media(min-width:920px){
+    .nav-phone{display:inline-flex !important;margin-left:8px;align-items:center;justify-content:center;width:38px;height:38px;border:1px solid rgba(255,255,255,0.25);border-radius:4px;transition:background 0.15s ease,border-color 0.15s ease;}
+    .nav-phone:hover{background:rgba(255,255,255,0.08);border-color:rgba(255,255,255,0.4);}
+    .nav-phone svg{width:18px;height:18px;fill:#ffffff;display:block;}
+  }
 </style>
 </head>
 <body>
@@ -205,7 +216,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <header>
   <div class="nav-row">
     <a href="/" class="logo">
-      <img src="/assets/logo.webp" alt="JWC Performance" style="height:180px;width:auto;display:block;">
+      <img src="/assets/logo.webp" alt="JWC Performance" style="height:68px;width:auto;display:block;" width="122" height="68" onerror="this.src='/assets/logo.webp'">
     </a>
     <nav class="desktop-nav">
       <div class="nav-dropdown">
@@ -225,7 +236,15 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           <a href="/google-ads-b2c">Google Ads for B2C</a>
         </div>
       </div>
-      <div class="nav-dropdown"><a href="/about">About</a><div class="dropdown-menu"><a href="/about">About Joe</a><a href="/process">How Joe works</a></div></div>
+      <div class="nav-dropdown">
+        <a href="/ppc-consultant-london">Locations</a>
+        <div class="dropdown-menu">
+          <a href="/ppc-consultant-london">London</a>
+          <a href="/ppc-consultant-bromley">Bromley</a>
+          <a href="/ppc-consultant-kent">Kent</a>
+        </div>
+      </div>
+      <div class="nav-dropdown"><a href="/about">About</a><div class="dropdown-menu"><a href="/about">About Joe</a><a href="/process">How Joe works</a><a href="/faq">FAQ</a></div></div>
       <div class="nav-dropdown">
         <a href="/case-studies/google-ads">Case studies</a>
         <div class="dropdown-menu">
@@ -233,11 +252,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           <a href="/case-studies/website-design">Website Design &amp; Build</a>
         </div>
       </div>
-      <a href="/ppc-consultant-london">London PPC</a>
       <a href="/blog/">Blog</a>
-      <a href="/faq">FAQ</a>
     </nav>
-    <a href="tel:07848522456" class="nav-phone" style="display:none;color:#ffffff;font-family:'JetBrains Mono',monospace;font-size:13px;font-weight:600;letter-spacing:0.02em;opacity:0.85;">07848 522456</a>
+    <a href="tel:07848522456" class="nav-phone" style="display:none;" aria-label="Call 07848 522456" title="Call 07848 522456">
+      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.24.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+    </a>
     <a href="/services/google-ads-audit" class="nav-cta">Free audit</a>
     <button class="menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false">
       <span></span><span></span><span></span>
@@ -253,15 +272,18 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <a href="/google-ads-b2b" style="font-weight:700;color:var(--gold-deep);">Sectors</a>
     <a href="/google-ads-b2b" style="padding-left:36px;font-size:14px;">→ Google Ads for B2B</a>
     <a href="/google-ads-b2c" style="padding-left:36px;font-size:14px;">→ Google Ads for B2C</a>
+    <a href="/ppc-consultant-london" style="font-weight:700;color:var(--gold-deep);">Locations</a>
+    <a href="/ppc-consultant-london" style="padding-left:36px;font-size:14px;">→ London</a>
+    <a href="/ppc-consultant-bromley" style="padding-left:36px;font-size:14px;">→ Bromley</a>
+    <a href="/ppc-consultant-kent" style="padding-left:36px;font-size:14px;">→ Kent</a>
     <a href="/about" style="font-weight:700;color:var(--gold-deep);">About</a>
     <a href="/about" style="padding-left:36px;font-size:14px;">→ About Joe</a>
     <a href="/process" style="padding-left:36px;font-size:14px;">→ How Joe works</a>
+    <a href="/faq" style="padding-left:36px;font-size:14px;">→ FAQ</a>
     <a href="/case-studies/google-ads" style="font-weight:700;color:var(--gold-deep);">Case studies</a>
     <a href="/case-studies/google-ads" style="padding-left:36px;font-size:14px;">→ Google Ads</a>
     <a href="/case-studies/website-design" style="padding-left:36px;font-size:14px;">→ Website Design &amp; Build</a>
-    <a href="/ppc-consultant-london">London PPC</a>
     <a href="/blog/">Blog</a>
-    <a href="/faq">FAQ</a>
     <a href="/services/google-ads-audit"><button class="mm-cta">Get a free audit</button></a>
   </div>
 </header>
@@ -482,32 +504,37 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <a href="/services/account-restructure">Account restructure</a>
       </div>
       <div class="footer-col">
+        <h4>Locations</h4>
+        <a href="/ppc-consultant-london">London</a>
+        <a href="/ppc-consultant-bromley">Bromley</a>
+        <a href="/ppc-consultant-kent">Kent</a>
+      </div>
+      <div class="footer-col">
         <h4>Case studies</h4>
         <a href="/case-studies/google-ads">Google Ads</a>
         <a href="/case-studies/website-design">Website Design &amp; Build</a>
       </div>
       <div class="footer-col">
         <h4>More</h4>
-        <a href="/about" style="font-weight:700;color:var(--gold-deep);">About</a>
-    <a href="/about" style="padding-left:36px;font-size:14px;">→ About Joe</a>
-    <a href="/process" style="padding-left:36px;font-size:14px;">→ How Joe works</a>        <a href="/blog/">Blog</a>
+        <a href="/about">About</a>
+        <a href="/process">How it works</a>
+        <a href="/blog/">Blog</a>
         <a href="/faq">FAQ</a>
-        <a href="/ppc-consultant-london">London PPC</a>
         <a href="/cookie-policy">Cookie policy</a>
         <a href="/privacy-policy">Privacy policy</a>
       </div>
       <div class="footer-col">
         <h4>Get in touch</h4>
-        <a href="tel:07848522456" style="font-weight:600;color:var(--gold-deep);">07848 522456</a>
-        <a href="mailto:enquiries@jwcperformance.co.uk">Email</a>
+        <a href="tel:07848522456">Call</a>
+        <a href="mailto:Enquiries%20%3Cenquiries@jwcperformance.co.uk%3E">Email</a>
         <a href="/services/google-ads-audit">Free audit</a>
-        <a href="/#contact">Contact form</a>
+        <a href="/contact">Contact form</a>
       </div>
     </div>
     <div class="footer-bottom">
       <span>© 2026 JWC Performance. Google Ads specialist for UK businesses.</span>
       <div class="social-icons">
-        <a href="mailto:enquiries@jwcperformance.co.uk" class="social-icon email" aria-label="Email" title="Email">
+        <a href="mailto:Enquiries%20%3Cenquiries@jwcperformance.co.uk%3E" class="social-icon email" aria-label="Email" title="Email">
           <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
         </a>
         <a href="https://wa.me/447399600473" class="social-icon whatsapp jwc-whatsapp" aria-label="WhatsApp" title="WhatsApp">
