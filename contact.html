@@ -8,7 +8,7 @@
 <link rel="canonical" href="https://www.jwcperformance.co.uk/contact">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
   :root{
     --ink:#23241D;--paper:#F6F4ED;--surface:#ECE7D8;
@@ -58,14 +58,14 @@
   .breadcrumb{font-family:'JetBrains Mono',monospace;font-size:11.5px;color:var(--muted);margin-bottom:16px;}
   .breadcrumb a{color:var(--muted);}
   .breadcrumb a:hover{color:var(--gold-deep);}
-  h1.page-title{font-family:'Fraunces',serif;font-size:32px;font-weight:700;letter-spacing:-0.01em;line-height:1.1;margin-bottom:16px;max-width:700px;}
+  h1.page-title{font-family:'Manrope',sans-serif;font-size:32px;font-weight:700;letter-spacing:-0.01em;line-height:1.1;margin-bottom:16px;max-width:700px;}
   @media(min-width:900px){h1.page-title{font-size:42px;}}
   .page-intro{font-size:17px;color:var(--muted);max-width:600px;}
 
   .contact-wrap{display:grid;grid-template-columns:1fr;gap:40px;padding:52px 0 70px;}
   @media(min-width:960px){.contact-wrap{grid-template-columns:1fr 380px;gap:60px;}}
 
-  .contact-side h2{font-family:'Fraunces',serif;font-size:22px;font-weight:700;margin-bottom:14px;}
+  .contact-side h2{font-family:'Manrope',sans-serif;font-size:22px;font-weight:700;margin-bottom:14px;}
   .contact-side p{font-size:15px;color:var(--muted);margin-bottom:20px;max-width:400px;}
   .contact-detail{display:flex;flex-direction:column;gap:16px;margin-bottom:28px;}
   .contact-detail-item a, .contact-detail-item span{font-size:15px;font-weight:600;color:var(--ink);}
@@ -118,7 +118,7 @@
     display:flex;align-items:center;justify-content:center;font-size:22px;font-weight:700;
     margin:0 auto 18px;
   }
-  .form-success h3{font-family:'Fraunces',serif;font-size:20px;font-weight:700;margin-bottom:8px;}
+  .form-success h3{font-family:'Manrope',sans-serif;font-size:20px;font-weight:700;margin-bottom:8px;}
   .form-success p{font-size:14.5px;color:var(--muted);max-width:340px;margin:0 auto;}
 
   /* --- Header/footer standardisation pass --- */
@@ -135,9 +135,9 @@
 </head>
 <body>
 
-<div class="mock-flag">REVIEW COPY — Formspree endpoint is live and correct, still confirming field names match your homepage form before this goes live</div>
+<div class="mock-flag">REVIEW COPY, Formspree endpoint is live and correct, still confirming field names match your homepage form before this goes live</div>
 
-<div class="top-strip"><a href="tel:07848522456" style="color:inherit;font-weight:700;">07848 522456</a> · Google Ads specialist — <strong>free account audit, no obligation</strong> · 15+ years' experience · fixed fee</div>
+<div class="top-strip"><a href="tel:07848522456" style="color:inherit;font-weight:700;">07848 522456</a> · Google Ads specialist, <strong>free account audit, no obligation</strong> · 15+ years' experience · fixed fee</div>
 
 <header>
   <div class="nav-row">
@@ -228,7 +228,7 @@
 
       <div class="contact-form-card">
         <form class="form-card" id="enquiryForm" method="POST" action="https://formspree.io/f/mnjknpkk">
-          <input type="hidden" name="_subject" value="New enquiry — JWC Performance (Contact page)">
+          <input type="hidden" name="_subject" value="New enquiry, JWC Performance (Contact page)">
           <input type="text" name="_gotcha" style="display:none">
           <div class="form-two-col">
             <div class="form-row">
@@ -381,7 +381,7 @@
   menuBtn.addEventListener('click', () => { mobileMenu.classList.toggle('open'); });
   document.querySelectorAll('.mobile-menu a').forEach(a => { a.addEventListener('click', () => { mobileMenu.classList.remove('open'); }); });
 
-  // Enquiry form — AJAX submission, matches homepage behaviour
+  // Enquiry form, AJAX submission, matches homepage behaviour
   var enquiryForm = document.getElementById('enquiryForm');
   if(enquiryForm){
     enquiryForm.addEventListener('submit', function(e){
@@ -400,12 +400,12 @@
         } else {
           btn.textContent = 'Send message';
           btn.disabled = false;
-          alert('Something went wrong — please try again or email enquiries@jwcperformance.co.uk');
+          alert('Something went wrong. Please try again or email enquiries@jwcperformance.co.uk');
         }
       }).catch(function(){
         btn.textContent = 'Send message';
         btn.disabled = false;
-        alert('Something went wrong — please try again or email enquiries@jwcperformance.co.uk');
+        alert('Something went wrong. Please try again or email enquiries@jwcperformance.co.uk');
       });
     });
   }
