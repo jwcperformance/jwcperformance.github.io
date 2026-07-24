@@ -113,6 +113,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   .callout p{font-size:15px;color:var(--muted);margin-bottom:0;}
   .callout strong{color:var(--ink);}
 
+  /* FAQ */
+  .faq-list{display:flex;flex-direction:column;}
+  .faq-row{padding:20px 0;border-top:1px solid var(--line);}
+  .faq-row:first-child{border-top:none;}
+  .faq-q{font-size:16px;font-weight:700;margin-bottom:8px;font-family:'Manrope',sans-serif;}
+  .faq-a{font-size:14.5px;color:var(--muted);}
+
   /* CTA band */
   .cta-band{background:var(--khaki-deep);padding:56px 0;}
   .cta-band .section-label{color:var(--gold);}
@@ -221,6 +228,46 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   .form-success h3{font-family:'Manrope',sans-serif;font-size:22px;font-weight:700;color:var(--ink);margin-bottom:8px;}
   .form-success p{font-size:14.5px;color:var(--muted);}
 </style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Do you work as a B2B Google Ads agency, or as a specialist consultant?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "As a freelance specialist, not an agency. Every B2B account is planned, built and managed directly by me, not handed to a junior account manager once the contract is signed. For B2B accounts with longer sales cycles and multiple stakeholders, that direct access tends to matter more than it would for a simple B2C account."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can you help with B2B lead generation specifically, not just clicks?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, that's the core of the approach. B2B Google Ads only works if it's judged on qualified leads and pipeline, not just form fills. Conversion tracking is set up to reflect that from the start, ideally connected through to your CRM so lead quality, not just lead volume, drives the account."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How is B2B Google Ads management priced?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Fixed fee, agreed in writing before work starts, rather than a percentage of your ad spend. That keeps the cost predictable whether your B2B account spends £1,000 a month or £10,000."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you only manage Google Ads for large B2B companies?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No, B2B accounts range from small consultancies and SaaS startups through to larger corporate accounts. The fundamentals of B2B buying behaviour apply regardless of company size, the campaign structure just scales to match your budget and sales cycle."
+      }
+    }
+  ]
+}
+</script>
 </head>
 <body>
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5HCM3QFH" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
@@ -445,6 +492,33 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <span class="sector-tag">Manufacturing</span>
         <span class="sector-tag">Consultancy</span>
         <span class="sector-tag">Business services</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="content" style="background:var(--surface);">
+    <div class="wrap">
+      <div class="section-label">Common questions</div>
+      <h2>Questions about Google Ads for B2B.</h2>
+      <p class="section-sub">A few things B2B businesses tend to ask before handing over their Google Ads account.</p>
+      <div class="faq-list">
+        <div class="faq-row">
+          <p class="faq-q">Do you work as a B2B Google Ads agency, or as a specialist consultant?</p>
+          <p class="faq-a">As a freelance specialist, not an agency. Every B2B account is planned, built and managed directly by me, not handed to a junior account manager once the contract is signed. For B2B accounts with longer sales cycles and multiple stakeholders, that direct access tends to matter more than it would for a simple B2C account.</p>
+        </div>
+        <div class="faq-row">
+          <p class="faq-q">Can you help with B2B lead generation specifically, not just clicks?</p>
+          <p class="faq-a">Yes, that's the core of the approach. B2B Google Ads only works if it's judged on qualified leads and pipeline, not just form fills. Conversion tracking is set up to reflect that from the start, ideally connected through to your CRM so lead quality, not just lead volume, drives the account.</p>
+        </div>
+        <div class="faq-row">
+          <p class="faq-q">How is B2B Google Ads management priced?</p>
+          <p class="faq-a">Fixed fee, agreed in writing before work starts, rather than a percentage of your ad spend. That keeps the cost predictable whether your B2B account spends £1,000 a month or £10,000.</p>
+        </div>
+        <div class="faq-row">
+          <p class="faq-q">Do you only manage Google Ads for large B2B companies?</p>
+          <p class="faq-a">No, B2B accounts range from small consultancies and SaaS startups through to larger corporate accounts. The fundamentals of B2B buying behaviour apply regardless of company size, the campaign structure just scales to match your budget and sales cycle.</p>
+        </div>
       </div>
     </div>
   </section>
