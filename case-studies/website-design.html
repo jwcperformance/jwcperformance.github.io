@@ -91,6 +91,16 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   .metric-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--line-strong);border:1px solid var(--line-strong);}
   @media(min-width:760px){.metric-grid{grid-template-columns:repeat(4,1fr);}}
   .metric{background:var(--paper);padding:24px;text-align:center;}
+
+  .case-card{display:block;background:var(--paper);border:1px solid var(--line-strong);padding:28px;margin-bottom:20px;}
+  .case-card-tag{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--gold-deep);font-weight:700;text-transform:uppercase;letter-spacing:0.06em;background:var(--gold-pale);padding:4px 12px;display:inline-block;margin-bottom:14px;}
+  .case-card h3{font-family:'Manrope',sans-serif;font-size:22px;font-weight:700;letter-spacing:-0.01em;margin-bottom:10px;color:var(--ink);}
+  .case-card p{font-size:15px;color:var(--muted);margin-bottom:20px;max-width:640px;}
+  .case-card-metrics{display:flex;flex-wrap:wrap;gap:24px;margin-bottom:20px;}
+  .case-card-metric{}
+  .case-card-metric-value{font-family:'Manrope',sans-serif;font-size:24px;font-weight:700;color:var(--gold-deep);line-height:1;}
+  .case-card-metric-label{font-family:'JetBrains Mono',monospace;font-size:10px;text-transform:uppercase;letter-spacing:0.04em;color:var(--muted);margin-top:4px;}
+  .case-card-link{display:inline-flex;align-items:center;gap:6px;font-weight:700;color:var(--gold-deep);font-size:14.5px;}
   .metric-value{font-family:'Manrope',sans-serif;font-size:36px;font-weight:700;color:var(--gold-deep);line-height:1;}
   .metric-label{font-family:'JetBrains Mono',monospace;font-size:10.5px;text-transform:uppercase;letter-spacing:0.05em;color:var(--muted);margin-top:6px;}
   .metric-note{font-size:11.5px;color:var(--muted);margin-top:4px;}
@@ -268,7 +278,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
   <section class="page-hero">
     <div class="wrap">
-      <div class="breadcrumb"><a href="/">Home</a> / Case studies / Google Ads</div>
+      <div class="breadcrumb"><a href="/">Home</a> / Case studies / Website Design &amp; Build</div>
       <div class="eyebrow">Real work · real results</div>
       <h1>Website Design &amp; Build case studies.</h1>
       <p class="hero-sub">Websites built to capture leads and grow businesses online. Case studies are added as clients approve them for publication.</p>
@@ -280,7 +290,28 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <div class="wrap">
       <div class="section-label">Case studies</div>
       <h2>Real work, real results.</h2>
-      <p class="section-sub">Case studies are added as clients approve them for publication. More coming shortly.</p>
+      <p class="section-sub">More case studies are added as clients approve them for publication.</p>
+
+      <a href="/case-studies/step-and-co-website-design" class="case-card">
+        <span class="case-card-tag">Building &amp; Roofing · Website Design &amp; Build</span>
+        <h3>Step &amp; Co: a new site that paid for itself within two weeks</h3>
+        <p>A full rebuild for a 10 year established Bromley building and roofing company, built to turn a strong Checkatrade reputation into a site that actually generates leads.</p>
+        <div class="case-card-metrics">
+          <div class="case-card-metric">
+            <div class="case-card-metric-value">+30%</div>
+            <div class="case-card-metric-label">Quality leads, first 2 weeks</div>
+          </div>
+          <div class="case-card-metric">
+            <div class="case-card-metric-value">&lt;2 weeks</div>
+            <div class="case-card-metric-label">Time to cover build cost</div>
+          </div>
+          <div class="case-card-metric">
+            <div class="case-card-metric-value">On time</div>
+            <div class="case-card-metric-label">Delivered to schedule</div>
+          </div>
+        </div>
+        <span class="case-card-link">Read the case study →</span>
+      </a>
     </div>
   </section>
 
