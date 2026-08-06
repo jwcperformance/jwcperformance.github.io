@@ -118,6 +118,30 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   @media (min-width:760px){.tech-callout{flex-direction:row;align-items:center;justify-content:space-between;gap:24px;}}
   .tech-callout h3{font-family:'Manrope',sans-serif;font-size:19px;font-weight:700;color:#F6F4ED;margin-bottom:6px;}
   .tech-callout p{font-size:14px;color:#C7C3AC;max-width:560px;}
+
+  .pricing-grid{display:grid;grid-template-columns:1fr;gap:20px;margin-bottom:24px;}
+  @media (min-width:900px){.pricing-grid{grid-template-columns:repeat(3,1fr);align-items:stretch;}}
+  .pricing-card{border:1px solid var(--line-strong);background:var(--paper);padding:28px;display:flex;flex-direction:column;position:relative;}
+  .pricing-card.featured{background:var(--khaki-deep);border-color:var(--khaki-deep);}
+  .pricing-badge{position:absolute;top:-12px;left:28px;background:var(--gold);color:#ffffff;font-family:'JetBrains Mono',monospace;font-size:10.5px;font-weight:700;text-transform:uppercase;letter-spacing:0.05em;padding:5px 12px;border-radius:3px;}
+  .pricing-tier{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--gold-deep);text-transform:uppercase;letter-spacing:0.06em;font-weight:700;margin-bottom:10px;}
+  .pricing-card.featured .pricing-tier{color:var(--gold);}
+  .pricing-name{font-family:'Manrope',sans-serif;font-size:21px;font-weight:700;margin-bottom:10px;color:var(--ink);}
+  .pricing-card.featured .pricing-name{color:#F6F4ED;}
+  .pricing-price{font-family:'Manrope',sans-serif;font-size:28px;font-weight:800;color:var(--gold-deep);margin-bottom:4px;}
+  .pricing-card.featured .pricing-price{color:var(--gold);}
+  .pricing-price span{font-size:12.5px;font-weight:600;color:var(--muted);}
+  .pricing-card.featured .pricing-price span{color:#C7C3AC;}
+  .pricing-desc{font-size:13.5px;color:var(--muted);margin-bottom:20px;}
+  .pricing-card.featured .pricing-desc{color:#C7C3AC;}
+  .pricing-features{list-style:none;margin:0 0 24px;padding:0;flex-grow:1;}
+  .pricing-features li{font-size:13.5px;color:var(--ink);padding:9px 0;border-top:1px solid var(--line);display:flex;gap:8px;}
+  .pricing-features li:first-child{border-top:none;}
+  .pricing-card.featured .pricing-features li{color:#EDE9D8;border-top-color:rgba(255,255,255,0.12);}
+  .pricing-features li::before{content:'✓';color:var(--gold-deep);font-weight:700;flex-shrink:0;}
+  .pricing-card.featured .pricing-features li::before{color:var(--gold);}
+  .pricing-note{background:var(--surface);border:1px solid var(--line);padding:18px 22px;font-size:13.5px;color:var(--muted);}
+  .pricing-note strong{color:var(--ink);}
   .tech-tags{display:flex;flex-wrap:wrap;gap:8px;flex-shrink:0;}
   .tech-tag{font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:700;color:var(--gold-deep);background:var(--gold-pale);padding:6px 12px;text-transform:uppercase;letter-spacing:0.05em;white-space:nowrap;}
 
@@ -362,6 +386,67 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     </div>
   </section>
 
+  <!-- PRICING TIERS -->
+  <section id="pricing" style="background:var(--paper);">
+    <div class="wrap">
+      <div class="section-label">Pricing</div>
+      <h2>Three starting points, scoped properly on a call.</h2>
+      <p class="section-sub">These are starting prices to give you a rough idea, not a fixed menu. Every project gets a 30-minute scoping call where the exact price, page count and timeline are confirmed based on what you actually need.</p>
+
+      <div class="pricing-grid">
+        <div class="pricing-card">
+          <div class="pricing-tier">Essentials</div>
+          <div class="pricing-name">Essentials</div>
+          <div class="pricing-price">From £1,000</div>
+          <p class="pricing-desc">A single landing page or a small, focused site. Ideal for one clear offer, or as a sharp landing page for Google Ads.</p>
+          <ul class="pricing-features">
+            <li>Single landing page or up to 3 pages</li>
+            <li>Mobile-first design &amp; conversion-led structure</li>
+            <li>Lead forms, analytics &amp; conversion tracking</li>
+            <li>1 round of revisions</li>
+            <li>Everything in "What's included" below</li>
+          </ul>
+          <a href="/contact" class="btn btn-secondary">Enquire today</a>
+        </div>
+
+        <div class="pricing-card featured">
+          <span class="pricing-badge">Most common</span>
+          <div class="pricing-tier">Standard</div>
+          <div class="pricing-name">Standard</div>
+          <div class="pricing-price">From £1,750</div>
+          <p class="pricing-desc">A full service business site with room to properly cover what you do. The right fit for most established small businesses.</p>
+          <ul class="pricing-features">
+            <li>Up to 8 pages</li>
+            <li>Dedicated pages per service or location</li>
+            <li>Lead forms, analytics &amp; conversion tracking</li>
+            <li>2 rounds of revisions</li>
+            <li>Everything in Essentials, plus more</li>
+          </ul>
+          <a href="/contact" class="btn btn-primary">Enquire today</a>
+        </div>
+
+        <div class="pricing-card">
+          <div class="pricing-tier">Premium</div>
+          <div class="pricing-name">Premium</div>
+          <div class="pricing-price">From £2,750</div>
+          <p class="pricing-desc">Larger, multi-page builds for businesses with several services, locations, or more complex requirements.</p>
+          <ul class="pricing-features">
+            <li>9+ pages, scoped to your business</li>
+            <li>More complex structure &amp; integrations</li>
+            <li>Lead forms, analytics &amp; conversion tracking</li>
+            <li>3 rounds of revisions</li>
+            <li>Everything in Standard, plus more</li>
+          </ul>
+          <a href="/contact" class="btn btn-secondary">Enquire today</a>
+        </div>
+      </div>
+
+      <div class="pricing-note">
+        <p><strong>Copywriting is priced separately at every tier.</strong> You can provide your own text, or it can be quoted alongside your project at the scoping call. This keeps each package's price tied to the build itself, not an estimate of how much writing your site might need.</p>
+      </div>
+    </div>
+  </section>
+
   <!-- WHAT'S INCLUDED -->
   <section id="whats-included" style="background:var(--surface);">
     <div class="wrap">
@@ -590,7 +675,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       <div class="faq-list">
         <div class="faq-item open">
           <button class="faq-q"><span>Why does pricing start from £1,000?</span><span class="plus mono">+</span></button>
-          <div class="faq-a"><p>A single landing page with a form, tracking and hosting set up properly takes a meaningful amount of work, design, build, GTM setup, form integration, Cloudflare deployment and handover documentation. More pages, custom design requirements or third-party integrations add to that. The scoping call is where we agree the exact price for your specific project.</p></div>
+          <div class="faq-a"><p>A single landing page with a form, tracking and hosting set up properly takes a meaningful amount of work, design, build, GTM setup, form integration, Cloudflare deployment and handover documentation. The three pricing tiers above give a rough starting point based on page count and complexity, but the exact price is always confirmed at the scoping call once I understand what your project actually needs.</p></div>
         </div>
         <div class="faq-item">
           <button class="faq-q"><span>Do I need to provide copy and images?</span><span class="plus mono">+</span></button>
