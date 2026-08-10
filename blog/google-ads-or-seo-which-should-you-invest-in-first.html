@@ -3,9 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Google Ads Blog, Tips, Guides & Insights | JWC Performance</title>
-<meta name="description" content="Practical Google Ads advice from a specialist with 15+ years’ experience. Guides on campaign structure, keyword strategy, bidding, tracking and getting better ROI.">
-<link rel="canonical" href="https://www.jwcperformance.co.uk/blog/">
+<title>Google Ads or SEO: Which Should You Invest In First? | JWC Performance</title>
+<meta name="description" content="How Google Ads and SEO actually differ in speed, cost and risk, and a straightforward way to work out which one your business should invest in first.">
+<link rel="canonical" href="https://www.jwcperformance.co.uk/blog/google-ads-or-seo-which-should-you-invest-in-first">
 <!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -24,10 +24,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   }
   *{box-sizing:border-box;margin:0;padding:0;}
   html{scroll-behavior:smooth;}
-  body{font-family:'Inter',-apple-system,sans-serif;background:var(--paper);color:var(--ink);line-height:1.55;-webkit-font-smoothing:antialiased;overflow-x:hidden;}
+  body{font-family:'Inter',-apple-system,sans-serif;background:var(--paper);color:var(--ink);line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden;}
   a{color:inherit;text-decoration:none;}
   .wrap{max-width:var(--max);margin:0 auto;padding:0 20px;}
-
   .top-strip{background:var(--khaki-deep);color:#E6E2CF;font-family:'JetBrains Mono',monospace;font-size:11.5px;padding:8px 20px;text-align:center;}
   .top-strip strong{color:var(--gold);}
   header{position:sticky;top:0;z-index:50;background:rgba(246,244,237,0.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);}
@@ -62,43 +61,46 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     .dropdown-menu a:last-child{border-bottom:none;}
     .dropdown-menu a:hover{background:var(--surface);color:var(--gold-deep);}
   }
-
-  /* Blog hero */
-  .blog-hero{padding:52px 0 40px;border-bottom:1px solid var(--line);}
-  .eyebrow{font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:0.05em;color:var(--gold-deep);font-weight:600;text-transform:uppercase;display:flex;align-items:center;gap:8px;margin-bottom:16px;}
-  .eyebrow::before{content:'';width:14px;height:1px;background:var(--gold-deep);display:inline-block;}
-  h1{font-family:'Manrope',sans-serif;font-size:32px;font-weight:700;letter-spacing:-0.01em;margin-bottom:12px;}
-  @media(min-width:900px){h1{font-size:44px;}}
-  .blog-intro{font-size:16.5px;color:var(--muted);max-width:600px;}
-
-  /* Blog grid */
-  .blog-section{padding:52px 0;}
-  .blog-grid{display:grid;grid-template-columns:1fr;gap:1px;background:var(--line-strong);border:1px solid var(--line-strong);}
-  @media(min-width:760px){.blog-grid{grid-template-columns:repeat(2,1fr);}}
-  @media(min-width:1000px){.blog-grid{grid-template-columns:repeat(3,1fr);}}
-
-  .post-card{background:var(--paper);padding:28px;display:flex;flex-direction:column;gap:12px;transition:background 0.15s ease;}
-  .post-card:hover{background:var(--surface);}
-  .post-card-tag{font-family:'JetBrains Mono',monospace;font-size:10.5px;text-transform:uppercase;letter-spacing:0.06em;color:var(--gold-deep);font-weight:600;}
-  .post-card-meta{font-family:'JetBrains Mono',monospace;font-size:10.5px;color:var(--muted);}
-  .post-card h2{font-family:'Manrope',sans-serif;font-size:19px;font-weight:700;color:var(--ink);line-height:1.2;}
-  .post-card p{font-size:13.5px;color:var(--muted);flex:1;}
-  .post-card .read-more{font-family:'JetBrains Mono',monospace;font-size:11.5px;color:var(--gold-deep);font-weight:600;text-transform:uppercase;letter-spacing:0.04em;margin-top:4px;}
-
-  /* Coming soon posts */
-  .post-card.coming-soon{opacity:0.6;cursor:default;}
-  .post-card.coming-soon:hover{background:var(--paper);}
-  .coming-tag{font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--muted);border:1px solid var(--line-strong);padding:3px 8px;display:inline-block;margin-top:4px;}
-
-  /* CTA */
-  .cta-band{background:var(--khaki-deep);padding:56px 0;}
-  .cta-band .eyebrow{color:var(--gold);}
-  .cta-band .eyebrow::before{background:var(--gold);}
-  .cta-band h2{font-family:'Manrope',sans-serif;font-size:26px;font-weight:700;color:#F6F4ED;margin-bottom:10px;}
+  .article-hero{padding:52px 0 40px;border-bottom:1px solid var(--line);}
+  .breadcrumb{font-family:'JetBrains Mono',monospace;font-size:11.5px;color:var(--muted);margin-bottom:16px;display:flex;align-items:center;gap:8px;}
+  .breadcrumb a{color:var(--muted);}
+  .breadcrumb a:hover{color:var(--gold-deep);}
+  .article-meta{font-family:'JetBrains Mono',monospace;font-size:11.5px;color:var(--muted);margin-bottom:16px;display:flex;align-items:center;gap:16px;}
+  .article-meta .tag{background:var(--gold-pale);color:var(--gold-deep);padding:3px 10px;font-weight:600;}
+  h1.article-title{font-family:'Manrope',sans-serif;font-size:28px;font-weight:700;letter-spacing:-0.01em;line-height:1.1;margin-bottom:16px;max-width:820px;}
+  @media(min-width:900px){h1.article-title{font-size:40px;}}
+  .article-intro{font-size:17px;color:var(--muted);max-width:680px;line-height:1.6;}
+  .article-wrap{display:grid;grid-template-columns:1fr;gap:40px;padding:52px 0;}
+  @media(min-width:960px){.article-wrap{grid-template-columns:1fr 300px;gap:60px;}}
+  .article-body h2{font-family:'Manrope',sans-serif;font-size:24px;font-weight:700;letter-spacing:-0.01em;margin:40px 0 14px;color:var(--ink);}
+  .article-body h2:first-child{margin-top:0;}
+  .article-body h3{font-family:'Manrope',sans-serif;font-size:19px;font-weight:700;margin:28px 0 10px;color:var(--ink);}
+  .article-body p{font-size:16px;color:var(--muted);margin-bottom:18px;max-width:680px;}
+  .article-body ul,.article-body ol{margin:0 0 18px 20px;}
+  .article-body li{font-size:16px;color:var(--muted);margin-bottom:8px;}
+  .article-body strong{color:var(--ink);font-weight:600;}
+  .article-body a{color:var(--gold-deep);border-bottom:1px solid var(--gold);padding-bottom:1px;}
+  .callout{background:var(--surface);border-left:4px solid var(--gold);padding:20px 24px;margin:28px 0;}
+  .callout p{margin-bottom:0;font-size:15px;}
+  .callout strong{color:var(--gold-deep);}
+  .article-sidebar{display:flex;flex-direction:column;gap:20px;}
+  .sidebar-card{border:1px solid var(--line-strong);padding:20px;background:var(--paper);}
+  .sidebar-card h4{font-family:'JetBrains Mono',monospace;font-size:10.5px;text-transform:uppercase;letter-spacing:0.05em;color:var(--gold-deep);font-weight:600;margin-bottom:12px;}
+  .sidebar-card p{font-size:13.5px;color:var(--muted);margin-bottom:14px;}
+  .sidebar-card .btn{display:block;text-align:center;background:var(--gold);color:#ffffff;padding:12px 16px;border-radius:4px;font-weight:700;font-size:14px;}
+  .sidebar-card ul{list-style:none;}
+  .sidebar-card li{font-size:13.5px;padding:7px 0;border-bottom:1px solid var(--line);display:flex;gap:8px;}
+  .sidebar-card li:last-child{border-bottom:none;}
+  .sidebar-card li::before{content:'→';color:var(--gold-deep);flex-shrink:0;}
+  .author-card{background:var(--khaki-deep);padding:20px;}
+  .author-card h4{font-family:'JetBrains Mono',monospace;font-size:10.5px;text-transform:uppercase;letter-spacing:0.05em;color:var(--gold);font-weight:600;margin-bottom:10px;}
+  .author-card p{font-size:13px;color:#C7C3AC;margin-bottom:0;}
+  .cta-band{background:var(--khaki-deep);padding:56px 0;border-top:1px solid var(--line);}
+  .cta-band .eyebrow{font-family:'JetBrains Mono',monospace;font-size:11.5px;color:var(--gold);text-transform:uppercase;letter-spacing:0.06em;font-weight:600;margin-bottom:12px;display:flex;align-items:center;gap:8px;}
+  .cta-band .eyebrow::before{content:'';width:14px;height:1px;background:var(--gold);display:inline-block;}
+  .cta-band h2{font-family:'Manrope',sans-serif;font-size:28px;font-weight:700;color:#F6F4ED;margin-bottom:10px;}
   .cta-band p{color:#C7C3AC;font-size:15px;max-width:540px;margin-bottom:28px;}
-  .btn-primary{display:inline-flex;align-items:center;justify-content:center;padding:18px 30px;border-radius:4px;font-weight:700;font-size:16px;background:var(--gold);color:#ffffff;}
-
-  /* Cookie */
+  .btn-primary{display:inline-flex;align-items:center;justify-content:center;padding:18px 30px;border-radius:4px;font-weight:700;font-size:16px;background:var(--gold);color:#ffffff;border:none;}
   .cookie-banner{position:fixed;bottom:0;left:0;right:0;z-index:999;background:var(--khaki-deep);color:#EDE9D8;padding:16px 20px;display:flex;flex-direction:column;gap:12px;border-top:2px solid var(--gold);box-shadow:0 -4px 24px rgba(0,0,0,0.18);}
   .cookie-banner.hidden{display:none;}
   .cookie-banner p{font-size:13.5px;color:#C7C3AC;line-height:1.5;margin:0;}
@@ -108,13 +110,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   .cookie-accept{background:var(--gold);color:#ffffff;border:none;padding:10px 20px;border-radius:4px;font-weight:700;font-size:13.5px;cursor:pointer;font-family:inherit;}
   .cookie-reject{background:transparent;color:#C7C3AC;border:1px solid rgba(255,255,255,0.2);padding:10px 20px;border-radius:4px;font-weight:600;font-size:13.5px;cursor:pointer;font-family:inherit;}
   @media(min-width:760px){.cookie-banner{flex-direction:row;align-items:center;justify-content:space-between;}.cookie-banner-text{max-width:640px;}.cookie-btns{flex-shrink:0;}}
-
   footer{padding:40px 0 28px;}
   .footer-cols{display:grid;grid-template-columns:repeat(2,1fr);gap:24px;margin-bottom:24px;}
   .footer-col h4{font-family:'JetBrains Mono',monospace;font-size:10.5px;text-transform:uppercase;letter-spacing:0.05em;color:var(--muted);margin-bottom:12px;}
   .footer-col a{display:block;font-size:14px;padding:6px 0;color:var(--ink);}
     .footer-bottom{border-top:1px solid var(--line);padding-top:20px;font-size:12px;color:var(--muted);display:flex;flex-direction:row;justify-content:space-between;align-items:center;}
-  @media(min-width:760px){.footer-cols{grid-template-columns:repeat(5,1fr);}  .footer-bottom{border-top:1px solid var(--line);padding-top:20px;font-size:12px;color:var(--muted);display:flex;flex-direction:row;justify-content:space-between;align-items:center;}}
+  @media(min-width:760px){.footer-cols{grid-template-columns:repeat(4,1fr);}  .footer-bottom{border-top:1px solid var(--line);padding-top:20px;font-size:12px;color:var(--muted);display:flex;flex-direction:row;justify-content:space-between;align-items:center;}}
   .social-icons{display:flex;gap:10px;margin-top:4px;}
   .social-icon{width:32px;height:32px;display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:opacity 0.15s ease;line-height:0;background:none;}
   .social-icon:hover{opacity:0.7;}
@@ -137,7 +138,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   }
   .nav-row{
     display:flex;align-items:center;justify-content:space-between;
-    padding:10px 20px;max-width:var(--max);margin:0 auto;gap:16px;
+    padding:10px 20px;max-width:var(--max);margin:0 auto;
   }
   .logo{display:flex;align-items:center;line-height:1;}
   .menu-btn{
@@ -164,9 +165,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       display:inline-block;background:var(--gold);color:#ffffff;
       padding:16px 32px;border-radius:4px;font-weight:700;font-size:18px;
     }
-    .nav-phone{display:inline-flex !important;margin-left:8px;align-items:center;justify-content:center;width:38px;height:38px;border:1px solid rgba(255,255,255,0.25);border-radius:4px;transition:background 0.15s ease,border-color 0.15s ease;}
-    .nav-phone:hover{background:rgba(255,255,255,0.08);border-color:rgba(255,255,255,0.4);}
-    .nav-phone svg{width:18px;height:18px;fill:#ffffff;display:block;}
+    .nav-phone{display:inline-block !important;}
     .nav-dropdown{position:relative;}
     .nav-dropdown > a{display:flex;align-items:center;gap:5px;cursor:pointer;}
     .nav-dropdown > a::after{content:'▾';font-size:10px;color:var(--gold);transition:transform 0.2s ease;}
@@ -188,6 +187,17 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     }
     .dropdown-menu a:last-child{border-bottom:none;}
     .dropdown-menu a:hover{background:rgba(255,255,255,0.08);color:var(--gold);}
+  }
+
+  /* --- Header/footer standardisation pass --- */
+  .nav-row{gap:16px;}
+  @media(min-width:760px){
+    .footer-cols{grid-template-columns:repeat(5,1fr);}
+  }
+  @media(min-width:920px){
+    .nav-phone{display:inline-flex !important;margin-left:8px;align-items:center;justify-content:center;width:38px;height:38px;border:1px solid rgba(255,255,255,0.25);border-radius:4px;transition:background 0.15s ease,border-color 0.15s ease;}
+    .nav-phone:hover{background:rgba(255,255,255,0.08);border-color:rgba(255,255,255,0.4);}
+    .nav-phone svg{width:18px;height:18px;fill:#ffffff;display:block;}
   }
 </style>
 </head>
@@ -243,7 +253,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <a href="tel:07848522456" class="nav-phone" style="display:none;" aria-label="Call 07848 522456" title="Call 07848 522456">
       <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.24.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
     </a>
-    <a href="/contact" class="nav-cta">Enquire today</a>
+    <a href="/services/google-ads-audit" class="nav-cta">Free audit</a>
     <button class="menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false">
       <span></span><span></span><span></span>
     </button>
@@ -272,163 +282,163 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <a href="/case-studies/google-ads" style="padding-left:36px;font-size:14px;">→ Google Ads</a>
     <a href="/case-studies/website-design" style="padding-left:36px;font-size:14px;">→ Website Design &amp; Build</a>
     <a href="/blog/">Blog</a>
-    <a href="/contact"><button class="mm-cta">Enquire today</button></a>
+    <a href="/services/google-ads-audit"><button class="mm-cta">Get a free audit</button></a>
   </div>
 </header>
 
 <main>
-
-  <section class="blog-hero">
+  <section class="article-hero">
     <div class="wrap">
-      <div class="eyebrow">Insights & guides</div>
-      <h1>Google Ads, straight talk.</h1>
-      <p class="blog-intro">Honest guides, practical advice and plain-English explanations from a Google Ads specialist with 15+ years' experience. No fluff, no filler.</p>
-    </div>
-  </section>
-
-  <section class="blog-section">
-    <div class="wrap">
-      <div class="blog-grid">
-
-        <!-- Post 14, live -->
-        <a href="/blog/google-ads-or-seo-which-should-you-invest-in-first" class="post-card">
-          <div class="post-card-tag">Google Ads · Strategy</div>
-          <div class="post-card-meta">August 2026 · 7 min read</div>
-          <h2>Google Ads or SEO: Which Should You Invest In First?</h2>
-          <p>How the two actually differ in speed, cost and risk, and a straightforward way to work out which one your business should invest in first.</p>
-          <span class="read-more">Read post →</span>
-        </a>
-
-        <!-- Post 13, live -->
-        <a href="/blog/automated-bidding-which-strategy-actually-fits-your-account" class="post-card">
-          <div class="post-card-tag">Google Ads · Strategy</div>
-          <div class="post-card-meta">August 2026 · 8 min read</div>
-          <h2>Automated Bidding in Google Ads: Which Strategy Actually Fits Your Account</h2>
-          <p>What automated bidding actually does, the five main strategies explained plainly, and how to tell if your account has enough data for it to work well.</p>
-          <span class="read-more">Read post →</span>
-        </a>
-
-        <!-- Post 12, live -->
-        <a href="/blog/landing-pages-that-convert-what-to-fix-before-you-blame-your-ads" class="post-card">
-          <div class="post-card-tag">Google Ads · Strategy</div>
-          <div class="post-card-meta">July 2026 · 7 min read</div>
-          <h2>Landing Pages That Convert: What to Fix Before You Blame Your Ads</h2>
-          <p>Why a great ad with a weak landing page still fails, and the five things to check before you assume your campaign is the problem.</p>
-          <span class="read-more">Read post →</span>
-        </a>
-
-        <!-- Post 11, live -->
-        <a href="/blog/google-ads-account-restructure-when-and-why" class="post-card">
-          <div class="post-card-tag">Google Ads · Strategy</div>
-          <div class="post-card-meta">July 2026 · 8 min read</div>
-          <h2>Google Ads Account Restructure: When (and Why) You Need One</h2>
-          <p>The warning signs that your account needs restructuring, what actually gets rebuilt, and why a short term dip in performance is normal.</p>
-          <span class="read-more">Read post →</span>
-        </a>
-
-        <!-- Post 10, live -->
-        <a href="/blog/how-to-write-google-ads-copy-that-converts" class="post-card">
-          <div class="post-card-tag">Google Ads · Ad Copy</div>
-          <div class="post-card-meta">July 2026 · 7 min read</div>
-          <h2>How to Write Google Ads Copy That Converts</h2>
-          <p>How to write ad copy that gets the right clicks and actually converts, plus how to use responsive search ads and testing properly.</p>
-          <span class="read-more">Read post →</span>
-        </a>
-
-        <!-- Post 9, live -->
-        <a href="/blog/why-your-google-ads-quality-score-matters" class="post-card">
-          <div class="post-card-tag">Google Ads · Optimisation</div>
-          <div class="post-card-meta">July 2026 · 7 min read</div>
-          <h2>Why Your Google Ads Quality Score Matters (And How to Improve It)</h2>
-          <p>What Quality Score actually measures, how it affects what you pay per click, and five specific ways to improve it.</p>
-          <span class="read-more">Read post →</span>
-        </a>
-
-        <!-- Post 8, live -->
-        <a href="/blog/google-ads-for-b2b-what-works-and-what-doesnt" class="post-card">
-          <div class="post-card-tag">Google Ads · B2B</div>
-          <div class="post-card-meta">July 2026 · 9 min read</div>
-          <h2>Google Ads for B2B: What Works and What Doesn't</h2>
-          <p>What actually works in B2B Google Ads, what doesn't, a realistic timeline for results, and what the best performing accounts have in common.</p>
-          <span class="read-more">Read post →</span>
-        </a>
-
-        <!-- Post 7, live -->
-        <a href="/blog/should-you-hire-a-google-ads-freelancer-or-agency" class="post-card">
-          <div class="post-card-tag">Google Ads · Strategy</div>
-          <div class="post-card-meta">July 2026 · 8 min read</div>
-          <h2>Should You Hire a Google Ads Freelancer or an Agency?</h2>
-          <p>Both can work. Both can fail. An honest breakdown of the differences, what each costs, and how to decide which is right for your business.</p>
-          <span class="read-more">Read post →</span>
-        </a>
-
-        <!-- Post 1, live -->
-        <a href="/blog/how-much-does-a-google-ads-specialist-cost-uk" class="post-card">
-          <div class="post-card-tag">Google Ads · Pricing</div>
-          <div class="post-card-meta">June 2026 · 8 min read</div>
-          <h2>How Much Does a Google Ads Specialist Cost in the UK? (2026)</h2>
-          <p>Freelancer, agency or in-house, what does Google Ads management actually cost right now? An honest breakdown with real numbers.</p>
-          <span class="read-more">Read post →</span>
-        </a>
-
-        <!-- Post 2, live -->
-        <a href="/blog/why-your-google-ads-arent-converting" class="post-card">
-          <div class="post-card-tag">Google Ads · Optimisation</div>
-          <div class="post-card-meta">June 2026 · 9 min read</div>
-          <h2>Why Your Google Ads Aren't Converting (And How to Fix It)</h2>
-          <p>The most common reasons Google Ads campaigns fail to generate leads or sales and what to do about each one.</p>
-          <span class="read-more">Read post →</span>
-        </a>
-
-        <!-- Post 3, live -->
-        <a href="/blog/how-to-audit-your-google-ads-account" class="post-card">
-          <div class="post-card-tag">Google Ads · Auditing</div>
-          <div class="post-card-meta">June 2026 · 10 min read</div>
-          <h2>How to Audit Your Own Google Ads Account: 12 Things to Check</h2>
-          <p>A practical checklist covering the same 12 areas as a professional audit, explained in plain English.</p>
-          <span class="read-more">Read post →</span>
-        </a>
-
-        <!-- Post 4, live -->
-        <a href="/blog/how-long-does-google-ads-take-to-work" class="post-card">
-          <div class="post-card-tag">Google Ads · Strategy</div>
-          <div class="post-card-meta">June 2026 · 7 min read</div>
-          <h2>How Long Does It Take for Google Ads to Work?</h2>
-          <p>One of the most common questions from businesses starting with paid search. Here's an honest, practical answer.</p>
-          <span class="read-more">Read post →</span>
-        </a>
-
-        <!-- Post 5, live -->
-        <a href="/blog/what-is-a-good-cost-per-lead-google-ads" class="post-card">
-          <div class="post-card-tag">Google Ads · Performance</div>
-          <div class="post-card-meta">June 2026 · 8 min read</div>
-          <h2>What Is a Good Cost Per Lead on Google Ads?</h2>
-          <p>How to benchmark your cost per lead against realistic expectations, by sector, by intent and by account maturity.</p>
-          <span class="read-more">Read post →</span>
-        </a>
-
-        <!-- Post 6, live -->
-        <a href="/blog/google-ads-match-types-explained" class="post-card">
-          <div class="post-card-tag">Google Ads · Fundamentals</div>
-          <div class="post-card-meta">June 2026 · 9 min read</div>
-          <h2>Google Ads Match Types Explained: Broad, Phrase and Exact in 2026</h2>
-          <p>What broad, phrase and exact match actually do in 2026, how they have changed and which to use for your account.</p>
-          <span class="read-more">Read post →</span>
-        </a>
-
+      <div class="breadcrumb"><a href="/">Home</a> / <a href="/blog/">Blog</a> / Strategy</div>
+      <div class="article-meta">
+        <span class="tag">Google Ads</span>
+        <span>August 2026</span>
+        <span>7 min read</span>
       </div>
+      <h1 class="article-title">Google Ads or SEO: Which Should You Invest In First?</h1>
+      <p class="article-intro">This isn't really a competition between two marketing channels, it's a question about speed, budget and how much time you can afford to wait for results. Here's how they actually differ, and a straightforward way to work out which one makes sense for your business right now.</p>
     </div>
   </section>
+
+  <div class="wrap">
+    <div class="article-wrap">
+      <article class="article-body">
+
+        <!-- Infographic -->
+        <div style="margin:0 0 40px;">
+          <svg width="100%" viewBox="0 0 680 604" role="img" style="display:block;max-width:680px;" xmlns="http://www.w3.org/2000/svg">
+            <title>Google Ads versus SEO compared side by side</title>
+            <desc>A side by side comparison of Google Ads and SEO across speed to results, cost structure, what happens if you stop, and what each is best for, ending with the point that most businesses need both, just not at the same time.</desc>
+
+            <rect width="680" height="604" fill="#F6F4ED" rx="4"/>
+
+            <!-- HEADER -->
+            <rect x="30" y="20" width="620" height="62" rx="8" fill="#3D3E2F"/>
+            <text font-family="Georgia, 'Times New Roman', serif" font-size="15" font-weight="700" fill="#B6862A" text-anchor="middle" x="340" y="46">Google Ads vs SEO, compared</text>
+            <text font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#DDD8C7" text-anchor="middle" x="340" y="68">Four things that actually decide which comes first</text>
+
+            <!-- TABLE LABEL -->
+            <text font-family="Arial, Helvetica, sans-serif" font-size="10" font-weight="700" fill="#6A6753" x="30" y="100" letter-spacing="1.2">SIDE BY SIDE</text>
+            <line x1="30" y1="106" x2="650" y2="106" stroke="#DDD8C7" stroke-width="0.5"/>
+
+            <!-- Table header row -->
+            <rect x="170" y="114" width="240" height="30" rx="4" fill="#B6862A"/>
+            <text font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="700" fill="#ffffff" text-anchor="middle" x="290" y="134">GOOGLE ADS</text>
+            <rect x="410" y="114" width="240" height="30" rx="4" fill="#3D3E2F"/>
+            <text font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="700" fill="#ffffff" text-anchor="middle" x="530" y="134">SEO</text>
+
+            <!-- Row 1: Speed -->
+            <rect x="30" y="150" width="620" height="68" fill="#ECE7D8"/>
+            <text font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="700" fill="#3D3E2F" x="38" y="180">Speed to results</text>
+            <text font-family="Arial, Helvetica, sans-serif" font-size="11" fill="#6A6753" text-anchor="middle" x="290" y="176">Days, results can start</text>
+            <text font-family="Arial, Helvetica, sans-serif" font-size="11" fill="#6A6753" text-anchor="middle" x="290" y="192">almost immediately</text>
+            <text font-family="Arial, Helvetica, sans-serif" font-size="11" fill="#6A6753" text-anchor="middle" x="530" y="176">Months, typically 4 to 12</text>
+            <text font-family="Arial, Helvetica, sans-serif" font-size="11" fill="#6A6753" text-anchor="middle" x="530" y="192">before real movement</text>
+
+            <!-- Row 2: Cost structure -->
+            <rect x="30" y="220" width="620" height="68" fill="#F6F4ED"/>
+            <text font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="700" fill="#3D3E2F" x="38" y="250">Cost structure</text>
+            <text font-family="Arial, Helvetica, sans-serif" font-size="11" fill="#6A6753" text-anchor="middle" x="290" y="246">Pay per click, ongoing</text>
+            <text font-family="Arial, Helvetica, sans-serif" font-size="11" fill="#6A6753" text-anchor="middle" x="290" y="262">spend to stay visible</text>
+            <text font-family="Arial, Helvetica, sans-serif" font-size="11" fill="#6A6753" text-anchor="middle" x="530" y="246">Time and effort upfront,</text>
+            <text font-family="Arial, Helvetica, sans-serif" font-size="11" fill="#6A6753" text-anchor="middle" x="530" y="262">no cost per click</text>
+
+            <!-- Row 3: If you stop -->
+            <rect x="30" y="290" width="620" height="68" fill="#ECE7D8"/>
+            <text font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="700" fill="#3D3E2F" x="38" y="320">If you stop paying</text>
+            <text font-family="Arial, Helvetica, sans-serif" font-size="11" fill="#6A6753" text-anchor="middle" x="290" y="316">Traffic stops almost</text>
+            <text font-family="Arial, Helvetica, sans-serif" font-size="11" fill="#6A6753" text-anchor="middle" x="290" y="332">immediately</text>
+            <text font-family="Arial, Helvetica, sans-serif" font-size="11" fill="#6A6753" text-anchor="middle" x="530" y="316">Rankings usually hold for</text>
+            <text font-family="Arial, Helvetica, sans-serif" font-size="11" fill="#6A6753" text-anchor="middle" x="530" y="332">a while, then slowly fade</text>
+
+            <!-- Row 4: Best for -->
+            <rect x="30" y="360" width="620" height="68" fill="#F6F4ED"/>
+            <text font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="700" fill="#3D3E2F" x="38" y="390">Best for</text>
+            <text font-family="Arial, Helvetica, sans-serif" font-size="11" fill="#6A6753" text-anchor="middle" x="290" y="386">Needing leads now, testing</text>
+            <text font-family="Arial, Helvetica, sans-serif" font-size="11" fill="#6A6753" text-anchor="middle" x="290" y="402">messaging quickly</text>
+            <text font-family="Arial, Helvetica, sans-serif" font-size="11" fill="#6A6753" text-anchor="middle" x="530" y="386">Building a durable asset</text>
+            <text font-family="Arial, Helvetica, sans-serif" font-size="11" fill="#6A6753" text-anchor="middle" x="530" y="402">over the long term</text>
+
+            <!-- THE HONEST ANSWER -->
+            <text font-family="Arial, Helvetica, sans-serif" font-size="10" font-weight="700" fill="#6A6753" x="30" y="452" letter-spacing="1.2">THE HONEST ANSWER</text>
+            <line x1="30" y1="458" x2="650" y2="458" stroke="#DDD8C7" stroke-width="0.5"/>
+
+            <rect x="30" y="466" width="620" height="60" rx="6" fill="#3D3E2F"/>
+            <text font-family="Georgia, 'Times New Roman', serif" font-size="15" font-weight="700" fill="#B6862A" text-anchor="middle" x="340" y="493">Most businesses need both, just not both at once</text>
+            <text font-family="Arial, Helvetica, sans-serif" font-size="11" fill="#DDD8C7" text-anchor="middle" x="340" y="512">Start with whichever matches your current runway</text>
+
+            <!-- WHY IT MATTERS -->
+            <rect x="30" y="538" width="620" height="46" rx="6" fill="#ECE7D8" stroke="#DDD8C7" stroke-width="0.5"/>
+            <rect x="30" y="538" width="4" height="46" rx="2" fill="#3D3E2F"/>
+            <text font-family="Arial, Helvetica, sans-serif" font-size="11" fill="#6A6753" x="46" y="558">Need leads this month? Google Ads is the safer bet. Have runway</text>
+            <text font-family="Arial, Helvetica, sans-serif" font-size="11" fill="#6A6753" x="46" y="574">and want less reliance on paid traffic long term? SEO is worth it.</text>
+          </svg>
+        </div>
+
+        <h2>Why this feels like a harder question than it is</h2>
+        <p>Google Ads and SEO both aim at the same destination, more of the right people finding your business on Google, so it's easy to treat them as competing options where picking one means rejecting the other. They're not really competing though. They're different tools with different speeds, different cost structures and different risks, and the right starting point depends far more on your situation than on which channel is objectively "better."</p>
+
+        <h2>Speed to results</h2>
+        <p>Google Ads can start sending traffic within a day of launching, and you'll usually have a genuine read on performance within a few weeks. SEO works on a completely different timeline. Even with strong technical foundations and good content, meaningful ranking movement typically takes four to twelve months, sometimes longer in competitive markets. If you need leads this month, SEO simply can't move fast enough to be the answer on its own, no matter how well it's done.</p>
+
+        <h2>Cost structure</h2>
+        <p>Google Ads is pay per click. Spend flows out continuously, and visibility is tied directly to that spend. Stop paying and the traffic stops within hours. SEO is closer to an upfront investment of time and effort, whether that's your own time, a specialist's, or both, with no direct cost attached to each visitor once you're ranking. That makes SEO cheaper per click in the long run, but only after the months of work needed to get there.</p>
+
+        <div class="callout">
+          <p><strong>Quick check:</strong> If losing your current traffic overnight would seriously hurt the business, that's usually a sign you're leaning too heavily on one channel, whichever one it is.</p>
+        </div>
+
+        <h2>What happens if you stop</h2>
+        <p>This is where the two genuinely diverge. Pause Google Ads and your traffic disappears almost immediately, there's no residual benefit sitting there once the spend stops. Pause SEO work and rankings tend to hold for a while before slowly fading, since search engines don't instantly forget a site that's built up authority and relevance over time. That durability is SEO's real advantage, it's just one that only shows up after the initial investment has already been made.</p>
+
+        <h2>A simple way to decide</h2>
+        <p>If your business needs leads in the next few weeks, not months, Google Ads is almost always the right place to start. It's controllable, measurable, and gives you real data on what messaging and offers actually convert, data that's genuinely useful for SEO content later too.</p>
+        <p>If you've got some breathing room, an established business with steady cash flow, and want to reduce how dependent you are on paid traffic over the next year or two, that's when SEO earns serious consideration, either running alongside ads or as the next investment once ads are performing well.</p>
+        <p>The businesses that struggle most tend to be the ones who pick a channel based on what a competitor is doing rather than their own situation, or who expect SEO to move at Google Ads speed and give up on it three months in, right around when it usually starts to work.</p>
+
+        <h2>The bottom line</h2>
+        <p>This was never really a question of which channel is better. It's a question of how much time you have before you need results, and how much you want to reduce reliance on paid traffic further down the line. Most businesses that succeed with both end up using Google Ads to generate leads now, and SEO to build something that needs less ongoing spend later, just rarely starting both on the same day.</p>
+
+      </article>
+
+      <aside class="article-sidebar">
+        <div class="sidebar-card" style="background:var(--khaki-deep);">
+          <h4 style="color:var(--gold);">Need leads now?</h4>
+          <p style="color:#C7C3AC;">Start with the free 12-point Google Ads audit, delivered within 5 working days with no obligation to proceed.</p>
+          <a href="/services/google-ads-audit" class="btn">Request free audit</a>
+        </div>
+        <div class="sidebar-card">
+          <h4>Related services</h4>
+          <ul>
+            <li><a href="/services/google-ads-audit">Free account audit</a></li>
+            <li><a href="/services/new-account-build">New account build</a></li>
+            <li><a href="/services/account-management">Account management</a></li>
+          </ul>
+        </div>
+        <div class="sidebar-card">
+          <h4>More from the blog</h4>
+          <ul>
+            <li><a href="/blog/how-long-does-google-ads-take-to-work">How long does Google Ads take to work</a></li>
+            <li><a href="/blog/what-is-a-good-cost-per-lead-google-ads">What is a good cost per lead</a></li>
+            <li><a href="/blog/">All posts</a></li>
+          </ul>
+        </div>
+        <div class="author-card">
+          <h4>Written by</h4>
+          <p>Joe Coombs. Google Ads specialist with 15+ years of experience across B2B and B2C campaigns, from large corporations to growing SMBs.</p>
+        </div>
+      </aside>
+    </div>
+  </div>
 
   <section class="cta-band">
     <div class="wrap">
       <div class="eyebrow">Get started</div>
-      <h2>Want a free review of your account?</h2>
-      <p>The free Google Ads audit covers 12 areas of your account, delivered as a PDF within 5 working days with no obligation to proceed.</p>
-      <a href="/services/google-ads-audit" class="btn-primary">Request your free audit</a>
+      <h2>Need results while you decide on SEO?</h2>
+      <p>The free audit is the fastest way to see what Google Ads could realistically do for your business. A full 12-point review, delivered within 5 working days with no obligation to proceed.</p>
+      <a href="/services/google-ads-audit" class="btn-primary">Get your free audit</a>
     </div>
   </section>
-
 </main>
 
 <footer>
