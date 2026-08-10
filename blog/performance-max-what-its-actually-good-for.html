@@ -3,9 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Google Ads Blog, Tips, Guides & Insights | JWC Performance</title>
-<meta name="description" content="Practical Google Ads advice from a specialist with 15+ years’ experience. Guides on campaign structure, keyword strategy, bidding, tracking and getting better ROI.">
-<link rel="canonical" href="https://www.jwcperformance.co.uk/blog/">
+<title>Performance Max in 2026: What It's Actually Good For (and What to Watch) | JWC Performance</title>
+<meta name="description" content="An honest look at Performance Max in 2026, when it genuinely helps, when it burns budget with no visibility, and how to run it without losing control of your account.">
+<link rel="canonical" href="https://www.jwcperformance.co.uk/blog/performance-max-what-its-actually-good-for">
 <!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -24,10 +24,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   }
   *{box-sizing:border-box;margin:0;padding:0;}
   html{scroll-behavior:smooth;}
-  body{font-family:'Inter',-apple-system,sans-serif;background:var(--paper);color:var(--ink);line-height:1.55;-webkit-font-smoothing:antialiased;overflow-x:hidden;}
+  body{font-family:'Inter',-apple-system,sans-serif;background:var(--paper);color:var(--ink);line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden;}
   a{color:inherit;text-decoration:none;}
   .wrap{max-width:var(--max);margin:0 auto;padding:0 20px;}
-
   .top-strip{background:var(--khaki-deep);color:#E6E2CF;font-family:'JetBrains Mono',monospace;font-size:11.5px;padding:8px 20px;text-align:center;}
   .top-strip strong{color:var(--gold);}
   header{position:sticky;top:0;z-index:50;background:rgba(246,244,237,0.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);}
@@ -62,43 +61,46 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     .dropdown-menu a:last-child{border-bottom:none;}
     .dropdown-menu a:hover{background:var(--surface);color:var(--gold-deep);}
   }
-
-  /* Blog hero */
-  .blog-hero{padding:52px 0 40px;border-bottom:1px solid var(--line);}
-  .eyebrow{font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:0.05em;color:var(--gold-deep);font-weight:600;text-transform:uppercase;display:flex;align-items:center;gap:8px;margin-bottom:16px;}
-  .eyebrow::before{content:'';width:14px;height:1px;background:var(--gold-deep);display:inline-block;}
-  h1{font-family:'Manrope',sans-serif;font-size:32px;font-weight:700;letter-spacing:-0.01em;margin-bottom:12px;}
-  @media(min-width:900px){h1{font-size:44px;}}
-  .blog-intro{font-size:16.5px;color:var(--muted);max-width:600px;}
-
-  /* Blog grid */
-  .blog-section{padding:52px 0;}
-  .blog-grid{display:grid;grid-template-columns:1fr;gap:1px;background:var(--line-strong);border:1px solid var(--line-strong);}
-  @media(min-width:760px){.blog-grid{grid-template-columns:repeat(2,1fr);}}
-  @media(min-width:1000px){.blog-grid{grid-template-columns:repeat(3,1fr);}}
-
-  .post-card{background:var(--paper);padding:28px;display:flex;flex-direction:column;gap:12px;transition:background 0.15s ease;}
-  .post-card:hover{background:var(--surface);}
-  .post-card-tag{font-family:'JetBrains Mono',monospace;font-size:10.5px;text-transform:uppercase;letter-spacing:0.06em;color:var(--gold-deep);font-weight:600;}
-  .post-card-meta{font-family:'JetBrains Mono',monospace;font-size:10.5px;color:var(--muted);}
-  .post-card h2{font-family:'Manrope',sans-serif;font-size:19px;font-weight:700;color:var(--ink);line-height:1.2;}
-  .post-card p{font-size:13.5px;color:var(--muted);flex:1;}
-  .post-card .read-more{font-family:'JetBrains Mono',monospace;font-size:11.5px;color:var(--gold-deep);font-weight:600;text-transform:uppercase;letter-spacing:0.04em;margin-top:4px;}
-
-  /* Coming soon posts */
-  .post-card.coming-soon{opacity:0.6;cursor:default;}
-  .post-card.coming-soon:hover{background:var(--paper);}
-  .coming-tag{font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--muted);border:1px solid var(--line-strong);padding:3px 8px;display:inline-block;margin-top:4px;}
-
-  /* CTA */
-  .cta-band{background:var(--khaki-deep);padding:56px 0;}
-  .cta-band .eyebrow{color:var(--gold);}
-  .cta-band .eyebrow::before{background:var(--gold);}
-  .cta-band h2{font-family:'Manrope',sans-serif;font-size:26px;font-weight:700;color:#F6F4ED;margin-bottom:10px;}
+  .article-hero{padding:52px 0 40px;border-bottom:1px solid var(--line);}
+  .breadcrumb{font-family:'JetBrains Mono',monospace;font-size:11.5px;color:var(--muted);margin-bottom:16px;display:flex;align-items:center;gap:8px;}
+  .breadcrumb a{color:var(--muted);}
+  .breadcrumb a:hover{color:var(--gold-deep);}
+  .article-meta{font-family:'JetBrains Mono',monospace;font-size:11.5px;color:var(--muted);margin-bottom:16px;display:flex;align-items:center;gap:16px;}
+  .article-meta .tag{background:var(--gold-pale);color:var(--gold-deep);padding:3px 10px;font-weight:600;}
+  h1.article-title{font-family:'Manrope',sans-serif;font-size:28px;font-weight:700;letter-spacing:-0.01em;line-height:1.1;margin-bottom:16px;max-width:820px;}
+  @media(min-width:900px){h1.article-title{font-size:40px;}}
+  .article-intro{font-size:17px;color:var(--muted);max-width:680px;line-height:1.6;}
+  .article-wrap{display:grid;grid-template-columns:1fr;gap:40px;padding:52px 0;}
+  @media(min-width:960px){.article-wrap{grid-template-columns:1fr 300px;gap:60px;}}
+  .article-body h2{font-family:'Manrope',sans-serif;font-size:24px;font-weight:700;letter-spacing:-0.01em;margin:40px 0 14px;color:var(--ink);}
+  .article-body h2:first-child{margin-top:0;}
+  .article-body h3{font-family:'Manrope',sans-serif;font-size:19px;font-weight:700;margin:28px 0 10px;color:var(--ink);}
+  .article-body p{font-size:16px;color:var(--muted);margin-bottom:18px;max-width:680px;}
+  .article-body ul,.article-body ol{margin:0 0 18px 20px;}
+  .article-body li{font-size:16px;color:var(--muted);margin-bottom:8px;}
+  .article-body strong{color:var(--ink);font-weight:600;}
+  .article-body a{color:var(--gold-deep);border-bottom:1px solid var(--gold);padding-bottom:1px;}
+  .callout{background:var(--surface);border-left:4px solid var(--gold);padding:20px 24px;margin:28px 0;}
+  .callout p{margin-bottom:0;font-size:15px;}
+  .callout strong{color:var(--gold-deep);}
+  .article-sidebar{display:flex;flex-direction:column;gap:20px;}
+  .sidebar-card{border:1px solid var(--line-strong);padding:20px;background:var(--paper);}
+  .sidebar-card h4{font-family:'JetBrains Mono',monospace;font-size:10.5px;text-transform:uppercase;letter-spacing:0.05em;color:var(--gold-deep);font-weight:600;margin-bottom:12px;}
+  .sidebar-card p{font-size:13.5px;color:var(--muted);margin-bottom:14px;}
+  .sidebar-card .btn{display:block;text-align:center;background:var(--gold);color:#ffffff;padding:12px 16px;border-radius:4px;font-weight:700;font-size:14px;}
+  .sidebar-card ul{list-style:none;}
+  .sidebar-card li{font-size:13.5px;padding:7px 0;border-bottom:1px solid var(--line);display:flex;gap:8px;}
+  .sidebar-card li:last-child{border-bottom:none;}
+  .sidebar-card li::before{content:'→';color:var(--gold-deep);flex-shrink:0;}
+  .author-card{background:var(--khaki-deep);padding:20px;}
+  .author-card h4{font-family:'JetBrains Mono',monospace;font-size:10.5px;text-transform:uppercase;letter-spacing:0.05em;color:var(--gold);font-weight:600;margin-bottom:10px;}
+  .author-card p{font-size:13px;color:#C7C3AC;margin-bottom:0;}
+  .cta-band{background:var(--khaki-deep);padding:56px 0;border-top:1px solid var(--line);}
+  .cta-band .eyebrow{font-family:'JetBrains Mono',monospace;font-size:11.5px;color:var(--gold);text-transform:uppercase;letter-spacing:0.06em;font-weight:600;margin-bottom:12px;display:flex;align-items:center;gap:8px;}
+  .cta-band .eyebrow::before{content:'';width:14px;height:1px;background:var(--gold);display:inline-block;}
+  .cta-band h2{font-family:'Manrope',sans-serif;font-size:28px;font-weight:700;color:#F6F4ED;margin-bottom:10px;}
   .cta-band p{color:#C7C3AC;font-size:15px;max-width:540px;margin-bottom:28px;}
-  .btn-primary{display:inline-flex;align-items:center;justify-content:center;padding:18px 30px;border-radius:4px;font-weight:700;font-size:16px;background:var(--gold);color:#ffffff;}
-
-  /* Cookie */
+  .btn-primary{display:inline-flex;align-items:center;justify-content:center;padding:18px 30px;border-radius:4px;font-weight:700;font-size:16px;background:var(--gold);color:#ffffff;border:none;}
   .cookie-banner{position:fixed;bottom:0;left:0;right:0;z-index:999;background:var(--khaki-deep);color:#EDE9D8;padding:16px 20px;display:flex;flex-direction:column;gap:12px;border-top:2px solid var(--gold);box-shadow:0 -4px 24px rgba(0,0,0,0.18);}
   .cookie-banner.hidden{display:none;}
   .cookie-banner p{font-size:13.5px;color:#C7C3AC;line-height:1.5;margin:0;}
@@ -108,13 +110,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   .cookie-accept{background:var(--gold);color:#ffffff;border:none;padding:10px 20px;border-radius:4px;font-weight:700;font-size:13.5px;cursor:pointer;font-family:inherit;}
   .cookie-reject{background:transparent;color:#C7C3AC;border:1px solid rgba(255,255,255,0.2);padding:10px 20px;border-radius:4px;font-weight:600;font-size:13.5px;cursor:pointer;font-family:inherit;}
   @media(min-width:760px){.cookie-banner{flex-direction:row;align-items:center;justify-content:space-between;}.cookie-banner-text{max-width:640px;}.cookie-btns{flex-shrink:0;}}
-
   footer{padding:40px 0 28px;}
   .footer-cols{display:grid;grid-template-columns:repeat(2,1fr);gap:24px;margin-bottom:24px;}
   .footer-col h4{font-family:'JetBrains Mono',monospace;font-size:10.5px;text-transform:uppercase;letter-spacing:0.05em;color:var(--muted);margin-bottom:12px;}
   .footer-col a{display:block;font-size:14px;padding:6px 0;color:var(--ink);}
     .footer-bottom{border-top:1px solid var(--line);padding-top:20px;font-size:12px;color:var(--muted);display:flex;flex-direction:row;justify-content:space-between;align-items:center;}
-  @media(min-width:760px){.footer-cols{grid-template-columns:repeat(5,1fr);}  .footer-bottom{border-top:1px solid var(--line);padding-top:20px;font-size:12px;color:var(--muted);display:flex;flex-direction:row;justify-content:space-between;align-items:center;}}
+  @media(min-width:760px){.footer-cols{grid-template-columns:repeat(4,1fr);}  .footer-bottom{border-top:1px solid var(--line);padding-top:20px;font-size:12px;color:var(--muted);display:flex;flex-direction:row;justify-content:space-between;align-items:center;}}
   .social-icons{display:flex;gap:10px;margin-top:4px;}
   .social-icon{width:32px;height:32px;display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:opacity 0.15s ease;line-height:0;background:none;}
   .social-icon:hover{opacity:0.7;}
@@ -137,7 +138,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   }
   .nav-row{
     display:flex;align-items:center;justify-content:space-between;
-    padding:10px 20px;max-width:var(--max);margin:0 auto;gap:16px;
+    padding:10px 20px;max-width:var(--max);margin:0 auto;
   }
   .logo{display:flex;align-items:center;line-height:1;}
   .menu-btn{
@@ -164,9 +165,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       display:inline-block;background:var(--gold);color:#ffffff;
       padding:16px 32px;border-radius:4px;font-weight:700;font-size:18px;
     }
-    .nav-phone{display:inline-flex !important;margin-left:8px;align-items:center;justify-content:center;width:38px;height:38px;border:1px solid rgba(255,255,255,0.25);border-radius:4px;transition:background 0.15s ease,border-color 0.15s ease;}
-    .nav-phone:hover{background:rgba(255,255,255,0.08);border-color:rgba(255,255,255,0.4);}
-    .nav-phone svg{width:18px;height:18px;fill:#ffffff;display:block;}
+    .nav-phone{display:inline-block !important;}
     .nav-dropdown{position:relative;}
     .nav-dropdown > a{display:flex;align-items:center;gap:5px;cursor:pointer;}
     .nav-dropdown > a::after{content:'▾';font-size:10px;color:var(--gold);transition:transform 0.2s ease;}
@@ -188,6 +187,17 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     }
     .dropdown-menu a:last-child{border-bottom:none;}
     .dropdown-menu a:hover{background:rgba(255,255,255,0.08);color:var(--gold);}
+  }
+
+  /* --- Header/footer standardisation pass --- */
+  .nav-row{gap:16px;}
+  @media(min-width:760px){
+    .footer-cols{grid-template-columns:repeat(5,1fr);}
+  }
+  @media(min-width:920px){
+    .nav-phone{display:inline-flex !important;margin-left:8px;align-items:center;justify-content:center;width:38px;height:38px;border:1px solid rgba(255,255,255,0.25);border-radius:4px;transition:background 0.15s ease,border-color 0.15s ease;}
+    .nav-phone:hover{background:rgba(255,255,255,0.08);border-color:rgba(255,255,255,0.4);}
+    .nav-phone svg{width:18px;height:18px;fill:#ffffff;display:block;}
   }
 </style>
 </head>
@@ -243,7 +253,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <a href="tel:07848522456" class="nav-phone" style="display:none;" aria-label="Call 07848 522456" title="Call 07848 522456">
       <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.24.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
     </a>
-    <a href="/contact" class="nav-cta">Enquire today</a>
+    <a href="/services/google-ads-audit" class="nav-cta">Free audit</a>
     <button class="menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false">
       <span></span><span></span><span></span>
     </button>
@@ -272,181 +282,164 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <a href="/case-studies/google-ads" style="padding-left:36px;font-size:14px;">→ Google Ads</a>
     <a href="/case-studies/website-design" style="padding-left:36px;font-size:14px;">→ Website Design &amp; Build</a>
     <a href="/blog/">Blog</a>
-    <a href="/contact"><button class="mm-cta">Enquire today</button></a>
+    <a href="/services/google-ads-audit"><button class="mm-cta">Get a free audit</button></a>
   </div>
 </header>
 
 <main>
-
-  <section class="blog-hero">
+  <section class="article-hero">
     <div class="wrap">
-      <div class="eyebrow">Insights & guides</div>
-      <h1>Google Ads, straight talk.</h1>
-      <p class="blog-intro">Honest guides, practical advice and plain-English explanations from a Google Ads specialist with 15+ years' experience. No fluff, no filler.</p>
-    </div>
-  </section>
-
-  <section class="blog-section">
-    <div class="wrap">
-      <div class="blog-grid">
-
-        <!-- Post 16, live -->
-        <a href="/blog/google-ads-conversion-tracking-why-first-party-data-matters-now" class="post-card">
-          <div class="post-card-tag">Google Ads · Optimisation</div>
-          <div class="post-card-meta">August 2026 · 7 min read</div>
-          <h2>Google Ads Conversion Tracking in 2026: Why First-Party Data Matters Now</h2>
-          <p>Why conversion tracking has quietly become the biggest lever most small business accounts get wrong, and what Enhanced Conversions and Consent Mode actually do.</p>
-          <span class="read-more">Read post →</span>
-        </a>
-
-        <!-- Post 15, live -->
-        <a href="/blog/performance-max-what-its-actually-good-for" class="post-card">
-          <div class="post-card-tag">Google Ads · Strategy</div>
-          <div class="post-card-meta">August 2026 · 8 min read</div>
-          <h2>Performance Max in 2026: What It's Actually Good For (and What to Watch)</h2>
-          <p>An honest look at when Performance Max genuinely earns its place in an account, and what to watch so it doesn't run away from you.</p>
-          <span class="read-more">Read post →</span>
-        </a>
-
-        <!-- Post 14, live -->
-        <a href="/blog/google-ads-or-seo-which-should-you-invest-in-first" class="post-card">
-          <div class="post-card-tag">Google Ads · Strategy</div>
-          <div class="post-card-meta">August 2026 · 7 min read</div>
-          <h2>Google Ads or SEO: Which Should You Invest In First?</h2>
-          <p>How the two actually differ in speed, cost and risk, and a straightforward way to work out which one your business should invest in first.</p>
-          <span class="read-more">Read post →</span>
-        </a>
-
-        <!-- Post 13, live -->
-        <a href="/blog/automated-bidding-which-strategy-actually-fits-your-account" class="post-card">
-          <div class="post-card-tag">Google Ads · Strategy</div>
-          <div class="post-card-meta">August 2026 · 8 min read</div>
-          <h2>Automated Bidding in Google Ads: Which Strategy Actually Fits Your Account</h2>
-          <p>What automated bidding actually does, the five main strategies explained plainly, and how to tell if your account has enough data for it to work well.</p>
-          <span class="read-more">Read post →</span>
-        </a>
-
-        <!-- Post 12, live -->
-        <a href="/blog/landing-pages-that-convert-what-to-fix-before-you-blame-your-ads" class="post-card">
-          <div class="post-card-tag">Google Ads · Strategy</div>
-          <div class="post-card-meta">July 2026 · 7 min read</div>
-          <h2>Landing Pages That Convert: What to Fix Before You Blame Your Ads</h2>
-          <p>Why a great ad with a weak landing page still fails, and the five things to check before you assume your campaign is the problem.</p>
-          <span class="read-more">Read post →</span>
-        </a>
-
-        <!-- Post 11, live -->
-        <a href="/blog/google-ads-account-restructure-when-and-why" class="post-card">
-          <div class="post-card-tag">Google Ads · Strategy</div>
-          <div class="post-card-meta">July 2026 · 8 min read</div>
-          <h2>Google Ads Account Restructure: When (and Why) You Need One</h2>
-          <p>The warning signs that your account needs restructuring, what actually gets rebuilt, and why a short term dip in performance is normal.</p>
-          <span class="read-more">Read post →</span>
-        </a>
-
-        <!-- Post 10, live -->
-        <a href="/blog/how-to-write-google-ads-copy-that-converts" class="post-card">
-          <div class="post-card-tag">Google Ads · Ad Copy</div>
-          <div class="post-card-meta">July 2026 · 7 min read</div>
-          <h2>How to Write Google Ads Copy That Converts</h2>
-          <p>How to write ad copy that gets the right clicks and actually converts, plus how to use responsive search ads and testing properly.</p>
-          <span class="read-more">Read post →</span>
-        </a>
-
-        <!-- Post 9, live -->
-        <a href="/blog/why-your-google-ads-quality-score-matters" class="post-card">
-          <div class="post-card-tag">Google Ads · Optimisation</div>
-          <div class="post-card-meta">July 2026 · 7 min read</div>
-          <h2>Why Your Google Ads Quality Score Matters (And How to Improve It)</h2>
-          <p>What Quality Score actually measures, how it affects what you pay per click, and five specific ways to improve it.</p>
-          <span class="read-more">Read post →</span>
-        </a>
-
-        <!-- Post 8, live -->
-        <a href="/blog/google-ads-for-b2b-what-works-and-what-doesnt" class="post-card">
-          <div class="post-card-tag">Google Ads · B2B</div>
-          <div class="post-card-meta">July 2026 · 9 min read</div>
-          <h2>Google Ads for B2B: What Works and What Doesn't</h2>
-          <p>What actually works in B2B Google Ads, what doesn't, a realistic timeline for results, and what the best performing accounts have in common.</p>
-          <span class="read-more">Read post →</span>
-        </a>
-
-        <!-- Post 7, live -->
-        <a href="/blog/should-you-hire-a-google-ads-freelancer-or-agency" class="post-card">
-          <div class="post-card-tag">Google Ads · Strategy</div>
-          <div class="post-card-meta">July 2026 · 8 min read</div>
-          <h2>Should You Hire a Google Ads Freelancer or an Agency?</h2>
-          <p>Both can work. Both can fail. An honest breakdown of the differences, what each costs, and how to decide which is right for your business.</p>
-          <span class="read-more">Read post →</span>
-        </a>
-
-        <!-- Post 1, live -->
-        <a href="/blog/how-much-does-a-google-ads-specialist-cost-uk" class="post-card">
-          <div class="post-card-tag">Google Ads · Pricing</div>
-          <div class="post-card-meta">June 2026 · 8 min read</div>
-          <h2>How Much Does a Google Ads Specialist Cost in the UK? (2026)</h2>
-          <p>Freelancer, agency or in-house, what does Google Ads management actually cost right now? An honest breakdown with real numbers.</p>
-          <span class="read-more">Read post →</span>
-        </a>
-
-        <!-- Post 2, live -->
-        <a href="/blog/why-your-google-ads-arent-converting" class="post-card">
-          <div class="post-card-tag">Google Ads · Optimisation</div>
-          <div class="post-card-meta">June 2026 · 9 min read</div>
-          <h2>Why Your Google Ads Aren't Converting (And How to Fix It)</h2>
-          <p>The most common reasons Google Ads campaigns fail to generate leads or sales and what to do about each one.</p>
-          <span class="read-more">Read post →</span>
-        </a>
-
-        <!-- Post 3, live -->
-        <a href="/blog/how-to-audit-your-google-ads-account" class="post-card">
-          <div class="post-card-tag">Google Ads · Auditing</div>
-          <div class="post-card-meta">June 2026 · 10 min read</div>
-          <h2>How to Audit Your Own Google Ads Account: 12 Things to Check</h2>
-          <p>A practical checklist covering the same 12 areas as a professional audit, explained in plain English.</p>
-          <span class="read-more">Read post →</span>
-        </a>
-
-        <!-- Post 4, live -->
-        <a href="/blog/how-long-does-google-ads-take-to-work" class="post-card">
-          <div class="post-card-tag">Google Ads · Strategy</div>
-          <div class="post-card-meta">June 2026 · 7 min read</div>
-          <h2>How Long Does It Take for Google Ads to Work?</h2>
-          <p>One of the most common questions from businesses starting with paid search. Here's an honest, practical answer.</p>
-          <span class="read-more">Read post →</span>
-        </a>
-
-        <!-- Post 5, live -->
-        <a href="/blog/what-is-a-good-cost-per-lead-google-ads" class="post-card">
-          <div class="post-card-tag">Google Ads · Performance</div>
-          <div class="post-card-meta">June 2026 · 8 min read</div>
-          <h2>What Is a Good Cost Per Lead on Google Ads?</h2>
-          <p>How to benchmark your cost per lead against realistic expectations, by sector, by intent and by account maturity.</p>
-          <span class="read-more">Read post →</span>
-        </a>
-
-        <!-- Post 6, live -->
-        <a href="/blog/google-ads-match-types-explained" class="post-card">
-          <div class="post-card-tag">Google Ads · Fundamentals</div>
-          <div class="post-card-meta">June 2026 · 9 min read</div>
-          <h2>Google Ads Match Types Explained: Broad, Phrase and Exact in 2026</h2>
-          <p>What broad, phrase and exact match actually do in 2026, how they have changed and which to use for your account.</p>
-          <span class="read-more">Read post →</span>
-        </a>
-
+      <div class="breadcrumb"><a href="/">Home</a> / <a href="/blog/">Blog</a> / Strategy</div>
+      <div class="article-meta">
+        <span class="tag">Google Ads</span>
+        <span>August 2026</span>
+        <span>8 min read</span>
       </div>
+      <h1 class="article-title">Performance Max in 2026: What It's Actually Good For (and What to Watch)</h1>
+      <p class="article-intro">Performance Max gets talked about like it's either the future of Google Ads or a black box that quietly burns budget, depending who you ask. The honest answer sits in between. Here's when it genuinely earns its place in an account, and what to watch closely so it doesn't run away from you.</p>
     </div>
   </section>
+
+  <div class="wrap">
+    <div class="article-wrap">
+      <article class="article-body">
+
+        <!-- Infographic -->
+        <div style="margin:0 0 40px;">
+          <svg width="100%" viewBox="0 0 680 604" role="img" style="display:block;max-width:680px;" xmlns="http://www.w3.org/2000/svg">
+            <title>When Performance Max is a good fit and when to watch out</title>
+            <desc>Four factors that decide whether Performance Max is a good fit for an account, from product feed quality through to how much visibility and control the advertiser needs, ending with the point that Performance Max works best as one campaign in a wider account, not the whole account.</desc>
+
+            <rect width="680" height="604" fill="#F6F4ED" rx="4"/>
+
+            <!-- HEADER -->
+            <rect x="30" y="20" width="620" height="62" rx="8" fill="#3D3E2F"/>
+            <text font-family="Georgia, 'Times New Roman', serif" font-size="15" font-weight="700" fill="#B6862A" text-anchor="middle" x="340" y="46">Is Performance Max a good fit?</text>
+            <text font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#DDD8C7" text-anchor="middle" x="340" y="68">Four factors that actually decide it</text>
+
+            <!-- TABLE LABEL -->
+            <text font-family="Arial, Helvetica, sans-serif" font-size="10" font-weight="700" fill="#6A6753" x="30" y="100" letter-spacing="1.2">GOOD FIT VS WATCH OUT</text>
+            <line x1="30" y1="106" x2="650" y2="106" stroke="#DDD8C7" stroke-width="0.5"/>
+
+            <!-- Table header row -->
+            <rect x="170" y="114" width="240" height="30" rx="4" fill="#B6862A"/>
+            <text font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="700" fill="#ffffff" text-anchor="middle" x="290" y="134">GOOD FIT</text>
+            <rect x="410" y="114" width="240" height="30" rx="4" fill="#3D3E2F"/>
+            <text font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="700" fill="#ffffff" text-anchor="middle" x="530" y="134">WATCH OUT</text>
+
+            <!-- Row 1: Data feed -->
+            <rect x="30" y="150" width="620" height="68" fill="#ECE7D8"/>
+            <text font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="700" fill="#3D3E2F" x="38" y="180">Product feed</text>
+            <text font-family="Arial, Helvetica, sans-serif" font-size="11" fill="#6A6753" text-anchor="middle" x="290" y="176">Clean, well structured</text>
+            <text font-family="Arial, Helvetica, sans-serif" font-size="11" fill="#6A6753" text-anchor="middle" x="290" y="192">feed already in place</text>
+            <text font-family="Arial, Helvetica, sans-serif" font-size="11" fill="#6A6753" text-anchor="middle" x="530" y="176">Feed errors or thin data</text>
+            <text font-family="Arial, Helvetica, sans-serif" font-size="11" fill="#6A6753" text-anchor="middle" x="530" y="192">quietly cap performance</text>
+
+            <!-- Row 2: Conversion history -->
+            <rect x="30" y="220" width="620" height="68" fill="#F6F4ED"/>
+            <text font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="700" fill="#3D3E2F" x="38" y="250">Conversion history</text>
+            <text font-family="Arial, Helvetica, sans-serif" font-size="11" fill="#6A6753" text-anchor="middle" x="290" y="246">Existing account with</text>
+            <text font-family="Arial, Helvetica, sans-serif" font-size="11" fill="#6A6753" text-anchor="middle" x="290" y="262">solid data to seed it</text>
+            <text font-family="Arial, Helvetica, sans-serif" font-size="11" fill="#6A6753" text-anchor="middle" x="530" y="246">New account with little</text>
+            <text font-family="Arial, Helvetica, sans-serif" font-size="11" fill="#6A6753" text-anchor="middle" x="530" y="262">history to learn from</text>
+
+            <!-- Row 3: Brand terms -->
+            <rect x="30" y="290" width="620" height="68" fill="#ECE7D8"/>
+            <text font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="700" fill="#3D3E2F" x="38" y="320">Brand terms</text>
+            <text font-family="Arial, Helvetica, sans-serif" font-size="11" fill="#6A6753" text-anchor="middle" x="290" y="316">Comfortable letting Google</text>
+            <text font-family="Arial, Helvetica, sans-serif" font-size="11" fill="#6A6753" text-anchor="middle" x="290" y="332">find new audiences broadly</text>
+            <text font-family="Arial, Helvetica, sans-serif" font-size="11" fill="#6A6753" text-anchor="middle" x="530" y="316">Branded search needs</text>
+            <text font-family="Arial, Helvetica, sans-serif" font-size="11" fill="#6A6753" text-anchor="middle" x="530" y="332">protecting from overlap</text>
+
+            <!-- Row 4: Reporting -->
+            <rect x="30" y="360" width="620" height="68" fill="#F6F4ED"/>
+            <text font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="700" fill="#3D3E2F" x="38" y="390">Reporting needs</text>
+            <text font-family="Arial, Helvetica, sans-serif" font-size="11" fill="#6A6753" text-anchor="middle" x="290" y="386">Fine with asset group</text>
+            <text font-family="Arial, Helvetica, sans-serif" font-size="11" fill="#6A6753" text-anchor="middle" x="290" y="402">level reporting</text>
+            <text font-family="Arial, Helvetica, sans-serif" font-size="11" fill="#6A6753" text-anchor="middle" x="530" y="386">Needs to see exactly what</text>
+            <text font-family="Arial, Helvetica, sans-serif" font-size="11" fill="#6A6753" text-anchor="middle" x="530" y="402">keyword or placement converted</text>
+
+            <!-- THE RULE OF THUMB -->
+            <text font-family="Arial, Helvetica, sans-serif" font-size="10" font-weight="700" fill="#6A6753" x="30" y="452" letter-spacing="1.2">THE RULE OF THUMB</text>
+            <line x1="30" y1="458" x2="650" y2="458" stroke="#DDD8C7" stroke-width="0.5"/>
+
+            <rect x="30" y="466" width="620" height="60" rx="6" fill="#3D3E2F"/>
+            <text font-family="Georgia, 'Times New Roman', serif" font-size="15" font-weight="700" fill="#B6862A" text-anchor="middle" x="340" y="493">One campaign in the account, not the whole account</text>
+            <text font-family="Arial, Helvetica, sans-serif" font-size="11" fill="#DDD8C7" text-anchor="middle" x="340" y="512">Feed quality and exclusions still do most of the work</text>
+
+            <!-- WHY IT MATTERS -->
+            <rect x="30" y="538" width="620" height="46" rx="6" fill="#ECE7D8" stroke="#DDD8C7" stroke-width="0.5"/>
+            <rect x="30" y="538" width="4" height="46" rx="2" fill="#3D3E2F"/>
+            <text font-family="Arial, Helvetica, sans-serif" font-size="11" fill="#6A6753" x="46" y="558">Ad Strength and automation aren't a strategy on their own.</text>
+            <text font-family="Arial, Helvetica, sans-serif" font-size="11" fill="#6A6753" x="46" y="574">A well fed, well excluded campaign beats a lazy one every time.</text>
+          </svg>
+        </div>
+
+        <h2>Why Performance Max splits opinion</h2>
+        <p>Performance Max asks you to hand over more control than any campaign type before it. One campaign, one budget, and Google decides how to spread that budget across Search, Display, YouTube, Gmail, Discover and Maps, using whatever combination of your assets performs best in the moment. For some accounts that's a genuine step forward. For others, it's a black box that spends steadily without ever explaining exactly what's working.</p>
+        <p>Both reactions are usually correct, just about different accounts. The honest answer isn't "Performance Max is good" or "Performance Max is bad," it's that it rewards specific conditions and punishes their absence, quietly rather than obviously.</p>
+
+        <h2>Where it genuinely earns its place</h2>
+        <p><strong>A clean, well structured product feed.</strong> For ecommerce accounts, Performance Max leans heavily on feed data, product titles, categories, images, pricing, availability. A well maintained feed gives the system rich, accurate signal to work from. A messy or outdated one quietly caps performance in ways that are hard to spot without digging into the feed itself.</p>
+        <p><strong>Existing conversion data to seed it.</strong> Performance Max learns fastest when it can build on an account that already has a track record. Accounts moving an existing, well performing Search campaign's budget into Performance Max, alongside the original campaign rather than instead of it, tend to see a smoother transition than accounts starting from nothing.</p>
+        <p><strong>Comfort with less granular control.</strong> If broad reach across multiple channels is genuinely useful for the business, and you don't need to know exactly which placement drove which conversion, Performance Max's asset group level reporting is a reasonable trade for the reach it can access.</p>
+
+        <h2>Where to watch closely</h2>
+        <p><strong>Brand term cannibalisation.</strong> Performance Max can end up bidding on your own branded searches, traffic that would likely have come through organically or via a cheap branded Search campaign anyway. Without the right exclusions, that inflates apparent performance while actually just paying for clicks you'd have got for less, or for free.</p>
+        <p><strong>New accounts with thin data.</strong> The same conversion volume issue that affects other automated strategies applies here too, and arguably more so, since Performance Max is making decisions across several channels at once, not just one. A new account handing everything to Performance Max on day one is often making automated guesses look more sophisticated than they actually are.</p>
+        <p><strong>Reduced visibility into what's actually working.</strong> Reporting sits at the asset group level, not the individual keyword or placement level. For businesses that need to understand precisely which search terms or channels are driving results, that lack of granularity can feel like flying with fewer instruments than before.</p>
+
+        <div class="callout">
+          <p><strong>Quick check:</strong> If you can't currently name your top 10 converting search terms in your existing campaigns, you're not ready to lose that visibility inside Performance Max either. Fix the data question first.</p>
+        </div>
+
+        <h2>How to run it without losing control</h2>
+        <p>The accounts that get the most out of Performance Max treat it as one tool in the account, not the whole strategy. That usually means running it alongside a tightly controlled branded Search campaign, so brand terms stay protected and cheap rather than folded into a black box. It means setting account level negative keyword lists and audience signals deliberately, rather than leaving Performance Max to figure everything out unassisted. And it means checking the feed and asset quality regularly, since Performance Max reflects the quality of what you feed it far more than most campaign types.</p>
+        <p>Search terms insights, however limited compared to a standard Search campaign, are still worth checking periodically for anything obviously wasteful worth excluding.</p>
+
+        <h2>The bottom line</h2>
+        <p>Performance Max isn't a shortcut to better results, and it isn't a trap either. It's a genuinely different way of running ads that trades granular control for broader reach and automated optimisation, and it performs in proportion to how much good data and structure you give it. Feed it well, protect your brand terms, and keep half an eye on what it's actually doing, and it can earn its place. Hand it a messy feed and no oversight, and it'll spend that budget just as confidently while doing far less for you.</p>
+
+      </article>
+
+      <aside class="article-sidebar">
+        <div class="sidebar-card" style="background:var(--khaki-deep);">
+          <h4 style="color:var(--gold);">Not sure if PMax fits your account?</h4>
+          <p style="color:#C7C3AC;">The free 12-point audit checks your account structure and data quality, delivered within 5 working days.</p>
+          <a href="/services/google-ads-audit" class="btn">Request free audit</a>
+        </div>
+        <div class="sidebar-card">
+          <h4>Related services</h4>
+          <ul>
+            <li><a href="/services/account-management">Account management</a></li>
+            <li><a href="/services/account-restructure">Account restructure</a></li>
+            <li><a href="/services/google-ads-audit">Free account audit</a></li>
+          </ul>
+        </div>
+        <div class="sidebar-card">
+          <h4>More from the blog</h4>
+          <ul>
+            <li><a href="/blog/automated-bidding-which-strategy-actually-fits-your-account">Automated bidding, which strategy fits</a></li>
+            <li><a href="/blog/google-ads-account-restructure-when-and-why">Account restructure, when and why</a></li>
+            <li><a href="/blog/">All posts</a></li>
+          </ul>
+        </div>
+        <div class="author-card">
+          <h4>Written by</h4>
+          <p>Joe Coombs. Google Ads specialist with 15+ years of experience across B2B and B2C campaigns, from large corporations to growing SMBs.</p>
+        </div>
+      </aside>
+    </div>
+  </div>
 
   <section class="cta-band">
     <div class="wrap">
       <div class="eyebrow">Get started</div>
-      <h2>Want a free review of your account?</h2>
-      <p>The free Google Ads audit covers 12 areas of your account, delivered as a PDF within 5 working days with no obligation to proceed.</p>
-      <a href="/services/google-ads-audit" class="btn-primary">Request your free audit</a>
+      <h2>Is Performance Max helping or hiding problems in your account?</h2>
+      <p>The free audit checks your account structure, feed quality and exclusions, and flags anything working against you. Delivered within 5 working days with no obligation to proceed.</p>
+      <a href="/services/google-ads-audit" class="btn-primary">Get your free audit</a>
     </div>
   </section>
-
 </main>
 
 <footer>
