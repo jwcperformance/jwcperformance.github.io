@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://jwcperformance.co.uk/sitemap.xml
+Sitemap: https://www.jwcperformance.co.uk/sitemap.xml
