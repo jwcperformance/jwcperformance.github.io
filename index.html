@@ -768,7 +768,7 @@ header .nav-row{
   gap:18px;max-width:var(--max);margin:0 auto;padding:10px 20px !important;
 }
 header .logo{display:flex;align-items:center;line-height:0;}
-header .logo img{height:54px;width:auto;display:block;}
+header .logo img{height:74px;width:auto;display:block;}
 
 /* nav base (mobile-first: hidden) */
 header nav.desktop-nav{display:none;}
@@ -993,7 +993,7 @@ footer .footer-bottom{
   font-size:12px;color:#8C8871;display:flex;flex-direction:column;gap:14px;align-items:flex-start;
 }
 @media(min-width:760px){footer .footer-bottom{flex-direction:row;justify-content:space-between;align-items:center;}}
-footer .footer-logo{height:52px;width:auto;display:block;margin-bottom:18px;}
+footer .footer-logo{height:80px;width:auto;display:block;margin-bottom:18px;}
 footer .social-icon.email svg{fill:#8C8871;}
 
 /* ---------- Cookie banner ---------- */
@@ -1002,22 +1002,24 @@ footer .social-icon.email svg{fill:#8C8871;}
 .cookie-reject{border-radius:0 !important;}
 
 /* ---------- Homepage image hero (desktop only) ---------- */
-.jwc-hero-img{position:relative;overflow:hidden;padding:0 !important;}
+.jwc-hero-img{position:relative;overflow:hidden;padding:0 !important;background:#23241D;}
 .jwc-hero-media{display:none;}
 .jwc-hero-body{position:relative;padding:64px 20px 60px;max-width:1180px;}
-.jwc-hero-body .hero-sub{max-width:620px;}
+.jwc-hero-body .hero-sub{max-width:560px;}
+.jwc-hero-body h1{max-width:660px;}
 .jwc-results-grid{display:grid;grid-template-columns:1fr;gap:34px;align-items:start;}
 @media(min-width:900px){
   .jwc-results-grid{grid-template-columns:1.05fr 0.95fr;gap:56px;}
   .jwc-hero-media{
-    display:block;position:absolute;inset:0;
-    background:url('/assets/hero-home.png') center right / cover no-repeat;
+    display:block;position:absolute;top:0;bottom:0;right:0;left:48%;
+    background:url('/assets/hero-home.png') center right / contain no-repeat;
+    opacity:0.55;
   }
   .jwc-hero-media::after{
     content:'';position:absolute;inset:0;
-    background:linear-gradient(90deg,rgba(35,36,29,0.95) 0%,rgba(35,36,29,0.86) 42%,rgba(35,36,29,0.45) 100%);
+    background:linear-gradient(90deg,rgba(35,36,29,1) 0%,rgba(35,36,29,0.55) 26%,rgba(35,36,29,0) 60%);
   }
-  .jwc-hero-body{min-height:520px;display:flex;flex-direction:column;justify-content:center;padding:72px 20px;}
+  .jwc-hero-body{min-height:560px;max-width:1180px;display:flex;flex-direction:column;justify-content:center;padding:72px 20px;}
 }
 </style>
 </head>
@@ -1034,7 +1036,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <header>
   <div class="nav-row">
     <a href="/" class="logo" aria-label="JWC Performance home">
-      <img src="/assets/logo.webp" alt="JWC Performance" width="122" height="68">
+      <img src="/assets/logo.png" alt="JWC Performance" width="71" height="54">
     </a>
     <nav class="desktop-nav">
       <div class="nav2 has-sub">
@@ -1640,7 +1642,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <footer>
   <div class="wrap footer-grid">
-    <img src="/assets/logo.webp" alt="JWC Performance" class="footer-logo" width="94" height="52">
+    <img src="/assets/logo.png" alt="JWC Performance" class="footer-logo" width="106" height="80">
     <div class="footer-cols">
       <div class="footer-col">
         <h4>Google Ads</h4>
