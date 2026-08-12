@@ -160,4 +160,19 @@
     <loc>https://www.jwcperformance.co.uk/services/website-design</loc>
     <lastmod>2026-07-12</lastmod>
   </url>
+  <url>
+    <loc>https://www.jwcperformance.co.uk/services/google-ads</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.jwcperformance.co.uk/services/seo</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.jwcperformance.co.uk/services/websites</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
 </urlset>
