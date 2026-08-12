@@ -246,6 +246,286 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     .nav-phone svg{width:18px;height:18px;fill:#ffffff;display:block;}
   }
 </style>
+<style id="jwc-2a">
+/* ============================================================
+   JWC Performance — 2a theme layer
+   Loaded after each page's own <style> block. Same palette,
+   new structure: khaki-deep page bands, squared edges,
+   Manrope display scale, JetBrains Mono for data.
+   ============================================================ */
+
+:root{
+  --ink:#23241D;
+  --paper:#F6F4ED;
+  --surface:#ECE7D8;
+  --khaki:#6F6E55;
+  --khaki-deep:#3D3E2F;
+  --gold:#B6862A;
+  --gold-deep:#8A6418;
+  --gold-light:#E8C77A;
+  --gold-pale:#EEE0BE;
+  --line:#DDD8C7;
+  --line-strong:#C7C0A7;
+  --muted:#6A6753;
+  --max:1180px;
+}
+
+/* ---------- Top strip ---------- */
+.top-strip{
+  background:var(--khaki-deep) !important;
+  color:#CFCBB8 !important;
+  font-family:'JetBrains Mono',monospace;
+  font-size:11.5px;font-weight:500;letter-spacing:0.02em;
+  padding:9px 20px !important;text-align:center;
+  border-bottom:1px solid rgba(255,255,255,0.07);
+}
+.top-strip strong{color:var(--gold-light) !important;font-weight:700;}
+.top-strip a{color:var(--gold-light) !important;}
+
+/* ---------- Header ---------- */
+header{
+  position:sticky;top:0;z-index:200;
+  background:var(--khaki-deep) !important;
+  border-bottom:1px solid rgba(255,255,255,0.08) !important;
+}
+header .nav-row{
+  display:flex;align-items:center;justify-content:space-between;
+  gap:18px;max-width:var(--max);margin:0 auto;padding:10px 20px !important;
+}
+header .logo{display:flex;align-items:center;line-height:0;}
+header .logo img{height:54px;width:auto;display:block;}
+
+/* nav base (mobile-first: hidden) */
+header nav.desktop-nav{display:none;}
+header .nav-cta{display:none;}
+header .menu-btn{
+  width:42px;height:42px;border:1px solid rgba(255,255,255,0.3);border-radius:0;
+  background:transparent;display:flex;align-items:center;justify-content:center;
+  flex-direction:column;gap:4px;cursor:pointer;flex-shrink:0;
+}
+header .menu-btn span{width:18px;height:1.5px;background:#fff;display:block;}
+
+/* ---------- Desktop nav ---------- */
+header .nav-phone{display:none !important;}
+@media (min-width:920px){
+  header nav.desktop-nav{display:flex;align-items:center;gap:26px;}
+  header .menu-btn{display:none !important;}
+  header .nav-cta{
+    display:inline-flex;align-items:center;justify-content:center;
+    background:var(--gold);color:#fff !important;border-radius:0;
+    padding:14px 24px;font-weight:700;font-size:15px;white-space:nowrap;
+  }
+  header .nav-cta:hover{background:var(--gold-deep);}
+  header .nav-phone{
+    display:inline-flex !important;align-items:center;justify-content:center;
+    width:40px;height:40px;border:1px solid rgba(255,255,255,0.25);border-radius:0;flex-shrink:0;
+  }
+  header .nav-phone svg{width:18px;height:18px;fill:#fff;display:block;}
+  header .nav-phone:hover{background:rgba(255,255,255,0.08);}
+
+  .nav2{position:relative;}
+  .nav2 > a{
+    display:flex;align-items:center;gap:6px;
+    font-size:15px;font-weight:600;color:#F6F4ED !important;
+    padding:14px 0;border-bottom:2px solid transparent;white-space:nowrap;cursor:pointer;
+  }
+  .nav2.has-sub > a::after{
+    content:'';width:5px;height:5px;border-right:1.5px solid var(--gold-light);
+    border-bottom:1.5px solid var(--gold-light);transform:rotate(45deg) translateY(-2px);
+  }
+  .nav2:hover > a,.nav2.open > a{border-bottom-color:var(--gold);}
+
+  .nav2-menu{
+    display:none;position:absolute;top:100%;left:-18px;
+    background:var(--ink);border-top:2px solid var(--gold);
+    box-shadow:0 18px 40px rgba(35,36,29,0.35);
+    padding:8px 0;min-width:250px;z-index:300;
+  }
+  .nav2:hover > .nav2-menu,.nav2.open > .nav2-menu{display:block;}
+  .nav2-menu a{
+    display:block;padding:11px 22px;font-size:14px;font-weight:500;
+    color:#E6E2D2 !important;white-space:nowrap;
+  }
+  .nav2-menu a:hover{background:rgba(255,255,255,0.06);color:var(--gold-light) !important;}
+
+  /* mega panel: Services */
+  .nav2-mega{
+    display:none;position:absolute;top:100%;left:-24px;
+    background:var(--ink);border-top:2px solid var(--gold);
+    box-shadow:0 18px 40px rgba(35,36,29,0.35);
+    padding:26px 30px;z-index:300;
+    grid-template-columns:repeat(3,minmax(190px,1fr));gap:34px;
+  }
+  .nav2:hover > .nav2-mega,.nav2.open > .nav2-mega{display:grid;}
+  .nav2-col > .nav2-col-head{
+    display:block;font-family:'JetBrains Mono',monospace;font-size:10.5px;
+    font-weight:700;letter-spacing:0.09em;text-transform:uppercase;
+    color:var(--gold-light) !important;padding:0 0 10px;margin-bottom:8px;
+    border-bottom:1px solid rgba(255,255,255,0.12);
+  }
+  .nav2-col > .nav2-col-head:hover{color:#fff !important;}
+  .nav2-col a{
+    display:block;padding:8px 0;font-size:14px;font-weight:500;
+    color:#E6E2D2 !important;white-space:nowrap;
+  }
+  .nav2-col a:hover{color:var(--gold-light) !important;}
+  .nav2-col a .soon{
+    font-family:'JetBrains Mono',monospace;font-size:9.5px;letter-spacing:0.06em;
+    text-transform:uppercase;color:#8C8871;margin-left:8px;
+  }
+}
+
+/* ---------- Mobile menu ---------- */
+.mobile-menu{
+  display:none;flex-direction:column;
+  background:var(--ink);border-top:1px solid rgba(255,255,255,0.1);
+  max-height:calc(100vh - 70px);overflow-y:auto;
+}
+.mobile-menu.open{display:flex;}
+.mobile-menu a{
+  padding:14px 20px;font-size:15px;font-weight:500;
+  color:#E6E2D2 !important;border-bottom:1px solid rgba(255,255,255,0.08);
+}
+.mobile-menu .mm-head{
+  font-family:'JetBrains Mono',monospace;font-size:10.5px;font-weight:700;
+  letter-spacing:0.09em;text-transform:uppercase;color:var(--gold-light) !important;
+  padding:16px 20px 8px;border-bottom:1px solid rgba(255,255,255,0.14);
+}
+.mobile-menu a.mm-sub{padding-left:36px;font-size:14px;color:#C7C3AC !important;}
+.mobile-menu .mm-cta{
+  margin:18px 20px 24px;padding:17px;background:var(--gold);color:#fff;
+  text-align:center;border-radius:0;font-weight:700;border:none;font-size:16px;width:calc(100% - 40px);
+}
+
+/* ---------- Page hero bands ---------- */
+.hero,.page-hero,.article-hero,.about-hero,.contact-hero,.cs-hero,.blog-hero,.error-hero{
+  background:var(--khaki-deep) !important;
+  border-bottom:none !important;
+  padding:64px 0 60px !important;
+  position:relative;
+  color:#F6F4ED;
+}
+.hero::after,.page-hero::after,.article-hero::after,.about-hero::after,
+.contact-hero::after,.cs-hero::after,.blog-hero::after,.error-hero::after{
+  content:'';position:absolute;left:0;right:0;bottom:0;height:3px;background:var(--gold);
+}
+.page-hero h1,.article-hero h1,.about-hero h1,.contact-hero h1,.cs-hero h1,
+.blog-hero h1,.error-hero h1,.hero h1,
+.page-hero .page-title,.contact-hero .page-title,.article-hero .article-title{
+  font-family:'Manrope',sans-serif;font-weight:800;letter-spacing:-0.028em;
+  color:#F6F4ED !important;line-height:1.07;
+  font-size:clamp(30px,5.2vw,52px) !important;margin-bottom:20px;text-wrap:pretty;
+}
+.page-hero h1 em,.hero h1 em,.about-hero h1 em,.blog-hero h1 em,.cs-hero h1 em{
+  font-style:normal;color:var(--gold-light) !important;
+}
+.page-hero .hero-sub,.article-hero .article-intro,.about-hero .hero-sub,
+.contact-hero .page-intro,.cs-hero .hero-sub,.blog-hero .blog-intro,
+.error-hero .error-sub,.hero .hero-sub,.page-hero .page-intro,
+.page-hero .last-updated,.cs-hero .cs-intro{
+  color:#CFCBB8 !important;font-size:17px !important;line-height:1.6 !important;max-width:640px;
+}
+.page-hero .eyebrow,.article-hero .eyebrow,.about-hero .eyebrow,.contact-hero .eyebrow,
+.cs-hero .eyebrow,.blog-hero .eyebrow,.error-hero .eyebrow,.hero .eyebrow,
+.page-hero .section-label,.cs-hero .section-label,.article-hero .article-meta,
+.page-hero .breadcrumb,.article-hero .breadcrumb,.cs-hero .breadcrumb{
+  color:var(--gold-light) !important;
+  font-family:'JetBrains Mono',monospace;font-size:12px !important;
+  letter-spacing:0.07em;text-transform:uppercase;font-weight:600;
+}
+.page-hero .section-label::before,.cs-hero .section-label::before{background:var(--gold-light) !important;}
+.page-hero a,.article-hero a,.about-hero a,.contact-hero a,.cs-hero a,.blog-hero a,.error-hero a,.hero a{
+  color:var(--gold-light);
+}
+.page-hero .breadcrumb a,.article-hero .breadcrumb a,.cs-hero .breadcrumb a{color:#A8A48F;}
+.page-hero .btn-secondary,.hero .btn-secondary,.error-hero .btn-secondary,.cs-hero .btn-secondary,
+.about-hero .btn-secondary,.contact-hero .btn-secondary,.blog-hero .btn-secondary{
+  border:1.5px solid rgba(246,244,237,0.45) !important;color:#F6F4ED !important;background:transparent !important;
+}
+.page-hero .hero-meta,.hero .hero-meta,.about-hero .hero-meta{border-top-color:rgba(246,244,237,0.2) !important;}
+.page-hero .hero-meta-item,.hero .hero-meta-item,.about-hero .hero-meta-item{
+  border-bottom-color:rgba(246,244,237,0.2) !important;
+}
+.page-hero .hero-meta-item .k,.hero .hero-meta-item .k{color:#A8A48F !important;}
+.page-hero .hero-meta-item .v,.hero .hero-meta-item .v{color:#F6F4ED !important;}
+
+/* hero cards sitting on the dark band keep paper backgrounds */
+.hero .ledger,.page-hero .ledger{background:var(--paper) !important;border:none !important;border-top:3px solid var(--gold) !important;}
+
+/* ---------- Metric strip under hero ---------- */
+.jwc-metrics{background:var(--ink);}
+.jwc-metrics-inner{
+  max-width:var(--max);margin:0 auto;
+  display:grid;grid-template-columns:repeat(2,1fr);
+}
+@media(min-width:760px){.jwc-metrics-inner{grid-template-columns:repeat(4,1fr);}}
+.jwc-metric{padding:24px 20px;border-right:1px solid rgba(255,255,255,0.09);border-bottom:1px solid rgba(255,255,255,0.09);}
+.jwc-metric:nth-child(2n){border-right:none;}
+@media(min-width:760px){
+  .jwc-metric{border-bottom:none;}
+  .jwc-metric:nth-child(2n){border-right:1px solid rgba(255,255,255,0.09);}
+  .jwc-metric:last-child{border-right:none;}
+}
+.jwc-metric-v{font-family:'Manrope',sans-serif;font-size:30px;font-weight:800;color:var(--gold);line-height:1;margin-bottom:7px;}
+.jwc-metric-k{font-family:'JetBrains Mono',monospace;font-size:10.5px;letter-spacing:0.07em;text-transform:uppercase;color:#A8A48F;}
+
+/* ---------- Type & section rhythm ---------- */
+body{font-family:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;background:var(--paper);color:var(--ink);}
+.wrap{max-width:var(--max);}
+h2{font-family:'Manrope',sans-serif;font-weight:800 !important;letter-spacing:-0.022em !important;font-size:clamp(23px,2.6vw,30px) !important;}
+h3{font-family:'Manrope',sans-serif;font-weight:700 !important;letter-spacing:-0.012em;}
+section{padding:60px 0;border-bottom:1px solid var(--line);}
+.section-label{
+  font-family:'JetBrains Mono',monospace;font-size:11.5px;font-weight:600;
+  letter-spacing:0.07em;text-transform:uppercase;color:var(--gold-deep);
+}
+
+/* ---------- Squared edges, gold accents ---------- */
+.btn,.btn-primary,.btn-secondary,.form-submit,.nav-cta,.mm-cta,
+.service-file,.panel,.testimonial-card,.cred-badge,.faq-list,.ledger,
+.form-card,.form-row input,.form-row select,.form-row textarea,
+.cs-coming-soon,.cs-badge,.tag{border-radius:0 !important;}
+.btn-primary,.form-submit{background:var(--gold) !important;color:#fff !important;font-weight:700;}
+.btn-primary:hover,.form-submit:hover{background:var(--gold-deep) !important;}
+.btn{padding:17px 30px;font-size:16.5px;}
+.service-index{border-radius:0 !important;background:var(--gold) !important;color:#fff !important;border-color:var(--gold) !important;}
+.ledger-tab{clip-path:none !important;border-radius:0 !important;}
+.service-price .amount,.results-metric-value,.ledger-foot .total-value{font-family:'JetBrains Mono',monospace;}
+
+/* dark bands keep gold labels */
+.cta-band,.quote-block,.results-strip,.panel.featured{background:var(--khaki-deep) !important;}
+.cta-band .section-label{color:var(--gold-light) !important;}
+.cta-band .section-label::before{background:var(--gold-light) !important;}
+.quote-block{border-left:3px solid var(--gold) !important;}
+
+/* links */
+a{color:inherit;}
+main a:not(.btn):not(.nav-cta):not(.service-enquire):not([class*="cs-"]):hover{color:var(--gold-deep);}
+
+/* ---------- Footer ---------- */
+footer{background:var(--ink);color:#CFCBB8;padding:52px 0 26px !important;border-top:3px solid var(--gold);}
+footer .footer-cols{display:grid;grid-template-columns:repeat(2,1fr);gap:26px;}
+@media(min-width:760px){footer .footer-cols{grid-template-columns:repeat(3,1fr);}}
+@media(min-width:1040px){footer .footer-cols{grid-template-columns:repeat(6,1fr);}}
+footer .footer-col h4{
+  font-family:'JetBrains Mono',monospace;font-size:10.5px;font-weight:700;
+  letter-spacing:0.09em;text-transform:uppercase;color:var(--gold-light) !important;margin-bottom:12px;
+}
+footer .footer-col a{display:block;font-size:14px;padding:6px 0;color:#CFCBB8 !important;}
+footer .footer-col a:hover{color:var(--gold-light) !important;}
+footer .footer-bottom{
+  border-top:1px solid rgba(255,255,255,0.12) !important;padding-top:20px;margin-top:8px;
+  font-size:12px;color:#8C8871;display:flex;flex-direction:column;gap:14px;align-items:flex-start;
+}
+@media(min-width:760px){footer .footer-bottom{flex-direction:row;justify-content:space-between;align-items:center;}}
+footer .footer-logo{height:52px;width:auto;display:block;margin-bottom:18px;}
+footer .social-icon.email svg{fill:#8C8871;}
+
+/* ---------- Cookie banner ---------- */
+.cookie-banner{background:var(--ink) !important;border-top:2px solid var(--gold) !important;}
+.cookie-accept{background:var(--gold) !important;border-radius:0 !important;color:#fff !important;}
+.cookie-reject{border-radius:0 !important;}
+</style>
 </head>
 <body>
 <!-- Google Tag Manager (noscript) -->
@@ -256,46 +536,71 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 <header>
   <div class="nav-row">
-    <a href="/" class="logo">
-      <img src="/assets/logo.webp" alt="JWC Performance" style="height:68px;width:auto;display:block;" width="122" height="68" onerror="this.src='/assets/logo.webp'">
+    <a href="/" class="logo" aria-label="JWC Performance home">
+      <img src="/assets/logo.webp" alt="JWC Performance" width="122" height="68">
     </a>
     <nav class="desktop-nav">
-      <div class="nav-dropdown">
-        <a href="/#services">Services</a>
-        <div class="dropdown-menu">
-          <a href="/services/google-ads-audit">Google Ads Audit</a>
-          <a href="/services/account-management">Account Management</a>
-          <a href="/services/new-account-build">New Account Build</a>
-          <a href="/services/account-restructure">Account Restructure</a>
-          <a href="/services/website-design">Website Design &amp; Build</a>
+      <div class="nav2 has-sub">
+        <a href="#services-menu" aria-haspopup="true">Services</a>
+        <div class="nav2-mega">
+          <div class="nav2-col">
+            <a href="/services/google-ads" class="nav2-col-head">Google Ads</a>
+            <a href="/services/google-ads-audit">Google Ads Audit</a>
+            <a href="/services/account-management">Account Management</a>
+            <a href="/services/new-account-build">New Account Build</a>
+            <a href="/services/account-restructure">Account Restructure</a>
+          </div>
+          <div class="nav2-col">
+            <a href="/services/seo" class="nav2-col-head">SEO</a>
+            <a href="/services/technical-seo">Technical SEO</a>
+            <a href="/services/local-seo">Local SEO</a>
+            <a href="/services/on-page-seo">On-Page SEO</a>
+            <a href="/services/content">Content</a>
+          </div>
+          <div class="nav2-col">
+            <a href="/services/websites" class="nav2-col-head">Websites</a>
+            <a href="/services/website-design">Website Design</a>
+            <a href="/services/website-development">Website Development</a>
+            <a href="/services/website-hosting">Hosting</a>
+          </div>
         </div>
       </div>
-      <div class="nav-dropdown">
+      <div class="nav2 has-sub">
         <a href="/google-ads-b2b">Sectors</a>
-        <div class="dropdown-menu">
+        <div class="nav2-menu">
           <a href="/google-ads-b2b">Google Ads for B2B</a>
           <a href="/google-ads-b2c">Google Ads for B2C</a>
         </div>
       </div>
-      <div class="nav-dropdown">
+      <div class="nav2 has-sub">
         <a href="/ppc-consultant-london">Locations</a>
-        <div class="dropdown-menu">
+        <div class="nav2-menu">
           <a href="/ppc-consultant-london">London</a>
           <a href="/ppc-consultant-bromley">Bromley</a>
           <a href="/ppc-consultant-croydon">Croydon</a>
           <a href="/ppc-consultant-kent">Kent</a>
           <a href="/ppc-consultant-surrey">Surrey</a>
+          <a href="/ppc-consultant-beckenham">Beckenham</a>
+          <a href="/ppc-consultant-dartford">Dartford</a>
+          <a href="/ppc-consultant-lewisham">Lewisham</a>
         </div>
       </div>
-      <div class="nav-dropdown"><a href="/about">About</a><div class="dropdown-menu"><a href="/about">About Joe</a><a href="/process">How Joe works</a><a href="/faq">FAQ</a></div></div>
-      <div class="nav-dropdown">
+      <div class="nav2 has-sub">
+        <a href="/about">About</a>
+        <div class="nav2-menu">
+          <a href="/about">About Joe</a>
+          <a href="/process">How Joe works</a>
+          <a href="/faq">FAQ</a>
+        </div>
+      </div>
+      <div class="nav2 has-sub">
         <a href="/case-studies/google-ads">Case studies</a>
-        <div class="dropdown-menu">
+        <div class="nav2-menu">
           <a href="/case-studies/google-ads">Google Ads</a>
           <a href="/case-studies/website-design">Website Design &amp; Build</a>
         </div>
       </div>
-      <a href="/blog/">Blog</a>
+      <div class="nav2"><a href="/blog/">Blog</a></div>
     </nav>
     <a href="tel:07848522456" class="nav-phone" style="display:none;" aria-label="Call 07848 522456" title="Call 07848 522456">
       <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.24.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
@@ -306,29 +611,41 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     </button>
   </div>
   <div class="mobile-menu" id="mobileMenu">
-    <a href="/#services" style="font-weight:700;color:var(--gold-deep);">Services</a>
-    <a href="/services/google-ads-audit" style="padding-left:36px;font-size:14px;">→ Google Ads Audit</a>
-    <a href="/services/account-management" style="padding-left:36px;font-size:14px;">→ Account Management</a>
-    <a href="/services/new-account-build" style="padding-left:36px;font-size:14px;">→ New Account Build</a>
-    <a href="/services/account-restructure" style="padding-left:36px;font-size:14px;">→ Account Restructure</a>
-    <a href="/services/website-design" style="padding-left:36px;font-size:14px;">→ Website Design &amp; Build</a>
-    <a href="/google-ads-b2b" style="font-weight:700;color:var(--gold-deep);">Sectors</a>
-    <a href="/google-ads-b2b" style="padding-left:36px;font-size:14px;">→ Google Ads for B2B</a>
-    <a href="/google-ads-b2c" style="padding-left:36px;font-size:14px;">→ Google Ads for B2C</a>
-    <a href="/ppc-consultant-london" style="font-weight:700;color:var(--gold-deep);">Locations</a>
-    <a href="/ppc-consultant-london" style="padding-left:36px;font-size:14px;">→ London</a>
-    <a href="/ppc-consultant-bromley" style="padding-left:36px;font-size:14px;">→ Bromley</a>
-    <a href="/ppc-consultant-croydon" style="padding-left:36px;font-size:14px;">→ Croydon</a>
-    <a href="/ppc-consultant-kent" style="padding-left:36px;font-size:14px;">→ Kent</a>
-    <a href="/ppc-consultant-surrey" style="padding-left:36px;font-size:14px;">→ Surrey</a>
-    <a href="/about" style="font-weight:700;color:var(--gold-deep);">About</a>
-    <a href="/about" style="padding-left:36px;font-size:14px;">→ About Joe</a>
-    <a href="/process" style="padding-left:36px;font-size:14px;">→ How Joe works</a>
-    <a href="/faq" style="padding-left:36px;font-size:14px;">→ FAQ</a>
-    <a href="/case-studies/google-ads" style="font-weight:700;color:var(--gold-deep);">Case studies</a>
-    <a href="/case-studies/google-ads" style="padding-left:36px;font-size:14px;">→ Google Ads</a>
-    <a href="/case-studies/website-design" style="padding-left:36px;font-size:14px;">→ Website Design &amp; Build</a>
-    <a href="/blog/">Blog</a>
+    <span class="mm-head">Google Ads</span>
+    <a href="/services/google-ads" class="mm-sub">Google Ads overview</a>
+    <a href="/services/google-ads-audit" class="mm-sub">Google Ads Audit</a>
+    <a href="/services/account-management" class="mm-sub">Account Management</a>
+    <a href="/services/new-account-build" class="mm-sub">New Account Build</a>
+    <a href="/services/account-restructure" class="mm-sub">Account Restructure</a>
+    <span class="mm-head">SEO</span>
+    <a href="/services/seo" class="mm-sub">SEO overview</a>
+    <a href="/services/technical-seo" class="mm-sub">Technical SEO</a>
+    <a href="/services/local-seo" class="mm-sub">Local SEO</a>
+    <a href="/services/on-page-seo" class="mm-sub">On-Page SEO</a>
+    <a href="/services/content" class="mm-sub">Content</a>
+    <span class="mm-head">Websites</span>
+    <a href="/services/websites" class="mm-sub">Websites overview</a>
+    <a href="/services/website-design" class="mm-sub">Website Design</a>
+    <a href="/services/website-development" class="mm-sub">Website Development</a>
+    <a href="/services/website-hosting" class="mm-sub">Hosting</a>
+    <span class="mm-head">Sectors</span>
+    <a href="/google-ads-b2b" class="mm-sub">Google Ads for B2B</a>
+    <a href="/google-ads-b2c" class="mm-sub">Google Ads for B2C</a>
+    <span class="mm-head">Locations</span>
+    <a href="/ppc-consultant-london" class="mm-sub">London</a>
+    <a href="/ppc-consultant-bromley" class="mm-sub">Bromley</a>
+    <a href="/ppc-consultant-croydon" class="mm-sub">Croydon</a>
+    <a href="/ppc-consultant-kent" class="mm-sub">Kent</a>
+    <a href="/ppc-consultant-surrey" class="mm-sub">Surrey</a>
+    <a href="/ppc-consultant-beckenham" class="mm-sub">Beckenham</a>
+    <a href="/ppc-consultant-dartford" class="mm-sub">Dartford</a>
+    <a href="/ppc-consultant-lewisham" class="mm-sub">Lewisham</a>
+    <span class="mm-head">More</span>
+    <a href="/about" class="mm-sub">About Joe</a>
+    <a href="/process" class="mm-sub">How Joe works</a>
+    <a href="/faq" class="mm-sub">FAQ</a>
+    <a href="/case-studies/google-ads" class="mm-sub">Case studies</a>
+    <a href="/blog/" class="mm-sub">Blog</a>
     <a href="/contact"><button class="mm-cta">Enquire today</button></a>
   </div>
 </header>
@@ -708,15 +1025,28 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </main>
 
 <footer>
-  <div class="wrap">
+  <div class="wrap footer-grid">
+    <img src="/assets/logo.webp" alt="JWC Performance" class="footer-logo" width="94" height="52">
     <div class="footer-cols">
       <div class="footer-col">
-        <h4>Services</h4>
+        <h4>Google Ads</h4>
         <a href="/services/google-ads-audit">Free account audit</a>
-        <a href="/services/account-management">Account management</a>
         <a href="/services/new-account-build">New account build</a>
         <a href="/services/account-restructure">Account restructure</a>
-        <a href="/services/website-design">Website Design &amp; Build</a>
+        <a href="/services/account-management">Account management</a>
+      </div>
+      <div class="footer-col">
+        <h4>SEO</h4>
+        <a href="/services/technical-seo">Technical SEO</a>
+        <a href="/services/local-seo">Local SEO</a>
+        <a href="/services/on-page-seo">On-Page SEO</a>
+        <a href="/services/content">Content</a>
+      </div>
+      <div class="footer-col">
+        <h4>Websites</h4>
+        <a href="/services/website-design">Website design</a>
+        <a href="/services/website-development">Website development</a>
+        <a href="/services/website-hosting">Hosting</a>
       </div>
       <div class="footer-col">
         <h4>Locations</h4>
@@ -725,11 +1055,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <a href="/ppc-consultant-croydon">Croydon</a>
         <a href="/ppc-consultant-kent">Kent</a>
         <a href="/ppc-consultant-surrey">Surrey</a>
-      </div>
-      <div class="footer-col">
-        <h4>Case studies</h4>
-        <a href="/case-studies/google-ads">Google Ads</a>
-        <a href="/case-studies/website-design">Website Design &amp; Build</a>
+        <a href="/ppc-consultant-beckenham">Beckenham</a>
+        <a href="/ppc-consultant-dartford">Dartford</a>
+        <a href="/ppc-consultant-lewisham">Lewisham</a>
       </div>
       <div class="footer-col">
         <h4>More</h4>
@@ -737,13 +1065,14 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <a href="/process">How it works</a>
         <a href="/blog/">Blog</a>
         <a href="/faq">FAQ</a>
+        <a href="/case-studies/google-ads">Case studies</a>
         <a href="/cookie-policy">Cookie policy</a>
         <a href="/privacy-policy">Privacy policy</a>
       </div>
       <div class="footer-col">
         <h4>Get in touch</h4>
-        <a href="tel:07848522456">Call</a>
-        <a href="mailto:Enquiries%20%3Cenquiries@jwcperformance.co.uk%3E">Email</a>
+        <a href="tel:07848522456">07848 522456</a>
+        <a href="mailto:enquiries@jwcperformance.co.uk">enquiries@jwcperformance.co.uk</a>
         <a href="/services/google-ads-audit">Free audit</a>
         <a href="/contact">Contact form</a>
       </div>
@@ -751,7 +1080,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <div class="footer-bottom">
       <span>© 2026 JWC Performance. Google Ads specialist for UK businesses.</span>
       <div class="social-icons">
-        <a href="mailto:Enquiries%20%3Cenquiries@jwcperformance.co.uk%3E" class="social-icon email" aria-label="Email" title="Email">
+        <a href="mailto:enquiries@jwcperformance.co.uk" class="social-icon email" aria-label="Email" title="Email">
           <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
         </a>
         <a href="https://wa.me/447399600473" class="social-icon whatsapp jwc-whatsapp" aria-label="WhatsApp" title="WhatsApp">
@@ -863,5 +1192,28 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   })();
 </script>
 
+<script>
+/* JWC nav — dropdown panels (burger is handled by each page's existing script) */
+(function(){
+  document.querySelectorAll('.nav2.has-sub > a').forEach(function(link){
+    link.addEventListener('click', function(e){
+      if(window.innerWidth < 920) return;
+      e.preventDefault();
+      var item = link.parentNode;
+      var wasOpen = item.classList.contains('open');
+      document.querySelectorAll('.nav2').forEach(function(n){ n.classList.remove('open'); });
+      if(!wasOpen) item.classList.add('open');
+    });
+  });
+  document.addEventListener('click', function(e){
+    if(!e.target.closest('.nav2')){
+      document.querySelectorAll('.nav2').forEach(function(n){ n.classList.remove('open'); });
+    }
+  });
+  document.addEventListener('keydown', function(e){
+    if(e.key === 'Escape') document.querySelectorAll('.nav2').forEach(function(n){ n.classList.remove('open'); });
+  });
+})();
+</script>
 </body>
 </html>
