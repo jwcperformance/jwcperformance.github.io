@@ -993,7 +993,7 @@ footer .footer-bottom{
   font-size:12px;color:#8C8871;display:flex;flex-direction:column;gap:14px;align-items:flex-start;
 }
 @media(min-width:760px){footer .footer-bottom{flex-direction:row;justify-content:space-between;align-items:center;}}
-footer .footer-logo{height:80px;width:auto;display:block;margin-bottom:18px;}
+footer .footer-logo{height:80px;width:auto;max-width:none;flex:0 0 auto;align-self:flex-start;object-fit:contain;display:block;margin-bottom:18px;}
 footer .social-icon.email svg{fill:#8C8871;}
 
 /* ---------- Cookie banner ---------- */
@@ -1021,6 +1021,20 @@ footer .social-icon.email svg{fill:#8C8871;}
   }
   .jwc-hero-body{min-height:560px;max-width:1180px;display:flex;flex-direction:column;justify-content:center;padding:72px 20px;}
 }
+
+/* ---------- Homepage service groups ---------- */
+.jwc-home-services{display:grid;grid-template-columns:1fr;gap:1px;background:var(--line-strong);border:1px solid var(--line-strong);}
+@media(min-width:900px){.jwc-home-services{grid-template-columns:repeat(3,1fr);}}
+.jwc-home-service{background:var(--paper);padding:30px 26px;display:flex;flex-direction:column;gap:14px;}
+.jwc-hs-index{font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:600;letter-spacing:0.08em;color:var(--gold-deep);}
+.jwc-home-service h3{font-size:24px;font-weight:800;letter-spacing:-0.02em;margin:0;}
+.jwc-home-service > p{font-size:14.5px;color:var(--muted);margin:0;}
+.jwc-hs-list{list-style:none;margin:6px 0 0;padding:0;border-top:1px solid var(--line);}
+.jwc-hs-list li{border-bottom:1px solid var(--line);}
+.jwc-hs-list a{display:flex;justify-content:space-between;align-items:baseline;gap:12px;padding:12px 0;font-size:14.5px;font-weight:600;color:var(--ink);}
+.jwc-hs-list a:hover{color:var(--gold-deep);}
+.jwc-hs-list a span{font-family:'JetBrains Mono',monospace;font-size:13px;font-weight:700;color:var(--gold-deep);white-space:nowrap;}
+.jwc-hs-link{font-family:'JetBrains Mono',monospace;font-size:12px;font-weight:700;letter-spacing:0.05em;text-transform:uppercase;color:var(--gold-deep);border-bottom:1px solid var(--gold);padding-bottom:2px;align-self:flex-start;margin-top:auto;}
 </style>
 </head>
 <body>
@@ -1210,117 +1224,47 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="wrap">
       <div class="section-head">
         <div class="section-label">01 · Services</div>
-        <h2>Five Google Ads services. One fixed price for each.</h2>
+        <h2>Three areas of work. Fixed fees on all of them.</h2>
         <p class="section-sub">No bundled retainers, no "it depends" pricing. Every service has a fixed fee agreed in writing before any work begins, plus a free no-obligation audit to start.</p>
       </div>
 
-      <div class="service-file">
-        <div class="service-head">
-          <span class="service-index">01</span>
-          <span class="service-title">Google Ads account audit</span>
+      <div class="jwc-home-services">
+        <div class="jwc-home-service">
+          <span class="jwc-hs-index">01</span>
+          <h3><a href="/services/google-ads">Google Ads</a></h3>
+          <p>Audits, new account builds, restructures and ongoing management. Fifteen years of paid media, run by the person you speak to.</p>
+          <ul class="jwc-hs-list">
+            <li><a href="/services/google-ads-audit">Google Ads audit <span>Free</span></a></li>
+            <li><a href="/services/new-account-build">New account build <span>£1,000</span></a></li>
+            <li><a href="/services/account-restructure">Account restructure <span>£1,500</span></a></li>
+            <li><a href="/services/account-management">Account management <span>£60/hr</span></a></li>
+          </ul>
+          <a href="/services/google-ads" class="jwc-hs-link">All Google Ads services →</a>
         </div>
-        <div class="service-body">
-          <p class="service-desc">A thorough, no-obligation review of your Google Ads account covering account structure, search relevance, location performance, demographic performance, tracking, ads &amp; content and landing page quality. Delivered as a PowerPoint presentation with quick wins, a long-term strategy and predicted improvements.</p>
-          <div class="service-tags">
-            <span class="tag">Account structure</span>
-            <span class="tag">Search relevance</span>
-            <span class="tag">Location &amp; demographic</span>
-            <span class="tag">Tracking review</span>
-            <span class="tag">Ads &amp; content</span>
-            <span class="tag">Landing page</span>
-            <span class="tag">5 working days</span>
-          </div>
-          <div class="service-price-row">
-            <span class="service-price">
-              <span class="from">Completely free · no obligation</span>
-              <span class="amount" style="color:var(--gold-deep);">Free</span>
-            </span>
-            <a href="/services/google-ads-audit" class="service-enquire">Find out more →</a>
-          </div>
-        </div>
-      </div>
 
-      <div class="service-file">
-        <div class="service-head">
-          <span class="service-index">02</span>
-          <span class="service-title">Account management</span>
+        <div class="jwc-home-service">
+          <span class="jwc-hs-index">02</span>
+          <h3><a href="/services/seo">SEO</a></h3>
+          <p>The long game alongside paid search: fixing what stops Google reading your site, then earning the rankings that keep working after the budget stops.</p>
+          <ul class="jwc-hs-list">
+            <li><a href="/services/technical-seo">Technical SEO <span>On enquiry</span></a></li>
+            <li><a href="/services/local-seo">Local SEO <span>On enquiry</span></a></li>
+            <li><a href="/services/on-page-seo">On-Page SEO <span>On enquiry</span></a></li>
+            <li><a href="/services/content">Content <span>On enquiry</span></a></li>
+          </ul>
+          <a href="/services/seo" class="jwc-hs-link">All SEO services →</a>
         </div>
-        <div class="service-body">
-          <p class="service-desc">Hands-on day-to-day management of your Google Ads account, optimising bids, refining targeting, testing ad copy and keeping performance moving in the right direction. Available on an hourly or day-rate basis, no long-term contract required.</p>
-          <div class="service-tags">
-            <span class="tag">Flexible</span>
-            <span class="tag">No lock-in</span>
-            <span class="tag">Direct access</span>
-          </div>
-          <div class="service-price-row">
-            <span class="service-price"><span class="from">Hourly or day rate</span><span class="amount">£60/hr · £400/day</span></span>
-            <a href="/services/account-management" class="service-enquire">Find out more →</a>
-          </div>
-        </div>
-      </div>
 
-      <div class="service-file">
-        <div class="service-head">
-          <span class="service-index">03</span>
-          <span class="service-title">New Google Ads account build</span>
-        </div>
-        <div class="service-body">
-          <p class="service-desc">Starting from scratch? I'll build a Google Ads account from the ground up: campaign structure, keyword identification, ad copy creation, tracking setup, plus a competitor and market review so your account launches in the right position, not just a live one.</p>
-          <div class="service-tags">
-            <span class="tag">Campaign structure</span>
-            <span class="tag">Keyword research</span>
-            <span class="tag">Ad copy</span>
-            <span class="tag">Tracking setup</span>
-            <span class="tag">Competitor review</span>
-            <span class="tag">Up to 5 working days</span>
-          </div>
-          <div class="service-price-row">
-            <span class="service-price"><span class="from">One-off, fixed fee</span><span class="amount">£1,000</span></span>
-            <a href="/services/new-account-build" class="service-enquire">Find out more →</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="service-file">
-        <div class="service-head">
-          <span class="service-index">04</span>
-          <span class="service-title">Account restructure</span>
-        </div>
-        <div class="service-body">
-          <p class="service-desc">Everything in a new account build, plus a full analysis of your existing account: what's been working, what hasn't, and why. Your account rebuilt on solid foundations with the context of its history, not starting blind.</p>
-          <div class="service-tags">
-            <span class="tag">Full account analysis</span>
-            <span class="tag">Campaign rebuild</span>
-            <span class="tag">Keyword research</span>
-            <span class="tag">Ad copy</span>
-            <span class="tag">Tracking review</span>
-            <span class="tag">Up to 5 working days</span>
-          </div>
-          <div class="service-price-row">
-            <span class="service-price"><span class="from">One-off, fixed fee</span><span class="amount">£1,500</span></span>
-            <a href="/services/account-restructure" class="service-enquire">Find out more →</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="service-file">
-        <div class="service-head">
-          <span class="service-index">05</span>
-          <span class="service-title">Website design &amp; build</span>
-        </div>
-        <div class="service-body">
-          <p class="service-desc">A fast, professional website designed to capture leads and grow your business online. Mobile-first, clearly structured, with lead forms, analytics and conversion tracking set up correctly from day one. Hosted free on Cloudflare, with no monthly platform fees.</p>
-          <div class="service-tags">
-            <span class="tag">Mobile-first</span>
-            <span class="tag">Lead forms included</span>
-            <span class="tag">GTM + GA4</span>
-            <span class="tag">Free hosting</span>
-            <span class="tag">Full handover</span>
-          </div>
-          <div class="service-price-row">
-            <span class="service-price"><span class="from">From · price agreed at scoping call</span><span class="amount">£1,000+</span></span>
-            <a href="/services/website-design" class="service-enquire">Find out more →</a>
-          </div>
+        <div class="jwc-home-service">
+          <span class="jwc-hs-index">03</span>
+          <h3><a href="/services/websites">Websites</a></h3>
+          <p>Design, development and hosting. Mobile-first, lead forms that work, conversion tracking set up correctly from day one.</p>
+          <ul class="jwc-hs-list">
+            <li><a href="/services/website-design">Website design <span>£1,000+</span></a></li>
+            <li><a href="/services/website-development">Website development <span>On enquiry</span></a></li>
+            <li><a href="/services/website-hosting">Hosting <span>Free</span></a></li>
+          </ul>
+          <a href="/services/websites" class="jwc-hs-link">All website services →</a>
         </div>
       </div>
     </div>
