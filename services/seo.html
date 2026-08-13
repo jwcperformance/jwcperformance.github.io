@@ -31,7 +31,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 })(window,document,'script','dataLayer','GTM-5HCM3QFH');</script>
 <!-- End Google Tag Manager -->
 <title>SEO Services | Technical, Local, On-Page &amp; Content | JWC Performance</title>
-<meta name="description" content="SEO services scoped and priced upfront: technical SEO, local SEO, on-page SEO and content. No retainers, no long-term contracts.">
+<meta name="description" content="SEO services scoped and priced upfront: technical SEO, local SEO, on-page SEO and content. Fixed fee, no retainers, no long-term contracts.">
 <link rel="canonical" href="https://www.jwcperformance.co.uk/services/seo">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -124,7 +124,118 @@ footer{padding:52px 0 26px;}
 .cookie-accept{background:#B6862A;color:#fff;border:none;padding:12px 24px;font-weight:700;font-size:14.5px;cursor:pointer;font-family:inherit;}
 .cookie-reject{background:transparent;color:#C7C3AC;border:1px solid rgba(255,255,255,0.2);padding:10px 20px;font-weight:600;font-size:13.5px;cursor:pointer;font-family:inherit;}
 @media(min-width:760px){.cookie-banner{flex-direction:row;align-items:center;justify-content:space-between;}.cookie-banner-text{max-width:640px;}}
+
+/* --- Added: breadcrumb, diff-grid, problem list, sectors, callout, faq, prose --- */
+.breadcrumb{font-family:'JetBrains Mono',monospace;font-size:11.5px;color:#6A6753;margin-bottom:16px;display:flex;align-items:center;gap:8px;}
+.breadcrumb a{color:#6A6753;}
+.prose p{font-size:15.5px;color:#6A6753;margin-bottom:18px;max-width:720px;}
+.prose p:last-child{margin-bottom:0;}
+.prose strong{color:#23241D;}
+
+.diff-grid{display:grid;grid-template-columns:1fr;gap:1px;background:#C7C0A7;border:1px solid #C7C0A7;}
+@media(min-width:680px){.diff-grid{grid-template-columns:repeat(2,1fr);}}
+.diff-item{background:#F6F4ED;padding:24px;}
+.diff-item-label{font-family:'JetBrains Mono',monospace;font-size:10.5px;text-transform:uppercase;letter-spacing:0.05em;color:#8A6418;font-weight:600;margin-bottom:8px;}
+.diff-item h3{font-size:16px;font-weight:700;margin-bottom:8px;}
+.diff-item p{font-size:14px;color:#6A6753;}
+
+.problems-list{display:flex;flex-direction:column;}
+.problem-row{display:flex;gap:16px;padding:20px 0;border-top:1px solid #DDD8C7;align-items:flex-start;}
+.problem-row:first-child{border-top:none;}
+.problem-num{font-family:'JetBrains Mono',monospace;font-size:12px;font-weight:700;color:#8A6418;flex-shrink:0;padding-top:2px;width:24px;}
+.problem-title{font-size:15.5px;font-weight:700;margin-bottom:5px;}
+.problem-desc{font-size:14.5px;color:#6A6753;}
+
+.sectors-wrap{display:flex;flex-wrap:wrap;gap:8px;margin-top:20px;}
+.sector-tag{font-family:'JetBrains Mono',monospace;font-size:11.5px;font-weight:600;color:#23241D;background:#ECE7D8;border:1px solid #C7C0A7;padding:6px 14px;}
+
+.callout{background:#ECE7D8;border-left:4px solid #B6862A;padding:20px 24px;margin:28px 0;}
+.callout p{font-size:15px;color:#6A6753;margin-bottom:0;}
+.callout strong{color:#23241D;}
+
+.faq-list{display:flex;flex-direction:column;}
+.faq-row{padding:20px 0;border-top:1px solid #DDD8C7;}
+.faq-row:first-child{border-top:none;}
+.faq-q{font-size:16px;font-weight:700;margin-bottom:8px;font-family:'Manrope',sans-serif;}
+.faq-a{font-size:14.5px;color:#6A6753;}
+
+/* --- Enquiry form --- */
+.form-section{background:#3D3E2F;color:#F6F4ED;padding:56px 0;border-bottom:none;}
+.form-section .section-label{color:#B6862A;}
+.form-section .section-label::before{background:#B6862A;}
+.form-section h2{color:#F6F4ED;}
+.form-section .section-sub{color:#C7C3AC;}
+.form-grid{display:grid;grid-template-columns:1fr;gap:24px;margin-top:28px;}
+@media (min-width:820px){.form-grid{grid-template-columns:1fr 1.4fr;}}
+.form-meta{display:flex;flex-direction:column;}
+.form-meta-item{padding:14px 0;border-top:1px solid rgba(237,233,216,0.18);font-size:13.5px;}
+.form-meta-item:first-child{border-top:none;}
+.form-meta-item .k{font-family:'JetBrains Mono',monospace;font-size:10.5px;text-transform:uppercase;letter-spacing:0.05em;color:#A8A48F;display:block;margin-bottom:4px;}
+.form-meta-item .v{font-weight:600;}
+.form-card{background:#F6F4ED;color:#23241D;padding:24px;border-radius:4px;}
+.form-row{margin-bottom:14px;}
+.form-row label{display:block;font-size:12px;font-weight:600;color:#6A6753;margin-bottom:6px;text-transform:uppercase;letter-spacing:0.03em;}
+.form-row input,.form-row select,.form-row textarea{width:100%;border:1px solid #C7C0A7;background:#F6F4ED;padding:11px 12px;font-size:14.5px;font-family:inherit;color:#23241D;border-radius:3px;}
+.form-row textarea{min-height:80px;resize:vertical;}
+.form-row input:focus,.form-row select:focus,.form-row textarea:focus{outline:2px solid #8A6418;outline-offset:1px;border-color:#8A6418;}
+.form-row-2{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
+.form-submit{width:100%;background:#B6862A;color:#ffffff;border:none;padding:18px;font-weight:700;font-size:16px;border-radius:3px;cursor:pointer;margin-top:4px;}
+.form-note{font-size:12px;color:#6A6753;margin-top:10px;text-align:center;}
+.form-success{display:none;background:#F6F4ED;padding:32px;text-align:center;border-radius:4px;}
+.form-success.visible{display:block;}
+.form-success .success-icon{width:48px;height:48px;background:#B6862A;border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 16px;font-size:22px;}
+.form-success h3{font-family:'Manrope',sans-serif;font-size:22px;font-weight:700;color:#23241D;margin-bottom:8px;}
+.form-success p{font-size:14.5px;color:#6A6753;}
+
 </style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Do I need all four SEO services, or can I just take one?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Just one is fine. Each area is scoped and quoted separately, so you can start with whichever is the biggest gap and add others later if it makes sense."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Which SEO service should I start with?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A technical review is usually the right first step, since it tells you what is worth fixing before spending on content or on-page work. If your site is technically sound already, on-page or content is often the better starting point."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How long does SEO take to show results?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It depends on the starting point and how competitive your industry is, but most clients start seeing meaningful movement within three to six months. Local SEO tends to move faster than broader organic rankings."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How much does SEO cost?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Every service is a fixed fee, scoped against your specific site rather than a flat rate for everyone. Get in touch for a quote once the scope of work is understood."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you offer ongoing SEO retainers?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Not in the traditional sense. Work is scoped and quoted as defined projects. Many clients do come back for further rounds as their site and goals evolve, but each round is agreed on its own terms rather than running on an open ended monthly fee."
+      }
+    }
+  ]
+}
+</script>
 <style id="jwc-2a">
 /* ============================================================
    JWC Performance — 2a theme layer
@@ -534,22 +645,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
   <section class="page-hero">
     <div class="wrap">
+      <div class="breadcrumb"><a href="/">Home</a> / Services / SEO</div>
       <div class="eyebrow">Services · SEO</div>
       <h1>SEO on the same terms as everything else: fixed scope, fixed fee.</h1>
       <p class="hero-sub">Four areas of SEO work, quoted before anything starts. Useful alongside Google Ads, or on its own if paid search is not where you want to spend.</p>
       <div class="hero-ctas">
         <a href="/contact" class="btn btn-primary">Enquire about SEO</a>
-        <a href="/services/google-ads-audit" class="btn btn-secondary">See what an audit covers</a>
       </div>
-    </div>
-  </section>
-
-  <section>
-    <div class="wrap" style="max-width:820px;">
-      <div class="notice">
-        <span class="notice-label">In progress</span>
-        <p>The individual SEO service pages are being written. The outline below is accurate, and pricing is available on enquiry in the meantime.</p>
-      </div>
+      <p style="margin-top:12px;font-size:14px;color:#6A6753;">Or call: <a href="tel:07848522456" style="color:#8A6418;font-weight:600;font-family:'JetBrains Mono',monospace;">07848 522456</a></p>
     </div>
   </section>
 
@@ -604,11 +707,56 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div class="block dark">
           <h3>Not sure where to start?</h3>
           <p>A technical review is usually the right first step. It tells you what is worth fixing before you spend on content.</p>
-          <a href="/contact" class="btn btn-primary" style="margin-top:6px;">Ask about a review</a>
+          <a href="/contact" class="btn btn-primary" style="margin-top:6px;">Enquire today</a>
         </div>
       </div>
     </div>
   </section>
+
+  <!-- HOW SEO AND GOOGLE ADS FIT TOGETHER -->
+  <section style="background:#ECE7D8;">
+    <div class="wrap" style="max-width:820px;">
+      <div class="section-label">SEO and Google Ads</div>
+      <h2>Two different channels, often stronger together.</h2>
+      <div class="prose">
+        <p>Google Ads gets you in front of people immediately, for as long as you keep paying for clicks. SEO takes longer to build, but keeps working without an ongoing cost per click once a page is ranking well. Neither replaces the other, and businesses that rely on just one are usually leaving something on the table.</p>
+        <p>Technical SEO work in particular tends to improve Google Ads performance too, since landing page speed and quality feed directly into Quality Score, which affects how much you pay per click. It is common for a technical review to pay for part of itself through lower ad costs alone.</p>
+      </div>
+      <a href="/services/google-ads" class="btn btn-secondary">See Google Ads services</a>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section style="background:#F6F4ED;">
+    <div class="wrap">
+      <div class="section-label">Common questions</div>
+      <h2>Questions about SEO services.</h2>
+      <p class="section-sub">Answers to what comes up most often before an SEO project begins.</p>
+      <div class="faq-list">
+        <div class="faq-row">
+          <p class="faq-q">Do I need all four SEO services, or can I just take one?</p>
+          <p class="faq-a">Just one is fine. Each area is scoped and quoted separately, so you can start with whichever is the biggest gap and add others later if it makes sense.</p>
+        </div>
+        <div class="faq-row">
+          <p class="faq-q">Which SEO service should I start with?</p>
+          <p class="faq-a">A technical review is usually the right first step, since it tells you what is worth fixing before spending on content or on-page work. If your site is technically sound already, on-page or content is often the better starting point.</p>
+        </div>
+        <div class="faq-row">
+          <p class="faq-q">How long does SEO take to show results?</p>
+          <p class="faq-a">It depends on the starting point and how competitive your industry is, but most clients start seeing meaningful movement within three to six months. Local SEO tends to move faster than broader organic rankings.</p>
+        </div>
+        <div class="faq-row">
+          <p class="faq-q">How much does SEO cost?</p>
+          <p class="faq-a">Every service is a fixed fee, scoped against your specific site rather than a flat rate for everyone. Get in touch and I will give you a proper quote once I have looked at what is actually involved.</p>
+        </div>
+        <div class="faq-row">
+          <p class="faq-q">Do you offer ongoing SEO retainers?</p>
+          <p class="faq-a">Not in the traditional sense. Work is scoped and quoted as defined projects. Many clients do come back for further rounds as their site and goals evolve, but each round is agreed on its own terms rather than running on an open ended monthly fee.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <section class="cta-band">
     <div class="wrap">
       <div class="section-head">
@@ -619,6 +767,80 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <div class="hero-ctas" style="margin-top:0;">
         <a href="/contact" class="btn btn-primary">Get in touch</a>
         <a href="tel:07848522456" class="btn btn-secondary" style="border-color:rgba(246,244,237,0.45);color:#F6F4ED;">Call 07848 522456</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="form-section" id="enquire">
+    <div class="wrap">
+      <div class="section-label">Get in touch</div>
+      <h2>Tell me about your site.</h2>
+      <p class="section-sub">Fill in the form and I'll come back within one working day to discuss what's involved.</p>
+
+      <div class="form-grid">
+        <div class="form-meta">
+          <div class="form-meta-item">
+            <span class="k">Response time</span>
+            <span class="v">Within 1 working day</span>
+          </div>
+          <div class="form-meta-item">
+            <span class="k">Service</span>
+            <span class="v">SEO, all areas</span>
+          </div>
+          <div class="form-meta-item">
+            <span class="k">Terms</span>
+            <span class="v">Fixed fee, agreed before work starts</span>
+          </div>
+          <div class="form-meta-item">
+            <span class="k">Email</span>
+            <a class="v" href="mailto:Enquiries%20%3Cenquiries@jwcperformance.co.uk%3E" style="border-bottom:1px solid #B6862A;padding-bottom:1px;">enquiries@jwcperformance.co.uk</a>
+          </div>
+        </div>
+
+        <form class="form-card" id="seoHubForm" method="POST" action="https://formspree.io/f/mnjknpkk">
+          <input type="hidden" name="_subject" value="New enquiry: JWC Performance">
+          <input type="text" name="_gotcha" style="display:none">
+          <div class="form-row-2">
+            <div class="form-row">
+              <label for="seohub-name">Your name</label>
+              <input type="text" id="seohub-name" name="name" required>
+            </div>
+            <div class="form-row">
+              <label for="seohub-company">Company</label>
+              <input type="text" id="seohub-company" name="company">
+            </div>
+          </div>
+          <div class="form-row">
+            <label for="seohub-email">Email address</label>
+            <input type="email" id="seohub-email" name="email" required>
+          </div>
+          <div class="form-row">
+            <label for="seohub-website">Website URL</label>
+            <input type="url" id="seohub-website" name="website" placeholder="https://...">
+          </div>
+          <div class="form-row">
+            <label for="seohub-need">Which service?</label>
+            <select id="seohub-need" name="need">
+              <option>Not sure yet, would like advice</option>
+              <option>Technical SEO</option>
+              <option>Local SEO</option>
+              <option>On-Page SEO</option>
+              <option>Content</option>
+              <option>More than one of the above</option>
+            </select>
+          </div>
+          <div class="form-row">
+            <label for="seohub-notes">Tell me about your site and goals</label>
+            <textarea id="seohub-notes" name="notes" placeholder="Current setup, what's working, what isn't, what you're trying to achieve..."></textarea>
+          </div>
+          <button type="submit" class="form-submit" id="seoHubSubmit">Send enquiry</button>
+          <p class="form-note">No obligation. I'll come back within one working day.</p>
+        </form>
+        <div class="form-success" id="seoHubSuccess">
+          <div class="success-icon">✓</div>
+          <h3>Enquiry received.</h3>
+          <p>I'll be in touch within one working day to discuss your site and goals.</p>
+        </div>
       </div>
     </div>
   </section>
@@ -765,6 +987,35 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     });
   }
 })();
+</script>
+<script>
+  var seoHubForm = document.getElementById('seoHubForm');
+  if(seoHubForm){
+    seoHubForm.addEventListener('submit', function(e){
+      e.preventDefault();
+      var btn = document.getElementById('seoHubSubmit');
+      btn.textContent = 'Sending...';
+      btn.disabled = true;
+      fetch(seoHubForm.action, {
+        method: 'POST',
+        body: new FormData(seoHubForm),
+        headers: { 'Accept': 'application/json' }
+      }).then(function(res){
+        if(res.ok){
+          seoHubForm.style.display = 'none';
+          document.getElementById('seoHubSuccess').classList.add('visible');
+        } else {
+          btn.textContent = 'Send enquiry';
+          btn.disabled = false;
+          alert('Something went wrong. Please try again or email enquiries@jwcperformance.co.uk');
+        }
+      }).catch(function(){
+        btn.textContent = 'Send enquiry';
+        btn.disabled = false;
+        alert('Something went wrong. Please try again or email enquiries@jwcperformance.co.uk');
+      });
+    });
+  }
 </script>
 <script src="/assets/config.js" defer></script>
 </body>
