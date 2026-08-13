@@ -124,7 +124,118 @@ footer{padding:52px 0 26px;}
 .cookie-accept{background:#B6862A;color:#fff;border:none;padding:12px 24px;font-weight:700;font-size:14.5px;cursor:pointer;font-family:inherit;}
 .cookie-reject{background:transparent;color:#C7C3AC;border:1px solid rgba(255,255,255,0.2);padding:10px 20px;font-weight:600;font-size:13.5px;cursor:pointer;font-family:inherit;}
 @media(min-width:760px){.cookie-banner{flex-direction:row;align-items:center;justify-content:space-between;}.cookie-banner-text{max-width:640px;}}
+
+/* --- Added: breadcrumb, diff-grid, problem list, sectors, callout, faq, prose --- */
+.breadcrumb{font-family:'JetBrains Mono',monospace;font-size:11.5px;color:#6A6753;margin-bottom:16px;display:flex;align-items:center;gap:8px;}
+.breadcrumb a{color:#6A6753;}
+.prose p{font-size:15.5px;color:#6A6753;margin-bottom:18px;max-width:720px;}
+.prose p:last-child{margin-bottom:0;}
+.prose strong{color:#23241D;}
+
+.diff-grid{display:grid;grid-template-columns:1fr;gap:1px;background:#C7C0A7;border:1px solid #C7C0A7;}
+@media(min-width:680px){.diff-grid{grid-template-columns:repeat(2,1fr);}}
+.diff-item{background:#F6F4ED;padding:24px;}
+.diff-item-label{font-family:'JetBrains Mono',monospace;font-size:10.5px;text-transform:uppercase;letter-spacing:0.05em;color:#8A6418;font-weight:600;margin-bottom:8px;}
+.diff-item h3{font-size:16px;font-weight:700;margin-bottom:8px;}
+.diff-item p{font-size:14px;color:#6A6753;}
+
+.problems-list{display:flex;flex-direction:column;}
+.problem-row{display:flex;gap:16px;padding:20px 0;border-top:1px solid #DDD8C7;align-items:flex-start;}
+.problem-row:first-child{border-top:none;}
+.problem-num{font-family:'JetBrains Mono',monospace;font-size:12px;font-weight:700;color:#8A6418;flex-shrink:0;padding-top:2px;width:24px;}
+.problem-title{font-size:15.5px;font-weight:700;margin-bottom:5px;}
+.problem-desc{font-size:14.5px;color:#6A6753;}
+
+.sectors-wrap{display:flex;flex-wrap:wrap;gap:8px;margin-top:20px;}
+.sector-tag{font-family:'JetBrains Mono',monospace;font-size:11.5px;font-weight:600;color:#23241D;background:#ECE7D8;border:1px solid #C7C0A7;padding:6px 14px;}
+
+.callout{background:#ECE7D8;border-left:4px solid #B6862A;padding:20px 24px;margin:28px 0;}
+.callout p{font-size:15px;color:#6A6753;margin-bottom:0;}
+.callout strong{color:#23241D;}
+
+.faq-list{display:flex;flex-direction:column;}
+.faq-row{padding:20px 0;border-top:1px solid #DDD8C7;}
+.faq-row:first-child{border-top:none;}
+.faq-q{font-size:16px;font-weight:700;margin-bottom:8px;font-family:'Manrope',sans-serif;}
+.faq-a{font-size:14.5px;color:#6A6753;}
+
+/* --- Enquiry form --- */
+.form-section{background:#3D3E2F;color:#F6F4ED;padding:56px 0;border-bottom:none;}
+.form-section .section-label{color:#B6862A;}
+.form-section .section-label::before{background:#B6862A;}
+.form-section h2{color:#F6F4ED;}
+.form-section .section-sub{color:#C7C3AC;}
+.form-grid{display:grid;grid-template-columns:1fr;gap:24px;margin-top:28px;}
+@media (min-width:820px){.form-grid{grid-template-columns:1fr 1.4fr;}}
+.form-meta{display:flex;flex-direction:column;}
+.form-meta-item{padding:14px 0;border-top:1px solid rgba(237,233,216,0.18);font-size:13.5px;}
+.form-meta-item:first-child{border-top:none;}
+.form-meta-item .k{font-family:'JetBrains Mono',monospace;font-size:10.5px;text-transform:uppercase;letter-spacing:0.05em;color:#A8A48F;display:block;margin-bottom:4px;}
+.form-meta-item .v{font-weight:600;}
+.form-card{background:#F6F4ED;color:#23241D;padding:24px;border-radius:4px;}
+.form-row{margin-bottom:14px;}
+.form-row label{display:block;font-size:12px;font-weight:600;color:#6A6753;margin-bottom:6px;text-transform:uppercase;letter-spacing:0.03em;}
+.form-row input,.form-row select,.form-row textarea{width:100%;border:1px solid #C7C0A7;background:#F6F4ED;padding:11px 12px;font-size:14.5px;font-family:inherit;color:#23241D;border-radius:3px;}
+.form-row textarea{min-height:80px;resize:vertical;}
+.form-row input:focus,.form-row select:focus,.form-row textarea:focus{outline:2px solid #8A6418;outline-offset:1px;border-color:#8A6418;}
+.form-row-2{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
+.form-submit{width:100%;background:#B6862A;color:#ffffff;border:none;padding:18px;font-weight:700;font-size:16px;border-radius:3px;cursor:pointer;margin-top:4px;}
+.form-note{font-size:12px;color:#6A6753;margin-top:10px;text-align:center;}
+.form-success{display:none;background:#F6F4ED;padding:32px;text-align:center;border-radius:4px;}
+.form-success.visible{display:block;}
+.form-success .success-icon{width:48px;height:48px;background:#B6862A;border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 16px;font-size:22px;}
+.form-success h3{font-family:'Manrope',sans-serif;font-size:22px;font-weight:700;color:#23241D;margin-bottom:8px;}
+.form-success p{font-size:14.5px;color:#6A6753;}
+
 </style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Do I need a full new site, or just some fixes?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Not always a full rebuild. If the existing site is fundamentally sound, development work to fix specific issues is often faster and cheaper. Send over the URL and you'll get an honest answer either way."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How much does a new website cost?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Pricing starts from £1,000 depending on the number of pages and complexity involved, agreed properly at a scoping call rather than guessed at upfront."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is hosting really free?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, sites are hosted free on Cloudflare with no monthly platform fees. The only ongoing cost is domain registration, typically under £15 a year, paid directly to a registrar."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Will I be locked into using you for future changes?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. You get full access to the code and own the domain outright, so you're free to make changes yourself or bring in a different developer at any point."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can a website work alongside Google Ads?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Very well, in fact. A site built here works as a standalone site for organic traffic, or as a dedicated landing page for Google Ads, with tracking set up properly either way."
+      }
+    }
+  ]
+}
+</script>
 <style id="jwc-2a">
 /* ============================================================
    JWC Performance — 2a theme layer
@@ -534,13 +645,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
   <section class="page-hero">
     <div class="wrap">
+      <div class="breadcrumb"><a href="/">Home</a> / Services / Websites</div>
       <div class="eyebrow">Services · Websites</div>
       <h1>Websites built to turn visitors into enquiries.</h1>
       <p class="hero-sub">Mobile-first design, lead forms that work, analytics and conversion tracking set up correctly from day one. Hosted free on Cloudflare, with no monthly platform fees.</p>
       <div class="hero-ctas">
-        <a href="/contact" class="btn btn-primary">Get a website quote</a>
-        <a href="/services/google-ads-audit" class="btn btn-secondary">See what an audit covers</a>
+        <a href="/contact" class="btn btn-primary">Enquire Today</a>
       </div>
+      <p style="margin-top:12px;font-size:14px;color:#6A6753;">Or call: <a href="tel:07848522456" style="color:#8A6418;font-weight:600;font-family:'JetBrains Mono',monospace;">07848 522456</a></p>
     </div>
   </section>
 
@@ -585,21 +697,138 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div class="block dark">
           <h3>Already have a site?</h3>
           <p>Send me the URL. I will tell you honestly whether it needs a rebuild or just a few fixes.</p>
-          <a href="/contact" class="btn btn-primary" style="margin-top:6px;">Get a quote</a>
+          <a href="/contact" class="btn btn-primary" style="margin-top:6px;">Enquire today</a>
         </div>
       </div>
     </div>
   </section>
+
+  <!-- WEBSITES AND GOOGLE ADS -->
+  <section style="background:#ECE7D8;">
+    <div class="wrap" style="max-width:820px;">
+      <div class="section-label">Websites and Google Ads</div>
+      <h2>The landing page matters as much as the campaign.</h2>
+      <div class="prose">
+        <p>A well built Google Ads campaign can still underperform badly if it sends traffic to a slow, confusing, or poorly tracked landing page. Quality Score, conversion rate and cost per lead are all affected by what happens after the click, not just the campaign itself.</p>
+        <p>A site built here works equally well as a standalone site for organic search and referrals, or as a dedicated landing page for Google Ads. Either way, tracking is set up properly from day one so you know exactly what's working.</p>
+      </div>
+      <a href="/services/google-ads" class="btn btn-secondary" style="margin-top:20px;">See Google Ads services</a>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section style="background:#F6F4ED;">
+    <div class="wrap">
+      <div class="section-label">Common questions</div>
+      <h2>Questions about website services.</h2>
+      <p class="section-sub">Answers to what comes up most often before a website project begins.</p>
+      <div class="faq-list">
+        <div class="faq-row">
+          <p class="faq-q">Do I need a full new site, or just some fixes?</p>
+          <p class="faq-a">Not always a full rebuild. If the existing site is fundamentally sound, development work to fix specific issues is often faster and cheaper. Send over the URL and you'll get an honest answer either way.</p>
+        </div>
+        <div class="faq-row">
+          <p class="faq-q">How much does a new website cost?</p>
+          <p class="faq-a">Pricing starts from £1,000 depending on the number of pages and complexity involved, agreed properly at a scoping call rather than guessed at upfront. See the website design page for full pricing detail.</p>
+        </div>
+        <div class="faq-row">
+          <p class="faq-q">Is hosting really free?</p>
+          <p class="faq-a">Yes, sites are hosted free on Cloudflare with no monthly platform fees. The only ongoing cost is domain registration, typically under £15 a year, paid directly to a registrar.</p>
+        </div>
+        <div class="faq-row">
+          <p class="faq-q">Will I be locked into using you for future changes?</p>
+          <p class="faq-a">No. You get full access to the code and own the domain outright, so you're free to make changes yourself or bring in a different developer at any point.</p>
+        </div>
+        <div class="faq-row">
+          <p class="faq-q">Can a website work alongside Google Ads?</p>
+          <p class="faq-a">Very well, in fact. A site built here works as a standalone site for organic traffic, or as a dedicated landing page for Google Ads, with tracking set up properly either way.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <section class="cta-band">
     <div class="wrap">
       <div class="section-head">
         <div class="section-label">Get in touch</div>
         <h2>Tell me what&rsquo;s going on with your account.</h2>
-        <p class="section-sub">Fill in the form and I&rsquo;ll come back to you within one working day, usually sooner. Not sure what you need? Request the free audit, it&rsquo;s a good place to start regardless.</p>
+        <p class="section-sub">Fill in the form and I&rsquo;ll come back to you within one working day, usually sooner.</p>
       </div>
       <div class="hero-ctas" style="margin-top:0;">
-        <a href="/contact" class="btn btn-primary">Get in touch</a>
+        <a href="/contact" class="btn btn-primary">Enquire Today</a>
         <a href="tel:07848522456" class="btn btn-secondary" style="border-color:rgba(246,244,237,0.45);color:#F6F4ED;">Call 07848 522456</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="form-section" id="enquire">
+    <div class="wrap">
+      <div class="section-label">Get in touch</div>
+      <h2>Tell me about your project.</h2>
+      <p class="section-sub">Fill in the form and I'll come back within one working day to discuss what's involved.</p>
+
+      <div class="form-grid">
+        <div class="form-meta">
+          <div class="form-meta-item">
+            <span class="k">Response time</span>
+            <span class="v">Within 1 working day</span>
+          </div>
+          <div class="form-meta-item">
+            <span class="k">Service</span>
+            <span class="v">Websites, all areas</span>
+          </div>
+          <div class="form-meta-item">
+            <span class="k">Terms</span>
+            <span class="v">Fixed fee, agreed before work starts</span>
+          </div>
+          <div class="form-meta-item">
+            <span class="k">Email</span>
+            <a class="v" href="mailto:Enquiries%20%3Cenquiries@jwcperformance.co.uk%3E" style="border-bottom:1px solid #B6862A;padding-bottom:1px;">enquiries@jwcperformance.co.uk</a>
+          </div>
+        </div>
+
+        <form class="form-card" id="websitesHubForm" method="POST" action="https://formspree.io/f/mnjknpkk">
+          <input type="hidden" name="_subject" value="New enquiry: JWC Performance">
+          <input type="text" name="_gotcha" style="display:none">
+          <div class="form-row-2">
+            <div class="form-row">
+              <label for="websiteshub-name">Your name</label>
+              <input type="text" id="websiteshub-name" name="name" required>
+            </div>
+            <div class="form-row">
+              <label for="websiteshub-company">Company</label>
+              <input type="text" id="websiteshub-company" name="company">
+            </div>
+          </div>
+          <div class="form-row">
+            <label for="websiteshub-email">Email address</label>
+            <input type="email" id="websiteshub-email" name="email" required>
+          </div>
+          <div class="form-row">
+            <label for="websiteshub-website">Website URL (if you have one)</label>
+            <input type="url" id="websiteshub-website" name="website" placeholder="https://...">
+          </div>
+          <div class="form-row">
+            <label for="websiteshub-need">Which service?</label>
+            <select id="websiteshub-need" name="need">
+              <option>Not sure yet, would like advice</option>
+              <option>Website design</option>
+              <option>Website development</option>
+              <option>Hosting</option>
+            </select>
+          </div>
+          <div class="form-row">
+            <label for="websiteshub-notes">Tell me about your project and goals</label>
+            <textarea id="websiteshub-notes" name="notes" placeholder="Current setup, what's working, what isn't, what you're trying to achieve..."></textarea>
+          </div>
+          <button type="submit" class="form-submit" id="websitesHubSubmit">Send enquiry</button>
+          <p class="form-note">No obligation. I'll come back within one working day.</p>
+        </form>
+        <div class="form-success" id="websitesHubSuccess">
+          <div class="success-icon">✓</div>
+          <h3>Enquiry received.</h3>
+          <p>I'll be in touch within one working day to discuss your project and goals.</p>
+        </div>
       </div>
     </div>
   </section>
@@ -746,6 +975,35 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     });
   }
 })();
+</script>
+<script>
+  var websitesHubForm = document.getElementById('websitesHubForm');
+  if(websitesHubForm){
+    websitesHubForm.addEventListener('submit', function(e){
+      e.preventDefault();
+      var btn = document.getElementById('websitesHubSubmit');
+      btn.textContent = 'Sending...';
+      btn.disabled = true;
+      fetch(websitesHubForm.action, {
+        method: 'POST',
+        body: new FormData(websitesHubForm),
+        headers: { 'Accept': 'application/json' }
+      }).then(function(res){
+        if(res.ok){
+          websitesHubForm.style.display = 'none';
+          document.getElementById('websitesHubSuccess').classList.add('visible');
+        } else {
+          btn.textContent = 'Send enquiry';
+          btn.disabled = false;
+          alert('Something went wrong. Please try again or email enquiries@jwcperformance.co.uk');
+        }
+      }).catch(function(){
+        btn.textContent = 'Send enquiry';
+        btn.disabled = false;
+        alert('Something went wrong. Please try again or email enquiries@jwcperformance.co.uk');
+      });
+    });
+  }
 </script>
 <script src="/assets/config.js" defer></script>
 </body>

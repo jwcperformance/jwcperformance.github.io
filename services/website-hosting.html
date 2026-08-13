@@ -31,9 +31,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 })(window,document,'script','dataLayer','GTM-5HCM3QFH');</script>
 <!-- End Google Tag Manager -->
 <title>Website Hosting | Free Cloudflare Hosting | JWC Performance</title>
-<meta name="description" content="Free Cloudflare hosting with no monthly platform fees. You keep the domain, the site is handed over in full.">
+<meta name="description" content="Free website hosting on Cloudflare, no monthly platform fees. You keep the domain, get full code ownership, and a proper handover.">
 <link rel="canonical" href="https://www.jwcperformance.co.uk/services/website-hosting">
-<meta name="robots" content="noindex,follow">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -125,7 +124,118 @@ footer{padding:52px 0 26px;}
 .cookie-accept{background:#B6862A;color:#fff;border:none;padding:12px 24px;font-weight:700;font-size:14.5px;cursor:pointer;font-family:inherit;}
 .cookie-reject{background:transparent;color:#C7C3AC;border:1px solid rgba(255,255,255,0.2);padding:10px 20px;font-weight:600;font-size:13.5px;cursor:pointer;font-family:inherit;}
 @media(min-width:760px){.cookie-banner{flex-direction:row;align-items:center;justify-content:space-between;}.cookie-banner-text{max-width:640px;}}
+
+/* --- Added: breadcrumb, diff-grid, problem list, sectors, callout, faq, prose --- */
+.breadcrumb{font-family:'JetBrains Mono',monospace;font-size:11.5px;color:#6A6753;margin-bottom:16px;display:flex;align-items:center;gap:8px;}
+.breadcrumb a{color:#6A6753;}
+.prose p{font-size:15.5px;color:#6A6753;margin-bottom:18px;max-width:720px;}
+.prose p:last-child{margin-bottom:0;}
+.prose strong{color:#23241D;}
+
+.diff-grid{display:grid;grid-template-columns:1fr;gap:1px;background:#C7C0A7;border:1px solid #C7C0A7;}
+@media(min-width:680px){.diff-grid{grid-template-columns:repeat(2,1fr);}}
+.diff-item{background:#F6F4ED;padding:24px;}
+.diff-item-label{font-family:'JetBrains Mono',monospace;font-size:10.5px;text-transform:uppercase;letter-spacing:0.05em;color:#8A6418;font-weight:600;margin-bottom:8px;}
+.diff-item h3{font-size:16px;font-weight:700;margin-bottom:8px;}
+.diff-item p{font-size:14px;color:#6A6753;}
+
+.problems-list{display:flex;flex-direction:column;}
+.problem-row{display:flex;gap:16px;padding:20px 0;border-top:1px solid #DDD8C7;align-items:flex-start;}
+.problem-row:first-child{border-top:none;}
+.problem-num{font-family:'JetBrains Mono',monospace;font-size:12px;font-weight:700;color:#8A6418;flex-shrink:0;padding-top:2px;width:24px;}
+.problem-title{font-size:15.5px;font-weight:700;margin-bottom:5px;}
+.problem-desc{font-size:14.5px;color:#6A6753;}
+
+.sectors-wrap{display:flex;flex-wrap:wrap;gap:8px;margin-top:20px;}
+.sector-tag{font-family:'JetBrains Mono',monospace;font-size:11.5px;font-weight:600;color:#23241D;background:#ECE7D8;border:1px solid #C7C0A7;padding:6px 14px;}
+
+.callout{background:#ECE7D8;border-left:4px solid #B6862A;padding:20px 24px;margin:28px 0;}
+.callout p{font-size:15px;color:#6A6753;margin-bottom:0;}
+.callout strong{color:#23241D;}
+
+.faq-list{display:flex;flex-direction:column;}
+.faq-row{padding:20px 0;border-top:1px solid #DDD8C7;}
+.faq-row:first-child{border-top:none;}
+.faq-q{font-size:16px;font-weight:700;margin-bottom:8px;font-family:'Manrope',sans-serif;}
+.faq-a{font-size:14.5px;color:#6A6753;}
+
+/* --- Enquiry form --- */
+.form-section{background:#3D3E2F;color:#F6F4ED;padding:56px 0;border-bottom:none;}
+.form-section .section-label{color:#B6862A;}
+.form-section .section-label::before{background:#B6862A;}
+.form-section h2{color:#F6F4ED;}
+.form-section .section-sub{color:#C7C3AC;}
+.form-grid{display:grid;grid-template-columns:1fr;gap:24px;margin-top:28px;}
+@media (min-width:820px){.form-grid{grid-template-columns:1fr 1.4fr;}}
+.form-meta{display:flex;flex-direction:column;}
+.form-meta-item{padding:14px 0;border-top:1px solid rgba(237,233,216,0.18);font-size:13.5px;}
+.form-meta-item:first-child{border-top:none;}
+.form-meta-item .k{font-family:'JetBrains Mono',monospace;font-size:10.5px;text-transform:uppercase;letter-spacing:0.05em;color:#A8A48F;display:block;margin-bottom:4px;}
+.form-meta-item .v{font-weight:600;}
+.form-card{background:#F6F4ED;color:#23241D;padding:24px;border-radius:4px;}
+.form-row{margin-bottom:14px;}
+.form-row label{display:block;font-size:12px;font-weight:600;color:#6A6753;margin-bottom:6px;text-transform:uppercase;letter-spacing:0.03em;}
+.form-row input,.form-row select,.form-row textarea{width:100%;border:1px solid #C7C0A7;background:#F6F4ED;padding:11px 12px;font-size:14.5px;font-family:inherit;color:#23241D;border-radius:3px;}
+.form-row textarea{min-height:80px;resize:vertical;}
+.form-row input:focus,.form-row select:focus,.form-row textarea:focus{outline:2px solid #8A6418;outline-offset:1px;border-color:#8A6418;}
+.form-row-2{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
+.form-submit{width:100%;background:#B6862A;color:#ffffff;border:none;padding:18px;font-weight:700;font-size:16px;border-radius:3px;cursor:pointer;margin-top:4px;}
+.form-note{font-size:12px;color:#6A6753;margin-top:10px;text-align:center;}
+.form-success{display:none;background:#F6F4ED;padding:32px;text-align:center;border-radius:4px;}
+.form-success.visible{display:block;}
+.form-success .success-icon{width:48px;height:48px;background:#B6862A;border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 16px;font-size:22px;}
+.form-success h3{font-family:'Manrope',sans-serif;font-size:22px;font-weight:700;color:#23241D;margin-bottom:8px;}
+.form-success p{font-size:14.5px;color:#6A6753;}
+
 </style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Is hosting really free, or is there a catch?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It's genuinely free as part of a site built here, since Cloudflare Pages doesn't charge for hosting sites like this. The only cost is your domain registration, typically under £15 a year, paid directly to a registrar rather than through me."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can you host a site you didn't build?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "In some cases, depending on how the current site is built. Get in touch with details of your setup and I'll give you an honest answer about whether it's a good fit for Cloudflare hosting."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What happens if I want to move away in future?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "You can, at any point. You own the domain and the code, so there's no lock in and no need to ask permission to move elsewhere."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Will moving hosting cause any downtime?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The aim is none. The new setup is tested and confirmed working before the domain is pointed across, and the old hosting stays available as a fallback until everything is confirmed stable."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do I need technical knowledge to manage the site afterwards?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Not for basic content changes if the site is hand coded with clear structure. For anything more involved, ongoing support is available, or your own developer can pick it up using the handover documentation."
+      }
+    }
+  ]
+}
+</script>
 <style id="jwc-2a">
 /* ============================================================
    JWC Performance — 2a theme layer
@@ -535,55 +645,236 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
   <section class="page-hero">
     <div class="wrap">
+      <div class="breadcrumb"><a href="/">Home</a> / <a href="/services/websites">Websites</a> / Hosting</div>
       <div class="eyebrow">Services · Websites</div>
-      <h1>Hosting with no monthly platform fees.</h1>
-      <p class="hero-sub">Sites are hosted free on Cloudflare. You keep the domain in your own name, and the build is handed over in full, so you are never locked in.</p>
+      <h1>Hosting with no monthly platform fees, and nothing holding you hostage.</h1>
+      <p class="hero-sub">Sites are hosted free on Cloudflare. You keep the domain in your own name, and the build is handed over in full, so you are never locked in to keep paying just to keep your own site online.</p>
       <div class="hero-ctas">
-        <a href="/contact" class="btn btn-primary">Enquire about Hosting</a>
-        <a href="/services/google-ads-audit" class="btn btn-secondary">See what an audit covers</a>
+        <a href="/contact" class="btn btn-primary">Enquire Today</a>
       </div>
+      <p style="margin-top:12px;font-size:14px;color:#6A6753;">Or call: <a href="tel:07848522456" style="color:#8A6418;font-weight:600;font-family:'JetBrains Mono',monospace;">07848 522456</a></p>
     </div>
   </section>
 
-  <section>
-    <div class="wrap" style="max-width:820px;">
-      <div class="notice">
-        <span class="notice-label">Page in progress</span>
-        <p>This page is a holding page while the full detail is written. The outline below is accurate. For pricing or scope right now, get in touch and I&rsquo;ll answer directly.</p>
-      </div>
-    </div>
-  </section>
-
+  <!-- WHAT'S INCLUDED -->
   <section style="background:#ECE7D8;">
-    <div class="wrap split">
-      <div>
-        <div class="section-label">What this covers</div>
-        <h2>Hosting.</h2>
-        <p class="section-sub" style="margin-bottom:18px;">Scoped and quoted before any work begins, same as every other service here.</p>
-        <a href="/services/websites" class="btn btn-secondary">All Websites services</a>
-      </div>
-      <div class="panel">
-        <div class="panel-eyebrow">Included</div>
-        <ul class="checklist">
-          <li>Free Cloudflare hosting</li>
-          <li>No monthly platform fees</li>
-          <li>SSL and CDN included</li>
-          <li>You own the domain and the code</li>
-          <li>Full handover documentation</li>
-        </ul>
+    <div class="wrap">
+      <div class="section-label">What's included</div>
+      <h2>Free hosting, with nothing hidden in the small print.</h2>
+      <p class="section-sub">A lot of website hosting is priced to lock you in. This isn't built that way.</p>
+
+      <div class="diff-grid">
+        <div class="diff-item">
+          <div class="diff-item-label">Cloudflare hosting</div>
+          <h3>Fast, reliable, and free</h3>
+          <p>Sites are hosted on Cloudflare Pages, a genuinely fast global network, at no monthly cost to you. This isn't a discounted introductory rate that jumps up later, it's simply free.</p>
+        </div>
+        <div class="diff-item">
+          <div class="diff-item-label">SSL and CDN included</div>
+          <h3>Secure and fast by default</h3>
+          <p>A valid SSL certificate and content delivery network come as standard, not as an optional paid extra, which is how it should be but often isn't with cheaper hosting providers.</p>
+        </div>
+        <div class="diff-item">
+          <div class="diff-item-label">You own the domain and the code</div>
+          <h3>Nothing held over you</h3>
+          <p>The domain stays registered in your name, and you get full access to the underlying code, so there's no dependency on any one person or company to keep your site running.</p>
+        </div>
+        <div class="diff-item">
+          <div class="diff-item-label">Full handover documentation</div>
+          <h3>Clear enough for anyone to pick up</h3>
+          <p>Documentation covering how the site is built and hosted, so if you ever want a different developer to take over, they can do so without starting from scratch.</p>
+        </div>
       </div>
     </div>
   </section>
+
+  <!-- SIGNS YOU NEED THIS -->
+  <section style="background:#F6F4ED;">
+    <div class="wrap">
+      <div class="section-label">Signs you need this</div>
+      <h2>How to tell your current hosting is costing you more than it should.</h2>
+      <p class="section-sub">These are the most common reasons a business ends up looking to move hosting.</p>
+
+      <div class="problems-list">
+        <div class="problem-row">
+          <span class="problem-num">01</span>
+          <div>
+            <div class="problem-title">You're paying a monthly platform fee for a site that rarely changes</div>
+            <div class="problem-desc">Some platforms charge ongoing fees regardless of how much support you actually need, which adds up over the years for very little in return.</div>
+          </div>
+        </div>
+        <div class="problem-row">
+          <span class="problem-num">02</span>
+          <div>
+            <div class="problem-title">You don't actually have access to your own code</div>
+            <div class="problem-desc">If a developer or agency built the site and never handed over proper access, you're dependent on them for even small changes, which is a risky position to be in.</div>
+          </div>
+        </div>
+        <div class="problem-row">
+          <span class="problem-num">03</span>
+          <div>
+            <div class="problem-title">The site is slow to load, especially from further away</div>
+            <div class="problem-desc">Hosting without a proper content delivery network can mean slower load times for visitors outside your host's home region, which affects both experience and rankings.</div>
+          </div>
+        </div>
+        <div class="problem-row">
+          <span class="problem-num">04</span>
+          <div>
+            <div class="problem-title">You're not sure who actually owns your domain</div>
+            <div class="problem-desc">Domains registered by an agency in their own account, rather than yours, can become a real problem if that relationship ever ends.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section style="background:#ECE7D8;">
+    <div class="wrap">
+      <div class="section-label">How it works</div>
+      <h2>Moving hosting without breaking anything.</h2>
+      <p class="section-sub">A careful process, so your site stays online throughout.</p>
+
+      <div class="diff-grid">
+        <div class="diff-item">
+          <div class="diff-item-label">First</div>
+          <h3>A look at your current setup</h3>
+          <p>Where the site is currently hosted, who owns the domain, and what's involved in moving it over without downtime.</p>
+        </div>
+        <div class="diff-item">
+          <div class="diff-item-label">Then</div>
+          <h3>The site set up on Cloudflare</h3>
+          <p>Deployed and tested on Cloudflare's network before anything is switched over, so it's confirmed working before it goes live.</p>
+        </div>
+        <div class="diff-item">
+          <div class="diff-item-label">Next</div>
+          <h3>Domain pointed across, carefully</h3>
+          <p>DNS changes made carefully to avoid any downtime, with the old hosting left in place until the new setup is confirmed stable.</p>
+        </div>
+        <div class="diff-item">
+          <div class="diff-item-label">Finally</div>
+          <h3>Full access and documentation handed over</h3>
+          <p>You get full access to everything, with documentation explaining how it's all set up, so nothing depends on any one person going forward.</p>
+        </div>
+      </div>
+
+      <div class="callout">
+        <p><strong>Already have a site built elsewhere?</strong> Hosting can often be moved across on its own, without touching the design or code, if the current setup is otherwise working fine.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section style="background:#F6F4ED;">
+    <div class="wrap">
+      <div class="section-label">Common questions</div>
+      <h2>Questions about hosting.</h2>
+      <p class="section-sub">Answers to what comes up most often before moving hosting over.</p>
+      <div class="faq-list">
+        <div class="faq-row">
+          <p class="faq-q">Is hosting really free, or is there a catch?</p>
+          <p class="faq-a">It's genuinely free as part of a site built here, since Cloudflare Pages doesn't charge for hosting sites like this. The only cost is your domain registration, typically under £15 a year, paid directly to a registrar rather than through me.</p>
+        </div>
+        <div class="faq-row">
+          <p class="faq-q">Can you host a site you didn't build?</p>
+          <p class="faq-a">In some cases, depending on how the current site is built. Get in touch with details of your setup and I'll give you an honest answer about whether it's a good fit for Cloudflare hosting.</p>
+        </div>
+        <div class="faq-row">
+          <p class="faq-q">What happens if I want to move away in future?</p>
+          <p class="faq-a">You can, at any point. You own the domain and the code, so there's no lock in and no need to ask permission to move elsewhere.</p>
+        </div>
+        <div class="faq-row">
+          <p class="faq-q">Will moving hosting cause any downtime?</p>
+          <p class="faq-a">The aim is none. The new setup is tested and confirmed working before the domain is pointed across, and the old hosting stays available as a fallback until everything is confirmed stable.</p>
+        </div>
+        <div class="faq-row">
+          <p class="faq-q">Do I need technical knowledge to manage the site afterwards?</p>
+          <p class="faq-a">Not for basic content changes if the site is hand coded with clear structure. For anything more involved, ongoing support is available, or your own developer can pick it up using the handover documentation.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
   <section class="cta-band">
     <div class="wrap">
-      <div class="section-head">
-        <div class="section-label">Get in touch</div>
-        <h2>Tell me what&rsquo;s going on with your account.</h2>
-        <p class="section-sub">Fill in the form and I&rsquo;ll come back to you within one working day, usually sooner. Not sure what you need? Request the free audit, it&rsquo;s a good place to start regardless.</p>
+      <div class="section-label">Get started</div>
+      <h2>Move to hosting with no monthly fees and no lock in.</h2>
+      <p>A quick look at your current setup is all it takes to confirm whether moving hosting makes sense.</p>
+      <div class="hero-ctas">
+        <a href="/contact" class="btn btn-primary">Enquire Today</a>
       </div>
-      <div class="hero-ctas" style="margin-top:0;">
-        <a href="/contact" class="btn btn-primary">Get in touch</a>
-        <a href="tel:07848522456" class="btn btn-secondary" style="border-color:rgba(246,244,237,0.45);color:#F6F4ED;">Call 07848 522456</a>
+    </div>
+  </section>
+
+  <section class="form-section" id="enquire">
+    <div class="wrap">
+      <div class="section-label">Get in touch</div>
+      <h2>Tell me about your current hosting.</h2>
+      <p class="section-sub">Fill in the form and I'll come back within one working day to discuss your setup and what's involved.</p>
+
+      <div class="form-grid">
+        <div class="form-meta">
+          <div class="form-meta-item">
+            <span class="k">Response time</span>
+            <span class="v">Within 1 working day</span>
+          </div>
+          <div class="form-meta-item">
+            <span class="k">Service</span>
+            <span class="v">Hosting</span>
+          </div>
+          <div class="form-meta-item">
+            <span class="k">Terms</span>
+            <span class="v">Free hosting, included with a build or migration</span>
+          </div>
+          <div class="form-meta-item">
+            <span class="k">Email</span>
+            <a class="v" href="mailto:Enquiries%20%3Cenquiries@jwcperformance.co.uk%3E" style="border-bottom:1px solid #B6862A;padding-bottom:1px;">enquiries@jwcperformance.co.uk</a>
+          </div>
+        </div>
+
+        <form class="form-card" id="websiteHostingForm" method="POST" action="https://formspree.io/f/mnjknpkk">
+          <input type="hidden" name="_subject" value="New enquiry: JWC Performance">
+          <input type="text" name="_gotcha" style="display:none">
+          <div class="form-row-2">
+            <div class="form-row">
+              <label for="websitehosting-name">Your name</label>
+              <input type="text" id="websitehosting-name" name="name" required>
+            </div>
+            <div class="form-row">
+              <label for="websitehosting-company">Company</label>
+              <input type="text" id="websitehosting-company" name="company">
+            </div>
+          </div>
+          <div class="form-row">
+            <label for="websitehosting-email">Email address</label>
+            <input type="email" id="websitehosting-email" name="email" required>
+          </div>
+          <div class="form-row">
+            <label for="websitehosting-website">Website URL</label>
+            <input type="url" id="websitehosting-website" name="website" placeholder="https://...">
+          </div>
+          <div class="form-row">
+            <label for="websitehosting-need">What do you need?</label>
+            <select id="websitehosting-need" name="need">
+              <option>Hosting</option>
+              <option>Website design</option>
+              <option>Website development</option>
+              <option>Not sure yet</option>
+            </select>
+          </div>
+          <div class="form-row">
+            <label for="websitehosting-notes">Tell me about your current setup</label>
+            <textarea id="websitehosting-notes" name="notes" placeholder="Where the site is hosted now, who owns the domain, what you're trying to achieve..."></textarea>
+          </div>
+          <button type="submit" class="form-submit" id="websiteHostingSubmit">Send enquiry</button>
+          <p class="form-note">No obligation. I'll come back within one working day.</p>
+        </form>
+        <div class="form-success" id="websiteHostingSuccess">
+          <div class="success-icon">✓</div>
+          <h3>Enquiry received.</h3>
+          <p>I'll be in touch within one working day to discuss your setup and goals.</p>
+        </div>
       </div>
     </div>
   </section>
@@ -730,6 +1021,35 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     });
   }
 })();
+</script>
+<script>
+  var websiteHostingForm = document.getElementById('websiteHostingForm');
+  if(websiteHostingForm){
+    websiteHostingForm.addEventListener('submit', function(e){
+      e.preventDefault();
+      var btn = document.getElementById('websiteHostingSubmit');
+      btn.textContent = 'Sending...';
+      btn.disabled = true;
+      fetch(websiteHostingForm.action, {
+        method: 'POST',
+        body: new FormData(websiteHostingForm),
+        headers: { 'Accept': 'application/json' }
+      }).then(function(res){
+        if(res.ok){
+          websiteHostingForm.style.display = 'none';
+          document.getElementById('websiteHostingSuccess').classList.add('visible');
+        } else {
+          btn.textContent = 'Send enquiry';
+          btn.disabled = false;
+          alert('Something went wrong. Please try again or email enquiries@jwcperformance.co.uk');
+        }
+      }).catch(function(){
+        btn.textContent = 'Send enquiry';
+        btn.disabled = false;
+        alert('Something went wrong. Please try again or email enquiries@jwcperformance.co.uk');
+      });
+    });
+  }
 </script>
 <script src="/assets/config.js" defer></script>
 </body>

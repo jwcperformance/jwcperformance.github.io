@@ -82,20 +82,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   .btn-primary{background:var(--gold);color:#ffffff;}
   .btn-secondary{background:transparent;border:2px solid var(--line-strong);color:var(--ink);font-weight:700;}
   @media (min-width:900px){
-    .page-hero-inner{display:grid;grid-template-columns:1.1fr 0.9fr;gap:56px;align-items:start;}
     h1{font-size:44px;}
     .hero-ctas{flex-direction:row;}
   }
 
-  /* Glance panel */
-  .glance-panel{border:1px solid var(--line-strong);background:var(--paper);}
-  .glance-head{background:var(--khaki-deep);padding:14px 20px;}
-  .glance-head span{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--gold);text-transform:uppercase;letter-spacing:0.06em;font-weight:600;}
-  .glance-row{display:flex;justify-content:space-between;align-items:baseline;padding:14px 20px;border-bottom:1px solid var(--line);font-size:13.5px;}
-  .glance-row:last-child{border-bottom:none;}
-  .glance-row .k{color:var(--muted);}
-  .glance-row .v{font-weight:700;}
-  .glance-row .v.gold{color:var(--gold-deep);font-family:'JetBrains Mono',monospace;}
 
   /* Sections */
   section{padding:56px 0;border-bottom:1px solid var(--line);}
@@ -548,6 +538,54 @@ footer .social-icon.email svg{fill:#8C8871;}
 .cookie-accept{background:var(--gold) !important;border-radius:0 !important;color:#fff !important;}
 .cookie-reject{border-radius:0 !important;}
 </style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Why does pricing start from £1,000?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A single landing page with a form, tracking and hosting set up properly takes a meaningful amount of work, design, build, GTM setup, form integration, Cloudflare deployment and handover documentation. The exact price is always confirmed at the scoping call once the project's actual needs are understood."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do I need to provide copy and images?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ideally yes, since you know your business better than anyone. But if help is needed with copy structure or sourcing imagery, that can be discussed at the scoping call."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I update the site myself after handover?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, full access to the GitHub repo is provided. Anyone with basic HTML knowledge can make text and content changes directly. Ongoing maintenance support is available for larger changes."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do I need a domain already?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Not necessarily, a domain can be set up as part of the project if needed. If one already exists, it gets connected to Cloudflare Pages during the launch phase."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can this be combined with Google Ads management?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, a site built alongside a Google Ads account build or restructure means the entire journey from ad to enquiry is designed to work together. The website also stands completely on its own for organic search, social media or direct traffic."
+      }
+    }
+  ]
+}
+</script>
 </head>
 <body>
 <!-- Google Tag Manager (noscript) -->
@@ -689,16 +727,6 @@ footer .social-icon.email svg{fill:#8C8871;}
           <a href="#whats-included" class="btn btn-secondary">See what's included</a>
         </div>
         <p style="margin-top:12px;font-size:14px;color:var(--muted);">Or call: <a href="tel:07848522456" style="color:var(--gold-deep);font-weight:600;font-family:'JetBrains Mono',monospace;">07848 522456</a></p>
-      </div>
-
-      <div class="glance-panel" style="margin-top:32px;">
-        <div class="glance-head"><span>At a glance</span></div>
-        <div class="glance-row"><span class="k">Starting from</span><span class="v gold">£1,000</span></div>
-        <div class="glance-row"><span class="k">Exact price</span><span class="v">Agreed at scoping call</span></div>
-        <div class="glance-row"><span class="k">Turnaround</span><span class="v">Agreed at scoping call</span></div>
-        <div class="glance-row"><span class="k">Hosting</span><span class="v">Cloudflare Pages, free</span></div>
-        <div class="glance-row"><span class="k">Forms</span><span class="v">Formspree</span></div>
-        <div class="glance-row"><span class="k">Maintenance</span><span class="v">Available on request</span></div>
       </div>
     </div>
   </section>
@@ -941,7 +969,7 @@ footer .social-icon.email svg{fill:#8C8871;}
           </div>
         </div>
         <div class="process-step">
-          <div class="step-left"><div class="step-num">02</div><div class="step-time">Day 1–2</div></div>
+          <div class="step-left"><div class="step-num">02</div><div class="step-time">Day 1 to 2</div></div>
           <div class="step-content">
             <div class="step-title">Scoping call</div>
             <div class="step-desc">A 30-minute call covering your business, goals, audience, design preferences and technical requirements. Pricing and timeline confirmed on this call, no surprises after.</div>
@@ -949,7 +977,7 @@ footer .social-icon.email svg{fill:#8C8871;}
           </div>
         </div>
         <div class="process-step">
-          <div class="step-left"><div class="step-num">03</div><div class="step-time">Day 2–3</div></div>
+          <div class="step-left"><div class="step-num">03</div><div class="step-time">Day 2 to 3</div></div>
           <div class="step-content">
             <div class="step-title">Brief & assets gathered</div>
             <div class="step-desc">Logo, brand assets, copy, imagery and any reference sites collected. Any gaps in copy or imagery flagged and resolved before the build starts, not halfway through.</div>
@@ -1055,8 +1083,8 @@ footer .social-icon.email svg{fill:#8C8871;}
               <label for="web-type">Type of site</label>
               <select id="web-type" name="site_type">
                 <option>Single landing page</option>
-                <option>Small site (2–5 pages)</option>
-                <option>Full site (6–10 pages)</option>
+                <option>Small site (2 to 5 pages)</option>
+                <option>Full site (6 to 10 pages)</option>
                 <option>Not sure yet</option>
               </select>
             </div>
