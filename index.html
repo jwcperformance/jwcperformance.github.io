@@ -1011,15 +1011,19 @@ footer .social-icon.email svg{fill:#8C8871;}
 @media(min-width:900px){
   .jwc-results-grid{grid-template-columns:1.05fr 0.95fr;gap:56px;}
   .jwc-hero-media{
-    display:block;position:absolute;top:0;bottom:0;right:0;left:48%;
-    background:url('/assets/hero-home.png') center right / contain no-repeat;
-    opacity:0.55;
+    display:block;position:absolute;inset:0;
+    background:#141a2b url('/assets/hero-london.webp') right center / cover no-repeat;
   }
   .jwc-hero-media::after{
     content:'';position:absolute;inset:0;
-    background:linear-gradient(90deg,rgba(35,36,29,1) 0%,rgba(35,36,29,0.55) 26%,rgba(35,36,29,0) 60%);
+    background:linear-gradient(90deg,rgba(15,18,30,0.92) 0%,rgba(15,18,30,0.75) 38%,rgba(15,18,30,0.15) 68%,rgba(15,18,30,0) 100%);
   }
   .jwc-hero-body{min-height:560px;max-width:1180px;display:flex;flex-direction:column;justify-content:center;padding:72px 20px;}
+}
+@media(min-width:900px) and (max-width:1199px){
+  .jwc-hero-media::after{
+    background:linear-gradient(90deg,rgba(15,18,30,0.94) 0%,rgba(15,18,30,0.85) 50%,rgba(15,18,30,0.25) 80%,rgba(15,18,30,0) 100%);
+  }
 }
 
 /* ---------- Homepage service groups ---------- */
