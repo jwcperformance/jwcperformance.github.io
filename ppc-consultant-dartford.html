@@ -852,13 +852,13 @@ footer .social-icon.email svg{fill:#8C8871;}
           </div>
           <div class="form-meta-item">
             <span class="k">Email</span>
-            <a class="v" href="mailto:Enquiries%20%3Cenquiries@jwcperformance.co.uk%3E" style="border-bottom:1px solid var(--gold);padding-bottom:1px;">enquiries@jwcperformance.co.uk</a>
+            <a class="v" href="mailto:Enquiries%20%3Cjoe@jwcperformance.co.uk%3E" style="border-bottom:1px solid var(--gold);padding-bottom:1px;">joe@jwcperformance.co.uk</a>
           </div>
         </div>
 
         <form class="form-card" id="dartfordForm" method="POST" action="https://formspree.io/f/mnjknpkk">
           <input type="hidden" name="_subject" value="New enquiry: JWC Performance">
-          <input type="text" name="_gotcha" style="display:none">
+          <input type="text" name="_gotcha" style="display:none" autocomplete="off" tabindex="-1" aria-hidden="true">
           <div class="form-row-2">
             <div class="form-row">
               <label for="dartford-name">Your name</label>
@@ -966,7 +966,7 @@ footer .social-icon.email svg{fill:#8C8871;}
       <div class="footer-col">
         <h4>Get in touch</h4>
         <a href="tel:07848522456">07848 522456</a>
-        <a href="mailto:enquiries@jwcperformance.co.uk">enquiries@jwcperformance.co.uk</a>
+        <a href="mailto:joe@jwcperformance.co.uk">joe@jwcperformance.co.uk</a>
         <a href="/services/google-ads-audit">Free audit</a>
         <a href="/contact">Contact form</a>
       </div>
@@ -974,7 +974,7 @@ footer .social-icon.email svg{fill:#8C8871;}
     <div class="footer-bottom">
       <span>© 2026 JWC Performance. Google Ads specialist for UK businesses.</span>
       <div class="social-icons">
-        <a href="mailto:enquiries@jwcperformance.co.uk" class="social-icon email" aria-label="Email" title="Email">
+        <a href="mailto:joe@jwcperformance.co.uk" class="social-icon email" aria-label="Email" title="Email">
           <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
         </a>
         <a href="https://wa.me/447848522456" class="social-icon whatsapp jwc-whatsapp" aria-label="WhatsApp" title="WhatsApp">
@@ -1056,12 +1056,12 @@ footer .social-icon.email svg{fill:#8C8871;}
         } else {
           btn.textContent = 'Send enquiry';
           btn.disabled = false;
-          alert('Something went wrong. Please try again or email enquiries@jwcperformance.co.uk');
+          alert('Something went wrong. Please try again or email joe@jwcperformance.co.uk');
         }
       }).catch(function(){
         btn.textContent = 'Send enquiry';
         btn.disabled = false;
-        alert('Something went wrong. Please try again or email enquiries@jwcperformance.co.uk');
+        alert('Something went wrong. Please try again or email joe@jwcperformance.co.uk');
       });
     });
   }
