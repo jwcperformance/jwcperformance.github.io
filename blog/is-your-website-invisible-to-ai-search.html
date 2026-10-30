@@ -1,0 +1,1069 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Is Your Website Invisible to AI Search? How to Check | JWC Performance</title>
+<meta name="description" content="AI crawlers like ChatGPT's can miss pages linked only by JavaScript. Here's what a 41 day test found, how to check your site in 5 minutes, and how to fix it.">
+<link rel="canonical" href="https://www.jwcperformance.co.uk/blog/is-your-website-invisible-to-ai-search">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Is Your Website Invisible to AI Search? How to Check, and How to Fix It">
+<meta property="og:description" content="AI crawlers like ChatGPT's can miss pages linked only by JavaScript. Here's what a 41 day test found, how to check your site in 5 minutes, and how to fix it.">
+<meta property="og:url" content="https://www.jwcperformance.co.uk/blog/is-your-website-invisible-to-ai-search">
+<meta property="og:site_name" content="JWC Performance">
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-5HCM3QFH');</script>
+<!-- End Google Tag Manager -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#23241D;--paper:#F6F4ED;--surface:#ECE7D8;
+    --khaki-deep:#3D3E2F;--gold:#B6862A;--gold-deep:#8A6418;--gold-pale:#EEE0BE;
+    --line:#DDD8C7;--line-strong:#C7C0A7;--muted:#6A6753;--max:1140px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  html{scroll-behavior:smooth;}
+  body{font-family:'Inter',-apple-system,sans-serif;background:var(--paper);color:var(--ink);line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden;}
+  a{color:inherit;text-decoration:none;}
+  .wrap{max-width:var(--max);margin:0 auto;padding:0 20px;}
+  .top-strip{background:var(--khaki-deep);color:#E6E2CF;font-family:'JetBrains Mono',monospace;font-size:11.5px;padding:8px 20px;text-align:center;}
+  .top-strip strong{color:var(--gold);}
+  header{position:sticky;top:0;z-index:50;background:rgba(246,244,237,0.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);}
+  .nav-row{display:flex;align-items:center;justify-content:space-between;padding:15px 20px;max-width:var(--max);margin:0 auto;}
+  .logo{font-family:'Manrope',sans-serif;font-weight:700;display:flex;align-items:center;gap:0;line-height:1;text-decoration:none;}
+  .logo .bracket-open{font-size:68px;color:var(--gold);line-height:1;margin-right:3px;font-family:'Manrope',sans-serif;font-weight:700;}
+  .logo .bracket-close{font-size:68px;color:var(--khaki-deep);line-height:1;margin-left:3px;font-family:'Manrope',sans-serif;font-weight:700;}
+  .logo .logo-inner{display:flex;flex-direction:column;justify-content:center;padding:0 2px;}
+  .logo .logo-name{font-family:'Manrope',sans-serif;font-weight:700;font-size:44px;color:var(--ink);letter-spacing:-0.01em;line-height:1.15;}
+  .logo .logo-sub{font-family:'JetBrains Mono',monospace;font-weight:600;font-size:16px;color:var(--gold-deep);letter-spacing:0.14em;text-transform:uppercase;line-height:1;}
+  nav.desktop-nav{display:none;}
+  .nav-cta{display:none;}
+  .menu-btn{width:40px;height:40px;border:1px solid var(--line-strong);border-radius:4px;background:transparent;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:4px;cursor:pointer;}
+  .menu-btn span{width:18px;height:1.5px;background:var(--ink);display:block;}
+  .mobile-menu{display:none;flex-direction:column;border-top:1px solid var(--line);background:var(--paper);}
+  .mobile-menu.open{display:flex;max-height:100vh;overflow-y:auto;}
+  .mobile-menu a{padding:16px 20px;border-bottom:1px solid var(--line);font-size:15px;font-weight:500;}
+  .mobile-menu .mm-cta{margin:16px 20px 20px;padding:18px;background:var(--gold);color:#ffffff;text-align:center;border-radius:4px;font-weight:700;border:none;font-size:16px;}
+  @media(min-width:920px){
+    nav.desktop-nav{display:flex;align-items:center;gap:30px;font-size:14px;font-weight:500;}
+    nav.desktop-nav a{padding:8px 0;border-bottom:1px solid transparent;}
+    nav.desktop-nav a:hover{border-bottom:1px solid var(--gold-deep);}
+    .menu-btn{display:none;}
+    .nav-cta{display:inline-block;background:var(--gold);color:#ffffff;padding:14px 26px;border-radius:4px;font-weight:700;font-size:15px;}
+    .nav-dropdown{position:relative;}
+    .nav-dropdown>a{display:flex;align-items:center;gap:5px;cursor:pointer;}
+    .nav-dropdown>a::after{content:'▾';font-size:10px;color:var(--gold-deep);transition:transform 0.2s ease;}
+    .nav-dropdown.open>a::after{transform:rotate(180deg);}
+    .dropdown-menu{display:none;position:absolute;top:calc(100% + 8px);left:0;min-width:220px;z-index:100;background:var(--paper);border:1px solid var(--line-strong);border-top:2px solid var(--gold);box-shadow:0 8px 24px rgba(0,0,0,0.08);}
+    .nav-dropdown.open .dropdown-menu{display:block;}
+    .dropdown-menu a{display:block;padding:12px 16px;font-size:13.5px;font-weight:500;color:var(--ink);border-bottom:1px solid var(--line);}
+    .dropdown-menu a:last-child{border-bottom:none;}
+    .dropdown-menu a:hover{background:var(--surface);color:var(--gold-deep);}
+  }
+  .article-hero{padding:52px 0 40px;border-bottom:1px solid var(--line);}
+  .breadcrumb{font-family:'JetBrains Mono',monospace;font-size:11.5px;color:var(--muted);margin-bottom:16px;display:flex;align-items:center;gap:8px;}
+  .breadcrumb a{color:var(--muted);}
+  .breadcrumb a:hover{color:var(--gold-deep);}
+  .article-meta{font-family:'JetBrains Mono',monospace;font-size:11.5px;color:var(--muted);margin-bottom:16px;display:flex;align-items:center;gap:16px;}
+  .article-meta .tag{background:var(--gold-pale);color:var(--gold-deep);padding:3px 10px;font-weight:600;}
+  h1.article-title{font-family:'Manrope',sans-serif;font-size:28px;font-weight:700;letter-spacing:-0.01em;line-height:1.1;margin-bottom:16px;max-width:820px;}
+  @media(min-width:900px){h1.article-title{font-size:40px;}}
+  .article-intro{font-size:17px;color:var(--muted);max-width:680px;line-height:1.6;}
+  .article-wrap{display:grid;grid-template-columns:1fr;gap:40px;padding:52px 0;}
+  @media(min-width:960px){.article-wrap{grid-template-columns:1fr 300px;gap:60px;}}
+  .article-body h2{font-family:'Manrope',sans-serif;font-size:24px;font-weight:700;letter-spacing:-0.01em;margin:40px 0 14px;color:var(--ink);}
+  .article-body h2:first-child{margin-top:0;}
+  .article-body h3{font-family:'Manrope',sans-serif;font-size:19px;font-weight:700;margin:28px 0 10px;color:var(--ink);}
+  .article-body p{font-size:16px;color:var(--muted);margin-bottom:18px;max-width:680px;}
+  .article-body ul,.article-body ol{margin:0 0 18px 20px;}
+  .article-body li{font-size:16px;color:var(--muted);margin-bottom:8px;}
+  .article-body strong{color:var(--ink);font-weight:600;}
+  .article-body a{color:var(--gold-deep);border-bottom:1px solid var(--gold);padding-bottom:1px;}
+  .callout{background:var(--surface);border-left:4px solid var(--gold);padding:20px 24px;margin:28px 0;}
+  .callout p{margin-bottom:0;font-size:15px;}
+  .callout strong{color:var(--gold-deep);}
+  .article-sidebar{display:flex;flex-direction:column;gap:20px;}
+  .sidebar-card{border:1px solid var(--line-strong);padding:20px;background:var(--paper);}
+  .sidebar-card h4{font-family:'JetBrains Mono',monospace;font-size:10.5px;text-transform:uppercase;letter-spacing:0.05em;color:var(--gold-deep);font-weight:600;margin-bottom:12px;}
+  .sidebar-card p{font-size:13.5px;color:var(--muted);margin-bottom:14px;}
+  .sidebar-card .btn{display:block;text-align:center;background:var(--gold);color:#ffffff;padding:12px 16px;border-radius:4px;font-weight:700;font-size:14px;}
+  .sidebar-card ul{list-style:none;}
+  .sidebar-card li{font-size:13.5px;padding:7px 0;border-bottom:1px solid var(--line);display:flex;gap:8px;}
+  .sidebar-card li:last-child{border-bottom:none;}
+  .sidebar-card li::before{content:'→';color:var(--gold-deep);flex-shrink:0;}
+  .author-card{background:var(--khaki-deep);padding:20px;}
+  .author-card h4{font-family:'JetBrains Mono',monospace;font-size:10.5px;text-transform:uppercase;letter-spacing:0.05em;color:var(--gold);font-weight:600;margin-bottom:10px;}
+  .author-card p{font-size:13px;color:#C7C3AC;margin-bottom:0;}
+  .cta-band{background:var(--khaki-deep);padding:56px 0;border-top:1px solid var(--line);}
+  .cta-band .eyebrow{font-family:'JetBrains Mono',monospace;font-size:11.5px;color:var(--gold);text-transform:uppercase;letter-spacing:0.06em;font-weight:600;margin-bottom:12px;display:flex;align-items:center;gap:8px;}
+  .cta-band .eyebrow::before{content:'';width:14px;height:1px;background:var(--gold);display:inline-block;}
+  .cta-band h2{font-family:'Manrope',sans-serif;font-size:28px;font-weight:700;color:#F6F4ED;margin-bottom:10px;}
+  .cta-band p{color:#C7C3AC;font-size:15px;max-width:540px;margin-bottom:28px;}
+  .btn-primary{display:inline-flex;align-items:center;justify-content:center;padding:18px 30px;border-radius:4px;font-weight:700;font-size:16px;background:var(--gold);color:#ffffff;border:none;}
+  .cookie-banner{position:fixed;bottom:0;left:0;right:0;z-index:999;background:var(--khaki-deep);color:#EDE9D8;padding:16px 20px;display:flex;flex-direction:column;gap:12px;border-top:2px solid var(--gold);box-shadow:0 -4px 24px rgba(0,0,0,0.18);}
+  .cookie-banner.hidden{display:none;}
+  .cookie-banner p{font-size:13.5px;color:#C7C3AC;line-height:1.5;margin:0;}
+  .cookie-banner a{color:var(--gold);text-decoration:underline;}
+  .cookie-banner-title{font-family:'Manrope',sans-serif;font-size:16px;font-weight:700;color:#F6F4ED;margin-bottom:2px;}
+  .cookie-btns{display:flex;gap:10px;}
+  .cookie-accept{background:var(--gold);color:#ffffff;border:none;padding:10px 20px;border-radius:4px;font-weight:700;font-size:13.5px;cursor:pointer;font-family:inherit;}
+  .cookie-reject{background:transparent;color:#C7C3AC;border:1px solid rgba(255,255,255,0.2);padding:10px 20px;border-radius:4px;font-weight:600;font-size:13.5px;cursor:pointer;font-family:inherit;}
+  @media(min-width:760px){.cookie-banner{flex-direction:row;align-items:center;justify-content:space-between;}.cookie-banner-text{max-width:640px;}.cookie-btns{flex-shrink:0;}}
+  footer{padding:40px 0 28px;}
+  .footer-cols{display:grid;grid-template-columns:repeat(2,1fr);gap:24px;margin-bottom:24px;}
+  .footer-col h4{font-family:'JetBrains Mono',monospace;font-size:10.5px;text-transform:uppercase;letter-spacing:0.05em;color:var(--muted);margin-bottom:12px;}
+  .footer-col a{display:block;font-size:14px;padding:6px 0;color:var(--ink);}
+    .footer-bottom{border-top:1px solid var(--line);padding-top:20px;font-size:12px;color:var(--muted);display:flex;flex-direction:row;justify-content:space-between;align-items:center;}
+  @media(min-width:760px){.footer-cols{grid-template-columns:repeat(4,1fr);}  .footer-bottom{border-top:1px solid var(--line);padding-top:20px;font-size:12px;color:var(--muted);display:flex;flex-direction:row;justify-content:space-between;align-items:center;}}
+  .social-icons{display:flex;gap:10px;margin-top:4px;}
+  .social-icon{width:32px;height:32px;display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:opacity 0.15s ease;line-height:0;background:none;}
+  .social-icon:hover{opacity:0.7;}
+  .social-icon.whatsapp svg{fill:#25D366;}
+  .social-icon.linkedin svg{fill:#0A66C2;}
+  .social-icon.facebook svg{fill:#1877F2;}
+  .social-icon.email svg{fill:var(--muted);}
+  .social-icon svg{width:28px;height:28px;display:block;}
+  .top-strip{
+    background:var(--gold);color:var(--khaki-deep);
+    font-family:'JetBrains Mono',monospace;font-size:11.5px;
+    padding:8px 20px;text-align:center;letter-spacing:0.01em;
+    font-weight:700;
+  }
+  .top-strip strong{color:var(--khaki-deep);font-weight:700;}
+  header{
+    position:sticky;top:0;z-index:50;
+    background:#3D3E2F;
+    border-bottom:1px solid rgba(255,255,255,0.08);
+  }
+  .nav-row{
+    display:flex;align-items:center;justify-content:space-between;
+    padding:10px 20px;max-width:var(--max);margin:0 auto;
+  }
+  .logo{display:flex;align-items:center;line-height:1;}
+  .menu-btn{
+    width:40px;height:40px;border:1px solid rgba(255,255,255,0.3);border-radius:4px;
+    background:transparent;display:flex;align-items:center;justify-content:center;
+    flex-direction:column;gap:4px;cursor:pointer;
+  }
+  .menu-btn span{width:18px;height:1.5px;background:#ffffff;display:block;}
+  .mobile-menu{display:none;flex-direction:column;border-top:1px solid var(--line);background:var(--paper);}
+  .mobile-menu.open{display:flex;max-height:100vh;overflow-y:auto;}
+  .mobile-menu a{padding:16px 20px;border-bottom:1px solid var(--line);font-size:15px;font-weight:500;}
+  .mobile-menu .mm-cta{
+    margin:16px 20px 20px;padding:18px;background:var(--gold);color:#ffffff;
+    text-align:center;border-radius:4px;font-weight:700;border:none;font-size:16px;
+  }
+  nav.desktop-nav{display:none;}
+  .nav-cta{display:none;}
+  @media (min-width:920px){
+    nav.desktop-nav{display:flex;align-items:center;gap:30px;font-size:17px;font-weight:500;}
+    nav.desktop-nav a{padding:8px 0;border-bottom:1px solid transparent;color:#ffffff;}
+    nav.desktop-nav a:hover{border-bottom:1px solid rgba(255,255,255,0.5);color:#ffffff;}
+    .menu-btn{display:none;}
+    .nav-cta{
+      display:inline-block;background:var(--gold);color:#ffffff;
+      padding:16px 32px;border-radius:4px;font-weight:700;font-size:18px;
+    }
+    .nav-phone{display:inline-block !important;}
+    .nav-dropdown{position:relative;}
+    .nav-dropdown > a{display:flex;align-items:center;gap:5px;cursor:pointer;}
+    .nav-dropdown > a::after{content:'▾';font-size:10px;color:var(--gold);transition:transform 0.2s ease;}
+    .nav-dropdown.open > a::after{transform:rotate(180deg);}
+    .dropdown-menu{
+      display:none;
+      position:absolute;top:calc(100% + 8px);left:0;
+      min-width:220px;z-index:100;
+      background:var(--khaki-deep);
+      border:1px solid rgba(255,255,255,0.1);
+      border-top:2px solid var(--gold);
+      box-shadow:0 8px 24px rgba(0,0,0,0.2);
+    }
+    .nav-dropdown.open .dropdown-menu{display:block;}
+    .dropdown-menu a{
+      display:block;padding:12px 16px;
+      font-size:13.5px;font-weight:500;color:#ffffff;
+      border-bottom:1px solid rgba(255,255,255,0.08);
+    }
+    .dropdown-menu a:last-child{border-bottom:none;}
+    .dropdown-menu a:hover{background:rgba(255,255,255,0.08);color:var(--gold);}
+  }
+
+  /* --- Header/footer standardisation pass --- */
+  .nav-row{gap:16px;}
+  @media(min-width:760px){
+    .footer-cols{grid-template-columns:repeat(5,1fr);}
+  }
+  @media(min-width:920px){
+    .nav-phone{display:inline-flex !important;margin-left:8px;align-items:center;justify-content:center;width:38px;height:38px;border:1px solid rgba(255,255,255,0.25);border-radius:4px;transition:background 0.15s ease,border-color 0.15s ease;}
+    .nav-phone:hover{background:rgba(255,255,255,0.08);border-color:rgba(255,255,255,0.4);}
+    .nav-phone svg{width:18px;height:18px;fill:#ffffff;display:block;}
+  }
+</style>
+
+<style id="jwc-2a">
+/* ============================================================
+   JWC Performance — 2a theme layer
+   Loaded after each page's own <style> block. Same palette,
+   new structure: khaki-deep page bands, squared edges,
+   Manrope display scale, JetBrains Mono for data.
+   ============================================================ */
+
+:root{
+  --ink:#23241D;
+  --paper:#F6F4ED;
+  --surface:#ECE7D8;
+  --khaki:#6F6E55;
+  --khaki-deep:#3D3E2F;
+  --gold:#B6862A;
+  --gold-deep:#8A6418;
+  --gold-light:#E8C77A;
+  --gold-pale:#EEE0BE;
+  --line:#DDD8C7;
+  --line-strong:#C7C0A7;
+  --muted:#6A6753;
+  --max:1180px;
+}
+
+/* ---------- Top strip ---------- */
+.top-strip{
+  background:var(--khaki-deep) !important;
+  color:#CFCBB8 !important;
+  font-family:'JetBrains Mono',monospace;
+  font-size:11.5px;font-weight:500;letter-spacing:0.02em;
+  padding:9px 20px !important;text-align:center;
+  border-bottom:1px solid rgba(255,255,255,0.07);
+}
+.top-strip strong{color:var(--gold-light) !important;font-weight:700;}
+.top-strip a{color:var(--gold-light) !important;}
+
+/* ---------- Header ---------- */
+header{
+  position:sticky;top:0;z-index:200;
+  background:var(--khaki-deep) !important;
+  border-bottom:1px solid rgba(255,255,255,0.08) !important;
+}
+header .nav-row{
+  display:flex;align-items:center;justify-content:space-between;
+  gap:18px;max-width:var(--max);margin:0 auto;padding:10px 20px !important;
+}
+header .logo{display:flex;align-items:center;line-height:0;}
+header .logo img{height:74px;width:auto;display:block;}
+
+/* nav base (mobile-first: hidden) */
+header nav.desktop-nav{display:none;}
+header .nav-cta{display:none;}
+header .menu-btn{
+  width:42px;height:42px;border:1px solid rgba(255,255,255,0.3);border-radius:0;
+  background:transparent;display:flex;align-items:center;justify-content:center;
+  flex-direction:column;gap:4px;cursor:pointer;flex-shrink:0;
+}
+header .menu-btn span{width:18px;height:1.5px;background:#fff;display:block;}
+
+/* ---------- Desktop nav ---------- */
+header .nav-phone{display:none !important;}
+@media (min-width:920px){
+  header nav.desktop-nav{display:flex;align-items:center;gap:26px;}
+  header .menu-btn{display:none !important;}
+  header .nav-cta{
+    display:inline-flex;align-items:center;justify-content:center;
+    background:var(--gold);color:#fff !important;border-radius:0;
+    padding:14px 24px;font-weight:700;font-size:15px;white-space:nowrap;
+  }
+  header .nav-cta:hover{background:var(--gold-deep);}
+  header .nav-phone{
+    display:inline-flex !important;align-items:center;justify-content:center;
+    width:40px;height:40px;border:1px solid rgba(255,255,255,0.25);border-radius:0;flex-shrink:0;
+  }
+  header .nav-phone svg{width:18px;height:18px;fill:#fff;display:block;}
+  header .nav-phone:hover{background:rgba(255,255,255,0.08);}
+
+  .nav2{position:relative;}
+  .nav2 > a{
+    display:flex;align-items:center;gap:6px;
+    font-size:15px;font-weight:600;color:#F6F4ED !important;
+    padding:14px 0;border-bottom:2px solid transparent;white-space:nowrap;cursor:pointer;
+  }
+  .nav2.has-sub > a::after{
+    content:'';width:5px;height:5px;border-right:1.5px solid var(--gold-light);
+    border-bottom:1.5px solid var(--gold-light);transform:rotate(45deg) translateY(-2px);
+  }
+  .nav2:hover > a,.nav2.open > a{border-bottom-color:var(--gold);}
+
+  .nav2-menu{
+    display:none;position:absolute;top:100%;left:-18px;
+    background:var(--ink);border-top:2px solid var(--gold);
+    box-shadow:0 18px 40px rgba(35,36,29,0.35);
+    padding:8px 0;min-width:250px;z-index:300;
+  }
+  .nav2:hover > .nav2-menu,.nav2.open > .nav2-menu{display:block;}
+  .nav2-menu a{
+    display:block;padding:11px 22px;font-size:14px;font-weight:500;
+    color:#E6E2D2 !important;white-space:nowrap;
+  }
+  .nav2-menu a:hover{background:rgba(255,255,255,0.06);color:var(--gold-light) !important;}
+
+  /* mega panel: Services */
+  .nav2-mega{
+    display:none;position:absolute;top:100%;left:-24px;
+    background:var(--ink);border-top:2px solid var(--gold);
+    box-shadow:0 18px 40px rgba(35,36,29,0.35);
+    padding:26px 30px;z-index:300;
+    grid-template-columns:repeat(3,minmax(190px,1fr));gap:34px;
+  }
+  .nav2:hover > .nav2-mega,.nav2.open > .nav2-mega{display:grid;}
+  .nav2-col > .nav2-col-head{
+    display:block;font-family:'JetBrains Mono',monospace;font-size:10.5px;
+    font-weight:700;letter-spacing:0.09em;text-transform:uppercase;
+    color:var(--gold-light) !important;padding:0 0 10px;margin-bottom:8px;
+    border-bottom:1px solid rgba(255,255,255,0.12);
+  }
+  .nav2-col > .nav2-col-head:hover{color:#fff !important;}
+  .nav2-col a{
+    display:block;padding:8px 0;font-size:14px;font-weight:500;
+    color:#E6E2D2 !important;white-space:nowrap;
+  }
+  .nav2-col a:hover{color:var(--gold-light) !important;}
+  .nav2-col a .soon{
+    font-family:'JetBrains Mono',monospace;font-size:9.5px;letter-spacing:0.06em;
+    text-transform:uppercase;color:#8C8871;margin-left:8px;
+  }
+}
+
+/* ---------- Mobile menu ---------- */
+.mobile-menu{
+  display:none;flex-direction:column;
+  background:var(--ink);border-top:1px solid rgba(255,255,255,0.1);
+  max-height:calc(100vh - 70px);overflow-y:auto;
+}
+.mobile-menu.open{display:flex;}
+.mobile-menu a{
+  padding:14px 20px;font-size:15px;font-weight:500;
+  color:#E6E2D2 !important;border-bottom:1px solid rgba(255,255,255,0.08);
+}
+.mobile-menu .mm-head{
+  font-family:'JetBrains Mono',monospace;font-size:10.5px;font-weight:700;
+  letter-spacing:0.09em;text-transform:uppercase;color:var(--gold-light) !important;
+  padding:16px 20px 8px;border-bottom:1px solid rgba(255,255,255,0.14);
+}
+.mobile-menu a.mm-sub{padding-left:36px;font-size:14px;color:#C7C3AC !important;}
+.mobile-menu .mm-cta{
+  margin:18px 20px 24px;padding:17px;background:var(--gold);color:#fff;
+  text-align:center;border-radius:0;font-weight:700;border:none;font-size:16px;width:calc(100% - 40px);
+}
+
+/* ---------- Page hero bands ---------- */
+.hero,.page-hero,.article-hero,.about-hero,.contact-hero,.cs-hero,.blog-hero,.error-hero{
+  background:var(--khaki-deep) !important;
+  border-bottom:none !important;
+  padding:64px 0 60px !important;
+  position:relative;
+  color:#F6F4ED;
+}
+.hero::after,.page-hero::after,.article-hero::after,.about-hero::after,
+.contact-hero::after,.cs-hero::after,.blog-hero::after,.error-hero::after{
+  content:'';position:absolute;left:0;right:0;bottom:0;height:3px;background:var(--gold);
+}
+.page-hero h1,.article-hero h1,.about-hero h1,.contact-hero h1,.cs-hero h1,
+.blog-hero h1,.error-hero h1,.hero h1,
+.page-hero .page-title,.contact-hero .page-title,.article-hero .article-title{
+  font-family:'Manrope',sans-serif;font-weight:800;letter-spacing:-0.028em;
+  color:#F6F4ED !important;line-height:1.07;
+  font-size:clamp(30px,5.2vw,52px) !important;margin-bottom:20px;text-wrap:pretty;
+}
+.page-hero h1 em,.hero h1 em,.about-hero h1 em,.blog-hero h1 em,.cs-hero h1 em{
+  font-style:normal;color:var(--gold-light) !important;
+}
+.page-hero .hero-sub,.article-hero .article-intro,.about-hero .hero-sub,
+.contact-hero .page-intro,.cs-hero .hero-sub,.blog-hero .blog-intro,
+.error-hero .error-sub,.hero .hero-sub,.page-hero .page-intro,
+.page-hero .last-updated,.cs-hero .cs-intro{
+  color:#CFCBB8 !important;font-size:17px !important;line-height:1.6 !important;max-width:640px;
+}
+.page-hero .eyebrow,.article-hero .eyebrow,.about-hero .eyebrow,.contact-hero .eyebrow,
+.cs-hero .eyebrow,.blog-hero .eyebrow,.error-hero .eyebrow,.hero .eyebrow,
+.page-hero .section-label,.cs-hero .section-label,.article-hero .article-meta,
+.page-hero .breadcrumb,.article-hero .breadcrumb,.cs-hero .breadcrumb{
+  color:var(--gold-light) !important;
+  font-family:'JetBrains Mono',monospace;font-size:12px !important;
+  letter-spacing:0.07em;text-transform:uppercase;font-weight:600;
+}
+.page-hero .section-label::before,.cs-hero .section-label::before{background:var(--gold-light) !important;}
+.page-hero a,.article-hero a,.about-hero a,.contact-hero a,.cs-hero a,.blog-hero a,.error-hero a,.hero a{
+  color:var(--gold-light);
+}
+.page-hero .breadcrumb a,.article-hero .breadcrumb a,.cs-hero .breadcrumb a{color:#A8A48F;}
+.page-hero .btn-secondary,.hero .btn-secondary,.error-hero .btn-secondary,.cs-hero .btn-secondary,
+.about-hero .btn-secondary,.contact-hero .btn-secondary,.blog-hero .btn-secondary{
+  border:1.5px solid rgba(246,244,237,0.45) !important;color:#F6F4ED !important;background:transparent !important;
+}
+.page-hero .hero-meta,.hero .hero-meta,.about-hero .hero-meta{border-top-color:rgba(246,244,237,0.2) !important;}
+.page-hero .hero-meta-item,.hero .hero-meta-item,.about-hero .hero-meta-item{
+  border-bottom-color:rgba(246,244,237,0.2) !important;
+}
+.page-hero .hero-meta-item .k,.hero .hero-meta-item .k{color:#A8A48F !important;}
+.page-hero .hero-meta-item .v,.hero .hero-meta-item .v{color:#F6F4ED !important;}
+
+/* hero cards sitting on the dark band keep paper backgrounds */
+.hero .ledger,.page-hero .ledger{background:var(--paper) !important;border:none !important;border-top:3px solid var(--gold) !important;}
+
+/* ---------- Metric strip under hero ---------- */
+.jwc-metrics{background:var(--ink);}
+.jwc-metrics-inner{
+  max-width:var(--max);margin:0 auto;
+  display:grid;grid-template-columns:repeat(2,1fr);
+}
+@media(min-width:760px){.jwc-metrics-inner{grid-template-columns:repeat(4,1fr);}}
+.jwc-metric{padding:24px 20px;border-right:1px solid rgba(255,255,255,0.09);border-bottom:1px solid rgba(255,255,255,0.09);}
+.jwc-metric:nth-child(2n){border-right:none;}
+@media(min-width:760px){
+  .jwc-metric{border-bottom:none;}
+  .jwc-metric:nth-child(2n){border-right:1px solid rgba(255,255,255,0.09);}
+  .jwc-metric:last-child{border-right:none;}
+}
+.jwc-metric-v{font-family:'Manrope',sans-serif;font-size:30px;font-weight:800;color:var(--gold);line-height:1;margin-bottom:7px;}
+.jwc-metric-k{font-family:'JetBrains Mono',monospace;font-size:10.5px;letter-spacing:0.07em;text-transform:uppercase;color:#A8A48F;}
+
+/* ---------- Type & section rhythm ---------- */
+body{font-family:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;background:var(--paper);color:var(--ink);}
+.wrap{max-width:var(--max);}
+h2{font-family:'Manrope',sans-serif;font-weight:800 !important;letter-spacing:-0.022em !important;font-size:clamp(23px,2.6vw,30px) !important;}
+h3{font-family:'Manrope',sans-serif;font-weight:700 !important;letter-spacing:-0.012em;}
+section{padding:60px 0;border-bottom:1px solid var(--line);}
+.section-label{
+  font-family:'JetBrains Mono',monospace;font-size:11.5px;font-weight:600;
+  letter-spacing:0.07em;text-transform:uppercase;color:var(--gold-deep);
+}
+
+/* ---------- Squared edges, gold accents ---------- */
+.btn,.btn-primary,.btn-secondary,.form-submit,.nav-cta,.mm-cta,
+.service-file,.panel,.testimonial-card,.cred-badge,.faq-list,.ledger,
+.form-card,.form-row input,.form-row select,.form-row textarea,
+.cs-coming-soon,.cs-badge,.tag{border-radius:0 !important;}
+.btn-primary,.form-submit{background:var(--gold) !important;color:#fff !important;font-weight:700;}
+.btn-primary:hover,.form-submit:hover{background:var(--gold-deep) !important;}
+.btn{padding:17px 30px;font-size:16.5px;}
+.service-index{border-radius:0 !important;background:var(--gold) !important;color:#fff !important;border-color:var(--gold) !important;}
+.ledger-tab{clip-path:none !important;border-radius:0 !important;}
+.service-price .amount,.results-metric-value,.ledger-foot .total-value{font-family:'JetBrains Mono',monospace;}
+
+/* dark bands keep gold labels */
+.cta-band,.quote-block,.results-strip,.panel.featured{background:var(--khaki-deep) !important;}
+.cta-band .section-label{color:var(--gold-light) !important;}
+.cta-band .section-label::before{background:var(--gold-light) !important;}
+.quote-block{border-left:3px solid var(--gold) !important;}
+
+/* links */
+a{color:inherit;}
+main a:not(.btn):not(.nav-cta):not(.service-enquire):not([class*="cs-"]):hover{color:var(--gold-deep);}
+
+/* ---------- Footer ---------- */
+footer{background:var(--ink);color:#CFCBB8;padding:52px 0 26px !important;border-top:3px solid var(--gold);}
+footer .footer-cols{display:grid;grid-template-columns:repeat(2,1fr);gap:26px;}
+@media(min-width:760px){footer .footer-cols{grid-template-columns:repeat(3,1fr);}}
+@media(min-width:1040px){footer .footer-cols{grid-template-columns:repeat(6,1fr);}}
+footer .footer-col h4{
+  font-family:'JetBrains Mono',monospace;font-size:10.5px;font-weight:700;
+  letter-spacing:0.09em;text-transform:uppercase;color:var(--gold-light) !important;margin-bottom:12px;
+}
+footer .footer-col a{display:block;font-size:14px;padding:6px 0;color:#CFCBB8 !important;}
+footer .footer-col a:hover{color:var(--gold-light) !important;}
+footer .footer-bottom{
+  border-top:1px solid rgba(255,255,255,0.12) !important;padding-top:20px;margin-top:8px;
+  font-size:12px;color:#8C8871;display:flex;flex-direction:column;gap:14px;align-items:flex-start;
+}
+@media(min-width:760px){footer .footer-bottom{flex-direction:row;justify-content:space-between;align-items:center;}}
+footer .footer-logo{height:80px;width:auto;max-width:none;flex:0 0 auto;align-self:flex-start;object-fit:contain;display:block;margin-bottom:18px;}
+footer .social-icon.email svg{fill:#8C8871;}
+
+/* ---------- Cookie banner ---------- */
+.cookie-banner{background:var(--ink) !important;border-top:2px solid var(--gold) !important;}
+.cookie-accept{background:var(--gold) !important;border-radius:0 !important;color:#fff !important;}
+.cookie-reject{border-radius:0 !important;}
+</style>
+<style id="jwc-sitewide">
+  /* Nav phone: matches the size of the nav CTA button beside it */
+  @media(min-width:920px){
+    header a.nav-phone{display:inline-flex !important;box-sizing:border-box;width:53px !important;height:53px;gap:8px;padding:0;margin-left:8px;align-items:center;justify-content:center;border:1px solid rgba(255,255,255,0.35);border-radius:0px;color:#ffffff;font-weight:700;font-size:15px;line-height:1;white-space:nowrap;flex-shrink:0;}
+    header a.nav-phone:hover{background:rgba(255,255,255,0.08);border-color:rgba(255,255,255,0.5);}
+    header a.nav-phone svg{width:18px;height:18px;fill:#ffffff;display:block;flex-shrink:0;}
+    header a.nav-phone span{display:none;}
+  }
+  @media(min-width:1100px){
+    header a.nav-phone{width:148px !important;padding:0 8px;gap:6px;}
+    header a.nav-phone span{display:inline;}
+  }
+  /* Floating WhatsApp button */
+  .wa-float{position:fixed;right:20px;bottom:20px;z-index:998;width:56px;height:56px;border-radius:50%;background:#25D366;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 14px rgba(0,0,0,0.25);transition:transform 0.15s ease;}
+  .wa-float:hover{transform:scale(1.06);}
+  .wa-float svg{width:30px;height:30px;fill:#ffffff;display:block;}
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Is Your Website Invisible to AI Search? How to Check, and How to Fix It",
+  "description": "AI crawlers like ChatGPT's can miss pages linked only by JavaScript. Here's what a 41 day test found, how to check your site in 5 minutes, and how to fix it.",
+  "datePublished": "2026-10-30",
+  "dateModified": "2026-10-30",
+  "articleSection": "Website Design",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://www.jwcperformance.co.uk/blog/is-your-website-invisible-to-ai-search"
+  },
+  "author": {
+    "@type": "Person",
+    "name": "Joe Coombs",
+    "url": "https://www.jwcperformance.co.uk/about"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "JWC Performance",
+    "url": "https://www.jwcperformance.co.uk/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.jwcperformance.co.uk/assets/logo.webp"
+    }
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Can ChatGPT read my website?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It can read text and links that are in your page when it first loads. Studies have found that AI crawlers, including OpenAI's, don't run JavaScript, so content or links added by code afterwards may be missed."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can Google see JavaScript links?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Usually, yes. Googlebot can run JavaScript, and it reached JavaScript linked pages in the test. But it found fewer pages deeper in the site, so plain HTML links are still the safest choice."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I know if my site uses JavaScript links?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "View the page source with Ctrl and U and search for one of your page addresses. If it isn't there inside a normal link, the link is probably being added by code."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Should I block AI crawlers?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "That's your choice. If you want AI tools to recommend your business, don't block the crawlers they use to read websites. You can still block training crawlers separately if you prefer."
+      }
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.jwcperformance.co.uk/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Blog",
+      "item": "https://www.jwcperformance.co.uk/blog/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Is Your Website Invisible to AI Search? How to Check, and How to Fix It",
+      "item": "https://www.jwcperformance.co.uk/blog/is-your-website-invisible-to-ai-search"
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5HCM3QFH" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+<div class="top-strip"><a href="tel:07848522456" style="color:inherit;font-weight:700;">07848 522456</a> · Google Ads specialist, <strong>free account audit, no obligation</strong> · 15+ years' experience · fixed fee</div>
+
+<header>
+  <div class="nav-row">
+    <a href="/" class="logo" aria-label="JWC Performance home">
+      <img src="/assets/logo.png" alt="JWC Performance" width="71" height="54">
+    </a>
+    <nav class="desktop-nav">
+      <div class="nav2 has-sub">
+        <a href="#services-menu" aria-haspopup="true">Services</a>
+        <div class="nav2-mega">
+          <div class="nav2-col">
+            <a href="/services/google-ads" class="nav2-col-head">Google Ads</a>
+            <a href="/services/google-ads-audit">Google Ads Audit</a>
+            <a href="/services/account-management">Account Management</a>
+            <a href="/services/new-account-build">New Account Build</a>
+            <a href="/services/account-restructure">Account Restructure</a>
+          </div>
+          <div class="nav2-col">
+            <a href="/services/seo" class="nav2-col-head">SEO</a>
+            <a href="/services/technical-seo">Technical SEO</a>
+            <a href="/services/local-seo">Local SEO</a>
+            <a href="/services/on-page-seo">On-Page SEO</a>
+            <a href="/services/content">Content</a>
+          </div>
+          <div class="nav2-col">
+            <a href="/services/websites" class="nav2-col-head">Websites</a>
+            <a href="/services/website-design">Website Design</a>
+            <a href="/services/website-development">Website Development</a>
+            <a href="/services/website-hosting">Hosting</a>
+          </div>
+        </div>
+      </div>
+      <div class="nav2 has-sub">
+        <a href="/google-ads-b2b">Sectors</a>
+        <div class="nav2-menu">
+          <a href="/google-ads-b2b">Google Ads for B2B</a>
+          <a href="/google-ads-b2c">Google Ads for B2C</a>
+        </div>
+      </div>
+      <div class="nav2 has-sub">
+        <a href="/ppc-consultant-london">Locations</a>
+        <div class="nav2-menu">
+          <a href="/ppc-consultant-london">London</a>
+          <a href="/ppc-consultant-bromley">Bromley</a>
+          <a href="/ppc-consultant-croydon">Croydon</a>
+          <a href="/ppc-consultant-kent">Kent</a>
+          <a href="/ppc-consultant-surrey">Surrey</a>
+          <a href="/ppc-consultant-beckenham">Beckenham</a>
+          <a href="/ppc-consultant-dartford">Dartford</a>
+          <a href="/ppc-consultant-lewisham">Lewisham</a>
+        </div>
+      </div>
+      <div class="nav2 has-sub">
+        <a href="/about">About</a>
+        <div class="nav2-menu">
+          <a href="/about">About Joe</a>
+          <a href="/process">How Joe works</a>
+          <a href="/faq">FAQ</a>
+        </div>
+      </div>
+      <div class="nav2 has-sub">
+        <a href="/case-studies/google-ads">Case studies</a>
+        <div class="nav2-menu">
+          <a href="/case-studies/google-ads">Google Ads</a>
+          <a href="/case-studies/website-design">Website Design &amp; Build</a>
+        </div>
+      </div>
+      <div class="nav2"><a href="/blog/">Blog</a></div>
+    </nav>
+    <a href="tel:07848522456" class="nav-phone" style="display:none;" aria-label="Call 07848 522456" title="Call 07848 522456">
+      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.24.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+      <span>07848 522456</span>
+    </a>
+    <a href="/contact" class="nav-cta">Enquire today</a>
+    <button class="menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <span class="mm-head">Google Ads</span>
+    <a href="/services/google-ads" class="mm-sub">Google Ads overview</a>
+    <a href="/services/google-ads-audit" class="mm-sub">Google Ads Audit</a>
+    <a href="/services/account-management" class="mm-sub">Account Management</a>
+    <a href="/services/new-account-build" class="mm-sub">New Account Build</a>
+    <a href="/services/account-restructure" class="mm-sub">Account Restructure</a>
+    <span class="mm-head">SEO</span>
+    <a href="/services/seo" class="mm-sub">SEO overview</a>
+    <a href="/services/technical-seo" class="mm-sub">Technical SEO</a>
+    <a href="/services/local-seo" class="mm-sub">Local SEO</a>
+    <a href="/services/on-page-seo" class="mm-sub">On-Page SEO</a>
+    <a href="/services/content" class="mm-sub">Content</a>
+    <span class="mm-head">Websites</span>
+    <a href="/services/websites" class="mm-sub">Websites overview</a>
+    <a href="/services/website-design" class="mm-sub">Website Design</a>
+    <a href="/services/website-development" class="mm-sub">Website Development</a>
+    <a href="/services/website-hosting" class="mm-sub">Hosting</a>
+    <span class="mm-head">Sectors</span>
+    <a href="/google-ads-b2b" class="mm-sub">Google Ads for B2B</a>
+    <a href="/google-ads-b2c" class="mm-sub">Google Ads for B2C</a>
+    <span class="mm-head">Locations</span>
+    <a href="/ppc-consultant-london" class="mm-sub">London</a>
+    <a href="/ppc-consultant-bromley" class="mm-sub">Bromley</a>
+    <a href="/ppc-consultant-croydon" class="mm-sub">Croydon</a>
+    <a href="/ppc-consultant-kent" class="mm-sub">Kent</a>
+    <a href="/ppc-consultant-surrey" class="mm-sub">Surrey</a>
+    <a href="/ppc-consultant-beckenham" class="mm-sub">Beckenham</a>
+    <a href="/ppc-consultant-dartford" class="mm-sub">Dartford</a>
+    <a href="/ppc-consultant-lewisham" class="mm-sub">Lewisham</a>
+    <span class="mm-head">More</span>
+    <a href="/about" class="mm-sub">About Joe</a>
+    <a href="/process" class="mm-sub">How Joe works</a>
+    <a href="/faq" class="mm-sub">FAQ</a>
+    <a href="/case-studies/google-ads" class="mm-sub">Case studies</a>
+    <a href="/blog/" class="mm-sub">Blog</a>
+    <a href="/contact"><button class="mm-cta">Enquire today</button></a>
+  </div>
+</header>
+
+<main>
+  <section class="article-hero">
+    <div class="wrap">
+      <div class="breadcrumb"><a href="/">Home</a> / <a href="/blog/">Blog</a> / Websites</div>
+      <div class="article-meta">
+        <span class="tag">Website Design</span>
+        <span>October 2026</span>
+        <span>7 min read</span>
+      </div>
+      <h1 class="article-title">Is Your Website Invisible to AI Search? How to Check, and How to Fix It</h1>
+      <p class="article-intro">More people now ask ChatGPT, Google's AI and other tools to recommend a business. But some websites are built in a way those tools can't fully read. Here's what a recent test found, how to check your own site in five minutes, and what to fix if pages are missing.</p>
+    </div>
+  </section>
+
+  <div class="wrap">
+    <div class="article-wrap">
+      <article class="article-body">
+
+        <!-- Infographic -->
+        <div style="margin:0 0 40px;">
+          <svg width="100%" viewBox="0 0 680 640" role="img" style="display:block;max-width:680px;" xmlns="http://www.w3.org/2000/svg">
+            <title>Can AI tools see your website? A 4 step check and the fixes</title>
+            <desc>In a 41 day test, AI crawlers like GPTBot, ClaudeBot and PerplexityBot found none of the pages that were only linked through JavaScript. After switching to plain HTML links, GPTBot found 250 new pages within 48 hours. Four checks: view your page source, look for your service page links, look for your main text, and check your robots.txt. Fixes: use real HTML links, put key content in the page itself, keep a sitemap, and make sure the AI bots you want aren't blocked.</desc>
+
+            <rect width="680" height="640" fill="#F6F4ED" rx="4"/>
+
+            <!-- HEADER -->
+            <rect x="30" y="20" width="620" height="62" rx="8" fill="#3D3E2F"/>
+            <text font-family="Georgia, 'Times New Roman', serif" font-size="16" font-weight="700" fill="#B6862A" text-anchor="middle" x="340" y="46">Can AI tools actually see your website?</text>
+            <text font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#DDD8C7" text-anchor="middle" x="340" y="68">What a 41 day test found, and how to check your own site</text>
+
+            <!-- STATS -->
+            <text font-family="Arial, Helvetica, sans-serif" font-size="10" font-weight="700" fill="#6A6753" x="30" y="112" letter-spacing="1.2">WHAT THE TEST FOUND</text>
+            <line x1="30" y1="118" x2="650" y2="118" stroke="#DDD8C7" stroke-width="0.5"/>
+
+            <rect x="30" y="130" width="305" height="96" rx="6" fill="#ECE7D8" stroke="#DDD8C7" stroke-width="0.5"/>
+            <text font-family="Georgia, 'Times New Roman', serif" font-size="30" font-weight="700" fill="#8A6418" x="50" y="172">0 pages</text>
+            <text font-family="Arial, Helvetica, sans-serif" font-size="11.5" fill="#23241D" x="50" y="196">found by AI crawlers when the only</text>
+            <text font-family="Arial, Helvetica, sans-serif" font-size="11.5" fill="#23241D" x="50" y="212">links to them were in JavaScript</text>
+
+            <rect x="345" y="130" width="305" height="96" rx="6" fill="#ECE7D8" stroke="#DDD8C7" stroke-width="0.5"/>
+            <text font-family="Georgia, 'Times New Roman', serif" font-size="30" font-weight="700" fill="#8A6418" x="365" y="172">250 pages</text>
+            <text font-family="Arial, Helvetica, sans-serif" font-size="11.5" fill="#23241D" x="365" y="196">found by GPTBot within 48 hours</text>
+            <text font-family="Arial, Helvetica, sans-serif" font-size="11.5" fill="#23241D" x="365" y="212">of switching to plain HTML links</text>
+
+            <!-- CHECKS -->
+            <text font-family="Arial, Helvetica, sans-serif" font-size="10" font-weight="700" fill="#6A6753" x="30" y="256" letter-spacing="1.2">CHECK YOUR OWN SITE IN 4 STEPS</text>
+            <line x1="30" y1="262" x2="650" y2="262" stroke="#DDD8C7" stroke-width="0.5"/>
+
+            <!-- Left column: card x=30, number x=50, text x=80 -->
+            <rect x="30" y="274" width="305" height="76" rx="6" fill="#ECE7D8" stroke="#DDD8C7" stroke-width="0.5"/>
+            <text font-family="Georgia, 'Times New Roman', serif" font-size="22" font-weight="700" fill="#B6862A" x="50" y="314">1</text>
+            <text font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="700" fill="#23241D" x="80" y="304">View the page source</text>
+            <text font-family="Arial, Helvetica, sans-serif" font-size="11" fill="#6A6753" x="80" y="324">Ctrl and U on a computer</text>
+
+            <rect x="30" y="360" width="305" height="76" rx="6" fill="#ECE7D8" stroke="#DDD8C7" stroke-width="0.5"/>
+            <text font-family="Georgia, 'Times New Roman', serif" font-size="22" font-weight="700" fill="#B6862A" x="50" y="400">3</text>
+            <text font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="700" fill="#23241D" x="80" y="390">Find your main text</text>
+            <text font-family="Arial, Helvetica, sans-serif" font-size="11" fill="#6A6753" x="80" y="410">Copy a sentence and search for it</text>
+
+            <!-- Right column: card x=345, number x=365, text x=395 -->
+            <rect x="345" y="274" width="305" height="76" rx="6" fill="#ECE7D8" stroke="#DDD8C7" stroke-width="0.5"/>
+            <text font-family="Georgia, 'Times New Roman', serif" font-size="22" font-weight="700" fill="#B6862A" x="365" y="314">2</text>
+            <text font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="700" fill="#23241D" x="395" y="304">Find your service links</text>
+            <text font-family="Arial, Helvetica, sans-serif" font-size="11" fill="#6A6753" x="395" y="324">Search for the page addresses</text>
+
+            <rect x="345" y="360" width="305" height="76" rx="6" fill="#ECE7D8" stroke="#DDD8C7" stroke-width="0.5"/>
+            <text font-family="Georgia, 'Times New Roman', serif" font-size="22" font-weight="700" fill="#B6862A" x="365" y="400">4</text>
+            <text font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="700" fill="#23241D" x="395" y="390">Check your robots.txt</text>
+            <text font-family="Arial, Helvetica, sans-serif" font-size="11" fill="#6A6753" x="395" y="410">Make sure you're not blocking them</text>
+
+            <!-- FIXES -->
+            <text font-family="Arial, Helvetica, sans-serif" font-size="10" font-weight="700" fill="#6A6753" x="30" y="466" letter-spacing="1.2">IF SOMETHING'S MISSING</text>
+            <line x1="30" y1="472" x2="650" y2="472" stroke="#DDD8C7" stroke-width="0.5"/>
+
+            <rect x="30" y="482" width="620" height="54" rx="6" fill="#ECE7D8" stroke="#DDD8C7" stroke-width="0.5"/>
+            <text font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#23241D" text-anchor="middle" x="340" y="505">Use real HTML links  ·  Put key text in the page itself</text>
+            <text font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#23241D" text-anchor="middle" x="340" y="524">Keep a sitemap  ·  Don't block the AI tools you want to appear in</text>
+
+            <!-- BOTTOM LINE -->
+            <rect x="30" y="552" width="620" height="62" rx="6" fill="#3D3E2F"/>
+            <text font-family="Georgia, 'Times New Roman', serif" font-size="15" font-weight="700" fill="#B6862A" text-anchor="middle" x="340" y="579">If it isn't in the page source, AI tools may never see it</text>
+            <text font-family="Arial, Helvetica, sans-serif" font-size="11.5" fill="#DDD8C7" text-anchor="middle" x="340" y="599">Google can usually cope. Most AI crawlers can't.</text>
+          </svg>
+        </div>
+
+        <h2>What the test found</h2>
+        <p>SEO engineer Vinicius Stanula ran a 41 day test on a site with around 1,000 pages. Some sections were linked with normal HTML links. Others were only linked through JavaScript, which means the links only appeared after code ran in the browser.</p>
+        <p>The results were clear. AI crawlers like GPTBot, ClaudeBot and PerplexityBot didn't find a single page in the sections linked only by JavaScript. Googlebot did reach them, though it struggled deeper into the site. When the links were switched to plain HTML, GPTBot found 250 new pages within 48 hours.</p>
+
+        <h2>Why this happens</h2>
+        <p>When you visit a website, your browser downloads the page and then runs any code that comes with it. That code can build menus, load text and add links. Google's crawler can do the same thing, although it takes longer.</p>
+        <p>Most AI crawlers don't. A 2024 study by the hosting company Vercel found that none of the major AI crawlers it tracked, including those from OpenAI, Anthropic and Perplexity, ran JavaScript. They read the page as it first arrives from the server. If a link or a paragraph isn't there yet, they don't see it.</p>
+        <p>So if your menu, your service pages or your main text only appear once code runs, AI tools may not know those pages exist. And if they can't see them, they can't recommend you for those jobs.</p>
+
+        <div class="callout">
+          <p><strong>Why it matters for local businesses:</strong> When someone asks an AI tool "who's a good electrician in Bromley?", the tool can only suggest businesses it understands. A website it can't read properly gives it very little to go on. I covered this from the Google side in my post on <a href="/blog/how-to-stay-in-googles-ai-local-results">staying in Google's AI local results</a>.</p>
+        </div>
+
+        <h2>Which websites are most at risk?</h2>
+        <p>Plenty of sites are fine. The ones to check most carefully are:</p>
+        <ul>
+          <li><strong>Sites with fancy menus</strong> that open, slide or load on click, especially if the links inside them aren't normal links.</li>
+          <li><strong>Sites built as "apps"</strong> with some modern JavaScript frameworks, where the whole page is built in the browser.</li>
+          <li><strong>Pages that load more content as you scroll</strong>, or hide text behind tabs and "read more" buttons that pull it in later.</li>
+          <li><strong>Sites with text inside images</strong>, like a banner with your services written on it. No crawler can read that as text.</li>
+        </ul>
+
+        <h2>How to check your own site</h2>
+        <p>You don't need special tools. Do this on a computer.</p>
+
+        <h3>1. View the page source</h3>
+        <p>Open your homepage and press Ctrl and U, or Cmd, Option and U on a Mac. This shows the raw page as it arrives from your server, before any code runs. It's roughly what most AI crawlers see.</p>
+
+        <h3>2. Look for your service page links</h3>
+        <p>Press Ctrl and F and search for the address of one of your service pages, like "/boilers". If it's there inside an <strong>a href</strong> link, that page can be found. If it isn't there at all, the link is probably being added by code.</p>
+
+        <h3>3. Look for your main text</h3>
+        <p>Copy a sentence from the page, like your opening line, and search for it in the source. If you can't find it, that text is being loaded later, and AI tools may not see it.</p>
+
+        <h3>4. Check your robots.txt</h3>
+        <p>Visit yoursite.co.uk/robots.txt. This file tells crawlers what they're allowed to read. Make sure it isn't blocking the AI tools you want to appear in. Some security services also have settings that block AI crawlers, so check those too. One thing to know: blocking OpenAI's GPTBot stops your content being used for training, while ChatGPT's search uses a separate crawler called OAI-SearchBot.</p>
+
+        <h2>How to fix it</h2>
+        <ul>
+          <li><strong>Use real HTML links</strong> for your menu and your service pages. Every important page should be reachable through normal links in the page source.</li>
+          <li><strong>Put key content in the page itself.</strong> Your services, areas, prices and FAQs should be in the page as text when it loads, not pulled in afterwards.</li>
+          <li><strong>Ask about server side rendering</strong> if your site is built with a JavaScript framework. It means the server sends the finished page, so crawlers see everything straight away.</li>
+          <li><strong>Keep an up to date sitemap</strong> so search engines have a full list of your pages.</li>
+          <li><strong>Replace text in images</strong> with real text on the page.</li>
+        </ul>
+        <p>If your site has bigger technical problems too, my post on <a href="/blog/technical-seo-what-actually-stops-a-site-ranking">what actually stops a site ranking</a> covers the other common culprits.</p>
+
+        <h2>Why simple often wins</h2>
+        <p>The sites that do best here are often the simplest. Plain pages, real links and clear text, loading fast. That's the same thing that makes a site quick on a phone and easy for customers to use. My post on <a href="/blog/what-a-trade-business-website-needs-in-2026">what a trade website needs in 2026</a> covers the rest of the checklist.</p>
+        <p>It's also how I build websites. The pages are plain HTML with real links and real text, so Google, AI tools and customers all see the same thing.</p>
+
+        <h2>Common questions</h2>
+
+        <h3>Can ChatGPT read my website?</h3>
+        <p>It can read text and links that are in your page when it first loads. Studies have found that AI crawlers, including OpenAI's, don't run JavaScript, so content or links added by code afterwards may be missed.</p>
+
+        <h3>Can Google see JavaScript links?</h3>
+        <p>Usually, yes. Googlebot can run JavaScript, and it reached JavaScript linked pages in the test. But it found fewer pages deeper in the site, so plain HTML links are still the safest choice.</p>
+
+        <h3>How do I know if my site uses JavaScript links?</h3>
+        <p>View the page source with Ctrl and U and search for one of your page addresses. If it isn't there inside a normal link, the link is probably being added by code.</p>
+
+        <h3>Should I block AI crawlers?</h3>
+        <p>That's your choice. If you want AI tools to recommend your business, don't block the crawlers they use to read websites. You can still block training crawlers separately if you prefer.</p>
+
+        <h2>The bottom line</h2>
+        <p>If AI tools can't read your website, they can't recommend you. The fix is usually simple: real links, real text in the page, and no accidental blocks. Check your page source today. If your service pages or main text are missing, it's worth fixing before more of your customers start their search with AI. If you'd like a site built that way from the start, take a look at my <a href="/services/website-design">website design and build service</a>.</p>
+
+      </article>
+
+      <aside class="article-sidebar">
+        <div class="sidebar-card" style="background:var(--khaki-deep);">
+          <h4 style="color:var(--gold);">Want a site AI tools can read?</h4>
+          <p style="color:#C7C3AC;">Fast, plain HTML websites with real links and real text, built for trade and service businesses. Three packages, from £1,000.</p>
+          <a href="/services/website-design" class="btn">See website packages</a>
+        </div>
+        <div class="sidebar-card">
+          <h4>Related services</h4>
+          <ul>
+            <li><a href="/services/website-design">Website design and build</a></li>
+            <li><a href="/services/technical-seo">Technical SEO</a></li>
+            <li><a href="/services/seo">SEO services</a></li>
+            <li><a href="/case-studies/website-design">Website case studies</a></li>
+          </ul>
+        </div>
+        <div class="sidebar-card">
+          <h4>More from the blog</h4>
+          <ul>
+            <li><a href="/blog/technical-seo-what-actually-stops-a-site-ranking">What actually stops a site ranking</a></li>
+            <li><a href="/blog/how-to-stay-in-googles-ai-local-results">How to stay in Google's AI local results</a></li>
+            <li><a href="/blog/why-your-website-is-slow-and-what-actually-fixes-it">Why your website is slow</a></li>
+            <li><a href="/blog/">All posts</a></li>
+          </ul>
+        </div>
+        <div class="author-card">
+          <h4>Written by</h4>
+          <p>Joe Coombs. Google Ads specialist with 15+ years of experience, who also designs and builds websites for UK trade and service businesses.</p>
+        </div>
+      </aside>
+    </div>
+  </div>
+
+  <section class="cta-band">
+    <div class="wrap">
+      <div class="eyebrow">Get started</div>
+      <h2>Want a website that customers, Google and AI can all read?</h2>
+      <p>Plain, fast pages with real links, real text and tracking built in from day one. Three packages to choose from, with copywriting priced separately so you only pay for what you need.</p>
+      <a href="/services/website-design" class="btn-primary">See website packages</a>
+    </div>
+  </section>
+</main>
+
+
+
+
+<footer>
+  <div class="wrap footer-grid">
+    <img src="/assets/logo.png" alt="JWC Performance" class="footer-logo" width="106" height="80">
+    <div class="footer-cols">
+      <div class="footer-col">
+        <h4>Google Ads</h4>
+        <a href="/services/google-ads-audit">Free account audit</a>
+        <a href="/services/new-account-build">New account build</a>
+        <a href="/services/account-restructure">Account restructure</a>
+        <a href="/services/account-management">Account management</a>
+      </div>
+      <div class="footer-col">
+        <h4>SEO</h4>
+        <a href="/services/technical-seo">Technical SEO</a>
+        <a href="/services/local-seo">Local SEO</a>
+        <a href="/services/on-page-seo">On-Page SEO</a>
+        <a href="/services/content">Content</a>
+      </div>
+      <div class="footer-col">
+        <h4>Websites</h4>
+        <a href="/services/website-design">Website design</a>
+        <a href="/services/website-development">Website development</a>
+        <a href="/services/website-hosting">Hosting</a>
+      </div>
+      <div class="footer-col">
+        <h4>Locations</h4>
+        <a href="/ppc-consultant-london">London</a>
+        <a href="/ppc-consultant-bromley">Bromley</a>
+        <a href="/ppc-consultant-croydon">Croydon</a>
+        <a href="/ppc-consultant-kent">Kent</a>
+        <a href="/ppc-consultant-surrey">Surrey</a>
+        <a href="/ppc-consultant-beckenham">Beckenham</a>
+        <a href="/ppc-consultant-dartford">Dartford</a>
+        <a href="/ppc-consultant-lewisham">Lewisham</a>
+      </div>
+      <div class="footer-col">
+        <h4>More</h4>
+        <a href="/about">About</a>
+        <a href="/process">How Joe works</a>
+        <a href="/blog/">Blog</a>
+        <a href="/faq">FAQ</a>
+        <a href="/case-studies/google-ads">Case studies</a>
+        <a href="/cookie-policy">Cookie policy</a>
+        <a href="/privacy-policy">Privacy policy</a>
+      </div>
+      <div class="footer-col">
+        <h4>Get in touch</h4>
+        <a href="tel:07848522456">07848 522456</a>
+        <a href="mailto:joe@jwcperformance.co.uk">joe@jwcperformance.co.uk</a>
+        <a href="/services/google-ads-audit">Free audit</a>
+        <a href="/contact">Contact form</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 JWC Performance. Google Ads specialist for UK businesses.</span>
+      <div class="social-icons">
+        <a href="mailto:joe@jwcperformance.co.uk" class="social-icon email" aria-label="Email" title="Email">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+        </a>
+        <a href="https://wa.me/447848522456" class="social-icon whatsapp jwc-whatsapp" aria-label="WhatsApp" title="WhatsApp">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        </a>
+        <a href="https://www.linkedin.com/company/jwc-performance/" class="social-icon linkedin jwc-linkedin" aria-label="LinkedIn" title="LinkedIn">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+        </a>
+        <a href="https://www.facebook.com/profile.php?id=61591596471748" class="social-icon facebook jwc-facebook" aria-label="Facebook" title="Facebook">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<div class="cookie-banner" id="cookieBanner">
+  <div class="cookie-banner-text">
+    <div class="cookie-banner-title">This site uses cookies</div>
+    <p>We use cookies to analyse site traffic and improve your experience. <a href="/cookie-policy">Cookie policy</a></p>
+  </div>
+  <div class="cookie-btns">
+    <button class="cookie-accept" id="cookieAccept">Accept</button>
+    <button class="cookie-reject" id="cookieReject">Reject</button>
+  </div>
+</div>
+
+<script>
+  document.querySelectorAll('.nav-dropdown > a').forEach(function(link){
+    link.addEventListener('click', function(e){
+      e.preventDefault();
+      var dropdown = link.closest('.nav-dropdown');
+      var isOpen = dropdown.classList.contains('open');
+      document.querySelectorAll('.nav-dropdown').forEach(function(d){ d.classList.remove('open'); });
+      if(!isOpen) dropdown.classList.add('open');
+    });
+  });
+  document.addEventListener('click', function(e){
+    if(!e.target.closest('.nav-dropdown')){
+      document.querySelectorAll('.nav-dropdown').forEach(function(d){ d.classList.remove('open'); });
+    }
+  });
+  const menuBtn = document.getElementById('menuBtn');
+  const mobileMenu = document.getElementById('mobileMenu');
+  menuBtn.addEventListener('click', () => { mobileMenu.classList.toggle('open'); });
+  document.querySelectorAll('.mobile-menu a').forEach(a => { a.addEventListener('click', () => { mobileMenu.classList.remove('open'); }); });
+  (function(){
+    var banner = document.getElementById('cookieBanner');
+    if(localStorage.getItem('jwc_cookie_consent')) banner.classList.add('hidden');
+    function gtag(){window.dataLayer=window.dataLayer||[];window.dataLayer.push(arguments);}
+    document.getElementById('cookieAccept').addEventListener('click', function(){
+      localStorage.setItem('jwc_cookie_consent','accepted');
+      banner.classList.add('hidden');
+      gtag('consent','update',{'analytics_storage':'granted','ad_storage':'granted','ad_user_data':'granted','ad_personalization':'granted'});
+    });
+    document.getElementById('cookieReject').addEventListener('click', function(){
+      localStorage.setItem('jwc_cookie_consent','rejected');
+      banner.classList.add('hidden');
+    });
+  })();
+</script>
+<script>
+/* JWC nav — dropdown panels (burger is handled by each page's existing script) */
+(function(){
+  document.querySelectorAll('.nav2.has-sub > a').forEach(function(link){
+    link.addEventListener('click', function(e){
+      if(window.innerWidth < 920) return;
+      e.preventDefault();
+      var item = link.parentNode;
+      var wasOpen = item.classList.contains('open');
+      document.querySelectorAll('.nav2').forEach(function(n){ n.classList.remove('open'); });
+      if(!wasOpen) item.classList.add('open');
+    });
+  });
+  document.addEventListener('click', function(e){
+    if(!e.target.closest('.nav2')){
+      document.querySelectorAll('.nav2').forEach(function(n){ n.classList.remove('open'); });
+    }
+  });
+  document.addEventListener('keydown', function(e){
+    if(e.key === 'Escape') document.querySelectorAll('.nav2').forEach(function(n){ n.classList.remove('open'); });
+  });
+})();
+</script>
+<a href="https://wa.me/447848522456" class="wa-float" target="_blank" rel="noopener" aria-label="Message JWC Performance on WhatsApp" title="Message on WhatsApp"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></a>
+</body>
+</html>
