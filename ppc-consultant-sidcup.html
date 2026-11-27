@@ -612,6 +612,31 @@ footer .social-icon.email svg{fill:#8C8871;}
   ]
 }
 </script>
+<style id="jwc-loc-photo">
+  /* Location hero photo, blended into the hero colour */
+  .page-hero.has-photo{overflow:hidden;}
+  .page-hero.has-photo > .wrap{position:relative;z-index:1;}
+  .hero-photo{position:absolute;top:0;left:0;right:0;height:230px;margin:0;pointer-events:none;
+    -webkit-mask-image:linear-gradient(to bottom,#000 0%,rgba(0,0,0,.5) 55%,transparent 100%);
+    mask-image:linear-gradient(to bottom,#000 0%,rgba(0,0,0,.5) 55%,transparent 100%);}
+  .hero-photo img{display:block;width:100%;height:100%;object-fit:cover;opacity:.5;filter:brightness(var(--dim,.85));}
+  @media(min-width:900px){
+    .hero-photo{left:auto;top:0;bottom:0;height:auto;width:min(64%,1250px);
+      -webkit-mask-image:linear-gradient(to right,transparent 0%,rgba(0,0,0,.55) 30%,#000 66%);
+      mask-image:linear-gradient(to right,transparent 0%,rgba(0,0,0,.55) 30%,#000 66%);}
+    .hero-photo img{opacity:.85;object-position:var(--pos,60% 50%);}
+  }
+  @media(min-width:900px) and (max-width:1199px){
+    .hero-photo{width:54%;
+      -webkit-mask-image:linear-gradient(to right,transparent 0%,rgba(0,0,0,.4) 45%,#000 80%);
+      mask-image:linear-gradient(to right,transparent 0%,rgba(0,0,0,.4) 45%,#000 80%);}
+  }
+  .loc-figure{margin:0 0 20px;max-width:260px;}
+  .loc-figure img{display:block;width:100%;height:auto;border-top:3px solid var(--gold);}
+  .loc-figure figcaption{font-size:12px;color:var(--muted);margin-top:8px;line-height:1.4;}
+  .loc-figure figcaption a{color:var(--gold-deep);}
+  @media(min-width:760px){.loc-figure{float:right;margin:4px 0 16px 32px;}}
+</style>
 </head>
 <body>
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5HCM3QFH" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
@@ -731,7 +756,8 @@ footer .social-icon.email svg{fill:#8C8871;}
 
 <main>
 
-  <section class="page-hero">
+  <section class="page-hero has-photo" style="--pos:55% 50%;--dim:0.7;">
+    <div class="hero-photo"><picture><source media="(min-width:900px)" srcset="/assets/location-sidcup.webp" width="1280" height="720"><img src="/assets/location-sidcup-sm.webp" alt="Tree-lined high street with red-brick shops and flower borders in Sidcup" width="800" height="240" decoding="async" fetchpriority="high"></picture></div>
     <div class="wrap">
       <div class="breadcrumb"><a href="/">Home</a> / <a href="/locations">Locations</a> / PPC Consultant Sidcup</div>
       <div class="eyebrow">Sidcup</div>
