@@ -1012,8 +1012,9 @@ footer .social-icon.email svg{fill:#8C8871;}
   .jwc-results-grid{grid-template-columns:1.05fr 0.95fr;gap:56px;}
   .jwc-hero-media{
     display:block;position:absolute;inset:0;
-    background:#141a2b url('/assets/hero-london.webp') right center / cover no-repeat;
+    background:#141a2b url('/assets/hero-london-poster.webp') right center / cover no-repeat;
   }
+  .jwc-hero-video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:right center;}
   .jwc-hero-media::after{
     content:'';position:absolute;inset:0;
     background:linear-gradient(90deg,rgba(15,18,30,0.92) 0%,rgba(15,18,30,0.75) 38%,rgba(15,18,30,0.15) 68%,rgba(15,18,30,0) 100%);
@@ -1183,7 +1184,18 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
   <!-- HERO -->
   <section class="hero jwc-hero-img">
-    <div class="jwc-hero-media" aria-hidden="true"></div>
+    <div class="jwc-hero-media" aria-hidden="true">
+      <video class="jwc-hero-video" data-src="/assets/hero-london.mp4" poster="/assets/hero-london-poster.webp" muted loop playsinline preload="none" tabindex="-1"></video>
+    </div>
+    <script>
+    (function(){
+      var v=document.querySelector('.jwc-hero-video');
+      if(!v||!window.matchMedia)return;
+      if(!matchMedia('(min-width:900px)').matches||matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+      v.src=v.getAttribute('data-src');
+      v.play().catch(function(){});
+    })();
+    </script>
     <div class="wrap jwc-hero-body">
       <div class="eyebrow">Google Ads specialist · over 15 years&rsquo; experience</div>
       <h1>Better Google Ads results. <em>Starting with a free audit.</em></h1>
