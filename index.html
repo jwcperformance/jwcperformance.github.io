@@ -1012,9 +1012,9 @@ footer .social-icon.email svg{fill:#8C8871;}
   .jwc-results-grid{grid-template-columns:1.05fr 0.95fr;gap:56px;}
   .jwc-hero-media{
     display:block;position:absolute;inset:0;
-    background:#141a2b url('/assets/hero-london-poster.webp') right center / cover no-repeat;
+    background:#141a2b;
   }
-  .jwc-hero-video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:right center;}
+  .jwc-hero-video{position:absolute;right:0;top:50%;transform:translateY(-50%);width:80%;aspect-ratio:16/9;height:auto;object-fit:cover;-webkit-mask-image:linear-gradient(90deg,transparent 0,#000 30%);mask-image:linear-gradient(90deg,transparent 0,#000 30%);}
   .jwc-hero-media::after{
     content:'';position:absolute;inset:0;
     background:linear-gradient(90deg,rgba(15,18,30,0.92) 0%,rgba(15,18,30,0.75) 38%,rgba(15,18,30,0.15) 68%,rgba(15,18,30,0) 100%);
